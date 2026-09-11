@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167491345,
+ "updatedAt": 1789167564433,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1328,6 +1328,10 @@
   "Thuram": {
    "t": "AS Emazz",
    "p": 111
+  },
+  "Da Cunha": {
+   "t": "Fight Club",
+   "p": 46
   }
  },
  "riv": {
@@ -3820,6 +3824,13 @@
    "n": "Miller L.",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789167564433,
+   "a": "altri",
+   "n": "Da Cunha",
+   "t": "Fight Club",
+   "p": 46
   }
  ],
  "passed": [
