@@ -1,0 +1,154 @@
+TEST ASTA AS PINTA — 4 FOTOGRAFIE SUCCESSIVE
+==============================================
+
+Uso consigliato
+- Parti da beta pulita / stato azzerato.
+- In "Da foto" incolla UN BLOCCO ALLA VOLTA, premi Leggi, controlla la preview e poi Applica.
+- Lascia "Scala anche i crediti..." DISATTIVATO: in questi blocchi ci sono già righe-crediti delle squadre.
+- Tra UPDATE 2 e UPDATE 3 fai anche il test manuale SCARTATO indicato sotto.
+
+COSA DEVE ESSERE VERO
+- Una riga assente non cancella niente.
+- Un campo vuoto non cancella il valore già noto.
+- Un valore nuovo esplicito corregge il precedente.
+- Un giocatore prima "Scartato" e poi assegnato da una foto torna correttamente assegnato.
+
+
+==================== UPDATE 1 — prima fotografia ====================
+chill curre;468;2;0
+S.S. Longobarda;487;1;0
+Al-Chaos-Ahli;452;2;1
+AC OMMODITY;475;1;0
+Pro Stata;482;1;1
+Real Skënderbeu;461;2;0
+Space Invaders;490;1;0
+AS Emazz;475;1;1
+NewRock;470;1;0
+Fc Afragolese;459;2;0
+Fight Club;420;1;0
+Big Tasty FC;500;0;0
+Fun Cool FC;488;1;0
+Svilar;AS Emazz;25
+Calhanoglu;Fight Club;80
+Mancini;NewRock;30
+Carnesecchi;Pro Stata;18
+Barella;chill curre;22
+Dimarco;AS Pinta;58
+De Bruyne;AS Pinta;24
+
+CHECK DOPO UPDATE 1
+- AS Pinta: Dimarco 58 + De Bruyne 24, quindi 418 crediti residui.
+- Svilar: AS Emazz, 25.
+- Calhanoglu: Fight Club, 80.
+- Dashboard Rivali popolata.
+
+
+==================== UPDATE 2 — fotografia successiva ====================
+chill curre;412;5;1
+S.S. Longobarda;430;4;1
+Al-Chaos-Ahli;388;5;1
+AC OMMODITY;421;4;1
+Pro Stata;430;4;1
+Real Skënderbeu;401;5;1
+Space Invaders;438;4;1
+AS Emazz;390;4;
+NewRock;405;4;0
+Fc Afragolese;420;4;1
+Fight Club;350;4;0
+Big Tasty FC;456;3;1
+Svilar;AS Emazz;
+Calhanoglu;Fight Club;84
+Dybala Big Tasty FC 52
+Pulisic;AC OMMODITY;43
+Di Lorenzo;Real Skënderbeu;16
+Malen;Fc Afragolese;65
+Paz N.;chill curre;46
+Bastoni;AS Pinta;17
+Berardi;AS Pinta;35
+
+CHECK DOPO UPDATE 2
+- Svilar DEVE restare a 25: il prezzo vuoto non deve cancellarlo.
+- AS Emazz DEVE conservare 1 portiere: il campo portieri vuoto non deve azzerarlo.
+- Calhanoglu DEVE diventare 84: correzione esplicita.
+- Dybala deve essere riconosciuto anche senza separatori (test S1) e risultare Big Tasty FC a 52.
+- Fun Cool FC non compare nella fotografia: i suoi dati dell'UPDATE 1 devono restare invariati.
+- AS Pinta aggiunge Bastoni 17 e Berardi 35.
+
+TEST MANUALE ORA
+Cerca ORSOLINI -> prezzo lascialo vuoto -> seleziona "Scartato · resta libero" -> OK.
+Poi ricercalo: deve comparire "↺ già passato" ma deve essere ancora acquistabile.
+
+
+==================== UPDATE 3 — fotografia con correzioni ====================
+chill curre;330;8;1
+S.S. Longobarda;305;7;1
+Al-Chaos-Ahli;292;8;1
+AC OMMODITY;342;7;1
+Pro Stata;355;7;1
+Real Skënderbeu;318;8;1
+Space Invaders;360;7;1
+AS Emazz;326;7;1
+NewRock;355;7;0
+Fc Afragolese;336;8;1
+Fight Club;295;;
+Big Tasty FC;350;7;1
+Fun Cool FC;360;7;1
+Mancini;Space Invaders;31
+Dybala;Big Tasty FC;
+Pulisic;AC OMMODITY;45
+Malen;Fc Afragolese;
+Hojlund;Al-Chaos-Ahli;90
+Martinez L.;S.S. Longobarda;105
+Thuram;Fight Club;72
+Orsolini;Fun Cool FC;28
+Rabiot;AS Pinta;19
+
+CHECK DOPO UPDATE 3
+- Mancini deve passare da NewRock 30 a Space Invaders 31.
+- Dybala deve restare a 52: il prezzo vuoto non cancella.
+- Pulisic deve correggersi da 43 a 45.
+- Malen deve restare a 65.
+- Fight Club aggiorna SOLO i crediti a 295: giocatori/portieri restano quelli già noti.
+- Orsolini non deve più risultare "già passato": il nuovo screenshot lo assegna a Fun Cool FC a 28.
+- AS Pinta aggiunge Rabiot 19.
+
+
+==================== UPDATE 4 — fotografia più avanti ====================
+chill curre;244;12;1
+S.S. Longobarda;198;11;1
+Al-Chaos-Ahli;206;12;2
+AC OMMODITY;251;11;1
+Pro Stata;263;11;2
+Real Skënderbeu;235;12;1
+Space Invaders;270;11;1
+AS Emazz;238;11;2
+NewRock;260;11;1
+Fc Afragolese;227;12;1
+Fight Club;215;10;1
+Big Tasty FC;248;11;1
+Fun Cool FC;255;11;1
+Calhanoglu;Fight Club;
+Hojlund;Al-Chaos-Ahli;92
+Martinez L.;S.S. Longobarda;105
+Wesley;AS Pinta;28
+Konè M.;AS Pinta;16
+Ekkelenkamp;AS Pinta;13
+Vlasic;AS Pinta;18
+Davis K.;AS Pinta;25
+Maignan;AS Pinta;12
+
+CHECK DOPO UPDATE 4
+- Calhanoglu deve restare a 84 (campo prezzo vuoto).
+- Hojlund deve correggersi 90 -> 92.
+- Martinez L. resta 105: stesso dato, nessuna duplicazione.
+- AS Pinta deve avere complessivamente 11 giocatori del test e 235 crediti residui.
+- Copertura ruoli, budget reparto e max disponibili devono essersi mossi rispetto agli update precedenti.
+- "Chiudi ora" NON dovrebbe ancora comparire: nella beta 2.4 è volutamente riservato al vero finale, quando mancano al massimo 3 giocatori di movimento.
+
+
+TEST RAPIDO DEL NUOVO FLUSSO MANUALE
+1) Cerca Svilar (se usi questo test dopo gli import sarà già assegnato: usa un altro libero, es. un giocatore non presente nei blocchi).
+2) Inserisci prezzo.
+3) Seleziona un unico esito tra: ? da verificare / AS Pinta / Scartato / una delle altre squadre.
+4) Premi OK.
+5) L'app deve tornare direttamente alla ricerca vuota pronta per il nome successivo.

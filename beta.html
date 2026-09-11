@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#3E1D5C">
+<meta name="theme-color" content="#862633">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Asta Pinta">
 <meta name="robots" content="noindex">
 <title>Asta AS Pinta BETA</title>
 <style>
 :root{
-  --bg:#ECEEF2; --card:#FFFFFF; --ink:#1A1F2B; --muted:#646C7D; --line:#D6DAE3;
-  --pinta:#3E1D5C; --pinta-2:#7B3FB0; --go:#15784A; --warn:#A66A00; --stop:#A8261D; --own:#2458B8; --gone:#7A8190;
+  --bg:#F2F0EC; --card:#FFFFFF; --ink:#191B20; --muted:#6E6B68; --line:#DEDAD3;
+  --pinta:#862633; --pinta-2:#A72E3D; --giallo:#F2A900; --roma-dark:#581820; --roma-soft:#F7E9E5; --go:#15784A; --warn:#A66A00; --stop:#A8261D; --own:#2458B8; --gone:#7A8190;
   --r-lg:18px; --r-sm:10px;
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -140,6 +140,93 @@ body.auction .auction-actions input,body.auction .auction-actions select{font-si
   nav.tabs button{font-size:11px;padding-left:0;padding-right:0}
 }
 
+/* ---------- v2.3 beta: Roma-inspired infographic UI ---------- */
+:root{
+  --surface:#FBFAF8; --surface-2:#F2EEE8; --elev:0 12px 32px rgba(70,28,31,.08);
+  --elev-soft:0 5px 16px rgba(70,28,31,.06); --glass:rgba(255,255,255,.82);
+}
+html,body{background:radial-gradient(circle at 18% -10%,#FFF6DC 0,transparent 32%),linear-gradient(180deg,#FAF7F2 0,#F1EFEC 38%,#EFEEEC 100%)}
+body{letter-spacing:-.006em}
+header.top{background:radial-gradient(circle at 82% -40%,rgba(242,169,0,.34),transparent 38%),linear-gradient(120deg,#581820 0%,#862633 55%,#A72E3D 100%);box-shadow:0 9px 30px rgba(82,24,31,.22);border-bottom:1px solid rgba(255,255,255,.13)}
+header.top .in{min-height:48px}
+header.top b{display:flex;align-items:center;gap:9px;font-size:18px;letter-spacing:-.015em}
+.brandmark{width:31px;height:31px;border-radius:10px;display:inline-grid;place-items:center;background:linear-gradient(145deg,#FFD46C,#F2A900);color:#641D27;font-weight:950;font-size:12px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.48),0 4px 14px rgba(0,0,0,.18)}
+.pill{border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.card,details,.kpi,.budget-item,.alt-card,.info-card{box-shadow:var(--elev-soft)}
+.card{border-color:rgba(89,59,53,.12);background:rgba(255,255,255,.95)}
+h2{font-size:24px;letter-spacing:-.03em;margin-top:16px} h3{letter-spacing:-.015em}
+.search input{box-shadow:0 8px 26px rgba(134,38,51,.10);border-color:#A72E3D;background:rgba(255,255,255,.98)}
+.search input:focus{border-color:#862633;box-shadow:0 0 0 4px rgba(242,169,0,.20),0 10px 28px rgba(134,38,51,.12)}
+.results li button{border-color:rgba(89,59,53,.12);box-shadow:0 3px 11px rgba(70,28,31,.045);transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.results li button:active,.alt-card:active,.btn:active{transform:scale(.985)}
+.results .nm{font-size:16px;letter-spacing:-.01em}
+.verdict{box-shadow:0 12px 30px color-mix(in srgb,var(--c) 22%,transparent);border:1px solid rgba(255,255,255,.18);position:relative;overflow:hidden}
+.verdict:after{content:"";position:absolute;right:-48px;top:-66px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.09);pointer-events:none}
+.verdict .price{letter-spacing:-.06em}
+.btn{box-shadow:0 3px 10px rgba(70,28,31,.045);transition:transform .12s ease,box-shadow .12s ease}
+.btn.primary{background:linear-gradient(135deg,#862633,#B43A49);box-shadow:0 7px 18px rgba(134,38,51,.23)}
+.btn.accent{background:linear-gradient(135deg,#F2A900,#FFC83D);border-color:#E0A000;color:#4C3210;box-shadow:0 7px 18px rgba(242,169,0,.20)}
+.btn.dark{background:linear-gradient(135deg,#202226,#34363C)}
+.kpi{background:linear-gradient(180deg,#fff,#FCFBF8);border-color:rgba(89,59,53,.12);position:relative;overflow:hidden}
+.kpi.main{background:radial-gradient(circle at 90% 0,rgba(242,169,0,.32),transparent 38%),linear-gradient(145deg,#581820,#862633 70%,#A72E3D);box-shadow:0 10px 25px rgba(134,38,51,.20)}
+.kpi.main span{color:#F7E3DC}.kpi strong{letter-spacing:-.04em}
+nav.tabs{background:rgba(255,255,255,.90);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:rgba(89,59,53,.11);box-shadow:0 -8px 30px rgba(70,28,31,.07)}
+nav.tabs button{transition:color .15s ease,background .15s ease;border-radius:14px;margin:5px 2px;padding-top:7px;padding-bottom:7px}
+nav.tabs button[aria-current="page"]{background:#FFF0C9;color:#862633}
+.team-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:750;line-height:1.1;border:1px solid var(--tb-border);background:linear-gradient(100deg,var(--tb-bg1),var(--tb-bg2));color:var(--tb-fg);white-space:nowrap;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.4)}
+.team-badge .club-dot{width:7px;height:7px;border-radius:50%;background:var(--tb-accent);box-shadow:0 0 0 2px rgba(255,255,255,.6)}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}.section-head h2,.section-head h3{margin:0}
+.hero-tools{display:flex;gap:7px;flex-wrap:wrap}.share-btn{display:inline-flex;align-items:center;gap:7px}
+.import-rule{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:9px 0}.import-rule div{padding:9px;border-radius:12px;background:#FBF7F1;border:1px solid #E8DED1}
+.preview-change{font-size:12px;border-radius:999px;padding:3px 7px;background:#FFF0C9;color:#7A4D00;font-weight:750}.data-warn{border-left:5px solid #A66A00;background:#FFF9EE}
+.metric-card{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}.metric-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#FFF1C9;color:#862633;border:1px solid #F0D58C}.metric-icon svg{width:20px;height:20px}
+.progress-ring{--p:0;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--giallo) calc(var(--p)*1%),rgba(255,255,255,.18) 0);position:relative;flex:none}.progress-ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#6C1C27}.progress-ring span{position:relative;color:#fff;font-size:17px;font-weight:850}
+.hero-progress{display:flex;align-items:center;gap:13px}.hero-progress strong{font-size:25px;display:block;letter-spacing:-.04em}.hero-progress .small{color:#F7E3DC}
+.role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:7px}.role-meter{padding:9px 10px;border:1px solid #E7E0D7;background:#fff;border-radius:12px}.role-meter .topline{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:700}.mini-bar,.power-bar,.budget-bar{height:7px;border-radius:999px;background:#EEE8E0;overflow:hidden;margin-top:7px}.mini-bar>i,.power-bar>i,.budget-bar>i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#862633,#F2A900)}.role-meter.ok .mini-bar>i{background:linear-gradient(90deg,#147447,#55B77E)}.role-meter.warn .mini-bar>i{background:linear-gradient(90deg,#B14A35,#F2A900)}
+.budget-item{position:relative}.budget-item .budget-bar>i.over{background:linear-gradient(90deg,#A8261D,#E35A45)}
+.rival-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px}.rival-card{background:#fff;border:1px solid #E7E0D7;border-radius:14px;padding:10px}.rival-card .rline{display:flex;justify-content:space-between;gap:8px;align-items:center}.rival-card .big{font-weight:850;font-size:20px}.rival-card.you{border-color:#E4B83F;background:linear-gradient(180deg,#FFF8E4,#fff)}
+.info-card{border:1px solid #E7E0D7;background:linear-gradient(180deg,#fff,#FBF8F3);border-radius:16px;padding:12px;margin:9px 0}.info-card strong{color:#862633}
+.team-radio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%}.team-radio{cursor:pointer}.team-radio input{position:absolute;opacity:0;pointer-events:none}.team-radio span{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 7px;border:1px solid #DDD6CE;background:#fff;border-radius:10px;font-size:12px;font-weight:700;text-align:center;line-height:1.1}.team-radio input:checked+span{border-color:#862633;background:#FFF0C9;color:#862633;box-shadow:0 0 0 2px rgba(242,169,0,.18)}
+.pass-note{border-left:5px solid var(--giallo);background:#FFF8E5}.pass-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:999px;background:#FFF0C9;color:#7A4D00;font-size:11px;font-weight:800;margin-left:5px}
+.outcome-card{border:1px solid rgba(134,38,51,.18);background:linear-gradient(180deg,#fff,#FFFDFC)}
+.outcome-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:11px}.price-fast{display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}.price-fast input{width:84px;font-size:22px;font-weight:850;text-align:center;padding:8px;border:2px solid #D8CFC6;border-radius:12px;background:#fff}.price-fast input:focus{border-color:#862633;outline:0;box-shadow:0 0 0 3px rgba(242,169,0,.16)}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.outcome-choice{cursor:pointer;position:relative}.outcome-choice input{position:absolute;opacity:0;pointer-events:none}.outcome-choice span{display:flex;min-height:44px;align-items:center;justify-content:center;flex-direction:column;gap:1px;padding:7px 5px;border:1px solid #DDD6CE;border-radius:11px;background:#fff;font-size:12px;font-weight:760;text-align:center;line-height:1.05;transition:.12s ease}.outcome-choice span small{font-size:9px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.025em}.outcome-choice input:checked+span{border-color:#862633;box-shadow:0 0 0 3px rgba(134,38,51,.11);transform:translateY(-1px)}.outcome-choice.pinta span{background:#FFF2CF;border-color:#E4B83F;color:#6C1C27}.outcome-choice.pinta input:checked+span{background:linear-gradient(145deg,#FFF2CF,#FFE3A0);border-color:#862633}.outcome-choice.passed span{background:#FFF7E6;border-color:#E3BF78;color:#7A4D00}.outcome-choice.passed input:checked+span{background:#FFE8A9;border-color:#B47A00}.outcome-choice.doubt span{background:#F3F4F6;color:#5E6470}.outcome-choice.doubt input:checked+span{background:#E7E9ED;border-color:#6D7480}.outcome-ok{width:100%;margin-top:10px;font-size:16px;min-height:46px}.price-legend{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0 4px}.price-legend>div{padding:9px 10px;border:1px solid #E7E0D7;border-radius:12px;background:#FCFAF7}.price-legend b{display:block;color:#862633;font-size:12px;margin-bottom:2px}.price-legend span{display:block;color:var(--muted);font-size:11px;line-height:1.35}
+.narrative{font-size:15px;line-height:1.55;color:#33312E}.narrative b{color:#862633}
+.update-card{border-left:4px solid #D6A41A}.update-card .time{font-size:12px;color:#7B736C;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:760px){.team-radio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.rival-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.import-rule{grid-template-columns:1fr}.brandmark{width:27px;height:27px;border-radius:9px}.team-badge{font-size:11px;padding:3px 7px}.team-radio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.price-legend{grid-template-columns:1fr}.rival-grid{grid-template-columns:1fr}.progress-ring{width:66px;height:66px}}
+
+/* ---------- v2.5: linguaggio fantacalcistico, moduli e explainers ---------- */
+.section-help{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;margin:7px 0 11px;border:1px solid #E5DDD3;border-radius:14px;background:linear-gradient(180deg,#FFFEFC,#F8F4EE);color:#4E4A46;font-size:13px;line-height:1.45}
+.section-help .help-icon{width:25px;height:25px;flex:none;border-radius:9px;display:grid;place-items:center;background:#FFF0C9;color:#862633;font-weight:900;border:1px solid #ECD28C}.section-help b{color:#352F2D}
+.fanta-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:8px;margin:9px 0}.fanta-metric{padding:11px 12px;border:1px solid #E5DDD3;border-radius:14px;background:#fff}.fanta-metric .label{font-size:12px;font-weight:800;color:#862633;text-transform:uppercase;letter-spacing:.025em}.fanta-metric strong{display:block;font-size:27px;letter-spacing:-.04em;margin:1px 0}.fanta-metric .explain{font-size:11px;color:var(--muted);line-height:1.35}
+.expert-call{grid-column:1/-1;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:9px 11px}.expert-call .eyebrow{font-size:10px;opacity:.8;font-weight:900;text-transform:uppercase;letter-spacing:.07em}.expert-call strong{display:block;font-size:15px;line-height:1.35;margin-top:2px}
+.recent-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:9px 0}.recent-card{border:1px solid #E5DDD3;background:#fff;border-radius:12px;padding:9px 10px;min-width:0}.recent-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}.recent-card .small{font-size:11px}
+.formation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}.formation-card{border:1px solid #E3DAD0;border-radius:15px;background:#fff;padding:11px;position:relative}.formation-card.best{border-color:#D9A51D;background:linear-gradient(180deg,#FFF9E9,#fff)}.formation-card .fname{display:flex;justify-content:space-between;align-items:center;gap:8px}.formation-card .fname strong{font-size:19px;letter-spacing:-.03em}.formation-card .rank{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#7A4D00;background:#FFF0C9;border-radius:999px;padding:3px 7px}.formation-bar{height:8px;background:#EEE8E0;border-radius:999px;overflow:hidden;margin:8px 0}.formation-bar i{display:block;height:100%;background:linear-gradient(90deg,#862633,#F2A900);border-radius:inherit}.slot-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}.slot-tag{font-size:10px;font-weight:800;border-radius:999px;padding:3px 6px;background:#F2EEE8;color:#554D48;border:1px solid #E2DAD0}.target-line{font-size:11px;color:#5F5954;margin-top:6px;line-height:1.35}.formation-summary{display:flex;justify-content:space-between;gap:8px;align-items:end}.formation-summary .score{font-size:12px;color:var(--muted);text-align:right}.formation-summary .score b{display:block;color:#2F2B29;font-size:15px}
+.rival-card{padding:12px;min-height:132px}.rival-card .rname{font-size:13px;font-weight:800;line-height:1.15}.rival-statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.rival-statgrid div{background:#F8F5F1;border-radius:9px;padding:6px;text-align:center}.rival-statgrid b{display:block;font-size:15px}.rival-statgrid span{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.025em}.rival-max{margin-top:8px;padding-top:7px;border-top:1px solid #ECE5DC;font-size:11px}.rival-max b{font-size:16px;color:#862633}
+.settings-group{margin:14px 0 6px}.settings-group .group-title{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:850;letter-spacing:-.03em}.settings-group .group-kicker{font-size:12px;color:var(--muted);margin-top:2px}.setting-card .field{flex:1 1 160px}.setting-note{font-size:11px;color:var(--muted);line-height:1.35;margin-top:5px}.service-status{display:flex;justify-content:space-between;gap:10px;align-items:center}.service-dot{width:10px;height:10px;border-radius:50%;background:#5FD38D;display:inline-block;margin-right:5px}
+.identity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.identity-item{padding:9px 10px;border:1px solid #E5DDD3;border-radius:12px;background:#FCFAF7}.identity-item .label{font-size:10px;text-transform:uppercase;font-weight:800;color:var(--muted);letter-spacing:.04em}.identity-item b{display:block;margin-top:2px;font-size:14px}
+@media(max-width:560px){.recent-strip{grid-template-columns:1fr}.fanta-metrics{grid-template-columns:1fr 1fr}.formation-grid{grid-template-columns:1fr}.identity-grid{grid-template-columns:1fr}.rival-card{min-height:0}}
+
+
+/* ---------- v2.6: cockpit, rival rosters, tactical pitch, vector UI ---------- */
+.section-title{display:flex;align-items:center;gap:10px;margin:17px 0 10px;min-width:0}.section-title h2{margin:0;font-size:23px;letter-spacing:-.035em}.section-title .sec-sub{font-size:12px;color:var(--muted);margin-top:1px}.sec-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:13px;color:var(--pinta);background:linear-gradient(145deg,#FFF3D5,#F9E7E0);border:1px solid #E9D0B7;flex:none}.sec-icon svg{width:21px;height:21px}.icon-heading{display:flex;align-items:center;gap:7px}.icon-heading svg{width:18px;height:18px;color:var(--pinta);flex:none}.section-help .help-icon svg{width:15px;height:15px}.section-help .help-icon{font-size:0}
+.prompt-hero{display:flex;align-items:flex-start;gap:12px;padding:14px;margin:8px 0 12px;border-radius:18px;background:linear-gradient(135deg,#6F1F2B,#962D3B 62%,#B77900);color:#fff;box-shadow:0 10px 28px rgba(82,25,32,.15)}.prompt-hero .prompt-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:rgba(255,255,255,.14);flex:none}.prompt-hero .prompt-icon svg{width:22px;height:22px}.prompt-hero .eyebrow,.strategy-hero .eyebrow{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;opacity:.78}.prompt-hero b{font-size:17px}.prompt-hero p{font-size:12px;line-height:1.4;margin:5px 0 0;opacity:.88}.prompt-hero .btn{flex:none;background:#fff;color:#6F1F2B;border-color:#fff}.paste-card{background:#fff;border:1px solid #E4DDD4;border-radius:17px;padding:12px}.paste-card label{display:flex;flex-direction:column;margin-bottom:7px}.paste-card label span{font-size:12px;color:var(--muted)}.paste-card textarea{min-height:180px;background:#FCFBF9}.parse-big{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px}.parse-big svg{width:18px;height:18px}
+.rival-statgrid svg{width:14px;height:14px;color:#8E7C6E;margin-bottom:2px}.rival-statgrid div{display:flex;flex-direction:column;align-items:center}.rival-rosters{display:grid;gap:7px}.roster-detail summary{display:flex;align-items:center;justify-content:space-between;gap:8px}.roster-count{font-size:11px;color:var(--pinta);background:#FFF0C9;padding:3px 7px;border-radius:999px}.roster-note{padding-bottom:8px}.roster-role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:7px;padding:2px 0 8px}.roster-role{border:1px solid #E8E1D8;border-radius:12px;background:#FBF9F6;padding:8px}.roster-role-head{display:flex;justify-content:space-between;font-size:12px;font-weight:900;color:var(--pinta);margin-bottom:5px}.roster-role-head span{color:var(--muted)}.roster-role button{width:100%;border:0;background:#fff;border-radius:8px;padding:6px 7px;margin:3px 0;text-align:left;box-shadow:inset 0 0 0 1px #ECE6DE}.roster-role button b{display:block;font-size:12px}.roster-role button span{display:block;font-size:10px;color:var(--muted)}
+.strategy-hero{display:flex;align-items:center;gap:12px;padding:15px;border-radius:19px;background:linear-gradient(135deg,#6F1F2B,#8C2937 58%,#B17A06);color:#fff;margin:8px 0 9px;box-shadow:0 12px 30px rgba(89,28,36,.16)}.strategy-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:15px;background:rgba(255,255,255,.13);flex:none}.strategy-icon svg{width:25px;height:25px}.strategy-hero h3{font-size:21px;margin:2px 0}.strategy-hero p{font-size:13px;line-height:1.4;margin:0;opacity:.9}.strategy-cash{margin-left:auto;text-align:center;min-width:66px;padding:7px 9px;border-radius:13px;background:rgba(255,255,255,.12)}.strategy-cash span{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.07em;opacity:.75}.strategy-cash b{font-size:30px;line-height:1}.strategy-mini{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:8px 0}.strategy-mini>div{background:#fff;border:1px solid #E5DDD3;border-radius:14px;padding:10px;min-width:0}.strategy-mini svg{width:17px;height:17px;color:var(--pinta);float:right}.strategy-mini span{display:block;font-size:10px;text-transform:uppercase;font-weight:850;color:var(--muted);letter-spacing:.035em}.strategy-mini b{display:block;font-size:18px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.strategy-mini small{display:block;font-size:10px;color:var(--muted);line-height:1.25}.priority-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}.priority-card{position:relative;background:#fff;border:1px solid #E5DDD3;border-radius:15px;padding:12px 12px 11px 44px;min-height:108px}.priority-card .pnum{position:absolute;left:10px;top:10px;width:25px;height:25px;border-radius:9px;display:grid;place-items:center;background:#FFF0C9;color:#7A4D00;font-size:11px;font-weight:900}.priority-card .picon{position:absolute;left:12px;bottom:11px;color:var(--pinta)}.priority-card .picon svg{width:19px;height:19px}.priority-card b{font-size:14px}.priority-card p{font-size:11px;color:var(--muted);line-height:1.4;margin:4px 0 0}.target-market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:7px}.target-player{border:1px solid #E4DDD4;background:#fff;border-radius:13px;padding:9px;text-align:left}.target-player .target-main{display:flex;justify-content:space-between;gap:6px;align-items:center}.target-player .target-main b{font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis}.target-player .small{display:block;margin-top:4px}.target-price{display:block;font-size:10px;color:var(--muted);margin-top:5px}.target-price b{font-size:16px;color:var(--pinta)}
+.tactical-card{border-radius:18px;border:1px solid #D5D0C7;background:#fff;overflow:hidden;margin:8px 0}.tactical-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px}.tactical-head>div{display:flex;flex-direction:column}.tactical-head b{font-size:18px}.tactical-head span{font-size:11px;color:var(--muted)}.tactical-badge{font-size:9px!important;text-transform:uppercase;font-weight:900!important;color:#6F1F2B!important;background:#FFF0C9;padding:4px 7px;border-radius:999px}.pitch{position:relative;height:430px;margin:0 10px 10px;border-radius:15px;background:linear-gradient(90deg,#347D48 0 12.5%,#3B8750 12.5% 25%,#347D48 25% 37.5%,#3B8750 37.5% 50%,#347D48 50% 62.5%,#3B8750 62.5% 75%,#347D48 75% 87.5%,#3B8750 87.5%);border:2px solid rgba(255,255,255,.72);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}.pitch:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.65);border-radius:2px}.halfway{position:absolute;left:12px;right:12px;top:50%;border-top:1px solid rgba(255,255,255,.7)}.center-circle{position:absolute;width:72px;height:72px;border:1px solid rgba(255,255,255,.7);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.box{position:absolute;left:30%;width:40%;height:70px;border:1px solid rgba(255,255,255,.66)}.box-top{top:12px;border-top:0}.box-bottom{bottom:12px;border-bottom:0}.field-node{position:absolute;transform:translate(-50%,-50%);width:92px;min-height:42px;padding:5px 6px;border-radius:11px;text-align:center;background:rgba(255,255,255,.95);box-shadow:0 4px 12px rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.95);z-index:2}.field-node b{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.field-node span{display:block;font-size:9px;color:#5D5B57}.field-node.missing{background:rgba(78,96,80,.72);border:1px dashed rgba(255,255,255,.8);color:#fff;box-shadow:none}.field-node.missing span{color:rgba(255,255,255,.78)}
+@media(max-width:760px){.strategy-mini{grid-template-columns:1fr 1fr}.prompt-hero{flex-wrap:wrap}.prompt-hero .btn{width:100%}.pitch{height:390px}.field-node{width:76px}.field-node b{font-size:10px}.roster-role-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.strategy-hero{align-items:flex-start}.strategy-cash{min-width:58px}.priority-grid,.target-market-grid{grid-template-columns:1fr}.pitch{height:365px;margin-left:5px;margin-right:5px}.field-node{width:67px;padding:4px}.field-node b{font-size:9px}.field-node span{font-size:8px}.roster-role-grid{grid-template-columns:1fr}.section-title .sec-sub{max-width:250px}}
+
+
+/* v2.7: data quality, expert notes, rival drawer, CheckAI */
+.quick-flags{display:flex;gap:7px;flex-wrap:wrap;margin:9px 0}.quick-flag{border:1px solid #DDD6CE;background:#fff;border-radius:999px;padding:7px 11px;font-weight:850;font-size:12px;cursor:pointer}.quick-flag.must-on{background:#FFF0C9;border-color:#D9A927;color:#6D211E}.quick-flag.avoid-on{background:#FCEDEA;border-color:#D99C92;color:#922E2A}.quick-flag svg{width:14px;height:14px;vertical-align:-2px;margin-right:4px}
+.data-alert{border-color:#E0A08F!important;background:linear-gradient(135deg,#FFF2EE,#fff)!important}.data-alert strong{color:#9C2F28}.alert-list{display:grid;gap:6px;margin-top:8px}.alert-row{display:flex;gap:8px;align-items:center;padding:7px 8px;background:#fff;border:1px solid #F0D3CB;border-radius:10px}.alert-row .grow{min-width:0}.alert-badge{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:#A0372F;background:#FCE9E4;border-radius:999px;padding:3px 7px;white-space:nowrap}
+.expert-note{margin-top:10px;border:1px solid #E5D8C7;background:linear-gradient(140deg,#FFF9EA,#fff);border-radius:14px;padding:11px}.expert-note-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.expert-note-head b{font-size:13px;color:#6F231F}.expert-score{background:#6F231F;color:#fff;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:900}.expert-note p{margin:7px 0 0;font-size:13px;line-height:1.45}.expert-note a{font-size:11px;color:#6F231F;font-weight:800;text-decoration:none}.identity-summary{display:grid;grid-template-columns:1.2fr .8fr;gap:8px;margin-bottom:8px}.identity-primary{border-radius:13px;padding:10px;background:#F8F5F0;border:1px solid #E5DDD3}.identity-primary .bigline{font-size:15px;font-weight:900;margin-top:2px}.identity-primary .subline{font-size:12px;color:var(--muted);margin-top:3px}
+.rival-card.clickable{cursor:pointer;position:relative;transition:.14s ease}.rival-card.clickable:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(79,30,28,.08)}.rival-card.clickable::after{content:'Apri rosa';position:absolute;right:10px;bottom:8px;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:#8A6F5C}.rival-card.open{grid-column:1/-1;border-color:#C79535;background:linear-gradient(180deg,#FFF9EA,#fff)}.rival-card.open::after{content:'Chiudi rosa'}.rival-inline-roster{margin-top:10px;padding-top:10px;border-top:1px solid #E9DED0}.rival-inline-roster .roster-role-grid{margin-top:7px}
+.preflight-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}.checkai-btn{background:linear-gradient(135deg,#54202A,#8B2A36);color:#fff;border-color:#54202A}.checkai-btn svg{width:16px;height:16px;vertical-align:-3px;margin-right:5px}.must-top{border:1px solid #E0C36E;background:linear-gradient(140deg,#FFF8DD,#fff);border-radius:15px;padding:11px;margin:8px 0}.must-top h3{margin:0 0 7px}.must-pills{display:flex;flex-wrap:wrap;gap:6px}.must-pill{border:1px solid #DDB84F;background:#fff;border-radius:999px;padding:6px 9px;font-size:12px;font-weight:850}.must-pill.avoid{border-color:#D7A49A;background:#FFF4F1;color:#8E302B}
+@media(max-width:560px){.identity-summary{grid-template-columns:1fr}.rival-card.open{grid-column:auto}.quick-flags{display:grid;grid-template-columns:1fr 1fr}.quick-flag{width:100%}}
+
 </style>
 </head>
 <body>
@@ -151,9 +238,24 @@ body.auction .auction-actions input,body.auction .auction-actions select{font-si
 <script>
 
 "use strict";
-const APP_VERSION = "2.1";
+const APP_VERSION = "2.7-beta";
 const ROLES = ["Por","Dc","B","Dd","Ds","E","M","C","W","T","A","Pc"];
+// 11 schemi ufficiali Mantra. Ogni slot contiene i ruoli alternativi ammessi senza malus.
+const MANTRA_FORMATIONS = [
+  {n:"3-4-3",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M","C"],["C"],["E"],["W","A"],["A","Pc"],["W","A"]]},
+  {n:"3-4-1-2",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M","C"],["C"],["E"],["T"],["A","Pc"],["A","Pc"]]},
+  {n:"3-4-2-1",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M"],["M","C"],["E","W"],["T"],["T","A"],["A","Pc"]]},
+  {n:"3-5-2",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M"],["M","C"],["C"],["E","W"],["A","Pc"],["A","Pc"]]},
+  {n:"3-5-1-1",slots:[["Dc"],["Dc"],["Dc","B"],["E","W"],["M"],["M"],["C"],["E","W"],["T","A"],["A","Pc"]]},
+  {n:"4-3-3",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["M","C"],["C"],["W","A"],["A","Pc"],["W","A"]]},
+  {n:"4-3-1-2",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["M","C"],["C"],["T"],["T","A","Pc"],["A","Pc"]]},
+  {n:"4-4-2",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["E"],["M","C"],["C"],["E","W"],["A","Pc"],["A","Pc"]]},
+  {n:"4-1-4-1",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["C","T"],["T"],["E","W"],["W"],["A","Pc"]]},
+  {n:"4-4-1-1",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["E","W"],["M"],["C"],["E","W"],["T","A"],["A","Pc"]]},
+  {n:"4-2-3-1",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["M","C"],["W","T"],["T"],["W","A"],["A","Pc"]]}
+];
 let P = [], SHORT = [], CFG = null, TEAMS = [], NOI = "", RIVALS = [], RULES = null, PRICE = null, MINS = null, byName = new Map(), dataFromCache = false;
+let DATA_WARNINGS = [];
 
 /* ---------- testo e ricerca ---------- */
 const norm = s => (s||"").toString().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/['’`]/g,"").replace(/[^a-z0-9. ]+/g," ").replace(/\s+/g," ").trim();
@@ -171,6 +273,22 @@ function init(players, cfg, shortlist){
   });
 }
 const esc = s => (s??"").toString().replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CLUB_COLORS = {
+  "Atalanta":["#E8F2FF","#EDEEF2","#164B91","#0B2F5C"], "Bologna":["#FCEBED","#EAF0FA","#A51D31","#233C77"],
+  "Cagliari":["#FCEBED","#EAF0FA","#A72236","#263B76"], "Como":["#E7F1FF","#F3F8FF","#1565B5","#144A7A"],
+  "Fiorentina":["#F2EAFB","#FAF7FD","#6B2C91","#4A1D69"], "Frosinone":["#FFF7D8","#EBF2FF","#D5A800","#244A88"],
+  "Genoa":["#FCEBED","#E9EEF7","#A32236","#213B70"], "Inter":["#E8F1FF","#EEF0F4","#1769C2","#101926"],
+  "Juventus":["#F6F6F7","#E9EAED","#15171B","#15171B"], "Lazio":["#E8F6FF","#F7FCFF","#6CBCEB","#245D7A"],
+  "Lecce":["#FFF5D8","#FDE9E8","#C69B00","#A62B2A"], "Milan":["#FCE9EA","#ECEDEF","#C82432","#171A1F"],
+  "Monza":["#FDEBED","#FFF8F8","#D32236","#9C1B29"], "Napoli":["#E7F6FF","#F8FCFF","#2A9ED5","#186D97"],
+  "Parma":["#FFF4C7","#E9F0FF","#D8B100","#244F91"], "Roma":["#F8E7E3","#FFF2D6","#8B2231","#D2A51A"],
+  "Sassuolo":["#E7F6EC","#ECEFF0","#19884B","#17201B"], "Torino":["#F6E8E8","#FBF6F6","#7A2635","#5A1D28"],
+  "Udinese":["#F5F5F6","#EDEEEF","#22252B","#111318"], "Venezia":["#FFF0E7","#E8F3EA","#E96D1F","#1B6B42"]
+};
+function clubBadge(t){
+  const c=CLUB_COLORS[t]||["#F1EEF5","#FAF9FC","#6A5C77","#51465D"];
+  return `<span class="team-badge" style="--tb-bg1:${c[0]};--tb-bg2:${c[1]};--tb-accent:${c[2]};--tb-fg:${c[3]};--tb-border:${c[2]}33">${esc(t||"n.d.")}</span>`;
+}
 
 function searchPlayers(q){
   q = norm(q).replace(/\./g,""); if (q.length < 2) return [];
@@ -231,7 +349,7 @@ function defaults(){
   return {version:2, updatedAt:0, set:{...s}, mine:[], asg:{},
     riv:Object.fromEntries(RIVALS.map(t => [t, {c:s.budget, g:0, p:0}])),
     must:(CFG.must || []).filter(m => m && m.n).map(m => ({n:m.n, max:+m.max || 0, why:m.why || ""})),
-    black:(CFG.evita || []).filter(Boolean), upd:"", log:[]};
+    black:(CFG.evita || []).filter(Boolean), upd:"", log:[], passed:[], updates:[]};
 }
 let S = null;
 const utf8b64 = str => { const bytes = new TextEncoder().encode(str); let bin = ""; for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(bin); };
@@ -242,7 +360,7 @@ function merge(o){
   const d = defaults(); const s = Object.assign(d, o || {});
   s.set = Object.assign(defaults().set, (o && o.set) || {});
   s.riv = Object.assign(defaults().riv, (o && o.riv) || {});
-  ["mine","must","black","log"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
+  ["mine","must","black","log","passed","updates"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
   if (!s.asg || typeof s.asg !== "object") s.asg = {};
   return s;
 }
@@ -258,6 +376,14 @@ function persist(){
   updateStatus();
 }
 function logEvent(a, n, t, p){ S.log.push({ts: Date.now(), a, n: n || "", t: t || "", p: p ?? ""}); if (S.log.length > 1000) S.log.splice(0, S.log.length - 1000); }
+function passInfo(n){ const a=(S.passed||[]).filter(x=>x&&x.n===n).sort((a,b)=>(b.ts||0)-(a.ts||0)); return a[0]||null; }
+function clearPassed(n){ if(!Array.isArray(S.passed)) S.passed=[]; S.passed=S.passed.filter(x=>x.n!==n); }
+function recordUpdate(text, label="Aggiornamento da screenshot"){
+  if(!text) return; if(!Array.isArray(S.updates)) S.updates=[];
+  S.updates.push({ts:Date.now(),label,text}); if(S.updates.length>20) S.updates.splice(0,S.updates.length-20);
+}
+function fmtUpdate(u){ if(!u) return "Nessun aggiornamento registrato."; return `${u.text}`; }
+
 function saveUndo(label){ try { ls.set(LS_UNDO, JSON.stringify({label: label || "ultima azione", at: Date.now(), state: S})); } catch(e){} }
 function undoInfo(){ try { const u = JSON.parse(ls.get(LS_UNDO) || "null"); return u && u.state ? u : null; } catch(e){ return null; } }
 function undoLast(){ const u = undoInfo(); if (!u) return false; S = merge(u.state); ls.del(LS_UNDO); persist(); render(); toast(`Annullato: ${u.label}`); return true; }
@@ -419,6 +545,8 @@ function budgetArea(p){ if(!p) return "Altro"; if(p.tr==="Por") return "Por"; if
 function budgetStatus(){ const profile=(CFG.budgetReparti||{})[S.set.profiloBudget] || (CFG.budgetReparti||{}).Equilibrato || {}; const spent={Por:0,Difesa:0,Centrocampo:0,Trequarti:0,Attacco:0}; S.mine.forEach(x=>{ const a=budgetArea(byName.get(x.n)); if(a in spent) spent[a]+=+x.p||0; }); return Object.keys(spent).map(a=>({a,spent:spent[a],pct:+profile[a]||0,target:Math.round(S.set.budget*(+profile[a]||0)/100)})); }
 function holeRisks(){ return ROLES.filter(r=>(+MINS[r]||0)>0).map(r=>({r,miss:Math.max(0,MINS[r]-roleCountMine(r)),free:freeGoodForRole(r)})).filter(x=>x.miss>0 && x.free<=Math.max(3,x.miss*2)).sort((a,b)=>(a.free/a.miss)-(b.free/b.miss)); }
 function closingCandidates(){
+  const m=me();
+  if (m.movMiss > 3) return []; // I4 ha senso solo davvero nel finale
   const missRoles=new Set(ROLES.filter(r=>(+MINS[r]||0)>roleCountMine(r)));
   return P.filter(p=>!assigned(p.n) && !teamAvoid(p) && !S.black.includes(p.n) && market(p)<=3 && rolesOf(p).some(r=>missRoles.has(r)))
     .map(p=>({p,cover:rolesOf(p).filter(r=>missRoles.has(r)).length})).sort((a,b)=>b.cover-a.cover || b.p.sc-a.p.sc).slice(0,8);
@@ -426,6 +554,138 @@ function closingCandidates(){
 function alternatives(p,n=3){
   const rr=new Set(rolesOf(p)); return P.filter(x=>x.n!==p.n && !assigned(x.n) && !teamAvoid(x) && !S.black.includes(x.n) && x.tr===p.tr)
     .sort((a,b)=>b.sc-a.sc || market(a)-market(b)).slice(0,n);
+}
+function helpBox(text,title="Come leggerla"){
+  return `<div class="section-help"><div class="help-icon">${mi("info")}</div><div><b>${esc(title)}</b><br>${text}</div></div>`;
+}
+function recentAuctionEvents(n=3){
+  return (S.log||[]).filter(e=>e&&e.n&&(/^(noi|altri|rimasto libero)/.test(e.a||""))).slice(-n).reverse();
+}
+function recentAuctionHTML(){
+  const xs=recentAuctionEvents(3); if(!xs.length) return "";
+  return `<div class="section-head"><h3>Ultimi 3 passaggi registrati</h3></div><div class="recent-strip">${xs.map(e=>{
+    const when=new Date(e.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});
+    const outcome=(e.a||"").startsWith("noi")?`AS Pinta · ${e.p||"?"} cr`:(e.a||"").startsWith("rimasto libero")?"Scartato · ancora libero":`${e.t||"?"}${e.p!==""?` · ${e.p} cr`:""}`;
+    return `<button class="recent-card" data-open="${esc(e.n)}" style="text-align:left"><b>${esc(e.n)}</b><span class="small">${esc(outcome)} · ${when}</span></button>`;
+  }).join("")}</div>`;
+}
+function bitCount(x){ let c=0; while(x){x&=x-1;c++;} return c; }
+function fitsSlot(p,slot){ const rr=rolesOf(p); return slot.some(r=>rr.includes(r)); }
+function bestFreeForSlot(slot){
+  return P.filter(p=>!assigned(p.n)&&!teamAvoid(p)&&!S.black.includes(p.n)&&fitsSlot(p,slot))
+    .sort((a,b)=>b.sc-a.sc || market(a)-market(b))[0] || null;
+}
+function formationFit(f){
+  const owned=S.mine.map(x=>byName.get(x.n)).filter(p=>p&&p.tr!=="Por"), N=f.slots.length, LIM=1<<N;
+  let dp=new Array(LIM).fill(null); dp[0]={score:0,assign:new Array(N).fill(null)};
+  for(const p of owned){
+    const ndp=dp.slice();
+    for(let mask=0;mask<LIM;mask++) if(dp[mask]){
+      const state=dp[mask];
+      for(let i=0;i<N;i++) if(!(mask&(1<<i)) && fitsSlot(p,f.slots[i])){
+        const nm=mask|(1<<i), val=state.score+10000+(+p.sc||0);
+        if(!ndp[nm] || val>ndp[nm].score){ const assign=state.assign.slice(); assign[i]=p; ndp[nm]={score:val,assign}; }
+      }
+    }
+    dp=ndp;
+  }
+  let bestMask=0,best=dp[0];
+  for(let mask=1;mask<LIM;mask++) if(dp[mask] && (!best || dp[mask].score>best.score)){best=dp[mask];bestMask=mask;}
+  const moveFilled=bitCount(bestMask), keeper=S.mine.map(x=>byName.get(x.n)).filter(p=>p&&rolesOf(p).includes("Por")).sort((a,b)=>b.sc-a.sc)[0]||null;
+  const total=moveFilled+(keeper?1:0), missing=[];
+  for(let i=0;i<N;i++) if(!(bestMask&(1<<i))) missing.push(f.slots[i]);
+  if(!keeper) missing.unshift(["Por"]);
+  const sumSc=best?Math.max(0,best.score-moveFilled*10000):0, avgSc=moveFilled?sumSc/moveFilled:0;
+  const depths=missing.map(slot=>P.filter(p=>!assigned(p.n)&&!teamAvoid(p)&&!S.black.includes(p.n)&&(+p.sc||0)>=48&&fitsSlot(p,slot)).length);
+  const ease=missing.length ? depths.reduce((a,x)=>a+Math.min(20,x),0)/(missing.length*20) : 1;
+  return {f,total,moveFilled,missing,avgSc,ease,depths,slotPlayers:(best&&best.assign)||new Array(N).fill(null),keeper};
+}
+function formationAnalysis(){
+  return MANTRA_FORMATIONS.map(formationFit).sort((a,b)=>b.total-a.total || b.avgSc-a.avgSc || b.ease-a.ease);
+}
+function formationCard(x,idx=0){
+  const pct=Math.round(x.total/11*100), missing=x.missing.slice(0,4), complete=x.total===11;
+  const targets=missing.slice(0,3).map(slot=>{const p=bestFreeForSlot(slot);return `${slot.join("/")}${p?` → ${p.n}`:""}`;});
+  return `<div class="formation-card ${idx===0?"best":""}"><div class="fname"><strong>${x.f.n}</strong>${idx===0?`<span class="rank">migliore oggi</span>`:""}</div>
+    <div class="formation-summary"><div><b>${complete?"Schierabile senza malus":`${x.total}/11 coperti`}</b><div class="small">con la rosa attuale</div></div><div class="score"><span>qualità coperti</span><b>${x.avgSc?x.avgSc.toFixed(0):"—"}/100</b></div></div>
+    <div class="formation-bar"><i style="width:${pct}%"></i></div>
+    ${missing.length?`<div class="small">Buchi ottimali</div><div class="slot-tags">${missing.map(s=>`<span class="slot-tag">${esc(s.join("/"))}</span>`).join("")}${x.missing.length>4?`<span class="slot-tag">+${x.missing.length-4}</span>`:""}</div>`:`<div class="target-line"><b>Copertura completa:</b> puoi già costruire questo XI senza fuori ruolo.</div>`}
+    ${targets.length?`<div class="target-line"><b>Mercato utile:</b> ${esc(targets.join(" · "))}</div>`:""}
+  </div>`;
+}
+function formationField(x){
+  if(!x) return "";
+  const counts=x.f.n.split("-").map(Number), rows=[]; let pos=0;
+  counts.forEach(c=>{ rows.push(x.slotPlayers.slice(pos,pos+c)); pos+=c; });
+  const nodes=[];
+  if(x.keeper) nodes.push(`<div class="field-node" style="left:50%;top:89%"><b>${esc(x.keeper.n)}</b><span>Por</span></div>`);
+  else nodes.push(`<div class="field-node missing" style="left:50%;top:89%"><b>POR</b><span>manca</span></div>`);
+  const y0=73,y1=18,step=rows.length>1?(y0-y1)/(rows.length-1):0; let slotIndex=0;
+  rows.forEach((row,ri)=>{
+    const y=y0-ri*step, count=row.length;
+    row.forEach((pl,j)=>{
+      const xPos=(j+1)*100/(count+1), slot=x.f.slots[slotIndex++]||[];
+      nodes.push(`<div class="field-node ${pl?"":"missing"}" style="left:${xPos}%;top:${y}%"><b>${pl?esc(pl.n):esc(slot.join("/"))}</b><span>${pl?esc(slot.join("/")):"da coprire"}</span></div>`);
+    });
+  });
+  return `<div class="tactical-card"><div class="tactical-head"><div><b>${esc(x.f.n)}</b><span>${x.total}/11 coperti senza malus</span></div><span class="tactical-badge">modulo guida</span></div><div class="pitch"><div class="halfway"></div><div class="center-circle"></div><div class="box box-top"></div><div class="box box-bottom"></div>${nodes.join("")}</div></div>`;
+}
+function rosterForTeam(t){
+  return Object.entries(S.asg||{}).filter(([n,a])=>a&&a.t===t).map(([n,a])=>({n,p:byName.get(n),price:a.p})).sort((a,b)=>(b.p?.sc||0)-(a.p?.sc||0));
+}
+function rivalRosterBody(t){
+  const xs=rosterForTeam(t), snap=(S.riv[t]&&S.riv[t].g)||0;
+  if(!xs.length) return `<div class="rival-inline-roster"><p class="small">Nessun nome registrato. Lo snapshot può dirci quanti giocatori ha la squadra, ma non ancora chi sono.</p></div>`;
+  const groups=ROLES.map(r=>({r,arr:xs.filter(x=>x.p&&rolesOf(x.p).includes(r))})).filter(g=>g.arr.length);
+  return `<div class="rival-inline-roster"><div class="small roster-note"><b>${xs.length}${snap?`/${snap}`:""} nomi noti.</b> I pluriruolo compaiono in ogni ruolo Mantra che possono coprire.</div><div class="roster-role-grid">${groups.map(g=>`<div class="roster-role"><div class="roster-role-head">${g.r}<span>${g.arr.length}</span></div>${g.arr.map(x=>`<button data-open="${esc(x.n)}"><b>${esc(x.n)}</b><span>${x.price?esc(x.price)+" cr · ":"⚠ prezzo ? · "}${x.p?esc(x.p.r):"ruolo n.d."}</span></button>`).join("")}</div>`).join("")}</div></div>`;
+}
+function rivalRosterHTML(t){
+  const xs=rosterForTeam(t), snap=(S.riv[t]&&S.riv[t].g)||0;
+  if(!xs.length) return `<details class="roster-detail"><summary>${esc(t)} · nessun nome registrato</summary><p class="small">La foto può dirci quanti giocatori ha, ma non ancora chi sono. Le rose nominali si costruiscono solo con assegnazioni viste o importate.</p></details>`;
+  const groups=ROLES.map(r=>({r,arr:xs.filter(x=>x.p&&rolesOf(x.p).includes(r))})).filter(g=>g.arr.length);
+  return `<details class="roster-detail"><summary><span>${esc(t)}</span><span class="roster-count">${xs.length}${snap?`/${snap}`:""} nomi noti</span></summary><div class="small roster-note">Un pluriruolo compare in tutti i ruoli Mantra in cui è schierabile: il conteggio della rosa resta quello dei ${xs.length} nomi distinti registrati.</div><div class="roster-role-grid">${groups.map(g=>`<div class="roster-role"><div class="roster-role-head">${g.r}<span>${g.arr.length}</span></div>${g.arr.map(x=>`<button data-open="${esc(x.n)}"><b>${esc(x.n)}</b><span>${x.price?esc(x.price)+" cr · ":""}${x.p?esc(x.p.r):"ruolo n.d."}</span></button>`).join("")}</div>`).join("")}</div></details>`;
+}
+function marketMood(st=auctionStats()){
+  if(st.inflN<8) return {label:"campione piccolo",text:`Solo ${st.inflN} prezzi utili: non cambiare strategia sulla base dell'inflazione ancora.`};
+  const p=Math.round((st.infl-1)*100);
+  if(p>=12) return {label:`+${p}% caldo`,text:"La stanza sta pagando sopra le nostre stime: privilegia fit di ruolo e lascia andare gli hype fuori piano."};
+  if(p<=-10) return {label:`${p}% freddo`,text:"I prezzi registrati sono sotto le stime: puoi anticipare qualche acquisto di qualità senza forzare."};
+  return {label:"in linea",text:"Il mercato osservato è vicino alle nostre stime: continua a usare i tetti strategici senza correzioni emotive."};
+}
+function strategyPriorities(){
+  const m=me(), st=auctionStats(), forms=formationAnalysis(), best=forms[0], risks=holeRisks(), openMust=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]), mood=marketMood(st), out=[];
+  if(risks.length){ const x=risks[0]; out.push({icon:"shield",title:`Proteggi ${x.r}`,text:`Te ne mancano ${x.miss} e restano ${x.free} titolari buoni: se esce un profilo coerente non aspettare troppo.`}); }
+  if(best && best.missing.length){ const slots=best.missing.slice(0,3).map(s=>s.join("/")).join(" · "); out.push({icon:"route",title:`Costruisci il ${best.f.n}`,text:`È il modulo oggi meglio coperto (${best.total}/11). I buchi principali sono ${slots}.`}); }
+  if(openMust.length){ const names=openMust.slice(0,3).map(x=>x.n).join(", "); out.push({icon:"target",title:`Tieni cassa per ${openMust.length} MUST`,text:`Ancora liberi: ${names}${openMust.length>3?"…":""}. Riserva stimata: ${m.mustRes} crediti.`}); }
+  if(st.avgPower>0){ if(st.ourPower>st.avgPower*1.18) out.push({icon:"spark",title:"Hai leva sui rilanci",text:`${st.ourPower.toFixed(1)} cr/posto contro ${st.avgPower.toFixed(1)} dei rivali: puoi scegliere uno scontro importante senza dover inseguire tutti.`}); else if(st.ourPower<st.avgPower*.82) out.push({icon:"wallet",title:"Preserva potere d'acquisto",text:`${st.ourPower.toFixed(1)} cr/posto contro ${st.avgPower.toFixed(1)} dei rivali: evita aste marginali e concentra i crediti sui buchi veri.`}); }
+  out.push({icon:"chart",title:`Mercato ${mood.label}`,text:mood.text});
+  return out.slice(0,4);
+}
+function strategyCandidates(best,limit=8){
+  if(!best) return [];
+  const slots=best.missing.filter(s=>!s.includes("Por")), map=new Map();
+  slots.forEach(slot=>{
+    P.filter(p=>!assigned(p.n)&&!teamAvoid(p)&&!S.black.includes(p.n)&&fitsSlot(p,slot)).sort((a,b)=>b.sc-a.sc||market(a)-market(b)).slice(0,5).forEach(p=>{
+      const cur=map.get(p.n)||{p,cover:new Set(),score:0}; cur.cover.add(slot.join("/")); cur.score=(p.sc||0)+cur.cover.size*8; map.set(p.n,cur);
+    });
+  });
+  return [...map.values()].sort((a,b)=>b.score-a.score||market(a.p)-market(b.p)).slice(0,limit);
+}
+function expertAdvice(p,v){
+  const own=mineOf(p.n), gone=S.asg[p.n];
+  if(own) return `È già nostro a ${own.p} crediti: il punto ora è capire come si incastra nei moduli, non rilanciare.`;
+  if(gone) return `È già stato assegnato${gone.t?` a ${gone.t}`:""}${gone.p?` a ${gone.p}`:""}: passa oltre.`;
+  const needs=rolesOf(p).filter(r=>(+MINS[r]||0)>roleCountMine(r)), sca=scarcityForPlayer(p), m=me(), mk=market(p), lim=+v.price||0;
+  if(v.cls==="stop") return teamAvoid(p)?`Passa. Per scelta strategica AS Pinta evita ${p.t}; entra solo nell'ipotesi estrema indicata dal tetto.`:`Passa: oggi il rapporto valore/rischio non giustifica crediti su questo profilo.`;
+  if(v.cls==="must") return `Rilancia con decisione fino a ${lim}. È un MUST: il budget è già impostato per proteggerne l'acquisto; oltre ${lim} fermati.`;
+  if(v.cls==="go"){
+    const roleTxt=needs.length?` In più copre ${needs.join("/")}, ruol${needs.length>1?"i":"o"} ancora da costruire.`:"";
+    const scarce=sca&&sca.level!=="ok"?` La disponibilità sul ruolo ${sca.r} si sta stringendo: qui aspettare troppo costa alternative.`:"";
+    const priceTxt=lim>=mk?`Se resta intorno alla stima di mercato (${mk}), è un acquisto coerente.`:`La cassa attuale ti impone disciplina: non superare ${lim}, anche se il mercato lo valuta ${mk}.`;
+    return `Rilancia controllato fino a ${lim}. ${priceTxt}${roleTxt}${scarce}`;
+  }
+  if(v.cls==="warn") return `Aspetta il prezzo. Entra solo se resta davvero a sconto e non oltre ${lim}; se l'asta accelera, meglio conservare crediti per profili più centrali nella strategia.`;
+  return `Valuta il prezzo, ma senza inseguire: la priorità resta mantenere flessibilità per i ruoli ancora scoperti e i MUST.`;
 }
 function verdict(p){
   const own = mineOf(p.n), gone = S.asg[p.n];
@@ -449,28 +709,109 @@ function verdict(p){
   return {cls:"warn", what:"Solo se costa poco", price: lim, lab:"fino a", tip};
 }
 
+
+function missingPriceAssignments(){
+  const out=[];
+  (S.mine||[]).forEach(x=>{ if(!(Number(x.p)>0)) out.push({n:x.n,t:NOI,kind:"nostro"}); });
+  Object.entries(S.asg||{}).forEach(([n,a])=>{ if(a && !(Number(a.p)>0)) out.push({n,t:a.t||"squadra da verificare",kind:"rivale"}); });
+  return out;
+}
+function geNoteHTML(p){
+  if(!p || !p.ge) return "";
+  const score=p.geScore?`<span class="expert-score">GE ${esc(p.geScore)}/10</span>`:"";
+  return `<div class="expert-note"><div class="expert-note-head"><b>🧠 Dritta Gruppo Esperti</b>${score}</div><p>${esc(p.ge)}</p><div style="margin-top:6px"><a href="https://forum.gruppoesperti.it/viewtopic.php?t=232729" target="_blank" rel="noopener">Schede squadra 2026/27 ↗</a></div></div>`;
+}
+function checkAIText(){
+  const m=me(), st=auctionStats(), forms=formationAnalysis(), best=forms[0], risks=holeRisks(), budgets=budgetStatus(), missing=missingPriceAssignments(), mood=marketMood(st), priorities=strategyPriorities();
+  const lines=[];
+  lines.push(`# AS Pinta — CheckAI asta Mantra`);
+  lines.push(`Generato: ${new Date().toLocaleString("it-IT")}`);
+  lines.push(``);
+  lines.push(`## Istruzione per il chatbot`);
+  lines.push(`Agisci da esperto di Fantacalcio Mantra. Verifica criticamente la strategia di AS Pinta sulla base SOLO dei dati sotto. Controlla: equilibrio budget, copertura dei moduli, scarsità dei ruoli, potere d'acquisto rispetto ai rivali, coerenza dei MUST, rischi di sovrappagare e 3 priorità operative per i prossimi acquisti. Segnala esplicitamente eventuali dati incompleti, soprattutto prezzi mancanti, e non inventare rose rivali non registrate.`);
+  lines.push(``);
+  lines.push(`## Situazione sintetica`);
+  lines.push(currentSituationText());
+  lines.push(`Mercato osservato: ${mood.label} (${st.inflN} prezzi utili).`);
+  lines.push(`Strategia: stile ${S.set.stile}; tetto stella ${S.set.tetto}% del budget; cuscinetto finale ${S.set.riserva}; profilo budget ${S.set.profiloBudget||"Equilibrato"}.`);
+  lines.push(``);
+  lines.push(`## Priorità suggerite dall'app`);
+  priorities.forEach((x,i)=>lines.push(`${i+1}. ${x.title}: ${x.text}`));
+  lines.push(``);
+  lines.push(`## Rosa AS Pinta (${S.mine.length} giocatori)`);
+  (S.mine||[]).forEach(x=>{ const p=byName.get(x.n); lines.push(`- ${x.n}; ${p?p.t:"?"}; ruoli ${p?p.r:(x.por?"Por":"?")}; prezzo ${x.p||"MANCANTE"}; score ${p?p.sc:"?"}`); });
+  lines.push(``);
+  lines.push(`## Moduli Mantra`);
+  forms.slice(0,5).forEach((x,i)=>lines.push(`- ${i===0?"GUIDA ":""}${x.f.n}: ${x.total}/11 coperti; buchi ${x.missing.length?x.missing.map(z=>z.join('/')).join(', '):'nessuno'}`));
+  lines.push(``);
+  lines.push(`## Rischi di copertura`);
+  if(risks.length) risks.forEach(x=>lines.push(`- ${x.r}: mancano ${x.miss}; titolari buoni liberi ${x.free}; fabbisogno lega stimato ${x.need}`)); else lines.push(`- Nessun allarme forte rilevato.`);
+  lines.push(``);
+  lines.push(`## Budget per reparto`);
+  budgets.forEach(x=>lines.push(`- ${x.a}: spesi ${x.spent}; target ${x.target} (${x.pct}%)`));
+  lines.push(``);
+  lines.push(`## MUST ancora aperti`);
+  const om=(S.must||[]).filter(x=>!mineOf(x.n)&&!S.asg[x.n]);
+  if(om.length) om.forEach(x=>{const p=byName.get(x.n);lines.push(`- ${x.n}; max ${x.max||"auto"}; mercato ${p?market(p):"?"}; tetto ${p?maxFor(p):"?"}`)}); else lines.push(`- Nessuno.`);
+  lines.push(``);
+  lines.push(`## Da evitare`);
+  lines.push(`Manuali: ${(S.black||[]).join(', ')||'nessuno'}. Squadre ultima spiaggia: ${(CFG.evitaSquadre||[]).join(', ')||'nessuna'}.`);
+  lines.push(``);
+  lines.push(`## Rivali`);
+  RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t]),known:rosterForTeam(t)})).sort((a,b)=>b.power-a.power).forEach(x=>{
+    lines.push(`### ${x.t}`); lines.push(`Crediti ${x.r.c}; giocatori snapshot ${x.r.g}; portieri ${x.r.p}; potere d'acquisto ${x.power.toFixed(1)} cr/posto; nomi registrati ${x.known.length}.`);
+    x.known.forEach(z=>lines.push(`- ${z.n}; ruoli ${z.p?z.p.r:'?'}; prezzo ${z.price||'MANCANTE'}`));
+  });
+  lines.push(``);
+  lines.push(`## Qualità dati`);
+  if(missing.length) missing.forEach(x=>lines.push(`- ⚠ PREZZO MANCANTE: ${x.n}; ${x.t}`)); else lines.push(`- Nessuna assegnazione registrata senza prezzo.`);
+  if(S.upd) lines.push(`Ultimo snapshot rivali: ${S.upd}.`);
+  (S.updates||[]).slice(-3).forEach(u=>lines.push(`- Update ${new Date(u.ts).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}: ${fmtUpdate(u)}`));
+  return lines.join("\n");
+}
+function downloadText(name,text,type="text/markdown"){
+  const blob=new Blob([text],{type}); const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},700);
+}
+
 /* ---------- interfaccia ---------- */
-let tab = "cerca", selected = null, query = "", roleSel = "Pc", importPreview = null, resetArm = false, auctionMode = false;
+let tab = "cerca", selected = null, query = "", roleSel = "Pc", importPreview = null, resetArm = false, auctionMode = false, rivalOpen = null;
 const $ = s => document.querySelector(s);
 function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2200); }
 function commit(msg){ persist(); render(); if (msg) toast(msg); }
 
+/* Curated inline vector set in the Lucide visual language (ISC): self-contained, no CDN at auction time. */
 const ICONS = {
-  cerca:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>',
-  rosa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>',
-  rivali:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 5-5s5 2 5 5"/></svg>',
-  importa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>',
-  obiettivi:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>',
-  impostazioni:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>'
+  cerca:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
+  rosa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/><path d="M7 3v18M17 3v18"/></svg>',
+  rivali:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  importa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"/><circle cx="12" cy="13" r="3"/></svg>',
+  obiettivi:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+  impostazioni:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3"/><path d="M1 14h6M9 8h6M17 16h6"/></svg>'
 };
 const TABNAMES = {cerca:"Cerca", rosa:"Rosa", rivali:"Rivali", importa:"Da foto", obiettivi:"Obiettivi", impostazioni:"Impostazioni"};
+const METRIC_ICONS={
+  wallet:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7V5a2 2 0 0 0-2-2H5a3 3 0 0 0 0 6h15v10H5a3 3 0 0 1-3-3V6"/><path d="M16 13h2"/></svg>',
+  users:ICONS.rivali, target:ICONS.obiettivi, camera:ICONS.importa, settings:ICONS.impostazioni, search:ICONS.cerca,
+  info:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
+  shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V5l8-3 8 3v8Z"/><path d="m9 12 2 2 4-4"/></svg>',
+  chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 16 4-5 4 3 5-7"/></svg>',
+  spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/></svg>',
+  clipboard:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="18" x="5" y="3" rx="2"/><path d="M9 3V1h6v2M9 9h6M9 13h6M9 17h4"/></svg>',
+  layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>',
+  trophy:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3"/></svg>',
+  route:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h5.5a3.5 3.5 0 0 0 0-7H9.5a3.5 3.5 0 0 1 0-7H18"/><circle cx="18" cy="5" r="3"/></svg>',
+  eye:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.1 12a10.5 10.5 0 0 1 19.8 0 10.5 10.5 0 0 1-19.8 0Z"/><circle cx="12" cy="12" r="3"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+};
+const mi=n=>METRIC_ICONS[n]||METRIC_ICONS.chart;
+function sectionTitle(icon,title,sub=""){ return `<div class="section-title"><span class="sec-icon">${mi(icon)}</span><div><h2>${esc(title)}</h2>${sub?`<div class="sec-sub">${esc(sub)}</div>`:""}</div></div>`; }
 
 function render(){
   const m = me(), u=undoInfo();
   document.body.classList.toggle("auction", auctionMode);
-  $("#topbar").innerHTML = `<b>${esc(NOI)}${IS_BETA ? " · BETA" : ""}</b><button class="pill sync" id="syncpill" data-tab="impostazioni"></button>
+  $("#topbar").innerHTML = `<b><span class="brandmark">AP</span><span>${esc(NOI)}${IS_BETA ? " · BETA" : ""}</span></b><button class="pill sync" id="syncpill" data-tab="impostazioni"></button>
     <span class="pill">Crediti <strong>${m.rem}</strong></span><span class="pill">Rosa <strong>${m.tot}</strong>/${RULES.porMin + RULES.movMin}+</span>
-    <span class="pill">Max mov <strong>${m.consMov}</strong></span><span class="pill">Max por <strong>${m.consPor}</strong></span>
+    <span class="pill">Mov fino a <strong>${m.consMov}</strong></span><span class="pill">Por fino a <strong>${m.consPor}</strong></span>${missingPriceAssignments().length?`<button class="pill" data-tab="obiettivi" title="Assegnazioni senza prezzo: controlla i dati">⚠ prezzi ${missingPriceAssignments().length}</button>`:""}${DATA_WARNINGS.length?`<span class="pill" title="Controlla Impostazioni">⚠ ${DATA_WARNINGS.length}</span>`:""}
     <button class="pill" data-undolast ${u ? "" : "disabled"} title="${u ? esc(u.label) : "Niente da annullare"}">↶ Annulla</button>`;
   $("#tabs").innerHTML = Object.keys(TABNAMES).map(k => `<button data-tab="${k}" ${k===tab?'aria-current="page"':''}>${ICONS[k]}${TABNAMES[k]}</button>`).join("");
   const app = $("#app");
@@ -492,185 +833,316 @@ function viewCerca(){
   const tools=`<div class="search-tools"><button class="btn small" data-auctionmode><span class="mode-label">${auctionMode?"Esci da ":""}modalità asta</span>${auctionMode?" ×":" ⛶"}</button></div>`;
   const html = `<div class="search"><input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Cognome del giocatore uscito" value="${esc(query)}" aria-label="Cerca giocatore">${tools}</div>`;
   const list=resultsHTML();
-  return html + `<div id="res" class="search-stage ${selected?'has-detail':''}">${selected ? `<div class="listpane">${list}</div><div class="detailpane">${card(byName.get(selected))}</div>` : list}</div>`;
+  const content=selected
+    ? `<div class="listpane">${list}</div><div class="detailpane">${card(byName.get(selected))}</div>`
+    : `${list}${!norm(query)?recentAuctionHTML():""}`;
+  return html + `<div id="res" class="search-stage ${selected?'has-detail':''}">${content}</div>`;
 }
 function resultsHTML(){
   const res = searchPlayers(query);
   if (!query) return `<p class="empty">Esce un nome all'asta: scrivi 2-4 lettere del cognome. Juve e Lazio ci sono, ma per AS Pinta sono "ultima spiaggia".</p>`;
   if (norm(query).length >= 2 && !res.length) return `<div class="card"><b>Non trovato.</b><p class="small">Prova solo il cognome o una grafia più corta.</p></div>`;
-  return `<ul class="results">` + res.map(p => `<li><button data-open="${esc(p.n)}"><span class="grow"><span class="nm">${esc(p.n)}</span><br><span class="meta">${esc(p.t)}, ${esc(p.r)}</span></span>${miniTag(p)}</button></li>`).join("") + `</ul>`;
+  return `<ul class="results">` + res.map(p => { const pi=passInfo(p.n); return `<li><button data-open="${esc(p.n)}"><span class="grow"><span class="nm">${esc(p.n)}${pi?`<span class="pass-tag">↺ già passato</span>`:""}</span><br><span class="meta">${clubBadge(p.t)} <span style="margin-left:5px">${esc(p.r)}</span></span></span>${miniTag(p)}</button></li>`; }).join("") + `</ul>`;
 }
 function card(p){
   if(!p) return `<div class="card"><b>Giocatore non trovato.</b></div>`;
-  const v = verdict(p), must = mustOf(p.n), black = S.black.includes(p.n), own = mineOf(p.n), gone = S.asg[p.n], sca=scarcityForPlayer(p), alts=alternatives(p);
-  const facts = [
-    ["Squadra", p.t + (p.v ? "" : " (da verificare)")], ["Ruoli Mantra", p.r], ["Fascia SOS", p.ft + " (" + p.tr + ")"],
-    ["Titolarità", p.s], ["Rigori / piazzati", (p.rg || "no") + " / " + (p.pz || "no")], ["Mercato stimato", market(p) + " crediti"],
-    ["Tetto consigliato", maxFor(p) + " crediti"], ["Punteggio", p.sc + "/100"], ["Consiglio", consOf(p)]
-  ];
-  let h = `<div class="verdict ${v.cls}"><div class="who">${esc(p.n)}, ${esc(p.t)}</div><div class="what">${esc(v.what)}</div>
-    <div class="price">${v.price !== "" ? `<small>${esc(v.lab)}</small>${esc(v.price)}` : ""}</div>${v.tip ? `<div class="tip">${esc(v.tip)}</div>` : ""}</div>`;
+  const v = verdict(p), must = mustOf(p.n), black = S.black.includes(p.n), own = mineOf(p.n), gone = S.asg[p.n], sca=scarcityForPlayer(p), alts=alternatives(p), passed=passInfo(p.n), advice=expertAdvice(p,v);
+  const liveLimit=(v.price!==""&&v.price!==undefined)?`${v.price} cr`:"—";
+  let h = `<div class="verdict ${v.cls}"><div class="who"><b>${esc(p.n)}</b> · ${clubBadge(p.t)}</div><div class="what">${esc(v.what)}</div>
+    <div class="price">${v.price !== "" ? `<small>${esc(v.lab)}</small>${esc(v.price)}` : ""}</div>
+    <div class="expert-call"><div class="eyebrow">Consiglio d'asta</div><strong>${esc(advice)}</strong></div>${v.tip ? `<div class="tip">${esc(v.tip)}</div>` : ""}</div>`;
+  h += `<div class="quick-flags"><button class="quick-flag ${must?'must-on':''}" data-must="${esc(p.n)}">★ ${must?'MUST attivo':'Segna MUST'}</button><button class="quick-flag ${black?'avoid-on':''}" data-black="${esc(p.n)}">⊘ ${black?'Da evitare':'Segna da evitare'}</button></div>`;
+  if(passed && !own && !gone) h+=`<div class="card pass-note"><b>↺ Già passato e ancora libero.</b> <span class="small">Ultimo passaggio alle ${new Date(passed.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}. Può essere ripescato normalmente.</span></div>`;
   if (own || gone){
     h += `<div class="row auction-actions"><button class="btn danger" data-undo="${esc(p.n)}">Annulla assegnazione</button><button class="btn dark" data-back>Nuova ricerca</button></div>`;
   } else {
-    h += `<div class="card"><h3 style="margin-top:0">Com'è finita?</h3><div class="row auction-actions" style="align-items:flex-end">
-      <label class="field">Prezzo<input id="price" type="number" inputmode="numeric" min="1" placeholder="cr"></label><button class="btn primary" data-buy="${esc(p.n)}">Preso da noi</button></div>
-      <div class="row auction-actions" style="align-items:flex-end;margin-top:8px"><label class="field" style="flex:1">Squadra<select id="team"><option value="">non so</option>${RIVALS.map(t => `<option>${esc(t)}</option>`).join("")}</select></label>
-      <button class="btn dark" data-other="${esc(p.n)}">Preso da altri</button></div><p class="small">Se metti squadra + prezzo, aggiorno il rivale. I successivi screenshot possono correggere il dato.</p></div>`;
-    h += `<div class="row"><button class="btn" data-back>Nuova ricerca</button></div>`;
+    h += `<div class="card outcome-card"><div class="outcome-head"><div><h3 style="margin:0">Registra l'esito dell'estrazione</h3><div class="small">Inserisci il prezzo, scegli chi lo ha preso (o Scartato) e conferma.</div></div><label class="price-fast">Prezzo<input id="price" type="number" inputmode="numeric" min="1" placeholder="cr"></label></div>
+      <div class="outcome-grid">
+        <label class="outcome-choice doubt"><input type="radio" name="outcomeChoice" value=""><span>?<small>da verificare</small></span></label>
+        <label class="outcome-choice pinta"><input type="radio" name="outcomeChoice" value="__PINTA__"><span>AS Pinta<small>nostro</small></span></label>
+        <label class="outcome-choice passed"><input type="radio" name="outcomeChoice" value="__SCARTATO__"><span>Scartato<small>resta libero</small></span></label>
+        ${RIVALS.map(t=>`<label class="outcome-choice rival"><input type="radio" name="outcomeChoice" value="${esc(t)}"><span>${esc(t)}</span></label>`).join("")}
+      </div>
+      <button class="btn primary outcome-ok" data-outcome="${esc(p.n)}">OK · registra e passa al prossimo</button>
+      <p class="small">“? da verificare” conserva l'estrazione senza inventare dati: una foto successiva potrà completare squadra o prezzo.</p></div>`;
   }
   if (p.i) h += `<div class="card" style="border-color:#E7C07A;background:#FFF8EA"><b>Infortunio:</b> ${esc(p.i)}</div>`;
-  if (sca && sca.level!=="ok") h += `<div class="card"><span class="badge ${sca.level}">Scarsità ${esc(sca.r)}</span> <span class="small">${sca.free} titolari buoni liberi / ~${sca.need} slot di lega ancora scoperti. Il tetto è già corretto leggermente.</span></div>`;
-  h += `<div class="card"><dl class="facts">${facts.map(f => `<div><dt>${f[0]}</dt><dd>${esc(f[1])}</dd></div>`).join("")}</dl>
-    ${p.no ? `<p class="note"><b>Perché:</b> ${esc(p.no)}</p><p class="small">Fonte del “Perché”: dati SOS Fanta + Fantacalcio.it già inclusi nel dataset.</p>` : ""}<p class="small">Fasce per ruolo: ${esc(p.fr)}${p.fe ? ". Valore FVM stimato dalla fascia." : ""}</p></div>`;
-  if(!own && !gone && alts.length) h += `<div class="card"><h3 style="margin-top:0">Alternative libere dello stesso ruolo</h3><div class="alt-grid">${alts.map(a=>`<button class="alt-card" data-open="${esc(a.n)}"><b>${esc(a.n)}</b><span class="small">${esc(a.t)} · ${esc(a.r)} · ${esc(a.ft)}</span><span class="small">max ${maxFor(a)} · mercato ${market(a)}</span></button>`).join("")}</div></div>`;
-  h += `<div class="row" style="margin-top:8px"><button class="btn small" data-must="${esc(p.n)}">${must ? "Togli dai MUST" : "Aggiungi ai MUST"}</button>
-    <button class="btn small" data-black="${esc(p.n)}">${black ? "Togli da evitare" : "Metti tra da evitare"}</button></div>`;
+  if (sca && sca.level!=="ok") h += `<div class="card"><span class="badge ${sca.level}">Scarsità ${esc(sca.r)}</span> <span class="small">${sca.free} titolari buoni ancora liberi per circa ${sca.need} slot di lega da coprire. Il tetto del giocatore tiene già conto di questa pressione.</span></div>`;
+  h += `<div class="fanta-metrics">
+      <div class="fanta-metric"><div class="label">Stima mercato</div><strong>${market(p)} cr</strong><div class="explain">Quanto ci aspettiamo che possa costare in una lega come la vostra, sulla base del FVM e della taratura del mercato.</div></div>
+      <div class="fanta-metric"><div class="label">Tetto strategico AS Pinta</div><strong>${maxFor(p)} cr</strong><div class="explain">Quanto vale per noi in assoluto: qualità, ruolo, strategia e scarsità. Non considera ancora quanto puoi spendere oggi.</div></div>
+      <div class="fanta-metric"><div class="label">Limite operativo oggi</div><strong>${liveLimit}</strong><div class="explain">Il vero “fino a”: tiene conto dei crediti rimasti, degli slot obbligatori, della riserva e dei MUST ancora da prendere.</div></div>
+    </div>`;
+  h += `<div class="card"><h3 style="margin-top:0">Identikit fantacalcistico</h3>
+    <div class="identity-summary"><div class="identity-primary"><div class="label">Profilo rapido</div><div class="bigline">${esc(p.r)} · ${esc(p.ft)}</div><div class="subline">${esc(p.s)}${p.rg?` · ${esc(p.rg)} rigorista`:''}${p.pz?` · piazzati`:''}</div></div><div class="identity-primary"><div class="label">Valutazione AS Pinta</div><div class="bigline">${p.sc}/100 · ${esc(consOf(p))}</div><div class="subline">ruolo guida ${esc(p.tr)} · FVM ${esc(p.fv)}${p.fe?' stimato':''}</div></div></div>
+    ${geNoteHTML(p)}
+    ${p.no ? `<div class="expert-note" style="background:#F8F5F0"><div class="expert-note-head"><b>📌 Lettura AS Pinta</b></div><p>${esc(p.no)}</p></div>` : ""}
+    <details style="margin-top:9px"><summary>Dati tecnici completi</summary><div class="identity-grid" style="margin-top:7px">
+      <div class="identity-item"><div class="label">Ruoli Mantra</div><b>${esc(p.r)}</b></div>
+      <div class="identity-item"><div class="label">Fasce per ruolo</div><b>${esc(p.fr)}</b></div>
+      <div class="identity-item"><div class="label">Titolarità</div><b>${esc(p.s)}</b></div>
+      <div class="identity-item"><div class="label">Rigori / piazzati</div><b>${esc((p.rg||"no")+" / "+(p.pz||"no"))}</b></div>
+    </div></details></div>`;
+  if(!own && !gone && alts.length) h += `<div class="card"><h3 style="margin-top:0">Alternative ancora libere</h3>${helpBox("Tre profili liberi dello stesso ruolo guida: servono per capire subito cosa perdi se lasci questo giocatore e quanto margine resta sul mercato.","Confronto rapido")}<div class="alt-grid">${alts.map(a=>`<button class="alt-card" data-open="${esc(a.n)}"><b>${esc(a.n)}</b><span class="small">${clubBadge(a.t)} <span style="margin-left:4px">${esc(a.r)} · ${esc(a.ft)}</span></span><span class="small">mercato ${market(a)} · tetto ${maxFor(a)}</span></button>`).join("")}</div></div>`;
   return h;
 }
-
 function viewRosa(m){
-  const cov = ROLES.map(r => [r, roleCountMine(r)]), st=auctionStats(), risks=holeRisks(), close=closingCandidates(), budgets=budgetStatus();
-  let h = `<h2>La nostra rosa</h2><h3>Cruscotto asta</h3><div class="dash-grid">
-    <div class="kpi main"><span>Asta tracciata</span><strong>${st.comp}%</strong><span>${st.tracked}/${st.target} slot target</span></div>
-    <div class="kpi"><span>Budget speso lega*</span><strong>${st.spentPct}%</strong></div>
-    <div class="kpi"><span>Inflazione osservata*</span><strong>${st.inflN>=8?st.infl.toFixed(2)+'×':'—'}</strong><span>${st.inflN} prezzi noti</span></div>
-    <div class="kpi"><span>Crediti/slot noi</span><strong>${st.ourPower.toFixed(1)}</strong></div>
-    <div class="kpi"><span>Crediti/slot rivali</span><strong>${st.avgPower.toFixed(1)}</strong><span>media snapshot</span></div></div>
-    <p class="small">*Indicatori di fotografia: con aggiornamenti a salti possono essere incompleti. Non modificano automaticamente i tetti.</p>
-    <div class="kpis"><div class="kpi main"><span>Crediti rimasti</span><strong>${m.rem}</strong></div>
-    <div class="kpi"><span>Offerta max movimento</span><strong>${m.consMov}</strong><span>tecnica ${m.tecMov}</span></div>
-    <div class="kpi"><span>Offerta max portiere</span><strong>${m.consPor}</strong><span>tecnica ${m.tecPor}</span></div>
-    <div class="kpi"><span>Portieri (2-4)</span><strong>${m.por}</strong></div><div class="kpi"><span>Movimento (23-26)</span><strong>${m.mov}</strong></div>
-    <div class="kpi"><span>Riservati MUST/finale</span><strong>${m.mustRes + m.finRes}</strong></div></div>
-    <h3>Copertura ruoli</h3><div class="chips">${cov.map(([r,n]) => `<span class="chip ${n >= MINS[r] ? "ok" : "no"}">${r} ${n}/${MINS[r]}</span>`).join("")}</div>`;
-  if(risks.length) h += `<div class="card risk-card"><b>Rischio buco</b><p class="small">Attenzione ai ruoli in cui la disponibilità utile si sta stringendo.</p>${risks.map(x=>`<div class="list-item"><b>${x.r}</b><span class="grow small">te ne mancano ${x.miss}; titolari buoni liberi ${x.free}</span></div>`).join("")}</div>`;
-  if(close.length) h += `<div class="card close-now"><b>Chiudi ora (1–3 crediti)</b><p class="small">Migliori liberi economici che coprono almeno un ruolo ancora sotto minimo.</p>${close.map(x=>`<div class="list-item"><span class="grow"><button data-open="${esc(x.p.n)}" style="border:0;background:none;padding:0;font-weight:700">${esc(x.p.n)}</button><br><span class="small">${esc(x.p.t)} · ${esc(x.p.r)} · copre ${x.cover} bisogno/i</span></span><span>${market(x.p)} cr</span></div>`).join("")}</div>`;
-  h += `<h3>Budget per reparto · ${esc(S.set.profiloBudget || 'Equilibrato')}</h3><div class="budget-grid">${budgets.map(x=>`<div class="budget-item"><span class="small">${x.a} · target ${x.pct}%</span><br><strong>${x.spent}</strong> / ${x.target}<br><span class="small">${x.spent<=x.target?'margine '+(x.target-x.spent):'oltre target '+(x.spent-x.target)}</span></div>`).join("")}</div>
-    <p class="small">I preset reparto sono configurabili in config.json; servono come bussola, non bloccano gli acquisti.</p><h3>Acquisti (${S.mine.length})</h3>`;
-  h += S.mine.length ? `<div class="card">` + S.mine.map((x,i) => { const p = byName.get(x.n); return `<div class="list-item"><span class="grow"><b>${esc(x.n)}</b><br><span class="small">${p ? esc(p.t + ", " + p.r + ", tetto " + maxFor(p)) : (x.por ? "portiere fuori lista" : "fuori lista")}</span></span>
+  const cov = ROLES.filter(r => (+MINS[r]||0)>0).map(r => [r, roleCountMine(r)]), st=auctionStats(), risks=holeRisks(), close=closingCandidates(), budgets=budgetStatus(), forms=formationAnalysis();
+  const inflPct=Math.round((st.infl-1)*100), inflLabel=st.inflN>=8?(inflPct===0?"in linea":`${inflPct>0?"+":""}${inflPct}%`):"—", inflExplain=st.inflN>=8?(inflPct>0?`I prezzi registrati sono circa ${inflPct}% sopra le stime dell'app.`:inflPct<0?`I prezzi registrati sono circa ${Math.abs(inflPct)}% sotto le stime dell'app.`:"I prezzi registrati sono sostanzialmente in linea con le stime."):`Servono almeno 8 prezzi noti prima di leggerlo seriamente.`;
+  let h = `<div class="section-head">${sectionTitle("layers","La nostra rosa","cassa, copertura e costruzione tattica")}<div class="hero-tools"><button class="btn small share-btn" data-sharestate>↗ Condividi stato</button></div></div>
+    ${helpBox("Questa schermata non serve solo a contare i giocatori: ti dice quanta libertà di spesa hai, dove rischi un buco e quali moduli Mantra stai costruendo davvero.","Lettura da fantallenatore")}
+    <div class="card kpi main"><div class="hero-progress"><div class="progress-ring" style="--p:${st.comp}"><span>${st.comp}%</span></div><div><span>Dati d'asta registrati</span><strong>${st.tracked}/${st.target}</strong><div class="small">confronto col target teorico di rose complete: è una fotografia del tool, non l'avanzamento ufficiale dell'asta</div></div></div></div>
+    <div class="fanta-metrics">
+      <div class="fanta-metric"><div class="label">Crediti disponibili</div><strong>${m.rem}</strong><div class="explain">La cassa reale di AS Pinta dopo gli acquisti già registrati.</div></div>
+      <div class="fanta-metric"><div class="label">Movimento · puoi arrivare a</div><strong>${m.consMov} cr</strong><div class="explain">Massimo consigliato su un singolo giocatore di movimento oggi, lasciando coperti posti obbligatori, MUST e riserva finale.</div></div>
+      <div class="fanta-metric"><div class="label">Portiere · puoi arrivare a</div><strong>${m.consPor} cr</strong><div class="explain">Stessa logica, ma applicata a un portiere.</div></div>
+      <div class="fanta-metric"><div class="label">Mercato della stanza</div><strong>${inflLabel}</strong><div class="explain">${esc(inflExplain)} È un termometro: non alza automaticamente i tuoi tetti.</div></div>
+      <div class="fanta-metric"><div class="label">Potere d'acquisto</div><strong>${st.ourPower.toFixed(1)} cr/posto</strong><div class="explain">Crediti rimasti divisi per i posti minimi ancora da riempire. Media rivali: ${st.avgPower.toFixed(1)}. Più sei sopra, più puoi permetterti di vincere rilanci.</div></div>
+      <div class="fanta-metric"><div class="label">Rosa attuale</div><strong>${m.tot}</strong><div class="explain">${m.por} portieri · ${m.mov} giocatori di movimento. Minimo lega: ${RULES.porMin} + ${RULES.movMin}.</div></div>
+    </div>
+    <h3>Copertura minima dei ruoli</h3>${helpBox("È il controllo di sicurezza: confronta quanti giocatori possiedi per ogni ruolo Mantra con i minimi prudenziali impostati. Non dice ancora quale modulo puoi schierare: quello è il blocco tattico subito sotto.","Prima evita i buchi")}
+    <div class="role-grid">${cov.map(([r,n])=>{const min=+MINS[r]||0,pct=min?Math.min(100,Math.round(n/min*100)):100,cl=n>=min?'ok':'warn';return `<div class="role-meter ${cl}"><div class="topline"><span>${r}</span><span>${n}/${min}</span></div><div class="mini-bar"><i style="width:${pct}%"></i></div></div>`}).join("")}</div>`;
+  if(risks.length) h += `<div class="card risk-card"><b>Rischio buco</b><p class="small">Qui non guardo solo quanti te ne mancano: considero anche quanti titolari utili sono ancora liberi. Se un ruolo si restringe, diventa più urgente.</p>${risks.map(x=>`<div class="list-item"><b>${x.r}</b><span class="grow small">te ne mancano ${x.miss}; titolari buoni ancora liberi ${x.free}</span></div>`).join("")}</div>`;
+  h += `<h3>Moduli Mantra: cosa puoi costruire</h3>${helpBox("Analizzo gli 11 moduli ufficiali Mantra senza fuori ruolo e assegno ogni tuo giocatore una sola volta nel ruolo migliore possibile. “Coperti” significa quanti degli 11 posti puoi riempire oggi; sui buchi ti indico anche un profilo ancora libero che potrebbe aiutare. In BASIC il sistema può cambiare modulo durante le sostituzioni, quindi avere 2-3 schemi ben coperti è un vantaggio.","La lettura tattica")}
+    <div class="formation-grid">${forms.slice(0,4).map((x,i)=>formationCard(x,i)).join("")}</div>
+    ${forms[0]?`<h3 class="icon-heading">${mi("eye")} XI tattico sul campo · modulo migliore oggi</h3>${formationField(forms[0])}`:""}
+    <details><summary>Vedi tutti gli 11 moduli</summary><div class="formation-grid">${forms.map((x,i)=>formationCard(x,i)).join("")}</div></details>`;
+  if(close.length) h += `<div class="card close-now"><b>Finale asta: profili da 1–3 crediti</b><p class="small">Compare solo quando mancano al massimo tre giocatori di movimento. Sono liberi economici che coprono almeno un ruolo ancora sotto il minimo.</p>${close.map(x=>`<div class="list-item"><span class="grow"><button data-open="${esc(x.p.n)}" style="border:0;background:none;padding:0;font-weight:700">${esc(x.p.n)}</button><br><span class="small">${esc(x.p.t)} · ${esc(x.p.r)} · copre ${x.cover} bisogno/i</span></span><span>${market(x.p)} cr</span></div>`).join("")}</div>`;
+  h += `<h3>Budget per reparto · ${esc(S.set.profiloBudget || 'Equilibrato')}</h3>${helpBox("È una bussola, non un vincolo: confronta quanto hai già speso in ogni zona del campo con il profilo scelto. Se sfori un reparto devi sapere consapevolmente dove recuperare crediti negli altri.","Distribuzione dei crediti")}<div class="budget-grid">${budgets.map(x=>{const pc=x.target?Math.round(x.spent/x.target*100):0;return `<div class="budget-item"><span class="small">${x.a} · obiettivo ${x.pct}%</span><br><strong>${x.spent}</strong> / ${x.target}<div class="budget-bar"><i class="${pc>100?'over':''}" style="width:${Math.min(100,pc)}%"></i></div><span class="small">${x.spent<=x.target?'margine '+(x.target-x.spent):'oltre target '+(x.spent-x.target)}</span></div>`}).join("")}</div>
+    <h3>Acquisti (${S.mine.length})</h3>${helpBox("Qui correggi soltanto eventuali errori di prezzo o rimuovi un acquisto registrato male. La gestione ordinaria passa dalla scheda del giocatore.","Rosa registrata")}`;
+  h += S.mine.length ? `<div class="card">` + S.mine.map((x,i) => { const p = byName.get(x.n); return `<div class="list-item"><span class="grow"><b>${esc(x.n)}</b><br><span class="small">${p ? clubBadge(p.t)+` <span style="margin-left:4px">${esc(p.r)} · tetto strategico ${maxFor(p)}</span>` : "dato non presente nel listone"}</span></span>
       <input type="number" inputmode="numeric" value="${esc(x.p)}" data-editprice="${i}" style="width:70px;font-size:17px;padding:6px;border:1px solid var(--line);border-radius:8px;text-align:right"><button class="btn small danger" data-del="${i}">Togli</button></div>`; }).join("") + `</div>` : `<p class="empty">Ancora nessun acquisto.</p>`;
-  h += `<details><summary>Aggiungi un giocatore fuori lista</summary><div class="row" style="align-items:flex-end;padding-bottom:10px"><label class="field">Nome<input id="xname" type="text"></label><label class="field">Prezzo<input id="xprice" type="number" inputmode="numeric"></label>
-      <label class="field">Ruolo<select id="xpor"><option value="0">Movimento</option><option value="1">Portiere</option></select></label><button class="btn primary" data-addx>Aggiungi</button></div></details>`;
   const last = S.log.slice(-40).reverse();
   h += `<details><summary>Storico azioni (${S.log.length})</summary>${last.length ? last.map(e => `<div class="list-item small"><span style="width:52px">${new Date(e.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}</span><span class="grow">${esc(e.a)}: <b>${esc(e.n)}</b> ${esc(e.t)} ${e.p !== "" ? esc(e.p) : ""}</span></div>`).join("") : `<p class="small">Nessuna azione.</p>`}</details>`;
   return h;
 }
-
 function viewRivali(){
-  const rows=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t])})).sort((a,b)=>b.power-a.power), tm=topRival(false).v;
-  let h = `<h2>Rivali</h2><p class="small">Ordinati per potere d'acquisto = crediti / slot obbligatori ancora da riempire. È una fotografia dell'ultimo aggiornamento, non una cronologia perfetta. ${S.upd ? "Ultimo update: " + esc(S.upd) + "." : "Mai aggiornati."}</p>
-    <div class="card tscroll" style="padding:6px 8px"><table><thead><tr><th>Squadra</th><th>Crediti</th><th>Gioc.</th><th>Por</th><th style="text-align:right">Cr/slot</th><th style="text-align:right">Max mov</th><th style="text-align:right">Max por</th></tr></thead><tbody>`;
-  for (const x of rows){ const t=x.t,r=x.r,mv=rivMax(r,false),pv=rivMax(r,true); h += `<tr class="${mv===tm && tm>0?'hl':''}"><td>${esc(t)}</td>
-    <td><input type="number" inputmode="numeric" value="${r.c}" data-riv="${esc(t)}" data-k="c"></td><td><input type="number" inputmode="numeric" value="${r.g}" data-riv="${esc(t)}" data-k="g"></td>
-    <td><input type="number" inputmode="numeric" value="${r.p}" data-riv="${esc(t)}" data-k="p"></td><td class="num">${x.power.toFixed(1)}</td><td class="num">${mv}</td><td class="num">${pv}</td></tr>`; }
-  const m=me(), ourPower=m.rem/Math.max(1,m.porMiss+m.movMiss);
-  h += `<tr style="background:#EFE7F7"><td><b>${NOI}</b></td><td class="num">${m.rem}</td><td class="num">${m.tot}</td><td class="num">${m.por}</td><td class="num">${ourPower.toFixed(1)}</td><td class="num">${m.tecMov}</td><td class="num">${m.tecPor}</td></tr></tbody></table></div>`;
+  const rows=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t]),slots:rivSlots(S.riv[t]),known:rosterForTeam(t).length})).sort((a,b)=>b.power-a.power), m=me(), ourSlots=Math.max(0,m.porMiss+m.movMiss), ourPower=m.rem/Math.max(1,ourSlots), maxPower=Math.max(1,ourPower,...rows.map(x=>x.power));
+  let h = `${sectionTitle("users","Rivali","tocca una squadra per aprire subito la rosa registrata")}<div class="section-head"><span></span><span class="small">${S.upd ? "foto aggiornata "+esc(S.upd) : "nessuna foto ancora"}</span></div>
+    ${helpBox("Non devi mantenere questi numeri a mano. Arrivano dalle foto. Tocca direttamente il box di una squadra per vedere i giocatori nominali che abbiamo registrato, divisi per ruolo Mantra.","Chi può ancora farti alzare il prezzo?")}
+    <div class="rival-grid"><div class="rival-card you"><div class="rline"><span class="rname">${esc(NOI)}<br><span class="small">noi</span></span><span class="big">${ourPower.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,ourPower/maxPower*100)}%"></i></div><div class="rival-statgrid"><div>${mi("wallet")}<b>${m.rem}</b><span>crediti</span></div><div>${mi("layers")}<b>${ourSlots}</b><span>posti min.</span></div><div>${mi("users")}<b>${m.tot}</b><span>rosa</span></div></div><div class="rival-max">Su un movimento oggi AS Pinta può arrivare a <b>${m.consMov}</b> senza rompere la strategia.</div></div>
+      ${rows.map(x=>{const open=rivalOpen===x.t;return `<div class="rival-card clickable ${open?'open':''}" data-rivalopen="${esc(x.t)}"><div class="rline"><span class="rname">${esc(x.t)}</span><span class="big">${x.power.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,x.power/maxPower*100)}%"></i></div><div class="rival-statgrid"><div>${mi("wallet")}<b>${x.r.c}</b><span>crediti</span></div><div>${mi("layers")}<b>${x.slots}</b><span>posti min.</span></div><div>${mi("eye")}<b>${x.known}${x.r.g?`/${x.r.g}`:""}</b><span>nomi noti</span></div></div><div class="rival-max">Rilancio massimo teorico su movimento: <b>${rivMax(x.r,false)}</b></div>${open?rivalRosterBody(x.t):''}</div>`}).join("")}</div>
+    ${helpBox("Il rilancio massimo teorico è il massimo matematico che una squadra potrebbe spendere lasciando 1 credito per ciascun posto minimo da coprire. Non è una previsione psicologica.","Come leggere i box")}
+    <details><summary>Correzione manuale · solo emergenza</summary><div class="tscroll"><table><thead><tr><th>Squadra</th><th>Crediti</th><th>Gioc.</th><th>Por</th></tr></thead><tbody>`;
+  for (const x of rows){ const t=x.t,r=x.r; h += `<tr><td>${esc(t)}</td><td><input type="number" inputmode="numeric" value="${r.c}" data-riv="${esc(t)}" data-k="c"></td><td><input type="number" inputmode="numeric" value="${r.g}" data-riv="${esc(t)}" data-k="g"></td><td><input type="number" inputmode="numeric" value="${r.p}" data-riv="${esc(t)}" data-k="p"></td></tr>`; }
+  h += `</tbody></table></div><p class="small">Usalo solo se un dato della foto è sicuramente sbagliato o non puoi fare un nuovo screenshot.</p></details>`;
   return h;
 }
-
-const PROMPT_SQUADRE = () => `Questa è una fotografia dell'asta in questo momento. Leggi, per ogni squadra visibile, crediti residui, numero giocatori e numero portieri (se un dato non si vede lascia vuoto). Se differisce da un dato precedente, vale questo screenshot. Rispondi SOLO nel formato Squadra;crediti;giocatori;portieri, una riga per squadra, senza intestazioni. Squadre possibili: ${TEAMS.join(", ")}.`;
-const PROMPT_GIOCATORI = () => `Questa è una fotografia dell'asta in questo momento. Elenca i giocatori assegnati visibili con squadra e prezzo se leggibile. Se un giocatore risultava già assegnato ma qui compare diversamente, vale questo screenshot. Rispondi SOLO nel formato Giocatore;Squadra;Prezzo, una riga per giocatore, senza intestazioni. Usa il nome come appare nell'app. Squadre possibili: ${TEAMS.join(", ")}.`;
+const PROMPT_FOTO = () => `Analizza questa singola fotografia dell'asta FantaEnel Mantra e trascrivi SOLO i dati realmente leggibili. Nella stessa foto possono esserci sia riepiloghi delle squadre sia giocatori assegnati: estrai entrambi se presenti. Usa esclusivamente righe in uno di questi due formati, senza intestazioni, commenti o testo aggiuntivo: Squadra;crediti_residui;numero_giocatori;numero_portieri oppure Giocatore;Squadra;Prezzo. Se un campo non è visibile lascialo vuoto mantenendo i separatori; non inventare valori e non completare dati usando conoscenze esterne. Per i giocatori usa il nome come appare nell'app/listone. Squadre possibili: ${TEAMS.join(", ")}.`;
 function viewImporta(){
-  let h = `<h2>Aggiorna da screenshot</h2><p class="small">Pensato per controlli a salti: ogni riga importata è una fotografia più recente e <b>corregge o completa</b> quella voce. L'assenza di una voce nello screenshot non cancella nulla.</p>
-    <div class="card"><b>Prompt crediti squadre</b><p class="small">${esc(PROMPT_SQUADRE())}</p><button class="btn small" data-copy="squadre">Copia prompt</button></div>
-    <div class="card"><b>Prompt giocatori assegnati</b><p class="small">${esc(PROMPT_GIOCATORI())}</p><button class="btn small" data-copy="giocatori">Copia prompt</button></div>
-    <textarea id="paste" placeholder="Incolla qui, es.:&#10;chill curre;412;5;2&#10;Calhanoglu;Fight Club;131"></textarea>
-    <label class="row small" style="margin:8px 0"><input type="checkbox" id="scala"> Per le squadre SENZA una riga crediti nello stesso import, aggiorna anche crediti/giocatori usando le assegnazioni</label><div class="row"><button class="btn dark" data-parse>Leggi</button></div>`;
-  if (importPreview){ const ip=importPreview; h += `<div class="card"><b>Cosa ho capito</b>
-    ${ip.riv.length ? `<h3>Squadre (${ip.riv.length})</h3>`+ip.riv.map(x=>`<div class="list-item"><span class="grow">${esc(x.t)}</span><span>${x.c} cr · ${x.g??"?"} gioc. · ${x.p??"?"} por</span></div>`).join(""):""}
-    ${ip.asg.length ? `<h3>Assegnazioni (${ip.asg.length})</h3>`+ip.asg.map(x=>`<div class="list-item"><span class="grow"><b>${esc(x.n)}</b> <span class="small">da "${esc(x.raw)}"</span></span><span>${esc(x.t||"squadra ?")} ${x.pr?x.pr+" cr":""}</span></div>`).join(""):""}
-    ${ip.bad.length ? `<h3 class="bad-txt">Non riconosciute (${ip.bad.length})</h3>`+ip.bad.map(x=>`<div class="small">${esc(x)}</div>`).join("")+`<p class="small">Prova solo il cognome o correggi a mano da Cerca.</p>`:""}
-    <div class="row" style="margin-top:10px"><button class="btn primary" data-apply ${ip.riv.length||ip.asg.length?"":"disabled"}>Applica come fotografia più recente</button><button class="btn" data-cancelimport>Annulla</button></div></div>`; }
+  let h = `${sectionTitle("camera","Aggiorna da screenshot","un solo prompt, qualsiasi cosa la foto riesca a contenere")}
+    <div class="prompt-hero"><div class="prompt-icon">${mi("clipboard")}</div><div class="grow"><div class="eyebrow">Prompt unico da usare con la foto</div><b>Legge insieme totali squadra e assegnazioni visibili</b><p>${esc(PROMPT_FOTO())}</p></div><button class="btn primary" data-copy="foto">Copia prompt</button></div>
+    ${helpBox("Il prompt lo copi una volta; poi, a ogni screenshot, incolli qui sotto la risposta. Può contenere nello stesso blocco righe di squadre e righe di giocatori. L'app le distingue da sola e fa merge.","Flusso rapido")}
+    <div class="import-rule"><div><b>✓ Integra</b><br><span class=small>aggiunge ciò che prima mancava</span></div><div><b>↻ Corregge</b><br><span class=small>solo valori esplicitamente diversi</span></div><div><b>∅ Non cancella</b><br><span class=small>vuoti e assenze non azzerano nulla</span></div></div>
+    <div class="paste-card"><label for="paste"><b>Incolla qui la lettura della foto</b><span>Puoi mescolare squadre e giocatori nello stesso blocco.</span></label><textarea id="paste" placeholder="Esempio:&#10;chill curre;412;5;2&#10;Calhanoglu;Fight Club;131"></textarea><button class="btn dark parse-big" data-parse>${mi("eye")} Leggi e mostrami cosa hai capito</button></div>`;
+  if (importPreview){ const ip=importPreview; h += `<div class="card"><b>Anteprima: cosa verrà integrato</b>
+    ${ip.riv.length ? `<h3>Squadre (${ip.riv.length})</h3>`+ip.riv.map(x=>`<div class="list-item"><span class="grow">${esc(x.t)}</span><span>${x.c??"?"} cr · ${x.g??"?"} gioc. · ${x.p??"?"} por</span></div>`).join(""):""}
+    ${ip.asg.length ? `<h3>Assegnazioni (${ip.asg.length})</h3>`+ip.asg.map(x=>`<div class="list-item"><span class="grow"><b>${esc(x.n)}</b> <span class="small">da "${esc(x.raw)}"</span></span><span>${esc(x.t||"squadra non letta")} ${x.pr!==null&&x.pr!==undefined?x.pr+" cr":""} <span class="preview-change">merge</span></span></div>`).join(""):""}
+    ${ip.bad.length ? `<h3 class="bad-txt">Non riconosciute (${ip.bad.length})</h3>`+ip.bad.map(x=>`<div class="small">${esc(x)}</div>`).join("")+`<p class="small">Correggi il testo o registra il giocatore direttamente da Cerca.</p>`:""}
+    <div class="row" style="margin-top:10px"><button class="btn primary" data-apply ${ip.riv.length||ip.asg.length?"":"disabled"}>Applica questa fotografia</button><button class="btn" data-cancelimport>Annulla</button></div></div>`; }
   return h;
+}
+function lineTeamMatch(line){
+  const nl=" "+norm(line)+" "; let best=null;
+  for(const t of TEAMS){ const nt=" "+norm(t)+" "; if(nl.includes(nt) && (!best || t.length>best.length)) best=t; }
+  return best;
+}
+function playerFromLooseLine(line, team){
+  let cleaned=line;
+  if(team){ const re=new RegExp(team.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"ig"); cleaned=cleaned.replace(re," "); }
+  cleaned=cleaned.replace(/\b(?:crediti?|cr|giocatori?|gioc\.?|rosa|portieri?|por|prezzo|pagato|squadra|team)\b\s*[:=-]?\s*\d*/gi," ").replace(/\b\d+\b/g," ").replace(/[;|,·:\-]+/g," ").replace(/\s+/g," ").trim();
+  if(!cleaned) return {p:null};
+  let mp=matchPlayer(cleaned); if(mp.p) return mp;
+  const words=cleaned.split(" ");
+  for(let len=Math.min(4,words.length);len>=1;len--){ for(let i=0;i+len<=words.length;i++){ mp=matchPlayer(words.slice(i,i+len).join(" ")); if(mp.p) return mp; } }
+  return {p:null};
 }
 function parseImport(text){
-  const out = {riv:[], asg:[], bad:[]};
-  for (let line of text.split(/\r?\n/)){
-    line = line.replace(/^\s*(?:[-*•]|\d+[.)])\s+/, "").replace(/\*\*/g,"").trim().replace(/^\|/, "").replace(/\|$/, "").trim();
-    if (!line || /^\|?\s*:?-{2,}/.test(line)) continue;
-    let parts = /[;|\t]/.test(line) ? line.split(/[;|\t]/) : line.split(","); parts = parts.map(s=>s.trim()); const nonEmpty=parts.filter(Boolean); if(!nonEmpty.length) continue;
-    if (/^(squadra|giocatore|team|nome)$/i.test(norm(nonEmpty[0]))) continue;
+  const out={riv:[],asg:[],bad:[]};
+  for(let line of text.split(/\r?\n/)){
+    line=line.replace(/^\s*(?:[-*•]|\d+[.)])\s+/,"").replace(/\*\*/g,"").trim().replace(/^\|/,"").replace(/\|$/,"").trim();
+    if(!line||/^\|?\s*:?-{2,}/.test(line)) continue;
+    let parts=/[;|\t]/.test(line)?line.split(/[;|\t]/):line.split(","); parts=parts.map(s=>s.trim()); const nonEmpty=parts.filter(Boolean);
+    if(!nonEmpty.length||/^(squadra|giocatore|team|nome)$/i.test(norm(nonEmpty[0]))) continue;
     const nums=nonEmpty.map(s=>/^\d+$/.test(s.replace(/\s/g,""))?+s.replace(/\s/g,""):null), team0=matchTeam(nonEmpty[0]);
-    if(team0 && nums[1]!==null && nums[1]!==undefined){ const na=parts.slice(1).map(s=>/^\d+$/.test(s.replace(/\s/g,""))?+s.replace(/\s/g,""):null); out.riv.push({t:team0,c:na[0],g:na[1]??null,p:na[2]??null}); continue; }
-    let team=null,name=null,price=null; nonEmpty.forEach((x,i)=>{ if(nums[i]!==null) price=nums[i]; else if(!team && matchTeam(x) && !matchPlayer(x).p) team=matchTeam(x); else if(!name) name=x; });
-    if(!name){out.bad.push(line);continue;} const mp=matchPlayer(name); if(!mp.p){out.bad.push(line+(mp.amb?"  (ambiguo: "+mp.amb.join(", ")+")":""));continue;} out.asg.push({n:mp.p.n,t:team,pr:price,raw:name});
-  } return out;
+    if(team0 && nums[1]!==null && nums[1]!==undefined){ const na=parts.slice(1).map(s=>/^\d+$/.test(s.replace(/\s/g,""))?+s.replace(/\s/g,""):null); out.riv.push({t:team0,c:na[0],g:na[1]??null,p:na[2]??null,raw:line}); continue; }
+    let team=null,name=null,price=null;
+    nonEmpty.forEach((x,i)=>{ if(nums[i]!==null) price=nums[i]; else if(!team && matchTeam(x) && !matchPlayer(x).p) team=matchTeam(x); else if(!name) name=x; });
+    if(name){ const mp=matchPlayer(name); if(mp.p){ out.asg.push({n:mp.p.n,t:team,pr:price,raw:name}); continue; } }
+    // S1: fallback tollerante per Live Text / testo grezzo senza separatori puliti.
+    const looseTeam=lineTeamMatch(line); const looseNums=(line.match(/\b\d+\b/g)||[]).map(Number); const mp=playerFromLooseLine(line,looseTeam);
+    if(mp.p){ out.asg.push({n:mp.p.n,t:looseTeam,pr:looseNums.length?looseNums[looseNums.length-1]:null,raw:line}); continue; }
+    if(looseTeam && looseNums.length){ out.riv.push({t:looseTeam,c:looseNums[0],g:looseNums.length>1?looseNums[1]:null,p:looseNums.length>2?looseNums[2]:null,raw:line}); continue; }
+    out.bad.push(line+(mp.amb?"  (ambiguo: "+mp.amb.join(", ")+")":""));
+  }
+  // ultima riga vince solo per i campi presenti; applyImport fa il merge conservativo
+  return out;
 }
 function removeKnownAssignment(n, touchRival=true){
   const i=S.mine.findIndex(x=>x.n===n); if(i>=0) S.mine.splice(i,1);
   const a=S.asg[n]; if(a){ if(touchRival && a.s && a.t && +a.p>0 && S.riv[a.t]){ const r=S.riv[a.t]; r.c+=+a.p; r.g=Math.max(0,r.g-1); if(isPor(n)) r.p=Math.max(0,r.p-1); } delete S.asg[n]; }
 }
 function applyImport(ip){
-  saveUndo("import da screenshot"); const scala=$("#scala") && $("#scala").checked, snapTeams=new Set(ip.riv.map(x=>x.t)), now=new Date().toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"}); let changed=0;
-  ip.asg.forEach(x=>{ const oldMine=mineOf(x.n), old=S.asg[x.n]; const sameMine=x.t===NOI && oldMine && (+oldMine.p||0)===(+x.pr||0); const sameOther=x.t!==NOI && old && (old.t||"")===(x.t||"") && (+old.p||0)===(+x.pr||0); if(sameMine||sameOther) return;
-    removeKnownAssignment(x.n, !snapTeams.has((old&&old.t)||""));
-    if(x.t===NOI){ S.mine.push({n:x.n,p:x.pr||0}); logEvent("noi (foto/correzione)",x.n,NOI,x.pr); }
-    else { const a={t:x.t||"",p:x.pr||""}; if(scala && x.t && x.pr && !snapTeams.has(x.t) && S.riv[x.t]){ const r=S.riv[x.t]; r.c-=x.pr; r.g+=1; if(isPor(x.n)) r.p+=1; a.s=1; } S.asg[x.n]=a; logEvent("altri (foto/correzione)",x.n,x.t,x.pr); } changed++;
+  saveUndo("import da screenshot");
+  const scala=false, snapTeams=new Set(ip.riv.map(x=>x.t)), now=new Date().toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});
+  const beforeRiv=JSON.parse(JSON.stringify(S.riv||{}));
+  let changed=0, completed=0, corrected=0; const changedNames=[];
+  ip.asg.forEach(x=>{
+    const oldMine=mineOf(x.n), old=S.asg[x.n];
+    const oldTeam=oldMine?NOI:(old?old.t||"":""), oldPrice=oldMine?(+oldMine.p||null):(old&&+old.p>0?+old.p:null);
+    const newTeam=x.t||oldTeam||"", newPrice=(x.pr!==null&&x.pr!==undefined&&x.pr!=="")?+x.pr:(oldPrice||null);
+    const sameTeam=(oldTeam||"")===(newTeam||""), samePrice=(oldPrice||null)===(newPrice||null);
+    if((oldMine||old) && sameTeam && samePrice) return;
+    const hadKnown=!!(oldMine||old), addsInfo=hadKnown && ((!oldTeam&&newTeam)||(!oldPrice&&newPrice));
+    removeKnownAssignment(x.n,!snapTeams.has(oldTeam)); clearPassed(x.n);
+    if(newTeam===NOI){ S.mine.push({n:x.n,p:newPrice||0}); logEvent("noi (foto/integrazione)",x.n,NOI,newPrice||""); }
+    else{
+      const a={t:newTeam||"",p:newPrice||""};
+      if(scala && newTeam && newPrice && !snapTeams.has(newTeam) && S.riv[newTeam]){ const r=S.riv[newTeam]; r.c-=newPrice; r.g+=1; if(isPor(x.n)) r.p+=1; a.s=1; }
+      S.asg[x.n]=a; logEvent("altri (foto/integrazione)",x.n,newTeam,newPrice||"");
+    }
+    changedNames.push(x.n); changed++; if(addsInfo) completed++; else if(hadKnown) corrected++;
   });
-  ip.riv.forEach(x=>{ if(x.t===NOI||!S.riv[x.t])return; const r=S.riv[x.t]; if(x.c!==null&&x.c!==undefined)r.c=x.c;if(x.g!==null)r.g=x.g;if(x.p!==null)r.p=x.p; });
-  if(ip.riv.length){S.upd=now;logEvent("snapshot rivali","","",ip.riv.length+" squadre");} importPreview=null; commit(`Foto applicata: ${ip.riv.length} squadre, ${changed} assegnazioni nuove/corrette`);
+  ip.riv.forEach(x=>{
+    if(x.t===NOI||!S.riv[x.t]) return; const r=S.riv[x.t];
+    if(x.c!==null&&x.c!==undefined) r.c=x.c;
+    if(x.g!==null&&x.g!==undefined) r.g=x.g;
+    if(x.p!==null&&x.p!==undefined) r.p=x.p;
+  });
+  const teamChanges=ip.riv.filter(x=>x.t!==NOI&&beforeRiv[x.t]&&S.riv[x.t]).map(x=>{
+    const a=beforeRiv[x.t],b=S.riv[x.t], bits=[];
+    if(a.c!==b.c) bits.push(`${a.c}→${b.c} cr`); if(a.g!==b.g) bits.push(`${a.g}→${b.g} gioc.`); if(a.p!==b.p) bits.push(`${a.p}→${b.p} por`);
+    return bits.length?`${x.t}: ${bits.join(", ")}`:null;
+  }).filter(Boolean);
+  if(ip.riv.length){ S.upd=now; logEvent("snapshot rivali","","",ip.riv.length+" squadre"); }
+  let narrative=[];
+  if(teamChanges.length){ const head=teamChanges.slice(0,3).join("; "); narrative.push(`la fotografia ha aggiornato ${teamChanges.length} squadre${head?` (${head}${teamChanges.length>3?`; +${teamChanges.length-3} altre`:""})`:""}`); }
+  if(changed){ narrative.push(`sono state integrate ${changed} assegnazioni${completed?`, ${completed} completate con informazioni mancanti`:""}${corrected?`, ${corrected} corrette`:""}${changedNames.length&&changedNames.length<=4?`: ${changedNames.join(", ")}`:""}`); }
+  if(!narrative.length && (ip.riv.length||ip.asg.length)) narrative.push("il controllo non ha prodotto variazioni rispetto ai dati già registrati");
+  if(narrative.length) recordUpdate(narrative.join(". ")+".");
+  importPreview=null;
+  const missNow=missingPriceAssignments().length;
+  commit(`Foto integrata: ${ip.riv.length} squadre, ${changed} assegnazioni (${completed} completate, ${corrected} corrette)${missNow?` · ⚠ ${missNow} prezzi da verificare`:""}`);
 }
 
 function viewObiettivi(){
+  const m=me(), st=auctionStats(), forms=formationAnalysis(), best=forms[0], mood=marketMood(st), priorities=strategyPriorities(), targets=strategyCandidates(best), openMust=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]);
   const free = P.filter(p => (";"+p.r+";").includes(";"+roleSel+";") && !mineOf(p.n) && !S.asg[p.n] && !consOf(p).startsWith("EVITA") && !teamAvoid(p)).slice(0, 10);
-  let h = `<h2>Obiettivi</h2><h3>I nostri MUST</h3>`;
-  h += S.must.length ? `<div class="card">` + S.must.map((m,i) => { const p = byName.get(m.n); const st = mineOf(m.n) ? "preso" : (S.asg[m.n] ? "andato" : "da prendere");
-      return `<div class="list-item"><span class="grow"><button class="btn small" data-open="${esc(m.n)}" style="border:0;padding:0;background:none;font-weight:700">${esc(m.n)}</button><br><span class="small">${p ? esc(p.t) + ", mercato " + market(p) : "fuori lista"}, ${st}</span></span>
-      <label class="field">Max<input type="number" inputmode="numeric" value="${m.max || ""}" placeholder="auto" data-mustmax="${i}" style="width:74px"></label>
-      <button class="btn small danger" data-mustdel="${i}">Togli</button></div>`; }).join("") + `<p class="small">Max vuoto = mercato +30%. Crediti tenuti da parte per i MUST ancora da prendere: ${me().mustRes}.</p></div>`
+  const now = priorities[0] || {title:"Mantieni flessibilità",text:"La rosa non segnala ancora un'urgenza dominante: usa il prezzo e il fit di ruolo per scegliere dove entrare."};
+  const missingPrices=missingPriceAssignments();
+  const openAvoid=S.black.filter(n=>!mineOf(n)&&!S.asg[n]);
+  let h = `${sectionTitle("target","Piano d'asta","la schermata da aprire prima e durante l'asta")}
+    <div class="preflight-actions"><button class="btn checkai-btn" data-checkai>✦ CheckAI · esporta stato completo</button><button class="btn small" data-seedcfg>Ricarica MUST/evita da config</button></div>
+    ${(openMust.length||openAvoid.length)?`<div class="must-top"><h3>★ Preferenze pre-asta in testa</h3><div class="must-pills">${openMust.map(x=>`<button class="must-pill" data-open="${esc(x.n)}">MUST · ${esc(x.n)}${x.max?` · max ${x.max}`:''}</button>`).join('')}${openAvoid.map(n=>`<button class="must-pill avoid" data-open="${esc(n)}">EVITA · ${esc(n)}</button>`).join('')}</div></div>`:''}
+    ${missingPrices.length?`<div class="card data-alert"><strong>⚠ Controllo puntuale richiesto: ${missingPrices.length} assegnazion${missingPrices.length===1?'e':'i'} senza prezzo</strong><p class="small">Il nome/squadra resta valido, ma senza prezzo si indeboliscono lettura del mercato, inflazione e analisi dei rivali. Appena puoi, verifica sul PC del battitore o nella schermata ufficiale e completa il dato.</p><div class="alert-list">${missingPrices.slice(0,10).map(x=>`<div class="alert-row"><span class="alert-badge">prezzo ?</span><span class="grow"><b>${esc(x.n)}</b><br><span class="small">${esc(x.t)}</span></span><button class="btn small" data-open="${esc(x.n)}">controlla</button></div>`).join('')}</div></div>`:''}
+    <div class="strategy-hero"><div class="strategy-icon">${mi("spark")}</div><div class="grow"><div class="eyebrow">Adesso</div><h3>${esc(now.title)}</h3><p>${esc(now.text)}</p></div><div class="strategy-cash"><span>cassa</span><b>${m.rem}</b></div></div>
+    <div class="strategy-mini">
+      <div>${mi("chart")}<span>Mercato</span><b>${esc(mood.label)}</b><small>${st.inflN} prezzi utili</small></div>
+      <div>${mi("wallet")}<span>Potere d'acquisto</span><b>${st.ourPower.toFixed(1)}</b><small>rivali ${st.avgPower.toFixed(1)} cr/posto</small></div>
+      <div>${mi("route")}<span>Modulo guida</span><b>${best?esc(best.f.n):"—"}</b><small>${best?best.total+"/11 coperti":"rosa vuota"}</small></div>
+      <div>${mi("target")}<span>MUST liberi</span><b>${openMust.length}</b><small>riserva ${m.mustRes} cr</small></div>
+    </div>
+    ${helpBox("Questa pagina combina strategia impostata, andamento dei prezzi, potere d'acquisto, scarsità dei ruoli, MUST e compatibilità con i moduli. Non decide al posto tuo: ordina le urgenze per evitare di spendere bene sul giocatore sbagliato.","Bussola live dell'asta")}
+    <h3 class="icon-heading">${mi("route")} Prossime priorità</h3><div class="priority-grid">${priorities.map((x,i)=>`<div class="priority-card"><span class="pnum">${i+1}</span><div class="picon">${mi(x.icon)}</div><b>${esc(x.title)}</b><p>${esc(x.text)}</p></div>`).join("")}</div>`;
+  if(best){ h += `<h3 class="icon-heading">${mi("eye")} Il modulo che stai costruendo meglio</h3>${formationField(best)}`; }
+  if(targets.length){ h += `<h3 class="icon-heading">${mi("target")} Mercato mirato sui buchi del modulo</h3>${helpBox("Non è una classifica assoluta dei giocatori: vengono premiati quelli che coprono uno o più slot mancanti del tuo modulo guida e sono ancora liberi.","Chi guardare se esce adesso")}<div class="target-market-grid">${targets.map(x=>`<button class="target-player" data-open="${esc(x.p.n)}"><span class="target-main"><b>${esc(x.p.n)}</b>${clubBadge(x.p.t)}</span><span class="small">copre ${esc([...x.cover].join(" + "))} · ruoli ${esc(x.p.r)}</span><span class="target-price"><b>${market(x.p)}</b> mercato · tetto ${maxFor(x.p)}</span></button>`).join("")}</div>`; }
+  h += `<h3 class="icon-heading">${mi("target")} MUST e preferenze manuali</h3>`;
+  h += S.must.length ? `<div class="card">` + S.must.map((m0,i) => { const p = byName.get(m0.n); const state = mineOf(m0.n) ? "preso" : (S.asg[m0.n] ? "andato" : "da prendere");
+      return `<div class="list-item"><span class="grow"><button class="btn small" data-open="${esc(m0.n)}" style="border:0;padding:0;background:none;font-weight:700">${esc(m0.n)}</button><br><span class="small">${p ? esc(p.t) + ", mercato " + market(p) : "fuori lista"}, ${state}</span></span>
+      <label class="field">Max<input type="number" inputmode="numeric" value="${m0.max || ""}" placeholder="auto" data-mustmax="${i}" style="width:74px"></label>
+      <button class="btn small danger" data-mustdel="${i}">Togli</button></div>`; }).join("") + `<p class="small">Max vuoto = mercato +30%. Crediti tenuti da parte per i MUST ancora da prendere: ${m.mustRes}.</p></div>`
     : `<p class="empty">Nessun MUST. Aprili da Cerca e tocca "Aggiungi ai MUST".</p>`;
-  h += `<div class="row"><button class="btn small" data-seedcfg>Importa MUST e da evitare da config.json</button></div>`;
+  h += ``;
   if (S.black.length) h += `<h3>Da evitare</h3><div class="chips">${S.black.map((n,i) => `<button class="chip" data-blackdel="${i}">${esc(n)} ✕</button>`).join("")}</div>`;
-  h += `<h3>Da evitare per squadra</h3><p class="small">${esc((CFG.evitaSquadre||[]).join(", "))}: restano nel listone e nell'asta, ma AS Pinta li considera solo ultima spiaggia a ${lastResortPrice()} credito.</p>`;
-  h += `<h3>Migliori ancora liberi per ruolo</h3><div class="chips">${ROLES.map(r => `<button class="chip" data-role="${r}" aria-pressed="${r === roleSel}">${r}</button>`).join("")}</div>
+  h += `<p class="small"><b>Da evitare per squadra:</b> ${esc((CFG.evitaSquadre||[]).join(", "))}. Restano nel listone ma AS Pinta li considera ultima spiaggia a ${lastResortPrice()} credito.</p>`;
+  h += `<h3 class="icon-heading">${mi("search")} Scanner ruolo per ruolo</h3><div class="chips">${ROLES.map(r => `<button class="chip" data-role="${r}" aria-pressed="${r === roleSel}">${r}</button>`).join("")}</div>
     <ul class="results">${free.map(p => `<li><button data-open="${esc(p.n)}"><span class="grow"><span class="nm">${esc(p.n)}</span><br><span class="meta">${esc(p.t)}, ${esc(p.r)}, ${esc(p.s)}</span></span>${miniTag(p)}</button></li>`).join("")}</ul>`;
-  h += `<h3>Shortlist Piano A / B / C</h3>`;
+  const passedFree=(S.passed||[]).filter(x=>!assigned(x.n)).sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,10);
+  if(passedFree.length) h += `<h3>Già passati e ancora liberi</h3><div class="chips">${passedFree.map(x=>`<button class="chip" data-open="${esc(x.n)}">↺ ${esc(x.n)}</button>`).join("")}</div><p class="small">Sono rimasti invenduti in un passaggio precedente: restano perfettamente ripescabili.</p>`;
+  h += `<details><summary>Shortlist Piano A / B / C</summary>`;
   const groups = {}; SHORT.forEach(([rep, piano, n]) => (groups[rep] = groups[rep] || []).push([piano, n]));
   for (const [rep, items] of Object.entries(groups)){
-    h += `<details><summary>${esc(rep)}</summary>` + items.map(([piano, n]) => { const p = byName.get(n); const done = mineOf(n) || S.asg[n];
-      return `<div class="list-item"><span class="small" style="width:118px">${esc(piano)}</span><span class="grow"><button data-open="${esc(n)}" style="border:0;background:none;padding:0;font-weight:600" class="${done ? "strike" : ""}">${esc(n)}</button><br><span class="small">${p ? esc(p.t) : ""}</span></span>${p ? miniTag(p) : ""}</div>`; }).join("") + `</details>`;
+    h += `<h3>${esc(rep)}</h3>` + items.map(([piano, n]) => { const p = byName.get(n); const done = mineOf(n) || S.asg[n];
+      return `<div class="list-item"><span class="small" style="width:118px">${esc(piano)}</span><span class="grow"><button data-open="${esc(n)}" style="border:0;background:none;padding:0;font-weight:600" class="${done ? "strike" : ""}">${esc(n)}</button><br><span class="small">${p ? esc(p.t) : ""}</span></span>${p ? miniTag(p) : ""}</div>`; }).join("");
   }
+  h += `</details>`;
   return h;
 }
-
 function viewImpostazioni(){
   const s = S.set, c = gh.cfg() || {repo: CFG.github.repo, branch: stateBranch(), owner: "", token: ""}, st = statusInfo();
-  return `<h2>Impostazioni</h2><div class="card"><div class="row">
-    <label class="field">Budget<input type="number" inputmode="numeric" value="${s.budget}" data-set="budget"></label>
-    <label class="field">Tetto per giocatore (%)<input type="number" inputmode="numeric" value="${s.tetto}" data-set="tetto"></label>
-    <label class="field">Riserva per il finale<input type="number" inputmode="numeric" value="${s.riserva}" data-set="riserva"></label>
-    <label class="field">Stile d'asta<select data-set="stile">${["Prudente","Normale","Aggressivo"].map(x => `<option ${x === s.stile ? "selected" : ""}>${x}</option>`).join("")}</select></label>
-    <label class="field">Profilo budget<select data-set="profiloBudget">${Object.keys(CFG.budgetReparti||{}).filter(x=>!x.startsWith("_")).map(x=>`<option ${x===s.profiloBudget?"selected":""}>${esc(x)}</option>`).join("")}</select></label></div>
-    <p class="small">Tetto 25% = nessun giocatore oltre 125 crediti (i MUST fanno eccezione). Per puntare su Malen o Lautaro serve circa 45%. Prudente abbassa i tetti del 10%, Aggressivo li alza del 10%.</p></div>
+  return `${sectionTitle("settings","Impostazioni","strategia separata dai servizi tecnici")}
+    <div class="settings-group"><div class="group-title">Strategia d'asta</div><div class="group-kicker">Queste scelte cambiano i consigli, i tetti e la gestione dei crediti durante l'asta.</div></div>
+    ${helpBox("Qui imposti il carattere di AS Pinta. Sono parametri fantacalcistici: puoi cambiarli anche durante l'asta se la strategia evolve; non toccano salvataggi o dati tecnici.","Configurazione sportiva")}
+    <div class="card setting-card"><div class="row">
+      <label class="field">Budget iniziale<input type="number" inputmode="numeric" value="${s.budget}" data-set="budget"><span class="setting-note">Crediti totali con cui parte ogni squadra.</span></label>
+      <label class="field">Tetto massimo per una stella (%)<input type="number" inputmode="numeric" value="${s.tetto}" data-set="tetto"><span class="setting-note">Limite assoluto sul budget per un singolo giocatore, prima delle eccezioni MUST. 25% di 500 = 125.</span></label>
+      <label class="field">Cuscinetto per il finale<input type="number" inputmode="numeric" value="${s.riserva}" data-set="riserva"><span class="setting-note">Crediti che l'app prova a non bruciare finché la rosa non è quasi completa.</span></label>
+      <label class="field">Aggressività ai rilanci<select data-set="stile">${["Prudente","Normale","Aggressivo"].map(x => `<option ${x === s.stile ? "selected" : ""}>${x}</option>`).join("")}</select><span class="setting-note">Prudente riduce i tetti del 10%; Aggressivo li alza del 10%. Non modifica i MUST.</span></label>
+      <label class="field">Distribuzione budget<select data-set="profiloBudget">${Object.keys(CFG.budgetReparti||{}).filter(x=>!x.startsWith("_")).map(x=>`<option ${x===s.profiloBudget?"selected":""}>${esc(x)}</option>`).join("")}</select><span class="setting-note">È la bussola con cui la schermata Rosa confronta la spesa tra reparti.</span></label>
+    </div></div>
 
-    ${IS_BETA ? `<div class="card" style="border-color:#E7C07A;background:#FFF8EA"><b>Canale BETA isolato</b><p class="small">Memoria locale separata e branch GitHub forzato su <b>stato-beta</b>. Non tocca lo stato dell'app vera.</p></div>` : ""}
-    <h3>Salvataggio su GitHub</h3>
-    <div class="card">
-      <p class="small">Stato attuale: <b class="${st.cls}-txt">${esc(st.txt)}</b>${sync.err ? `<br><span class="bad-txt">${esc(sync.err)}</span>` : ""}</p>
-      <p class="small">Ogni modifica è salvata subito su questo dispositivo. Se colleghi GitHub, qualche secondo dopo viene salvata anche nel repo (branch <b>${esc(c.branch)}</b>, file <b>${esc(c.file || CFG.github.file)}</b>): se chiudi Safari, cambi dispositivo o si cancella la memoria, riparti da lì. Il token resta solo su questo dispositivo.</p>
-      <div class="row">
-        <label class="field">Utente GitHub<input id="gh_owner" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.owner || "")}" placeholder="il tuo username"></label>
+    <div class="settings-group"><div class="group-title">Servizio, salvataggio e sicurezza</div><div class="group-kicker">Questa parte non cambia la strategia: serve solo a non perdere lo stato dell'asta e a recuperarlo.</div></div>
+    ${IS_BETA ? `<div class="card" style="border-color:#E7C07A;background:#FFF8EA"><b>Canale BETA isolato</b><p class="small">Usa memoria separata e branch <b>stato-beta</b>. I test qui non toccano lo stato dell'app vera.</p></div>` : ""}
+    <div class="card"><div class="service-status"><div><b>Salvataggio</b><p class="small" style="margin:3px 0 0">Ogni modifica viene salvata subito sul dispositivo${gh.ok()?" e sincronizzata anche su GitHub":""}.</p></div><div><b class="${st.cls}-txt">${esc(st.txt)}</b></div></div>${sync.err ? `<p class="small bad-txt">${esc(sync.err)}</p>` : ""}</div>
+    <details><summary>Connessione GitHub · dettagli di servizio</summary><div class="card" style="box-shadow:none;border:0;padding:6px 0">
+      <p class="small">Serve solo per avere una copia online dello stato e passare da un dispositivo all'altro. Se è già collegato e il pallino è verde, durante l'asta non devi entrare qui.</p>
+      <div class="row"><label class="field">Utente GitHub<input id="gh_owner" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.owner || "")}" placeholder="il tuo username"></label>
         <label class="field">Repository<input id="gh_repo" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.repo || "")}"></label>
-        <label class="field">Branch dello stato<input id="gh_branch" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.branch || stateBranch())}" ${IS_BETA?"readonly":""}></label>
-      </div>
-      <label class="field" style="margin-top:8px">Token (fine-grained, solo questo repo, Contents: Read and write)<input id="gh_token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" value="${esc(c.token || "")}" placeholder="github_pat_..."></label>
-      <div class="row" style="margin-top:10px">
-        <button class="btn primary" data-ghconnect>Collega e sincronizza</button>
-        <button class="btn" data-ghpush ${gh.ok() ? "" : "disabled"}>Salva ora su GitHub</button>
-        <button class="btn" data-ghpull ${gh.ok() ? "" : "disabled"}>Ricarica da GitHub</button>
-        <button class="btn danger" data-ghoff ${gh.ok() ? "" : "disabled"}>Scollega</button>
-      </div>
-      <p class="small">"Ricarica da GitHub" sostituisce i dati di questo dispositivo con quelli salvati nel repo: usalo se passi da un dispositivo all'altro.</p>
-    </div>
+        <label class="field">Branch stato<input id="gh_branch" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.branch || stateBranch())}" ${IS_BETA?"readonly":""}></label></div>
+      <label class="field" style="margin-top:8px">Token GitHub<input id="gh_token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" value="${esc(c.token || "")}" placeholder="github_pat_..."><span class="setting-note">Fine-grained, solo questo repository, permesso Contents: Read and write.</span></label>
+      <div class="row" style="margin-top:10px"><button class="btn primary" data-ghconnect>Collega e sincronizza</button><button class="btn" data-ghpush ${gh.ok() ? "" : "disabled"}>Salva ora</button><button class="btn" data-ghpull ${gh.ok() ? "" : "disabled"}>Ricarica da GitHub</button><button class="btn danger" data-ghoff ${gh.ok() ? "" : "disabled"}>Scollega</button></div>
+      <p class="small">“Ricarica da GitHub” sostituisce lo stato di questo dispositivo con quello salvato online: usalo quando passi volontariamente a un altro dispositivo.</p>
+    </div></details>
+    ${DATA_WARNINGS.length ? `<div class="card data-warn"><b>Controllo dati: ${DATA_WARNINGS.length} avviso/i</b>${DATA_WARNINGS.map(x=>`<div class="small" style="margin-top:5px">• ${esc(x)}</div>`).join("")}</div>` : `<div class="card"><b>Controllo dati ✓</b><p class="small">Config, listone e shortlist hanno superato i controlli essenziali all'avvio.</p></div>`}
+    <details><summary>Backup manuale e ripristino</summary><div class="card" style="box-shadow:none;border:0;padding:6px 0"><p class="small">Paracadute manuale: utile prima dell'asta o se vuoi conservare una copia indipendente da GitHub.</p><div class="row"><button class="btn dark" data-download>Scarica file di backup</button><button class="btn" data-backup>Copia codice di backup</button></div>
+      <textarea id="restore" placeholder="Incolla qui un codice di backup" style="min-height:80px;margin-top:10px"></textarea><div class="row" style="margin-top:8px"><button class="btn" data-restore>Ripristina dal codice</button><label class="btn">Ripristina da file<input type="file" id="restorefile" accept="application/json,.json" style="display:none"></label><button class="btn danger" data-reset>${resetArm ? "Tocca ancora per azzerare tutto" : "Azzera tutto"}</button></div></div></details>
+    <p class="small">Versione ${APP_VERSION}. Dati ${dataFromCache ? "caricati dalla copia salvata (offline)" : "caricati dal repo"}: base SOS Fanta/Fantacalcio.it 10/09–11/09 + dritta Gruppo Esperti integrata sui profili principali; Juve e Lazio inclusi ma ultima spiaggia per AS Pinta.</p>`;
+}
+function currentSituationText(){
+  const m=me(), risks=holeRisks(), st=auctionStats(), openMust=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]).length, bestForm=formationAnalysis()[0];
+  const parts=[];
+  parts.push(`AS Pinta ha ${m.tot} giocatori (${m.por} portieri e ${m.mov} di movimento), ha speso ${m.spent} crediti e ne conserva ${m.rem}`);
+  const need=m.porMiss+m.movMiss; parts.push(need?`restano almeno ${need} posti minimi da riempire`:`i minimi di rosa risultano coperti`);
+  if(bestForm) parts.push(`il modulo Mantra oggi meglio coperto è il ${bestForm.f.n} con ${bestForm.total}/11 posti già utilizzabili senza fuori ruolo`);
+  if(openMust) parts.push(`${openMust} MUST sono ancora liberi`);
+  if(risks.length) parts.push(`la criticità principale è ${risks.slice(0,3).map(x=>`${x.r} (${x.miss} mancanti, ${x.free} titolari buoni liberi)`).join(", ")}`); else parts.push(`non emergono al momento allarmi forti di scarsità`);
+  parts.push(`il potere d'acquisto è ${st.ourPower.toFixed(1)} crediti per posto ancora da coprire contro ${st.avgPower.toFixed(1)} di media dei rivali nell'ultimo snapshot`);
+  return parts.join("; ")+".";
+}
+function stateSnapshotHTML(){
+  const m=me(), st=auctionStats(), risks=holeRisks(), close=closingCandidates(), cov=ROLES.filter(r=>(+MINS[r]||0)>0).map(r=>[r,roleCountMine(r)]), budgets=budgetStatus(), forms=formationAnalysis(), now=new Date();
+  const riv=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t])})).sort((a,b)=>b.power-a.power), maxPower=Math.max(1,st.ourPower,...riv.map(x=>x.power));
+  const mustOpen=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]);
+  const rows=S.mine.map(x=>{const p=byName.get(x.n);return `<tr><td><b>${esc(x.n)}</b></td><td>${p?esc(p.t):"—"}</td><td>${p?esc(p.r):(x.por?"Por":"—")}</td><td>${esc(x.p)}</td></tr>`}).join("");
+  const updates=(S.updates||[]).slice(-2).reverse();
+  const passed=(S.passed||[]).filter(x=>!assigned(x.n)).sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,8);
+  const riskHTML=risks.length?risks.map(x=>`<span class="chip bad">${esc(x.r)}: mancano ${x.miss}, liberi ${x.free}</span>`).join(""):"<span class=chip>nessun allarme forte</span>";
+  const closeHTML=close.length?close.slice(0,6).map(x=>`<li><b>${esc(x.p.n)}</b> · ${esc(x.p.t)} · ${esc(x.p.r)} · mercato ${market(x.p)}</li>`).join(""):"<li>nessun candidato urgente</li>";
+  const mustHTML=mustOpen.length?mustOpen.map(x=>`<li><b>${esc(x.n)}</b>${+x.max>0?` · max ${x.max}`:" · max auto"}</li>`).join(""):"<li>nessun MUST ancora libero</li>";
+  const passedHTML=passed.length?passed.map(x=>`<span class="chip">↺ ${esc(x.n)}</span>`).join(""):"<span class=chip>nessuno</span>";
+  const rivalCards=[`<div class="rc you"><b>${esc(NOI)}</b><strong>${st.ourPower.toFixed(1)}</strong><div class="bar"><i style="width:${Math.min(100,st.ourPower/maxPower*100)}%"></i></div><small>${m.rem} cr · ${m.tot} gioc.</small></div>`,...riv.map(x=>`<div class="rc"><b>${esc(x.t)}</b><strong>${x.power.toFixed(1)}</strong><div class="bar"><i style="width:${Math.min(100,x.power/maxPower*100)}%"></i></div><small>${x.r.c} cr · ${x.r.g} gioc. · ${x.r.p} por</small></div>`)].join("");
+  return `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AS Pinta · stato asta</title><style>
+  :root{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Arial,sans-serif;color:#191B20;background:#F2F0EC;--r:#862633;--y:#F2A900}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% -5%,#FFF2C7,transparent 32%),#F2F0EC}.top{background:radial-gradient(circle at 85% -30%,#F2A90066,transparent 36%),linear-gradient(125deg,#581820,#862633 62%,#A72E3D);color:#fff;padding:24px}.wrap{max-width:960px;margin:auto;padding:14px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#FFE3A0}.top h1{margin:2px 0 4px;font-size:27px}.muted{font-size:12px;color:#716A63}.top .muted{color:#F4DCD8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}.k,.card,.rc{background:#fff;border:1px solid #E4DED5;border-radius:16px;padding:12px;margin:8px 0;box-shadow:0 5px 18px #5b1e2810}.k b{font-size:26px;display:block}.lead{font-size:16px;line-height:1.55}.lead b{color:var(--r)}.chip{display:inline-block;border:1px solid #DAD4CC;border-radius:999px;padding:5px 9px;margin:3px;font-size:12px}.chip.ok{background:#E9F6EF;border-color:#B7DEC9}.chip.bad{background:#FCEDEA;border-color:#E7B7AE}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:7px 5px;border-bottom:1px solid #EEE9E2;text-align:left}h2{margin:18px 0 8px;font-size:18px;color:#541921}ul{padding-left:20px}.updates{display:grid;gap:8px}.upd{border-left:4px solid var(--y);background:#FFFBF0;border-radius:12px;padding:10px}.upd small{display:block;color:#7A6F64;margin-bottom:3px}.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:7px}.role{background:#fff;border:1px solid #E4DED5;border-radius:12px;padding:8px}.role .line{display:flex;justify-content:space-between;font-size:12px;font-weight:700}.bar{height:7px;border-radius:999px;background:#EEE8E0;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--r),var(--y));border-radius:inherit}.budget{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:7px}.budget .b{background:#fff;border:1px solid #E4DED5;border-radius:12px;padding:9px}.rivals{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:7px}.rc{margin:0}.rc.you{border-color:#E0B540;background:#FFF8E4}.rc strong{float:right;font-size:20px}.rc small{display:block;margin-top:6px;color:#716A63}.progress{height:9px;border-radius:999px;background:#ffffff30;overflow:hidden;margin:10px 0 3px}.progress i{display:block;height:100%;width:${st.comp}%;background:linear-gradient(90deg,#F2A900,#FFD86A)}.mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:7px}.mod{background:#fff;border:1px solid #E4DED5;border-radius:12px;padding:9px}.mod.best{border-color:#D7AA2A;background:#FFF9E9}.mod strong{font-size:18px}.mod small{display:block;color:#716A63;margin-top:3px}
+  </style></head><body><div class="top"><div class="eyebrow">FantaEnel 1X2 · Mantra</div><h1>AS Pinta · stato asta</h1><div class="muted">Fotografia ${now.toLocaleString("it-IT")} · aggiornamenti a salti, non cronologia completa</div><div class="progress"><i></i></div><div class="muted">Asta tracciata ${st.comp}% · ${st.tracked}/${st.target} slot target</div></div><div class="wrap">
+  <div class="card"><h2 style="margin-top:0">Situazione in due righe</h2><div class="lead">${esc(currentSituationText())}</div></div>
+  <div class="card"><h2 style="margin-top:0">Ultimi due aggiornamenti</h2><div class="updates">${updates.length?updates.map((u,i)=>`<div class="upd"><small>${i===0?'Ultimo':'Precedente'} · ${new Date(u.ts).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}</small>${esc(fmtUpdate(u))}</div>`).join(""):`<div class="muted">Non ci sono ancora due import registrati.</div>`}</div></div>
+  <div class="grid"><div class=k><span class=muted>Crediti disponibili</span><b>${m.rem}</b></div><div class=k><span class=muted>Rosa</span><b>${m.tot}</b></div><div class=k><span class=muted>Movimento · fino a</span><b>${m.consMov}</b></div><div class=k><span class=muted>Portiere · fino a</span><b>${m.consPor}</b></div><div class=k><span class=muted>Crediti protetti</span><b>${m.mustRes+m.finRes}</b></div><div class=k><span class=muted>Potere d'acquisto</span><b>${st.ourPower.toFixed(1)}</b><span class=muted>cr/posto</span></div></div>
+  <div class=card><h2 style="margin-top:0">Copertura ruoli</h2><div class=roles>${cov.map(([r,n])=>{const min=+MINS[r]||0,pct=min?Math.min(100,n/min*100):100;return `<div class=role><div class=line><span>${r}</span><span>${n}/${min}</span></div><div class=bar><i style="width:${pct}%"></i></div></div>`}).join("")}</div><h2>Rischio buco</h2>${riskHTML}</div>
+  <div class=card><h2 style="margin-top:0">Moduli Mantra meglio coperti</h2><div class=mods>${forms.slice(0,3).map((x,i)=>`<div class="mod ${i===0?'best':''}"><strong>${x.f.n}</strong><small>${x.total}/11 posti coperti senza fuori ruolo${x.missing.length?` · mancano ${x.missing.slice(0,3).map(z=>z.join('/')).join(', ')}`:' · già schierabile'}</small></div>`).join("")}</div></div>
+  <div class=card><h2 style="margin-top:0">Budget per reparto</h2><div class=budget>${budgets.map(x=>{const pc=x.target?Math.min(100,x.spent/x.target*100):0;return `<div class=b><b>${x.a}</b><div>${x.spent} / ${x.target}</div><div class=bar><i style="width:${pc}%"></i></div></div>`}).join("")}</div></div>
+  <div class=card><h2 style="margin-top:0">Rosa</h2><table><thead><tr><th>Giocatore</th><th>Club</th><th>Ruoli</th><th>Pagato</th></tr></thead><tbody>${rows||'<tr><td colspan=4>Ancora nessun acquisto</td></tr>'}</tbody></table></div>
+  <div class=card><h2 style="margin-top:0">MUST ancora liberi</h2><ul>${mustHTML}</ul><h2>Chiudi ora / low cost utili</h2><ul>${closeHTML}</ul><h2>Già passati e ancora liberi</h2>${passedHTML}</div>
+  <div class=card><h2 style="margin-top:0">Potere d'acquisto rivali</h2><div class=rivals>${rivalCards}</div><div class=muted style="margin-top:8px">Ultimo snapshot rivali: ${esc(S.upd||"non indicato")}</div></div>
+  </div></body></html>`;
+}
 
-    <h3>Backup manuale</h3><div class="card">
-    <div class="row"><button class="btn dark" data-download>Scarica file di backup</button><button class="btn" data-backup>Copia codice di backup</button></div>
-    <textarea id="restore" placeholder="Incolla qui un codice di backup" style="min-height:80px;margin-top:10px"></textarea>
-    <div class="row" style="margin-top:8px"><button class="btn" data-restore>Ripristina dal codice</button>
-      <label class="btn">Ripristina da file<input type="file" id="restorefile" accept="application/json,.json" style="display:none"></label>
-      <button class="btn danger" data-reset>${resetArm ? "Tocca ancora per azzerare tutto" : "Azzera tutto"}</button></div></div>
-    <p class="small">Versione ${APP_VERSION}. Dati ${dataFromCache ? "caricati dalla copia salvata (offline)" : "caricati dal repo"}: base SOS Fanta/fantacalcio.it 10/09 + integrazione Juve/Lazio 11/09/2026; Juve e Lazio inclusi ma ultima spiaggia per AS Pinta; prezzi tarati su ${TEAMS.length} squadre da ${CFG.impostazioni.budget} crediti.</p>`;
+async function shareState(){
+  const html=stateSnapshotHTML(), stamp=new Date().toISOString().slice(0,16).replace(/[:T]/g,"-"), name=`AS-Pinta-stato-${stamp}.html`;
+  const file=new File([html],name,{type:"text/html"});
+  try{
+    if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({title:"AS Pinta · stato asta",text:"AS Pinta · situazione asta e ultimi aggiornamenti",files:[file]}); toast("Stato condiviso"); return; }
+  }catch(e){ if(e && e.name==="AbortError") return; }
+  const a=document.createElement("a"); a.href=URL.createObjectURL(file); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},700); toast("HTML dello stato scaricato");
 }
 
 async function copyText(txt){
@@ -680,15 +1152,43 @@ async function copyText(txt){
 
 /* ---------- eventi ---------- */
 document.addEventListener("click", e => {
+  const rv=e.target.closest("[data-rivalopen]");
+  if(rv && !e.target.closest("button")){ rivalOpen = rivalOpen===rv.dataset.rivalopen ? null : rv.dataset.rivalopen; render(); return; }
   const b = e.target.closest("button"); if (!b) return;
   const d = b.dataset;
   if ("undolast" in d){ undoLast(); return; }
+  if ("sharestate" in d){ shareState(); return; }
+  if (d.rivalopen){ rivalOpen = rivalOpen===d.rivalopen ? null : d.rivalopen; render(); return; }
+  if ("checkai" in d){ const txt=checkAIText(), stamp=new Date().toISOString().slice(0,16).replace(/[:T]/g,"-"); downloadText(`AS-Pinta-CheckAI-${stamp}.md`,txt); copyText(txt); return; }
   if ("auctionmode" in d){ auctionMode=!auctionMode; render(); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
   if (d.tab){ tab = d.tab; if (tab !== "cerca") selected = null; resetArm = false; render(); window.scrollTo(0,0); if (tab === "cerca") setTimeout(() => $("#q") && $("#q").focus(), 30); return; }
   if (d.open){ selected = d.open; tab = "cerca"; render(); window.scrollTo(0,0); return; }
   if ("back" in d){ selected = null; query = ""; render(); setTimeout(() => $("#q").focus(), 30); return; }
-  if (d.buy){ const pr = parseInt($("#price").value, 10); if (!(pr > 0)){ toast("Scrivi il prezzo pagato"); $("#price").focus(); return; } saveUndo(`acquisto ${d.buy}`); removeKnownAssignment(d.buy); S.mine.push({n: d.buy, p: pr}); logEvent("noi", d.buy, NOI, pr); selected = null; query = ""; commit(`${d.buy} preso a ${pr}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
-  if (d.other){ const t = $("#team").value, pr = parseInt($("#price").value, 10); saveUndo(`assegnazione ${d.other}`); removeKnownAssignment(d.other); const a = {t, p: pr > 0 ? pr : ""};
+  if (d.outcome){
+    const ch=document.querySelector('input[name="outcomeChoice"]:checked');
+    if(!ch){ toast("Scegli chi l'ha preso oppure Scartato"); return; }
+    const choice=ch.value, pr=parseInt($("#price").value,10), n=d.outcome;
+    if(choice!=="__SCARTATO__" && !(pr>0)){
+      const ok=window.confirm(`Prezzo mancante per ${n}. Puoi registrarlo lo stesso, ma comparirà un alert finché non lo completi. Continuare?`);
+      if(!ok){ $("#price").focus(); return; }
+    }
+    saveUndo(`esito ${n}`); removeKnownAssignment(n); clearPassed(n);
+    if(choice==="__SCARTATO__"){
+      S.passed.push({n,ts:Date.now()}); logEvent("rimasto libero",n,"","");
+      selected=null; query=""; commit(`${n} segnato come ancora libero`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
+    }
+    if(choice==="__PINTA__"){
+      S.mine.push({n,p:pr>0?pr:""}); logEvent("noi",n,NOI,pr>0?pr:"");
+      selected=null; query=""; commit(pr>0?`${n} preso a ${pr}`:`${n} registrato · ⚠ prezzo da verificare`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
+    }
+    const t=choice||"", a={t,p:pr>0?pr:""};
+    if(t && pr>0 && S.riv[t]){ const r=S.riv[t]; r.c-=pr; r.g+=1; if(isPor(n)) r.p+=1; a.s=1; }
+    S.asg[n]=a; logEvent("altri",n,t,pr>0?pr:"");
+    selected=null; query=""; commit(pr>0?`${n} segnato come preso${t?" da "+t:" · da verificare"}`:`${n} registrato${t?" a "+t:""} · ⚠ prezzo da verificare`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
+  }
+  if (d.buy){ const pr = parseInt($("#price").value, 10); if (!(pr > 0)){ toast("Scrivi il prezzo pagato"); $("#price").focus(); return; } saveUndo(`acquisto ${d.buy}`); removeKnownAssignment(d.buy); clearPassed(d.buy); S.mine.push({n: d.buy, p: pr}); logEvent("noi", d.buy, NOI, pr); selected = null; query = ""; commit(`${d.buy} preso a ${pr}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
+  if (d.pass){ saveUndo(`rimasto libero ${d.pass}`); clearPassed(d.pass); S.passed.push({n:d.pass,ts:Date.now()}); logEvent("rimasto libero",d.pass,"",""); selected=null; query=""; commit(`${d.pass} segnato come ancora libero`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
+  if (d.other){ const tr=document.querySelector('input[name="teamChoice"]:checked'), t=tr?tr.value:"", pr = parseInt($("#price").value, 10); saveUndo(`assegnazione ${d.other}`); removeKnownAssignment(d.other); clearPassed(d.other); const a = {t, p: pr > 0 ? pr : ""};
     if (t && pr > 0){ const r = S.riv[t]; r.c -= pr; r.g += 1; if (isPor(d.other)) r.p += 1; a.s = 1; }
     S.asg[d.other] = a; logEvent("altri", d.other, t, pr > 0 ? pr : ""); selected = null; query = ""; commit(`${d.other} segnato come preso${t ? " da " + t : ""}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
   if (d.undo){ const n = d.undo; saveUndo(`annulla assegnazione ${n}`); const i = S.mine.findIndex(x => x.n === n); if (i >= 0) S.mine.splice(i, 1);
@@ -701,7 +1201,7 @@ document.addEventListener("click", e => {
   if (d.mustdel){ S.must.splice(+d.mustdel, 1); commit("Tolto dai MUST"); return; }
   if (d.blackdel){ S.black.splice(+d.blackdel, 1); commit("Tolto da evitare"); return; }
   if (d.role){ roleSel = d.role; render(); return; }
-  if (d.copy){ copyText(d.copy === "squadre" ? PROMPT_SQUADRE() : PROMPT_GIOCATORI()); return; }
+  if (d.copy){ copyText(PROMPT_FOTO()); return; }
   if ("parse" in d){ const t = $("#paste").value; importPreview = parseImport(t); render(); const ta = $("#paste"); if (ta) ta.value = t; return; }
   if ("apply" in d){ if (importPreview) applyImport(importPreview); return; }
   if ("cancelimport" in d){ importPreview = null; render(); return; }
@@ -729,11 +1229,11 @@ document.addEventListener("click", e => {
 });
 document.addEventListener("input", e => {
   const el = e.target;
-  if (el.id === "q"){ query = el.value; selected = null; $("#res").innerHTML = resultsHTML(); }
+  if (el.id === "q"){ query = el.value; selected = null; const r=$("#res"); r.classList.remove("has-detail"); r.innerHTML = resultsHTML() + (!norm(query) ? recentAuctionHTML() : ""); }
 });
 document.addEventListener("change", e => {
   const el = e.target, d = el.dataset;
-  if (d.riv){ saveUndo(`aggiornamento rivale ${d.riv}`); const v = parseInt(el.value, 10); S.riv[d.riv] = S.riv[d.riv] || {c:S.set.budget,g:0,p:0}; S.riv[d.riv][d.k] = isNaN(v) ? 0 : v; S.upd = new Date().toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"}); commit(); }
+  if (d.riv){ saveUndo(`aggiornamento rivale ${d.riv}`); const v = parseInt(el.value, 10); S.riv[d.riv] = S.riv[d.riv] || {c:S.set.budget,g:0,p:0}; const oldv=S.riv[d.riv][d.k]; S.riv[d.riv][d.k] = isNaN(v) ? 0 : v; S.upd = new Date().toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"}); recordUpdate(`correzione manuale su ${d.riv}: ${d.k} ${oldv}→${S.riv[d.riv][d.k]}.`,`Correzione manuale`); commit(); }
   if (d.editprice !== undefined){ saveUndo("correzione prezzo acquisto"); const v = parseInt(el.value, 10); S.mine[+d.editprice].p = isNaN(v) ? 0 : v; commit("Prezzo aggiornato"); }
   if (d.mustmax !== undefined){ const v = parseInt(el.value, 10); S.must[+d.mustmax].max = isNaN(v) ? 0 : v; commit("Prezzo MUST aggiornato"); }
   if (d.set){ S.set[d.set] = ["stile","profiloBudget"].includes(d.set) ? el.value : (parseFloat(el.value) || 0); commit("Impostazione salvata"); }
@@ -746,6 +1246,23 @@ document.addEventListener("keydown", e => {
   if (e.key === "Enter" && e.target.id === "q"){ const r = searchPlayers(query); if (r.length){ selected = r[0].n; render(); } }
 });
 
+function validateData(players,cfg,shortlist){
+  const errors=[], warnings=[];
+  if(!Array.isArray(players)||!players.length) errors.push("players.json è vuoto o non è un array");
+  if(!cfg||!Array.isArray(cfg.squadre)||!cfg.squadre.length) errors.push("config.json: elenco squadre mancante");
+  if(cfg && (!cfg.noi || !(cfg.squadre||[]).includes(cfg.noi))) errors.push("config.json: 'noi' non compare nell'elenco squadre");
+  if(cfg && new Set(cfg.squadre||[]).size!==(cfg.squadre||[]).length) errors.push("config.json: ci sono squadre duplicate");
+  const names=(players||[]).map(x=>x&&x.n).filter(Boolean), set=new Set(names);
+  if(set.size!==names.length) errors.push("players.json: ci sono nomi giocatore duplicati");
+  (players||[]).forEach((x,i)=>{ if(!x||!x.n||!x.r||x.fv===undefined) warnings.push(`players.json riga ${i+1}: campi essenziali incompleti`); });
+  const cfgNames=[...(cfg&&cfg.must||[]).map(x=>x&&x.n).filter(Boolean),...(cfg&&cfg.evita||[]).filter(Boolean)];
+  cfgNames.filter(n=>!set.has(n)).forEach(n=>warnings.push(`config.json: '${n}' non esiste nel listone`));
+  (shortlist||[]).forEach(x=>{ if(Array.isArray(x)&&x[2]&&!set.has(x[2])) warnings.push(`shortlist: '${x[2]}' non esiste nel listone`); });
+  if(cfg&&(+cfg.impostazioni?.budget||0)<=0) errors.push("config.json: budget non valido");
+  if(cfg&&cfg.budgetReparti){ Object.entries(cfg.budgetReparti).filter(([k])=>!k.startsWith("_")).forEach(([k,v])=>{ const sum=Object.values(v||{}).reduce((a,n)=>a+(+n||0),0); if(Math.abs(sum-100)>1) warnings.push(`Profilo budget '${k}' somma ${sum}% invece di 100%`); }); }
+  return {errors,warnings:[...new Set(warnings)].slice(0,20)};
+}
+
 function fatal(msg){
   document.getElementById("app").innerHTML = `<div class="card" style="margin-top:20px"><h2 style="margin-top:0">L'app non riesce a partire</h2><p>${esc(msg)}</p><p class="small">Aprila dal link di GitHub Pages (non come file sul dispositivo) e controlla che nel repo ci sia la cartella <b>data</b> con players.json, config.json e shortlist.json.</p></div>`;
 }
@@ -753,12 +1270,13 @@ async function fetchJSON(path){ const r = await fetch(`${path}?v=${Date.now()}`,
 async function boot(){
   try {
     const [players, cfg, shortlist] = await Promise.all([fetchJSON("data/players.json"), fetchJSON("data/config.json"), fetchJSON("data/shortlist.json")]);
+    const check=validateData(players,cfg,shortlist); if(check.errors.length){ fatal("Controllo dati fallito: "+check.errors.join(" · ")); return; } DATA_WARNINGS=check.warnings;
     init(players, cfg, shortlist);
     ls.set(LS_CACHE, JSON.stringify({players, cfg, shortlist, at: Date.now()}));
   } catch(e){
     const cached = ls.get(LS_CACHE);
     if (!cached){ fatal("Non riesco a leggere i file dati (" + (e.message || e) + ")."); return; }
-    try { const o = JSON.parse(cached); init(o.players, o.cfg, o.shortlist); dataFromCache = true; } catch(err){ fatal("Copia dei dati danneggiata."); return; }
+    try { const o = JSON.parse(cached); const check=validateData(o.players,o.cfg,o.shortlist); if(check.errors.length){ fatal("Copia dati non valida: "+check.errors.join(" · ")); return; } DATA_WARNINGS=check.warnings; init(o.players, o.cfg, o.shortlist); dataFromCache = true; } catch(err){ fatal("Copia dei dati danneggiata."); return; }
   }
   loadLocal();
   if (!ls.set(IS_BETA ? "astaPinta.beta.test" : "astaPinta.test", "1")) localOk = false;
