@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152159224,
+ "updatedAt": 1789152218870,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -166,6 +166,11 @@
    "t": "Pro Stata",
    "p": 9,
    "s": 1
+  },
+  "Cristante": {
+   "t": "Real Skënderbeu",
+   "p": 27,
+   "s": 1
   }
  },
  "riv": {
@@ -195,8 +200,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 399,
-   "g": 5,
+   "c": 372,
+   "g": 6,
    "p": 0
   },
   "Space Invaders": {
@@ -530,6 +535,13 @@
    "n": "Keita M.",
    "t": "Pro Stata",
    "p": 9
+  },
+  {
+   "ts": 1789152218870,
+   "a": "altri",
+   "n": "Cristante",
+   "t": "Real Skënderbeu",
+   "p": 27
   }
  ],
  "passed": [
