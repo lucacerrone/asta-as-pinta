@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789163807321,
+ "updatedAt": 1789163849658,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1052,6 +1052,10 @@
   "Valeri": {
    "t": "Space Invaders",
    "p": 13
+  },
+  "Kristensen T.": {
+   "t": "Pro Stata",
+   "p": 18
   }
  },
  "riv": {
@@ -3040,6 +3044,13 @@
    "n": "Valeri",
    "t": "Space Invaders",
    "p": 13
+  },
+  {
+   "ts": 1789163849658,
+   "a": "altri",
+   "n": "Kristensen T.",
+   "t": "Pro Stata",
+   "p": 18
   }
  ],
  "passed": [
