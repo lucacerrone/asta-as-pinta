@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161811906,
+ "updatedAt": 1789161940049,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -45,6 +45,10 @@
   {
    "n": "Frendrup",
    "p": 12
+  },
+  {
+   "n": "Falcone",
+   "p": 10
   }
  ],
  "asg": {
@@ -2649,6 +2653,13 @@
    "n": "Ndour",
    "t": "chill curre",
    "p": 15
+  },
+  {
+   "ts": 1789161940049,
+   "a": "noi",
+   "n": "Falcone",
+   "t": "AS Pinta",
+   "p": 10
   }
  ],
  "passed": [
