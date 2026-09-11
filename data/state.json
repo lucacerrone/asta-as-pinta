@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150678057,
+ "updatedAt": 1789150888999,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -93,6 +93,10 @@
    "t": "Fun Cool FC",
    "p": 6,
    "s": 1
+  },
+  "Raimondo": {
+   "t": "",
+   "p": 83
   }
  },
  "riv": {
@@ -324,6 +328,13 @@
    "n": "Bakola",
    "t": "Fun Cool FC",
    "p": 6
+  },
+  {
+   "ts": 1789150888999,
+   "a": "altri",
+   "n": "Raimondo",
+   "t": "",
+   "p": 83
   }
  ],
  "passed": [
