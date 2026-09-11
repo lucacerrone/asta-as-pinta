@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152218870,
+ "updatedAt": 1789152260432,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -171,6 +171,11 @@
    "t": "Real Skënderbeu",
    "p": 27,
    "s": 1
+  },
+  "McKennie": {
+   "t": "S.S. Longobarda",
+   "p": 35,
+   "s": 1
   }
  },
  "riv": {
@@ -180,8 +185,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 348,
-   "g": 4,
+   "c": 313,
+   "g": 5,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -542,6 +547,13 @@
    "n": "Cristante",
    "t": "Real Skënderbeu",
    "p": 27
+  },
+  {
+   "ts": 1789152260432,
+   "a": "altri",
+   "n": "McKennie",
+   "t": "S.S. Longobarda",
+   "p": 35
   }
  ],
  "passed": [
