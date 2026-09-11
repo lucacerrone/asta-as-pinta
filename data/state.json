@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154517941,
+ "updatedAt": 1789154574561,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -378,6 +378,11 @@
    "t": "Fun Cool FC",
    "p": 2,
    "s": 1
+  },
+  "Dybala": {
+   "t": "Big Tasty FC",
+   "p": 90,
+   "s": 1
   }
  },
  "riv": {
@@ -437,8 +442,8 @@
    "p": 0
   },
   "Big Tasty FC": {
-   "c": 500,
-   "g": 0,
+   "c": 410,
+   "g": 1,
    "p": 0
   },
   "Fun Cool FC": {
@@ -1078,6 +1083,13 @@
    "n": "Cichella",
    "t": "Fun Cool FC",
    "p": 2
+  },
+  {
+   "ts": 1789154574561,
+   "a": "altri",
+   "n": "Dybala",
+   "t": "Big Tasty FC",
+   "p": 90
   }
  ],
  "passed": [
