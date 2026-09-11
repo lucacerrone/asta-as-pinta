@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154389821,
+ "updatedAt": 1789154442465,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -363,12 +363,17 @@
    "t": "AS Emazz",
    "p": 47,
    "s": 1
+  },
+  "Britschgi": {
+   "t": "chill curre",
+   "p": 13,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 443,
-   "g": 4,
+   "c": 430,
+   "g": 5,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -1042,6 +1047,13 @@
    "n": "Goncalves P.",
    "t": "AS Emazz",
    "p": 47
+  },
+  {
+   "ts": 1789154442465,
+   "a": "altri",
+   "n": "Britschgi",
+   "t": "chill curre",
+   "p": 13
   }
  ],
  "passed": [
