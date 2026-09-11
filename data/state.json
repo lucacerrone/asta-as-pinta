@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155930088,
+ "updatedAt": 1789156066228,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -495,10 +495,6 @@
    "t": "Real Skënderbeu",
    "p": 45
   },
-  "Zalewski": {
-   "t": "",
-   "p": 4
-  },
   "Kean": {
    "t": "Fun Cool FC",
    "p": 63,
@@ -515,7 +511,19 @@
    "s": 1
   },
   "Jashari": {
-   "t": "",
+   "t": "Space Invaders",
+   "p": 3
+  },
+  "Zalewski": {
+   "t": "S.S. Longobarda",
+   "p": 4
+  },
+  "Belahyane": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Moro N.": {
+   "t": "chill curre",
    "p": 3
   }
  },
@@ -1448,6 +1456,34 @@
    "n": "Jashari",
    "t": "",
    "p": 3
+  },
+  {
+   "ts": 1789156066228,
+   "a": "altri (foto/integrazione)",
+   "n": "Jashari",
+   "t": "Space Invaders",
+   "p": 3
+  },
+  {
+   "ts": 1789156066228,
+   "a": "altri (foto/integrazione)",
+   "n": "Zalewski",
+   "t": "S.S. Longobarda",
+   "p": 4
+  },
+  {
+   "ts": 1789156066228,
+   "a": "altri (foto/integrazione)",
+   "n": "Belahyane",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789156066228,
+   "a": "altri (foto/integrazione)",
+   "n": "Moro N.",
+   "t": "chill curre",
+   "p": 3
   }
  ],
  "passed": [
@@ -1494,6 +1530,11 @@
    "ts": 1789155699002,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 6 assegnazioni, 3 completate con informazioni mancanti, 1 corrette."
+  },
+  {
+   "ts": 1789156066228,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 4 assegnazioni, 2 completate con informazioni mancanti: Jashari, Zalewski, Belahyane, Moro N.."
   }
  ]
 }
