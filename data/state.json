@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167937830,
+ "updatedAt": 1789168135410,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1352,6 +1352,10 @@
   "Sanchez Ro.": {
    "t": "NewRock",
    "p": 1
+  },
+  "Soulè": {
+   "t": "Fc Afragolese",
+   "p": 27
   }
  },
  "riv": {
@@ -3886,6 +3890,13 @@
    "n": "Sanchez Ro.",
    "t": "NewRock",
    "p": 1
+  },
+  {
+   "ts": 1789168135410,
+   "a": "altri",
+   "n": "Soulè",
+   "t": "Fc Afragolese",
+   "p": 27
   }
  ],
  "passed": [
