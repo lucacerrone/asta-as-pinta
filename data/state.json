@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158885285,
+ "updatedAt": 1789158988919,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -689,12 +689,17 @@
    "t": "AS Emazz",
    "p": 4,
    "s": 1
+  },
+  "Alajbegovic": {
+   "t": "chill curre",
+   "p": 37,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 403,
-   "g": 7,
+   "c": 366,
+   "g": 8,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -1914,6 +1919,13 @@
    "n": "Vlasic",
    "t": "AS Pinta",
    "p": 35
+  },
+  {
+   "ts": 1789158988919,
+   "a": "altri",
+   "n": "Alajbegovic",
+   "t": "chill curre",
+   "p": 37
   }
  ],
  "passed": [
