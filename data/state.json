@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158196399,
+ "updatedAt": 1789158212453,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -646,6 +646,10 @@
    "t": "S.S. Longobarda",
    "p": 1,
    "s": 1
+  },
+  "Dele-Bashiru": {
+   "t": "",
+   "p": 1
   }
  },
  "riv": {
@@ -1807,6 +1811,13 @@
    "a": "altri",
    "n": "Sulemana I.",
    "t": "S.S. Longobarda",
+   "p": 1
+  },
+  {
+   "ts": 1789158212453,
+   "a": "altri",
+   "n": "Dele-Bashiru",
+   "t": "",
    "p": 1
   }
  ],
