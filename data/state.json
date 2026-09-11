@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155838034,
+ "updatedAt": 1789155908594,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -508,6 +508,11 @@
    "t": "Fc Afragolese",
    "p": 3,
    "s": 1
+  },
+  "De Gea": {
+   "t": "Fc Afragolese",
+   "p": 25,
+   "s": 1
   }
  },
  "riv": {
@@ -557,9 +562,9 @@
    "p": 0
   },
   "Fc Afragolese": {
-   "c": 487,
-   "g": 3,
-   "p": 0
+   "c": 462,
+   "g": 4,
+   "p": 1
   },
   "Fight Club": {
    "c": 431,
@@ -1425,6 +1430,13 @@
    "n": "Perez K.",
    "t": "Fc Afragolese",
    "p": 3
+  },
+  {
+   "ts": 1789155908594,
+   "a": "altri",
+   "n": "De Gea",
+   "t": "Fc Afragolese",
+   "p": 25
   }
  ],
  "passed": [
