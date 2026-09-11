@@ -1,0 +1,567 @@
+[
+[
+"Portieri",
+"A - Top",
+"Svilar"
+],
+[
+"Portieri",
+"B - Top alternativo",
+"Carnesecchi"
+],
+[
+"Portieri",
+"B - Blocco",
+"Butez"
+],
+[
+"Portieri",
+"B - Blocco (vice)",
+"Sanchez Ro."
+],
+[
+"Portieri",
+"C - Value",
+"Caprile"
+],
+[
+"Portieri",
+"C - Value",
+"Skorupski"
+],
+[
+"Portieri",
+"Jolly",
+"Milinkovic-Savic V."
+],
+[
+"Portieri",
+"Jolly",
+"Provedel"
+],
+[
+"Difesa - Dc",
+"A",
+"Mancini"
+],
+[
+"Difesa - Dc",
+"A",
+"Bastoni"
+],
+[
+"Difesa - Dc",
+"B",
+"Akanji"
+],
+[
+"Difesa - Dc",
+"B",
+"Rrahmani"
+],
+[
+"Difesa - Dc",
+"B",
+"Pavlovic"
+],
+[
+"Difesa - Dc",
+"B",
+"N'Dicka"
+],
+[
+"Difesa - Dc",
+"B",
+"Chalobah T."
+],
+[
+"Difesa - Dc",
+"B",
+"Gila"
+],
+[
+"Difesa - Dc",
+"C - Value",
+"Ostigard"
+],
+[
+"Difesa - Dc",
+"C - Value",
+"Vasquez"
+],
+[
+"Difesa - Dc",
+"C - Value",
+"Theate"
+],
+[
+"Difesa - Dc",
+"C - Value",
+"Tiago Gabriel"
+],
+[
+"Difesa - Dc",
+"C - Value",
+"Mina"
+],
+[
+"Difesa - Dc",
+"C - Value",
+"Comuzzo"
+],
+[
+"Difesa - Dc",
+"Low cost",
+"Diego Carlos"
+],
+[
+"Difesa - Dc",
+"Low cost",
+"Idzes"
+],
+[
+"Difesa - Dc",
+"Low cost",
+"Calvani"
+],
+[
+"Difesa - Dc",
+"Occasione",
+"Solet"
+],
+[
+"Difesa - Dd",
+"A",
+"Di Lorenzo"
+],
+[
+"Difesa - Dd",
+"B",
+"Couto"
+],
+[
+"Difesa - Dd",
+"B",
+"Jimenez A."
+],
+[
+"Difesa - Dd",
+"B",
+"Vojvoda"
+],
+[
+"Difesa - Dd",
+"C",
+"Belghali"
+],
+[
+"Difesa - Dd",
+"C",
+"Bellanova"
+],
+[
+"Difesa - Dd",
+"C",
+"Zortea"
+],
+[
+"Difesa - Dd",
+"Low cost",
+"Van Der Brempt"
+],
+[
+"Difesa - Dd",
+"Low cost",
+"Veiga D."
+],
+[
+"Difesa - Ds",
+"A",
+"Miranda J."
+],
+[
+"Difesa - Ds",
+"A",
+"Valeri"
+],
+[
+"Difesa - Ds",
+"B",
+"Kamara H."
+],
+[
+"Difesa - Ds",
+"B",
+"Bernasconi"
+],
+[
+"Difesa - Ds",
+"B",
+"Carlos Augusto"
+],
+[
+"Difesa - Ds",
+"C",
+"Mangas"
+],
+[
+"Difesa - Ds",
+"C",
+"Obrador"
+],
+[
+"Difesa - Ds",
+"Low cost",
+"Gallo"
+],
+[
+"Difesa - Ds",
+"Low cost",
+"Bracaglia"
+],
+[
+"Esterni - E",
+"A",
+"Wesley"
+],
+[
+"Esterni - E",
+"A",
+"Molina N."
+],
+[
+"Esterni - E",
+"A (se prezzo ok)",
+"Dimarco"
+],
+[
+"Esterni - E",
+"B",
+"Saelemaekers"
+],
+[
+"Esterni - E",
+"B",
+"Moreira"
+],
+[
+"Esterni - E",
+"B",
+"Diouf"
+],
+[
+"Esterni - E",
+"C",
+"Cacciamani"
+],
+[
+"Esterni - E",
+"Occasione",
+"Spence"
+],
+[
+"Centrocampo - M",
+"A",
+"Calhanoglu"
+],
+[
+"Centrocampo - M",
+"B",
+"Konè M."
+],
+[
+"Centrocampo - M",
+"B",
+"Ederson D.S."
+],
+[
+"Centrocampo - M",
+"B",
+"Modric"
+],
+[
+"Centrocampo - M",
+"B",
+"Cristante"
+],
+[
+"Centrocampo - M",
+"Value",
+"Calò"
+],
+[
+"Centrocampo - M",
+"Value",
+"Busio"
+],
+[
+"Centrocampo - M",
+"Value",
+"Lobotka"
+],
+[
+"Centrocampo - M",
+"Value",
+"Frendrup"
+],
+[
+"Centrocampo - M",
+"Low cost",
+"Romano"
+],
+[
+"Centrocampo - M",
+"Low cost",
+"Karlstrom"
+],
+[
+"Centrocampo - C",
+"A",
+"Da Cunha"
+],
+[
+"Centrocampo - C",
+"A",
+"Rabiot"
+],
+[
+"Centrocampo - C",
+"A",
+"Barella"
+],
+[
+"Centrocampo - C",
+"B",
+"Atta"
+],
+[
+"Centrocampo - C",
+"B",
+"Ekkelenkamp"
+],
+[
+"Centrocampo - C",
+"B",
+"Samardzic"
+],
+[
+"Centrocampo - C",
+"C",
+"Fazzini"
+],
+[
+"Centrocampo - C",
+"C",
+"Mandragora"
+],
+[
+"Centrocampo - C",
+"Occasione",
+"McTominay"
+],
+[
+"Trequarti - T",
+"A",
+"Paz N."
+],
+[
+"Trequarti - T",
+"A",
+"Pulisic"
+],
+[
+"Trequarti - T",
+"B",
+"De Bruyne"
+],
+[
+"Trequarti - T",
+"B",
+"Vlasic"
+],
+[
+"Trequarti - T",
+"B",
+"Baturina"
+],
+[
+"Trequarti - T",
+"B",
+"Mora"
+],
+[
+"Trequarti - T",
+"C",
+"Casadei"
+],
+[
+"Trequarti - T",
+"C",
+"Adzic"
+],
+[
+"Trequarti - T",
+"Scommessa",
+"Liberali"
+],
+[
+"Ali - W",
+"A",
+"Diao"
+],
+[
+"Ali - W",
+"A (se sconto)",
+"Orsolini"
+],
+[
+"Ali - W",
+"B",
+"Politano"
+],
+[
+"Ali - W",
+"B",
+"Goncalves P."
+],
+[
+"Ali - W",
+"B",
+"Rowe"
+],
+[
+"Ali - W",
+"Low cost",
+"Schmid"
+],
+[
+"Ali - W",
+"Low cost",
+"Kvernadze"
+],
+[
+"Ali - W",
+"Low cost",
+"Ghedjemis"
+],
+[
+"Attaccanti - A",
+"A",
+"Dybala"
+],
+[
+"Attaccanti - A",
+"B",
+"Berardi"
+],
+[
+"Attaccanti - A",
+"B",
+"Laurientè"
+],
+[
+"Attaccanti - A",
+"B",
+"De Ketelaere"
+],
+[
+"Attaccanti - A",
+"C",
+"Esposito Se."
+],
+[
+"Attaccanti - A",
+"C",
+"Yeboah J."
+],
+[
+"Attaccanti - A",
+"Scommessa",
+"Lontani"
+],
+[
+"Attaccanti - A",
+"Scommessa",
+"Zeballos"
+],
+[
+"Punte - Pc",
+"A (tetto!)",
+"Martinez L."
+],
+[
+"Punte - Pc",
+"A (tetto!)",
+"Malen"
+],
+[
+"Punte - Pc",
+"B",
+"Hojlund"
+],
+[
+"Punte - Pc",
+"B",
+"Kean"
+],
+[
+"Punte - Pc",
+"B",
+"Ramos G."
+],
+[
+"Punte - Pc",
+"B",
+"Thuram"
+],
+[
+"Punte - Pc",
+"C",
+"Scamacca"
+],
+[
+"Punte - Pc",
+"C",
+"Davis K."
+],
+[
+"Punte - Pc",
+"C",
+"Simeone"
+],
+[
+"Punte - Pc",
+"C",
+"Colombo"
+],
+[
+"Punte - Pc",
+"C",
+"Dovbyk"
+],
+[
+"Punte - Pc",
+"Low cost",
+"Tourè E."
+],
+[
+"Punte - Pc",
+"Low cost",
+"Adams A."
+],
+[
+"Punte - Pc",
+"Low cost",
+"Raimondo"
+],
+[
+"Punte - Pc",
+"Low cost",
+"Geubbels"
+],
+[
+"Punte - Pc",
+"Evita a quel prezzo",
+"Varela G."
+]
+]

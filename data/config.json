@@ -1,0 +1,69 @@
+{
+  "_leggimi": "Impostazioni della lega. Si può modificare da GitHub (icona matita). I nomi di MUST ed evita vanno scritti come nel listone (es. 'Martinez L.', 'Paz N.', 'Calò'): per controllare, cercali nell'app.",
+  "noi": "AS Pinta",
+  "squadre": [
+    "AS Pinta",
+    "chill curre",
+    "S.S. Longobarda",
+    "Al-Chaos-Ahli",
+    "AC OMMODITY",
+    "Pro Stata",
+    "Real Skënderbeu",
+    "Space Invaders",
+    "AS Emazz",
+    "NewRock",
+    "Fc Afragolese",
+    "Fight Club",
+    "Big Tasty FC",
+    "Fun Cool FC"
+  ],
+  "regole": {
+    "porMin": 2,
+    "porMax": 4,
+    "movMin": 23,
+    "movMax": 26,
+    "rosaMax": 30
+  },
+  "impostazioni": {
+    "budget": 500,
+    "tetto": 25,
+    "stile": "Normale",
+    "riserva": 30,
+    "target": 27
+  },
+  "prezzi": {
+    "sogliaBig": 150,
+    "sogliaMedi": 40,
+    "moltBig": 1.0,
+    "moltMedi": 1.15,
+    "moltBassi": 1.3,
+    "extraMust": 1.3
+  },
+  "minimiRuolo": {
+    "Por": 2,
+    "Dc": 5,
+    "B": 0,
+    "Dd": 2,
+    "Ds": 2,
+    "E": 2,
+    "M": 3,
+    "C": 3,
+    "W": 2,
+    "T": 2,
+    "A": 2,
+    "Pc": 3
+  },
+  "must": [
+    {
+      "n": "",
+      "max": 0,
+      "why": ""
+    }
+  ],
+  "evita": [],
+  "github": {
+    "repo": "asta-as-pinta",
+    "branch": "stato",
+    "file": "data/state.json"
+  }
+}
