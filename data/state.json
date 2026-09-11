@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789159103847,
+ "updatedAt": 1789159171358,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -651,10 +651,6 @@
    "p": 1,
    "s": 1
   },
-  "Dele-Bashiru": {
-   "t": "",
-   "p": 1
-  },
   "Adzic": {
    "t": "NewRock",
    "p": 36,
@@ -699,6 +695,30 @@
    "t": "AS Emazz",
    "p": 150,
    "s": 1
+  },
+  "Sulemana K.": {
+   "t": "NewRock",
+   "p": 1
+  },
+  "Ngonge": {
+   "t": "Big Tasty FC",
+   "p": 5
+  },
+  "Cambiaso": {
+   "t": "S.S. Longobarda",
+   "p": 10
+  },
+  "Rodriguez Je.": {
+   "t": "Fight Club",
+   "p": 7
+  },
+  "Conceicao": {
+   "t": "Fun Cool FC",
+   "p": 41
+  },
+  "Dele-Bashiru": {
+   "t": "NewRock",
+   "p": 1
   }
  },
  "riv": {
@@ -1938,6 +1958,48 @@
    "n": "Paz N.",
    "t": "AS Emazz",
    "p": 150
+  },
+  {
+   "ts": 1789159171357,
+   "a": "altri (foto/integrazione)",
+   "n": "Sulemana K.",
+   "t": "NewRock",
+   "p": 1
+  },
+  {
+   "ts": 1789159171357,
+   "a": "altri (foto/integrazione)",
+   "n": "Ngonge",
+   "t": "Big Tasty FC",
+   "p": 5
+  },
+  {
+   "ts": 1789159171357,
+   "a": "altri (foto/integrazione)",
+   "n": "Cambiaso",
+   "t": "S.S. Longobarda",
+   "p": 10
+  },
+  {
+   "ts": 1789159171358,
+   "a": "altri (foto/integrazione)",
+   "n": "Rodriguez Je.",
+   "t": "Fight Club",
+   "p": 7
+  },
+  {
+   "ts": 1789159171358,
+   "a": "altri (foto/integrazione)",
+   "n": "Conceicao",
+   "t": "Fun Cool FC",
+   "p": 41
+  },
+  {
+   "ts": 1789159171358,
+   "a": "altri (foto/integrazione)",
+   "n": "Dele-Bashiru",
+   "t": "NewRock",
+   "p": 1
   }
  ],
  "passed": [
@@ -1994,6 +2056,11 @@
    "ts": 1789158009437,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 1 squadre (Fight Club: 404→12 cr). sono state integrate 9 assegnazioni."
+  },
+  {
+   "ts": 1789159171358,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 6 assegnazioni, 1 completate con informazioni mancanti."
   }
  ]
 }
