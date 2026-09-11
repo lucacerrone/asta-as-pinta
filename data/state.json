@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156843307,
+ "updatedAt": 1789156877720,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -560,6 +560,11 @@
    "t": "AC OMMODITY",
    "p": 6,
    "s": 1
+  },
+  "Tourè I.": {
+   "t": "Fun Cool FC",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -624,8 +629,8 @@
    "p": 0
   },
   "Fun Cool FC": {
-   "c": 352,
-   "g": 5,
+   "c": 351,
+   "g": 6,
    "p": 0
   }
  },
@@ -1582,6 +1587,13 @@
    "n": "Ilic",
    "t": "AC OMMODITY",
    "p": 6
+  },
+  {
+   "ts": 1789156877720,
+   "a": "altri",
+   "n": "Tourè I.",
+   "t": "Fun Cool FC",
+   "p": 1
   }
  ],
  "passed": [
