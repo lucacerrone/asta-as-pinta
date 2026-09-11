@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160598080,
+ "updatedAt": 1789160885899,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -41,6 +41,14 @@
   {
    "n": "Carlos Augusto",
    "p": 15
+  },
+  {
+   "n": "Samardzic",
+   "p": 40
+  },
+  {
+   "n": "Sarr P.",
+   "p": 19
   }
  ],
  "asg": {
@@ -761,17 +769,9 @@
    "t": "AC OMMODITY",
    "p": 1
   },
-  "Samardzic": {
-   "t": "S.S. Longobarda",
-   "p": 40
-  },
   "Pasalic": {
    "t": "Al-Chaos-Ahli",
    "p": 7
-  },
-  "Sarr P.": {
-   "t": "S.S. Longobarda",
-   "p": 19
   },
   "Kelly L.": {
    "t": "Big Tasty FC",
@@ -792,6 +792,58 @@
   "Diao": {
    "t": "Fight Club",
    "p": 93
+  },
+  "Obrador": {
+   "t": "NewRock",
+   "p": 9
+  },
+  "Locatelli": {
+   "t": "Fun Cool FC",
+   "p": 1
+  },
+  "Caleta-Car": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Bernardeschi": {
+   "t": "Big Tasty FC",
+   "p": 20
+  },
+  "Vicario": {
+   "t": "chill curre",
+   "p": 46
+  },
+  "Woltemade": {
+   "t": "Al-Chaos-Ahli",
+   "p": 50
+  },
+  "Ordonez C.": {
+   "t": "Al-Chaos-Ahli",
+   "p": 9
+  },
+  "Sow": {
+   "t": "Big Tasty FC",
+   "p": 9
+  },
+  "Helland": {
+   "t": "chill curre",
+   "p": 19
+  },
+  "Ramon": {
+   "t": "AC OMMODITY",
+   "p": 31
+  },
+  "Fernandez T.": {
+   "t": "AS Emazz",
+   "p": 1
+  },
+  "Zaccagni": {
+   "t": "Fight Club",
+   "p": 69
+  },
+  "Zortea": {
+   "t": "Fun Cool FC",
+   "p": 8
   }
  },
  "riv": {
@@ -2262,6 +2314,111 @@
    "n": "Carlos Augusto",
    "t": "AS Pinta",
    "p": 15
+  },
+  {
+   "ts": 1789160885897,
+   "a": "altri (foto/integrazione)",
+   "n": "Obrador",
+   "t": "NewRock",
+   "p": 9
+  },
+  {
+   "ts": 1789160885897,
+   "a": "altri (foto/integrazione)",
+   "n": "Locatelli",
+   "t": "Fun Cool FC",
+   "p": 1
+  },
+  {
+   "ts": 1789160885897,
+   "a": "altri (foto/integrazione)",
+   "n": "Caleta-Car",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789160885897,
+   "a": "altri (foto/integrazione)",
+   "n": "Bernardeschi",
+   "t": "Big Tasty FC",
+   "p": 20
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Vicario",
+   "t": "chill curre",
+   "p": 46
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Woltemade",
+   "t": "Al-Chaos-Ahli",
+   "p": 50
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Ordonez C.",
+   "t": "Al-Chaos-Ahli",
+   "p": 9
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Sow",
+   "t": "Big Tasty FC",
+   "p": 9
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Helland",
+   "t": "chill curre",
+   "p": 19
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Ramon",
+   "t": "AC OMMODITY",
+   "p": 31
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Fernandez T.",
+   "t": "AS Emazz",
+   "p": 1
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Zaccagni",
+   "t": "Fight Club",
+   "p": 69
+  },
+  {
+   "ts": 1789160885898,
+   "a": "altri (foto/integrazione)",
+   "n": "Zortea",
+   "t": "Fun Cool FC",
+   "p": 8
+  },
+  {
+   "ts": 1789160885898,
+   "a": "noi (foto/integrazione)",
+   "n": "Samardzic",
+   "t": "AS Pinta",
+   "p": 40
+  },
+  {
+   "ts": 1789160885898,
+   "a": "noi (foto/integrazione)",
+   "n": "Sarr P.",
+   "t": "AS Pinta",
+   "p": 19
   }
  ],
  "passed": [
@@ -2343,6 +2500,11 @@
    "ts": 1789160184914,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 6 squadre (Real Skënderbeu: 15→22 gioc., 1→2 por; Real Skënderbeu: 15→22 gioc., 1→2 por; Fight Club: -29→329 cr, 9→12 gioc.; +3 altre). sono state integrate 3 assegnazioni, 1 completate con informazioni mancanti, 1 corrette: Lang, Zappacosta, Raimondo."
+  },
+  {
+   "ts": 1789160885898,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 15 assegnazioni, 2 corrette."
   }
  ]
 }
