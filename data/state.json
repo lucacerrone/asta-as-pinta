@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153404021,
+ "updatedAt": 1789153442390,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -274,12 +274,17 @@
    "t": "AC OMMODITY",
    "p": 16,
    "s": 1
+  },
+  "Viery": {
+   "t": "chill curre",
+   "p": 9,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 491,
-   "g": 1,
+   "c": 482,
+   "g": 2,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -799,6 +804,13 @@
    "n": "Fazzini",
    "t": "AC OMMODITY",
    "p": 16
+  },
+  {
+   "ts": 1789153442390,
+   "a": "altri",
+   "n": "Viery",
+   "t": "chill curre",
+   "p": 9
   }
  ],
  "passed": [
