@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155908594,
+ "updatedAt": 1789155930088,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -513,6 +513,10 @@
    "t": "Fc Afragolese",
    "p": 25,
    "s": 1
+  },
+  "Jashari": {
+   "t": "",
+   "p": 3
   }
  },
  "riv": {
@@ -1437,6 +1441,13 @@
    "n": "De Gea",
    "t": "Fc Afragolese",
    "p": 25
+  },
+  {
+   "ts": 1789155930088,
+   "a": "altri",
+   "n": "Jashari",
+   "t": "",
+   "p": 3
   }
  ],
  "passed": [
