@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153317191,
+ "updatedAt": 1789153368880,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -264,6 +264,11 @@
    "t": "Real Skënderbeu",
    "p": 73,
    "s": 1
+  },
+  "Zaniolo": {
+   "t": "AC OMMODITY",
+   "p": 35,
+   "s": 1
   }
  },
  "riv": {
@@ -283,8 +288,8 @@
    "p": 1
   },
   "AC OMMODITY": {
-   "c": 496,
-   "g": 2,
+   "c": 461,
+   "g": 3,
    "p": 0
   },
   "Pro Stata": {
@@ -775,6 +780,13 @@
    "n": "Orsolini",
    "t": "Real Skënderbeu",
    "p": 73
+  },
+  {
+   "ts": 1789153368880,
+   "a": "altri",
+   "n": "Zaniolo",
+   "t": "AC OMMODITY",
+   "p": 35
   }
  ],
  "passed": [
