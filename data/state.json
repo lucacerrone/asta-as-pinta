@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789163402339,
+ "updatedAt": 1789163522410,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1036,6 +1036,10 @@
   "Bernabè": {
    "t": "Space Invaders",
    "p": 4
+  },
+  "Gonzalez N.": {
+   "t": "chill curre",
+   "p": 44
   }
  },
  "riv": {
@@ -2975,6 +2979,13 @@
    "n": "Bernabè",
    "t": "Space Invaders",
    "p": 4
+  },
+  {
+   "ts": 1789163522410,
+   "a": "altri",
+   "n": "Gonzalez N.",
+   "t": "chill curre",
+   "p": 44
   }
  ],
  "passed": [
