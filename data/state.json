@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152051488,
+ "updatedAt": 1789152066767,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -499,6 +499,13 @@
    "n": "Dominguez B.",
    "t": "Real Skënderbeu",
    "p": 4
+  },
+  {
+   "ts": 1789152066767,
+   "a": "rimasto libero",
+   "n": "Marianucci",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
@@ -525,6 +532,10 @@
   {
    "n": "Stankovic A.",
    "ts": 1789151794534
+  },
+  {
+   "n": "Marianucci",
+   "ts": 1789152066767
   }
  ],
  "updates": []
