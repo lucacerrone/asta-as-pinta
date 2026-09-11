@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155819808,
+ "updatedAt": 1789155838034,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -503,6 +503,11 @@
    "t": "Fun Cool FC",
    "p": 63,
    "s": 1
+  },
+  "Perez K.": {
+   "t": "Fc Afragolese",
+   "p": 3,
+   "s": 1
   }
  },
  "riv": {
@@ -552,8 +557,8 @@
    "p": 0
   },
   "Fc Afragolese": {
-   "c": 490,
-   "g": 2,
+   "c": 487,
+   "g": 3,
    "p": 0
   },
   "Fight Club": {
@@ -1413,6 +1418,13 @@
    "n": "Kean",
    "t": "Fun Cool FC",
    "p": 63
+  },
+  {
+   "ts": 1789155838034,
+   "a": "altri",
+   "n": "Perez K.",
+   "t": "Fc Afragolese",
+   "p": 3
   }
  ],
  "passed": [
