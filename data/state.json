@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165230176,
+ "updatedAt": 1789165251491,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1132,6 +1132,10 @@
   "Fabbian": {
    "t": "Fun Cool FC",
    "p": 6
+  },
+  "Ciurria": {
+   "t": "",
+   "p": ""
   }
  },
  "riv": {
@@ -3260,6 +3264,13 @@
    "n": "Fabbian",
    "t": "Fun Cool FC",
    "p": 6
+  },
+  {
+   "ts": 1789165251491,
+   "a": "altri",
+   "n": "Ciurria",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
