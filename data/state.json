@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151794534,
+ "updatedAt": 1789151841151,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -126,6 +126,11 @@
    "t": "AS Emazz",
    "p": 1,
    "s": 1
+  },
+  "Belghali": {
+   "t": "Real Skënderbeu",
+   "p": 20,
+   "s": 1
   }
  },
  "riv": {
@@ -155,8 +160,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 477,
-   "g": 1,
+   "c": 457,
+   "g": 2,
    "p": 0
   },
   "Space Invaders": {
@@ -427,6 +432,13 @@
    "n": "Stankovic A.",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789151841151,
+   "a": "altri",
+   "n": "Belghali",
+   "t": "Real Skënderbeu",
+   "p": 20
   }
  ],
  "passed": [
