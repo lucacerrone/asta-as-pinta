@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150067064,
+ "updatedAt": 1789150087480,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -35,6 +35,11 @@
    "t": "S.S. Longobarda",
    "p": 36,
    "s": 1
+  },
+  "Nzola": {
+   "t": "AC OMMODITY",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -54,8 +59,8 @@
    "p": 0
   },
   "AC OMMODITY": {
-   "c": 500,
-   "g": 0,
+   "c": 499,
+   "g": 1,
    "p": 0
   },
   "Pro Stata": {
@@ -175,6 +180,13 @@
    "n": "Kevin Carlos",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789150087480,
+   "a": "altri",
+   "n": "Nzola",
+   "t": "AC OMMODITY",
+   "p": 1
   }
  ],
  "passed": [
