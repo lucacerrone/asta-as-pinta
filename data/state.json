@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152066767,
+ "updatedAt": 1789152123347,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -156,6 +156,11 @@
    "t": "Real Skënderbeu",
    "p": 4,
    "s": 1
+  },
+  "Kabasele": {
+   "t": "Real Skënderbeu",
+   "p": 8,
+   "s": 1
   }
  },
  "riv": {
@@ -185,8 +190,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 407,
-   "g": 4,
+   "c": 399,
+   "g": 5,
    "p": 0
   },
   "Space Invaders": {
@@ -506,6 +511,13 @@
    "n": "Marianucci",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789152123347,
+   "a": "altri",
+   "n": "Kabasele",
+   "t": "Real Skënderbeu",
+   "p": 8
   }
  ],
  "passed": [
