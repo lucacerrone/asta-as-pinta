@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789159666207,
+ "updatedAt": 1789159715163,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -525,10 +525,6 @@
   "Moro N.": {
    "t": "chill curre",
    "p": 3
-  },
-  "Varela G.": {
-   "t": "S.S. Longobarda",
-   "p": ""
   },
   "Ramos G.": {
    "t": "AC OMMODITY",
@@ -2095,6 +2091,13 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789159715163,
+   "a": "annulla",
+   "n": "Varela G.",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
