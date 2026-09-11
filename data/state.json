@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153966827,
+ "updatedAt": 1789154031193,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -319,6 +319,11 @@
    "t": "NewRock",
    "p": 18,
    "s": 1
+  },
+  "Osmajic": {
+   "t": "S.S. Longobarda",
+   "p": 21,
+   "s": 1
   }
  },
  "riv": {
@@ -328,8 +333,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 285,
-   "g": 8,
+   "c": 264,
+   "g": 9,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -907,6 +912,13 @@
    "n": "Fitz-Jim",
    "t": "NewRock",
    "p": 18
+  },
+  {
+   "ts": 1789154031193,
+   "a": "altri",
+   "n": "Osmajic",
+   "t": "S.S. Longobarda",
+   "p": 21
   }
  ],
  "passed": [
