@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149747132,
+ "updatedAt": 1789149765214,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -13,6 +13,11 @@
  "asg": {
   "Gineitis": {
    "t": "Fight Club",
+   "p": 1,
+   "s": 1
+  },
+  "Mota": {
+   "t": "AS Emazz",
    "p": 1,
    "s": 1
   }
@@ -54,8 +59,8 @@
    "p": 0
   },
   "AS Emazz": {
-   "c": 500,
-   "g": 0,
+   "c": 499,
+   "g": 1,
    "p": 0
   },
   "NewRock": {
@@ -113,6 +118,13 @@
    "n": "Chakvetadze",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789149765214,
+   "a": "altri",
+   "n": "Mota",
+   "t": "AS Emazz",
+   "p": 1
   }
  ],
  "passed": [
