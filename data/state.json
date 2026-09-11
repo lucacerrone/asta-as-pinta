@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789163603861,
+ "updatedAt": 1789163672133,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1044,6 +1044,10 @@
   "Pavard": {
    "t": "Al-Chaos-Ahli",
    "p": 8
+  },
+  "Zambo Anguissa": {
+   "t": "Fun Cool FC",
+   "p": 22
   }
  },
  "riv": {
@@ -3004,6 +3008,13 @@
    "n": "Pavard",
    "t": "Al-Chaos-Ahli",
    "p": 8
+  },
+  {
+   "ts": 1789163672133,
+   "a": "altri",
+   "n": "Zambo Anguissa",
+   "t": "Fun Cool FC",
+   "p": 22
   }
  ],
  "passed": [
