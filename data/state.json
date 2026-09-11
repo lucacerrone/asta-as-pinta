@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153013709,
+ "updatedAt": 1789153050671,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -229,6 +229,11 @@
    "t": "Fc Afragolese",
    "p": 3,
    "s": 1
+  },
+  "Gallo": {
+   "t": "Real Skënderbeu",
+   "p": 10,
+   "s": 1
   }
  },
  "riv": {
@@ -258,8 +263,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 372,
-   "g": 6,
+   "c": 362,
+   "g": 7,
    "p": 0
   },
   "Space Invaders": {
@@ -691,6 +696,13 @@
    "n": "Beukema",
    "t": "Fc Afragolese",
    "p": 3
+  },
+  {
+   "ts": 1789153050671,
+   "a": "altri",
+   "n": "Gallo",
+   "t": "Real Skënderbeu",
+   "p": 10
   }
  ],
  "passed": [
