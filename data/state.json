@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158212453,
+ "updatedAt": 1789158323311,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -650,6 +650,11 @@
   "Dele-Bashiru": {
    "t": "",
    "p": 1
+  },
+  "Adzic": {
+   "t": "NewRock",
+   "p": 36,
+   "s": 1
   }
  },
  "riv": {
@@ -694,8 +699,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": -69,
-   "g": 10,
+   "c": -105,
+   "g": 11,
    "p": 0
   },
   "Fc Afragolese": {
@@ -1819,6 +1824,13 @@
    "n": "Dele-Bashiru",
    "t": "",
    "p": 1
+  },
+  {
+   "ts": 1789158323311,
+   "a": "altri",
+   "n": "Adzic",
+   "t": "NewRock",
+   "p": 36
   }
  ],
  "passed": [
