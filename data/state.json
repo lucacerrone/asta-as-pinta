@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155626125,
+ "updatedAt": 1789155680575,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -482,6 +482,11 @@
    "t": "S.S. Longobarda",
    "p": 9,
    "s": 1
+  },
+  "Bonny": {
+   "t": "NewRock",
+   "p": 12,
+   "s": 1
   }
  },
  "riv": {
@@ -526,8 +531,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": -57,
-   "g": 9,
+   "c": -69,
+   "g": 10,
    "p": 0
   },
   "Fc Afragolese": {
@@ -1329,6 +1334,13 @@
    "n": "Odgaard",
    "t": "S.S. Longobarda",
    "p": 9
+  },
+  {
+   "ts": 1789155680575,
+   "a": "altri",
+   "n": "Bonny",
+   "t": "NewRock",
+   "p": 12
   }
  ],
  "passed": [
