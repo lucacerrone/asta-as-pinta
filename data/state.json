@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149765214,
+ "updatedAt": 1789149784257,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -125,6 +125,13 @@
    "n": "Mota",
    "t": "AS Emazz",
    "p": 1
+  },
+  {
+   "ts": 1789149784257,
+   "a": "rimasto libero",
+   "n": "Thiam",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
@@ -135,6 +142,10 @@
   {
    "n": "Chakvetadze",
    "ts": 1789149747132
+  },
+  {
+   "n": "Thiam",
+   "ts": 1789149784257
   }
  ],
  "updates": []
