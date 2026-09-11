@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149903891,
+ "updatedAt": 1789150055981,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -30,6 +30,11 @@
    "t": "chill curre",
    "p": 9,
    "s": 1
+  },
+  "Kvernadze": {
+   "t": "S.S. Longobarda",
+   "p": 36,
+   "s": 1
   }
  },
  "riv": {
@@ -39,8 +44,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 500,
-   "g": 0,
+   "c": 464,
+   "g": 1,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -156,6 +161,13 @@
    "n": "Ghedjemis",
    "t": "chill curre",
    "p": 9
+  },
+  {
+   "ts": 1789150055981,
+   "a": "altri",
+   "n": "Kvernadze",
+   "t": "S.S. Longobarda",
+   "p": 36
   }
  ],
  "passed": [
