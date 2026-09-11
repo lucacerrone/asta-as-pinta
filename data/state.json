@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152329418,
+ "updatedAt": 1789152370241,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -186,6 +186,11 @@
    "t": "Al-Chaos-Ahli",
    "p": 1,
    "s": 1
+  },
+  "Luis Henrique": {
+   "t": "S.S. Longobarda",
+   "p": 5,
+   "s": 1
   }
  },
  "riv": {
@@ -195,8 +200,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 313,
-   "g": 5,
+   "c": 308,
+   "g": 6,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -578,6 +583,13 @@
    "n": "Zhegrova",
    "t": "Al-Chaos-Ahli",
    "p": 1
+  },
+  {
+   "ts": 1789152370241,
+   "a": "altri",
+   "n": "Luis Henrique",
+   "t": "S.S. Longobarda",
+   "p": 5
   }
  ],
  "passed": [
