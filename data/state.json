@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152600519,
+ "updatedAt": 1789152634961,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -205,6 +205,10 @@
    "t": "Al-Chaos-Ahli",
    "p": 25,
    "s": 1
+  },
+  "Correia T.": {
+   "t": "Real Skënderbeu",
+   "p": ""
   }
  },
  "riv": {
@@ -632,6 +636,13 @@
    "n": "Stones",
    "t": "Al-Chaos-Ahli",
    "p": 25
+  },
+  {
+   "ts": 1789152634960,
+   "a": "altri",
+   "n": "Correia T.",
+   "t": "Real Skënderbeu",
+   "p": ""
   }
  ],
  "passed": [
