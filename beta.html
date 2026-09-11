@@ -1040,7 +1040,8 @@ function parseImport(text){
     if(team0 && nums[1]!==null && nums[1]!==undefined){ const na=parts.slice(1).map(s=>/^\d+$/.test(s.replace(/\s/g,""))?+s.replace(/\s/g,""):null); out.riv.push({t:team0,c:na[0],g:na[1]??null,p:na[2]??null,raw:line}); continue; }
     let team=null,name=null,price=null;
     nonEmpty.forEach((x,i)=>{ if(nums[i]!==null) price=nums[i]; else if(!team && matchTeam(x) && !matchPlayer(x).p) team=matchTeam(x); else if(!name) name=x; });
-    if(name){ const mp=matchPlayer(name); if(mp.p){ out.asg.push({n:mp.p.n,t:team,pr:price,raw:name}); continue; } }
+    // v2.7.1 P0: una riga senza separatori con squadra/numeri va al parser tollerante, non va letta tutta come nome
+    if(name && !(nonEmpty.length===1 && (lineTeamMatch(line) || /\d/.test(line)))){ const mp=matchPlayer(name); if(mp.p){ out.asg.push({n:mp.p.n,t:team,pr:price,raw:name}); continue; } }
     // S1: fallback tollerante per Live Text / testo grezzo senza separatori puliti.
     const looseTeam=lineTeamMatch(line); const looseNums=(line.match(/\b\d+\b/g)||[]).map(Number); const mp=playerFromLooseLine(line,looseTeam);
     if(mp.p){ out.asg.push({n:mp.p.n,t:looseTeam,pr:looseNums.length?looseNums[looseNums.length-1]:null,raw:line}); continue; }

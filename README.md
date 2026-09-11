@@ -1,17 +1,17 @@
-# Asta AS Pinta — v2.7
+# Asta AS Pinta — v2.7.1
 
 Web-app statica per l'asta **FantaEnel 1X2**, modalità **Mantra**, 14 squadre, 500 crediti. È pensata per iPad/iPhone durante un'asta random totale: cerchi il giocatore appena estratto, leggi il consiglio operativo e registri l'esito.
 
 ## File
 
-- `index.html` — versione stabile v2.7, usa `localStorage` e branch GitHub `stato`.
+- `index.html` — versione stabile v2.7.1 (UI P1 + fix import P0), usa `localStorage` e branch GitHub `stato`.
 - `beta.html` — canale di prova isolato, usa memoria separata e branch `stato-beta`.
 - `data/players.json` — listone e metadati giocatore. Juventus e Lazio sono presenti ma per AS Pinta sono “ultima spiaggia”.
 - `data/config.json` — squadre, regole, strategia, preset budget, MUST/evita.
 - `data/shortlist.json` — al momento vuoto (`[]`); può essere riempito senza cambiare il codice.
-- `HANDOFF_CLAUDE_v2.7.md` — documento principale per continuare lo sviluppo.
-- `DEPLOY_v2.7.md` — caricamento su GitHub e smoke test.
-- `TEST_ASTA_4_UPDATE.txt` — 4 snapshot progressivi per stressare import/merge.
+- `docs/HANDOFF_CLAUDE_v2.7.md` — documento principale per continuare lo sviluppo.
+- `docs/DEPLOY_v2.7.1.md` — caricamento su GitHub e smoke test.
+- `docs/TEST_ASTA_4_UPDATE.txt` — 4 snapshot progressivi per stressare import/merge.
 
 ## Flusso d'asta consigliato
 
