@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152884314,
+ "updatedAt": 1789152945796,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -214,6 +214,11 @@
    "t": "Space Invaders",
    "p": 71,
    "s": 1
+  },
+  "Comert": {
+   "t": "S.S. Longobarda",
+   "p": 13,
+   "s": 1
   }
  },
  "riv": {
@@ -223,8 +228,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 308,
-   "g": 6,
+   "c": 295,
+   "g": 7,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -655,6 +660,13 @@
    "n": "McTominay",
    "t": "Space Invaders",
    "p": 71
+  },
+  {
+   "ts": 1789152945796,
+   "a": "altri",
+   "n": "Comert",
+   "t": "S.S. Longobarda",
+   "p": 13
   }
  ],
  "passed": [
