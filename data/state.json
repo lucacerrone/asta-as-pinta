@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168993066,
+ "updatedAt": 1789169211995,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1424,6 +1424,26 @@
   "Obert": {
    "t": "Pro Stata",
    "p": 6
+  },
+  "Atta": {
+   "t": "chill curre",
+   "p": 27
+  },
+  "Koopmeiners": {
+   "t": "chill curre",
+   "p": 9
+  },
+  "Valle": {
+   "t": "Big Tasty FC",
+   "p": 4
+  },
+  "Hojlund": {
+   "t": "Big Tasty FC",
+   "p": 130
+  },
+  "Badiashile": {
+   "t": "Space Invaders",
+   "p": 1
   }
  },
  "riv": {
@@ -4091,6 +4111,41 @@
    "n": "Maignan",
    "t": "AS Pinta",
    "p": 40
+  },
+  {
+   "ts": 1789169211994,
+   "a": "altri (foto/integrazione)",
+   "n": "Atta",
+   "t": "chill curre",
+   "p": 27
+  },
+  {
+   "ts": 1789169211995,
+   "a": "altri (foto/integrazione)",
+   "n": "Koopmeiners",
+   "t": "chill curre",
+   "p": 9
+  },
+  {
+   "ts": 1789169211995,
+   "a": "altri (foto/integrazione)",
+   "n": "Valle",
+   "t": "Big Tasty FC",
+   "p": 4
+  },
+  {
+   "ts": 1789169211995,
+   "a": "altri (foto/integrazione)",
+   "n": "Hojlund",
+   "t": "Big Tasty FC",
+   "p": 130
+  },
+  {
+   "ts": 1789169211995,
+   "a": "altri (foto/integrazione)",
+   "n": "Badiashile",
+   "t": "Space Invaders",
+   "p": 1
   }
  ],
  "passed": [
@@ -4128,11 +4183,6 @@
   }
  ],
  "updates": [
-  {
-   "ts": 1789156066228,
-   "label": "Aggiornamento da screenshot",
-   "text": "sono state integrate 4 assegnazioni, 2 completate con informazioni mancanti: Jashari, Zalewski, Belahyane, Moro N.."
-  },
   {
    "ts": 1789158009437,
    "label": "Aggiornamento da screenshot",
@@ -4227,6 +4277,11 @@
    "ts": 1789168851882,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 1 squadre (Space Invaders: 224→1 cr). sono state integrate 12 assegnazioni."
+  },
+  {
+   "ts": 1789169211995,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 5 assegnazioni."
   }
  ]
 }
