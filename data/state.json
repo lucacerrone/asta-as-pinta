@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167564433,
+ "updatedAt": 1789167589733,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1332,6 +1332,10 @@
   "Da Cunha": {
    "t": "Fight Club",
    "p": 46
+  },
+  "Doekhi": {
+   "t": "Big Tasty FC",
+   "p": 4
   }
  },
  "riv": {
@@ -3831,6 +3835,13 @@
    "n": "Da Cunha",
    "t": "Fight Club",
    "p": 46
+  },
+  {
+   "ts": 1789167589733,
+   "a": "altri",
+   "n": "Doekhi",
+   "t": "Big Tasty FC",
+   "p": 4
   }
  ],
  "passed": [
