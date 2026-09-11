@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165324463,
+ "updatedAt": 1789165402455,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -61,6 +61,10 @@
   {
    "n": "Pisilli",
    "p": 15
+  },
+  {
+   "n": "Dovbyk",
+   "p": 28
   }
  ],
  "asg": {
@@ -3282,6 +3286,13 @@
    "n": "De Ketelaere",
    "t": "Real Skënderbeu",
    "p": 40
+  },
+  {
+   "ts": 1789165402455,
+   "a": "noi",
+   "n": "Dovbyk",
+   "t": "AS Pinta",
+   "p": 28
   }
  ],
  "passed": [
