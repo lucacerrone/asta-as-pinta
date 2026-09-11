@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151987866,
+ "updatedAt": 1789152015132,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -146,6 +146,11 @@
    "t": "Real Skënderbeu",
    "p": 46,
    "s": 1
+  },
+  "Monterisi": {
+   "t": "NewRock",
+   "p": 7,
+   "s": 1
   }
  },
  "riv": {
@@ -190,8 +195,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 489,
-   "g": 2,
+   "c": 482,
+   "g": 3,
    "p": 0
   },
   "Fc Afragolese": {
@@ -475,6 +480,13 @@
    "n": "Pellegrino M.",
    "t": "Real Skënderbeu",
    "p": 46
+  },
+  {
+   "ts": 1789152015132,
+   "a": "altri",
+   "n": "Monterisi",
+   "t": "NewRock",
+   "p": 7
   }
  ],
  "passed": [
