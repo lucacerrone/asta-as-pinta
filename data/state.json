@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150175075,
+ "updatedAt": 1789150218392,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -13,6 +13,10 @@
   {
    "n": "Pellegrini Lo.",
    "p": 4
+  },
+  {
+   "n": "De Roon",
+   "p": 3
   }
  ],
  "asg": {
@@ -223,6 +227,13 @@
    "n": "Pellegrini Lo.",
    "t": "AS Pinta",
    "p": 4
+  },
+  {
+   "ts": 1789150218392,
+   "a": "noi",
+   "n": "De Roon",
+   "t": "AS Pinta",
+   "p": 3
   }
  ],
  "passed": [
