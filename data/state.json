@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789163542068,
+ "updatedAt": 1789163603861,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1040,6 +1040,10 @@
   "Gonzalez N.": {
    "t": "chill curre",
    "p": 44
+  },
+  "Pavard": {
+   "t": "Al-Chaos-Ahli",
+   "p": 8
   }
  },
  "riv": {
@@ -2993,6 +2997,13 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789163603861,
+   "a": "altri",
+   "n": "Pavard",
+   "t": "Al-Chaos-Ahli",
+   "p": 8
   }
  ],
  "passed": [
