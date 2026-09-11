@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164813881,
+ "updatedAt": 1789164867592,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1096,6 +1096,10 @@
   "Davis K.": {
    "t": "Pro Stata",
    "p": 60
+  },
+  "Vitinha O.": {
+   "t": "chill curre",
+   "p": 3
   }
  },
  "riv": {
@@ -3161,6 +3165,13 @@
    "n": "Davis K.",
    "t": "Pro Stata",
    "p": 60
+  },
+  {
+   "ts": 1789164867592,
+   "a": "altri",
+   "n": "Vitinha O.",
+   "t": "chill curre",
+   "p": 3
   }
  ],
  "passed": [
