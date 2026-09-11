@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161135468,
+ "updatedAt": 1789161196433,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -41,10 +41,6 @@
   {
    "n": "Carlos Augusto",
    "p": 15
-  },
-  {
-   "n": "Samardzic",
-   "p": 40
   },
   {
    "n": "Frendrup",
@@ -2470,6 +2466,13 @@
    "n": "Sarr P.",
    "t": "S.S. Longobarda",
    "p": 19
+  },
+  {
+   "ts": 1789161196432,
+   "a": "annulla",
+   "n": "Samardzic",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
