@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168915457,
+ "updatedAt": 1789168993066,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -89,6 +89,10 @@
   {
    "n": "Vojvoda",
    "p": 10
+  },
+  {
+   "n": "Maignan",
+   "p": 40
   }
  ],
  "asg": {
@@ -4080,6 +4084,13 @@
    "n": "Obert",
    "t": "Pro Stata",
    "p": 6
+  },
+  {
+   "ts": 1789168993066,
+   "a": "noi",
+   "n": "Maignan",
+   "t": "AS Pinta",
+   "p": 40
   }
  ],
  "passed": [
