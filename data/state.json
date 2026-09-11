@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152945796,
+ "updatedAt": 1789152992854,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -219,6 +219,11 @@
    "t": "S.S. Longobarda",
    "p": 13,
    "s": 1
+  },
+  "Leysen F.": {
+   "t": "NewRock",
+   "p": 16,
+   "s": 1
   }
  },
  "riv": {
@@ -263,8 +268,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 482,
-   "g": 3,
+   "c": 466,
+   "g": 4,
    "p": 0
   },
   "Fc Afragolese": {
@@ -667,6 +672,13 @@
    "n": "Comert",
    "t": "S.S. Longobarda",
    "p": 13
+  },
+  {
+   "ts": 1789152992854,
+   "a": "altri",
+   "n": "Leysen F.",
+   "t": "NewRock",
+   "p": 16
   }
  ],
  "passed": [
