@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161107635,
+ "updatedAt": 1789161135468,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -856,6 +856,10 @@
   "Folorunsho": {
    "t": "Pro Stata",
    "p": 11
+  },
+  "Sarr P.": {
+   "t": "S.S. Longobarda",
+   "p": 19
   }
  },
  "riv": {
@@ -2459,6 +2463,13 @@
    "n": "Folorunsho",
    "t": "Pro Stata",
    "p": 11
+  },
+  {
+   "ts": 1789161135468,
+   "a": "altri",
+   "n": "Sarr P.",
+   "t": "S.S. Longobarda",
+   "p": 19
   }
  ],
  "passed": [
