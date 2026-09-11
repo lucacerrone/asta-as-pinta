@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167190759,
+ "updatedAt": 1789167409298,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1264,6 +1264,66 @@
   "Balerdi": {
    "t": "Fun Cool FC",
    "p": 16
+  },
+  "Butez": {
+   "t": "NewRock",
+   "p": 51
+  },
+  "Juan Jesus": {
+   "t": "Big Tasty FC",
+   "p": 2
+  },
+  "Yildiz": {
+   "t": "chill curre",
+   "p": 31
+  },
+  "Sutalo J.": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Marusic": {
+   "t": "Big Tasty FC",
+   "p": 2
+  },
+  "Cancellieri": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Romano": {
+   "t": "NewRock",
+   "p": 2
+  },
+  "Liberali": {
+   "t": "Al-Chaos-Ahli",
+   "p": 6
+  },
+  "Koulierakis": {
+   "t": "Al-Chaos-Ahli",
+   "p": 1
+  },
+  "Colpani": {
+   "t": "Fc Afragolese",
+   "p": 13
+  },
+  "Turati": {
+   "t": "S.S. Longobarda",
+   "p": 2
+  },
+  "Okoye": {
+   "t": "Fun Cool FC",
+   "p": 26
+  },
+  "Adams C.": {
+   "t": "Big Tasty FC",
+   "p": 15
+  },
+  "Piotrowski": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Odenthal": {
+   "t": "Space Invaders",
+   "p": 1
   }
  },
  "riv": {
@@ -3630,6 +3690,111 @@
    "n": "N'Dicka",
    "t": "AS Pinta",
    "p": 22
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Butez",
+   "t": "NewRock",
+   "p": 51
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Juan Jesus",
+   "t": "Big Tasty FC",
+   "p": 2
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Yildiz",
+   "t": "chill curre",
+   "p": 31
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Sutalo J.",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Marusic",
+   "t": "Big Tasty FC",
+   "p": 2
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Cancellieri",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Romano",
+   "t": "NewRock",
+   "p": 2
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Liberali",
+   "t": "Al-Chaos-Ahli",
+   "p": 6
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Koulierakis",
+   "t": "Al-Chaos-Ahli",
+   "p": 1
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Colpani",
+   "t": "Fc Afragolese",
+   "p": 13
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Turati",
+   "t": "S.S. Longobarda",
+   "p": 2
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Okoye",
+   "t": "Fun Cool FC",
+   "p": 26
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Adams C.",
+   "t": "Big Tasty FC",
+   "p": 15
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Piotrowski",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789167409298,
+   "a": "altri (foto/integrazione)",
+   "n": "Odenthal",
+   "t": "Space Invaders",
+   "p": 1
   }
  ],
  "passed": [
@@ -3761,6 +3926,11 @@
    "ts": 1789166487886,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 13 assegnazioni."
+  },
+  {
+   "ts": 1789167409298,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 15 assegnazioni."
   }
  ]
 }
