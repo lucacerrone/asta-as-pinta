@@ -29,7 +29,8 @@
     "tetto": 25,
     "stile": "Normale",
     "riserva": 30,
-    "target": 27
+    "target": 27,
+    "profiloBudget": "Equilibrato"
   },
   "prezzi": {
     "sogliaBig": 150,
@@ -65,5 +66,37 @@
     "repo": "asta-as-pinta",
     "branch": "stato",
     "file": "data/state.json"
+  },
+  "evitaSquadre": [
+    "Juventus",
+    "Lazio"
+  ],
+  "ultimaSpiaggia": {
+    "prezzo": 1,
+    "testo": "Solo ultima spiaggia: prendilo esclusivamente se serve a chiudere la rosa e poi scartalo."
+  },
+  "budgetReparti": {
+    "_nota": "Preset operativi configurabili. Le percentuali non provengono dal vecchio Excel e possono essere sostituite senza cambiare il codice.",
+    "Equilibrato": {
+      "Por": 5,
+      "Difesa": 20,
+      "Centrocampo": 25,
+      "Trequarti": 20,
+      "Attacco": 30
+    },
+    "Stella": {
+      "Por": 5,
+      "Difesa": 16,
+      "Centrocampo": 19,
+      "Trequarti": 15,
+      "Attacco": 45
+    },
+    "Bonus centrocampo": {
+      "Por": 5,
+      "Difesa": 18,
+      "Centrocampo": 32,
+      "Trequarti": 20,
+      "Attacco": 25
+    }
   }
 }
