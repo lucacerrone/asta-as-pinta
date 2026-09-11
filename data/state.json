@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166877715,
+ "updatedAt": 1789166952828,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1256,6 +1256,10 @@
   "Mangas": {
    "t": "Big Tasty FC",
    "p": 4
+  },
+  "Balerdi": {
+   "t": "Fun Cool FC",
+   "p": 16
   }
  },
  "riv": {
@@ -3608,6 +3612,13 @@
    "n": "Mangas",
    "t": "Big Tasty FC",
    "p": 4
+  },
+  {
+   "ts": 1789166952828,
+   "a": "altri",
+   "n": "Balerdi",
+   "t": "Fun Cool FC",
+   "p": 16
   }
  ],
  "passed": [
