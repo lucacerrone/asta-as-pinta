@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154746658,
+ "updatedAt": 1789154828203,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -398,6 +398,11 @@
    "t": "Real Skënderbeu",
    "p": 8,
    "s": 1
+  },
+  "Beto": {
+   "t": "Fight Club",
+   "p": 42,
+   "s": 1
   }
  },
  "riv": {
@@ -452,8 +457,8 @@
    "p": 0
   },
   "Fight Club": {
-   "c": 473,
-   "g": 3,
+   "c": 431,
+   "g": 4,
    "p": 0
   },
   "Big Tasty FC": {
@@ -1126,6 +1131,13 @@
    "n": "Zè Pedro",
    "t": "Real Skënderbeu",
    "p": 8
+  },
+  {
+   "ts": 1789154828202,
+   "a": "altri",
+   "n": "Beto",
+   "t": "Fight Club",
+   "p": 42
   }
  ],
  "passed": [
