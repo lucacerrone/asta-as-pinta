@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152313718,
+ "updatedAt": 1789152329418,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -181,6 +181,11 @@
    "t": "Al-Chaos-Ahli",
    "p": 16,
    "s": 1
+  },
+  "Zhegrova": {
+   "t": "Al-Chaos-Ahli",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -195,8 +200,8 @@
    "p": 0
   },
   "Al-Chaos-Ahli": {
-   "c": 454,
-   "g": 3,
+   "c": 453,
+   "g": 4,
    "p": 1
   },
   "AC OMMODITY": {
@@ -566,6 +571,13 @@
    "n": "Tiago Gabriel",
    "t": "Al-Chaos-Ahli",
    "p": 16
+  },
+  {
+   "ts": 1789152329418,
+   "a": "altri",
+   "n": "Zhegrova",
+   "t": "Al-Chaos-Ahli",
+   "p": 1
   }
  ],
  "passed": [
