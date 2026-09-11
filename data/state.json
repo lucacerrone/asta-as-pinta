@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789163522410,
+ "updatedAt": 1789163542068,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1116,7 +1116,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "23:40",
+ "upd": "23:52",
  "log": [
   {
    "ts": 1789149704009,
@@ -2986,6 +2986,13 @@
    "n": "Gonzalez N.",
    "t": "chill curre",
    "p": 44
+  },
+  {
+   "ts": 1789163542068,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -3097,6 +3104,11 @@
    "ts": 1789163402339,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 12 assegnazioni."
+  },
+  {
+   "ts": 1789163542068,
+   "label": "Aggiornamento da screenshot",
+   "text": "il controllo non ha prodotto variazioni rispetto ai dati già registrati."
   }
  ]
 }
