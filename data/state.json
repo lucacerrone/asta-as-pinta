@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160312808,
+ "updatedAt": 1789160598080,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -36,6 +36,10 @@
   },
   {
    "n": "Baldanzi",
+   "p": 15
+  },
+  {
+   "n": "Carlos Augusto",
    "p": 15
   }
  ],
@@ -2251,6 +2255,13 @@
    "n": "Diao",
    "t": "Fight Club",
    "p": 93
+  },
+  {
+   "ts": 1789160598080,
+   "a": "noi",
+   "n": "Carlos Augusto",
+   "t": "AS Pinta",
+   "p": 15
   }
  ],
  "passed": [
