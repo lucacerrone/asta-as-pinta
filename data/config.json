@@ -30,7 +30,7 @@
     "stile": "Normale",
     "riserva": 30,
     "target": 27,
-    "profiloBudget": "Equilibrato"
+    "profiloBudget": "Pinta 4-2-3-1"
   },
   "prezzi": {
     "sogliaBig": 150,
@@ -42,15 +42,15 @@
   },
   "minimiRuolo": {
     "Por": 2,
-    "Dc": 5,
+    "Dc": 4,
     "B": 0,
     "Dd": 2,
     "Ds": 2,
-    "E": 2,
+    "E": 0,
     "M": 3,
     "C": 3,
     "W": 2,
-    "T": 2,
+    "T": 3,
     "A": 2,
     "Pc": 3
   },
@@ -58,10 +58,15 @@
     {
       "n": "",
       "max": 0,
-      "why": ""
+      "why": "MUST extra-fanta da decidere con Ric (nome come nel listone + prezzo massimo)"
     }
   ],
-  "evita": [],
+  "evita": [
+    "Douvikas",
+    "Esposito F.P.",
+    "Castro S.",
+    "Varela G."
+  ],
   "github": {
     "repo": "asta-as-pinta",
     "branch": "stato",
@@ -76,7 +81,28 @@
     "testo": "Solo ultima spiaggia: prendilo esclusivamente se serve a chiudere la rosa e poi scartalo."
   },
   "budgetReparti": {
-    "_nota": "Preset operativi configurabili. Le percentuali non provengono dal vecchio Excel e possono essere sostituite senza cambiare il codice.",
+    "_nota": "Profili Pinta: difesa a 4 senza esterni E (scarsi quest'anno). Percentuali di strategia AS Pinta, modificabili.",
+    "Pinta 4-2-3-1": {
+      "Por": 7,
+      "Difesa": 20,
+      "Centrocampo": 20,
+      "Trequarti": 20,
+      "Attacco": 33
+    },
+    "Pinta 4-3-1-2": {
+      "Por": 7,
+      "Difesa": 20,
+      "Centrocampo": 24,
+      "Trequarti": 14,
+      "Attacco": 35
+    },
+    "Pinta 4-3-3": {
+      "Por": 7,
+      "Difesa": 20,
+      "Centrocampo": 22,
+      "Trequarti": 20,
+      "Attacco": 31
+    },
     "Equilibrato": {
       "Por": 5,
       "Difesa": 20,

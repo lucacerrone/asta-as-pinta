@@ -1,1 +1,352 @@
-[]
+[
+ [
+  "01 Portiere",
+  "A",
+  "Carnesecchi"
+ ],
+ [
+  "01 Portiere",
+  "A",
+  "Maignan"
+ ],
+ [
+  "01 Portiere",
+  "B",
+  "Butez"
+ ],
+ [
+  "01 Portiere",
+  "B (se sconto)",
+  "Svilar"
+ ],
+ [
+  "01 Portiere",
+  "2° economico",
+  "Skorupski"
+ ],
+ [
+  "01 Portiere",
+  "2° economico",
+  "Okoye"
+ ],
+ [
+  "01 Portiere",
+  "2° economico",
+  "Milinkovic-Savic V."
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "A",
+  "Pavlovic"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "A",
+  "Rrahmani"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "A",
+  "Mancini"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "B",
+  "Akanji"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "B",
+  "Chalobah T."
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "B",
+  "Gila"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "Value",
+  "Ostigard"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "Value",
+  "Vasquez"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "Panchina",
+  "Theate"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "Panchina",
+  "Mina"
+ ],
+ [
+  "02 Dc (x2 titolari)",
+  "Panchina",
+  "Comuzzo"
+ ],
+ [
+  "03 Dd",
+  "A",
+  "Di Lorenzo"
+ ],
+ [
+  "03 Dd",
+  "Value",
+  "Vojvoda"
+ ],
+ [
+  "03 Dd",
+  "Value",
+  "Jimenez A."
+ ],
+ [
+  "03 Dd",
+  "Value",
+  "Belghali"
+ ],
+ [
+  "03 Dd",
+  "Panchina",
+  "Bellanova"
+ ],
+ [
+  "03 Dd",
+  "Panchina",
+  "Van Der Brempt"
+ ],
+ [
+  "04 Ds",
+  "A",
+  "Miranda J."
+ ],
+ [
+  "04 Ds",
+  "Value",
+  "Kamara H."
+ ],
+ [
+  "04 Ds",
+  "Value",
+  "Valeri"
+ ],
+ [
+  "04 Ds",
+  "B",
+  "Spinazzola"
+ ],
+ [
+  "04 Ds",
+  "Panchina",
+  "Mangas"
+ ],
+ [
+  "04 Ds",
+  "Panchina",
+  "Gallo"
+ ],
+ [
+  "05 M (mediano)",
+  "A value",
+  "Calò"
+ ],
+ [
+  "05 M (mediano)",
+  "A",
+  "Ederson D.S."
+ ],
+ [
+  "05 M (mediano)",
+  "B",
+  "Modric"
+ ],
+ [
+  "05 M (mediano)",
+  "B",
+  "Konè M."
+ ],
+ [
+  "05 M (mediano)",
+  "Panchina",
+  "Busio"
+ ],
+ [
+  "05 M (mediano)",
+  "Panchina",
+  "Lobotka"
+ ],
+ [
+  "05 M (mediano)",
+  "Panchina",
+  "Frendrup"
+ ],
+ [
+  "06 M/C (centrale di qualità)",
+  "A",
+  "Da Cunha"
+ ],
+ [
+  "06 M/C (centrale di qualità)",
+  "A",
+  "Atta"
+ ],
+ [
+  "06 M/C (centrale di qualità)",
+  "B",
+  "Ekkelenkamp"
+ ],
+ [
+  "06 M/C (centrale di qualità)",
+  "B",
+  "Barella"
+ ],
+ [
+  "06 M/C (centrale di qualità)",
+  "Panchina",
+  "Fazzini"
+ ],
+ [
+  "06 M/C (centrale di qualità)",
+  "Panchina",
+  "Thorstvedt"
+ ],
+ [
+  "07 T (trequartista)",
+  "A",
+  "Vlasic"
+ ],
+ [
+  "07 T (trequartista)",
+  "A",
+  "De Bruyne"
+ ],
+ [
+  "07 T (trequartista)",
+  "Top se resta sotto tetto",
+  "Pulisic"
+ ],
+ [
+  "07 T (trequartista)",
+  "B",
+  "Mora"
+ ],
+ [
+  "07 T (trequartista)",
+  "Panchina",
+  "Adzic"
+ ],
+ [
+  "07 T (trequartista)",
+  "Panchina",
+  "Maldini"
+ ],
+ [
+  "08 W/T (ala-trequartista)",
+  "A",
+  "Goncalves P."
+ ],
+ [
+  "08 W/T (ala-trequartista)",
+  "A",
+  "Diao"
+ ],
+ [
+  "08 W/T (ala-trequartista)",
+  "B",
+  "Politano"
+ ],
+ [
+  "08 W/T (ala-trequartista)",
+  "Occasione infortunato",
+  "Orsolini"
+ ],
+ [
+  "08 W/T (ala-trequartista)",
+  "Panchina",
+  "Schmid"
+ ],
+ [
+  "08 W/T (ala-trequartista)",
+  "Panchina",
+  "Ghedjemis"
+ ],
+ [
+  "09 W/A (esterno offensivo)",
+  "A",
+  "Berardi"
+ ],
+ [
+  "09 W/A (esterno offensivo)",
+  "A",
+  "Dybala"
+ ],
+ [
+  "09 W/A (esterno offensivo)",
+  "B",
+  "Laurientè"
+ ],
+ [
+  "09 W/A (esterno offensivo)",
+  "B",
+  "De Ketelaere"
+ ],
+ [
+  "09 W/A (esterno offensivo)",
+  "Value",
+  "Esposito Se."
+ ],
+ [
+  "09 W/A (esterno offensivo)",
+  "Panchina",
+  "Lontani"
+ ],
+ [
+  "10 A/Pc (punta)",
+  "A",
+  "Kean"
+ ],
+ [
+  "10 A/Pc (punta)",
+  "A",
+  "Ramos G."
+ ],
+ [
+  "10 A/Pc (punta)",
+  "B",
+  "Davis K."
+ ],
+ [
+  "10 A/Pc (punta)",
+  "B",
+  "Scamacca"
+ ],
+ [
+  "10 A/Pc (punta)",
+  "Value",
+  "Colombo"
+ ],
+ [
+  "10 A/Pc (punta)",
+  "Value",
+  "Simeone"
+ ],
+ [
+  "10 A/Pc (punta)",
+  "Panchina",
+  "Tourè E."
+ ],
+ [
+  "10 A/Pc (punta)",
+  "Panchina",
+  "Adams A."
+ ],
+ [
+  "10 A/Pc (punta)",
+  "Panchina",
+  "Geubbels"
+ ]
+]
