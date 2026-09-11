@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152992854,
+ "updatedAt": 1789153013709,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -224,6 +224,11 @@
    "t": "NewRock",
    "p": 16,
    "s": 1
+  },
+  "Beukema": {
+   "t": "Fc Afragolese",
+   "p": 3,
+   "s": 1
   }
  },
  "riv": {
@@ -273,8 +278,8 @@
    "p": 0
   },
   "Fc Afragolese": {
-   "c": 500,
-   "g": 0,
+   "c": 497,
+   "g": 1,
    "p": 0
   },
   "Fight Club": {
@@ -679,6 +684,13 @@
    "n": "Leysen F.",
    "t": "NewRock",
    "p": 16
+  },
+  {
+   "ts": 1789153013709,
+   "a": "altri",
+   "n": "Beukema",
+   "t": "Fc Afragolese",
+   "p": 3
   }
  ],
  "passed": [
