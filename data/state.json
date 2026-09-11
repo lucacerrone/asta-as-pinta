@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158427149,
+ "updatedAt": 1789158471830,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -660,6 +660,11 @@
    "t": "Space Invaders",
    "p": 96,
    "s": 1
+  },
+  "De Winter": {
+   "t": "Fun Cool FC",
+   "p": 21,
+   "s": 1
   }
  },
  "riv": {
@@ -724,8 +729,8 @@
    "p": 0
   },
   "Fun Cool FC": {
-   "c": 321,
-   "g": 7,
+   "c": 300,
+   "g": 8,
    "p": 0
   }
  },
@@ -1843,6 +1848,13 @@
    "n": "Scamacca",
    "t": "Space Invaders",
    "p": 96
+  },
+  {
+   "ts": 1789158471830,
+   "a": "altri",
+   "n": "De Winter",
+   "t": "Fun Cool FC",
+   "p": 21
   }
  ],
  "passed": [
