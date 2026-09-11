@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153498172,
+ "updatedAt": 1789153592435,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -284,6 +284,11 @@
    "t": "chill curre",
    "p": 14,
    "s": 1
+  },
+  "Bartesaghi": {
+   "t": "Real Skënderbeu",
+   "p": 18,
+   "s": 1
   }
  },
  "riv": {
@@ -313,8 +318,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 253,
-   "g": 10,
+   "c": 235,
+   "g": 11,
    "p": 0
   },
   "Space Invaders": {
@@ -823,6 +828,13 @@
    "n": "Hien",
    "t": "chill curre",
    "p": 14
+  },
+  {
+   "ts": 1789153592435,
+   "a": "altri",
+   "n": "Bartesaghi",
+   "t": "Real Skënderbeu",
+   "p": 18
   }
  ],
  "passed": [
