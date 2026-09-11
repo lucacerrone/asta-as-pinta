@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156066228,
+ "updatedAt": 1789156118249,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -125,10 +125,6 @@
    "t": "Al-Chaos-Ahli",
    "p": 8,
    "s": 1
-  },
-  "Varela G.": {
-   "t": "",
-   "p": ""
   },
   "Gilmour": {
    "t": "AS Emazz",
@@ -1484,6 +1480,13 @@
    "n": "Moro N.",
    "t": "chill curre",
    "p": 3
+  },
+  {
+   "ts": 1789156118248,
+   "a": "annulla",
+   "n": "Varela G.",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
