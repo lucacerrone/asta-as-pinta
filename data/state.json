@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161202337,
+ "updatedAt": 1789161769469,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -860,6 +860,66 @@
   "Samardzic": {
    "t": "S.S. Longobarda",
    "p": 40
+  },
+  "Gudmundsson A.": {
+   "t": "Fight Club",
+   "p": 37
+  },
+  "Nicolussi Caviglia": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Gabbia": {
+   "t": "Space Invaders",
+   "p": 8
+  },
+  "Frattesi": {
+   "t": "Pro Stata",
+   "p": 65
+  },
+  "Jimenez A.": {
+   "t": "AS Emazz",
+   "p": 18
+  },
+  "Traorè Hj.": {
+   "t": "Fight Club",
+   "p": 1
+  },
+  "Carboni A.": {
+   "t": "AS Emazz",
+   "p": 11
+  },
+  "Perrone": {
+   "t": "Al-Chaos-Ahli",
+   "p": 21
+  },
+  "Bernasconi": {
+   "t": "Fun Cool FC",
+   "p": 16
+  },
+  "Maleh": {
+   "t": "AS Emazz",
+   "p": 1
+  },
+  "Castro S.": {
+   "t": "Al-Chaos-Ahli",
+   "p": 36
+  },
+  "Gaspar K.": {
+   "t": "Fight Club",
+   "p": 6
+  },
+  "Marcandalli": {
+   "t": "AS Emazz",
+   "p": 10
+  },
+  "Deiola": {
+   "t": "Fc Afragolese",
+   "p": 10
+  },
+  "Ndour": {
+   "t": "chill curre",
+   "p": 15
   }
  },
  "riv": {
@@ -2484,6 +2544,111 @@
    "n": "Samardzic",
    "t": "S.S. Longobarda",
    "p": 40
+  },
+  {
+   "ts": 1789161769468,
+   "a": "altri (foto/integrazione)",
+   "n": "Gudmundsson A.",
+   "t": "Fight Club",
+   "p": 37
+  },
+  {
+   "ts": 1789161769468,
+   "a": "altri (foto/integrazione)",
+   "n": "Nicolussi Caviglia",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Gabbia",
+   "t": "Space Invaders",
+   "p": 8
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Frattesi",
+   "t": "Pro Stata",
+   "p": 65
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Jimenez A.",
+   "t": "AS Emazz",
+   "p": 18
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Traorè Hj.",
+   "t": "Fight Club",
+   "p": 1
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Carboni A.",
+   "t": "AS Emazz",
+   "p": 11
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Perrone",
+   "t": "Al-Chaos-Ahli",
+   "p": 21
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Bernasconi",
+   "t": "Fun Cool FC",
+   "p": 16
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Maleh",
+   "t": "AS Emazz",
+   "p": 1
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Castro S.",
+   "t": "Al-Chaos-Ahli",
+   "p": 36
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Gaspar K.",
+   "t": "Fight Club",
+   "p": 6
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Marcandalli",
+   "t": "AS Emazz",
+   "p": 10
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Deiola",
+   "t": "Fc Afragolese",
+   "p": 10
+  },
+  {
+   "ts": 1789161769469,
+   "a": "altri (foto/integrazione)",
+   "n": "Ndour",
+   "t": "chill curre",
+   "p": 15
   }
  ],
  "passed": [
@@ -2575,6 +2740,11 @@
    "ts": 1789161054617,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 4 assegnazioni: Frendrup, Robinson J., Mendy P., Folorunsho."
+  },
+  {
+   "ts": 1789161769469,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 15 assegnazioni."
   }
  ]
 }
