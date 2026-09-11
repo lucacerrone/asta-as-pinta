@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150934065,
+ "updatedAt": 1789151023698,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -101,6 +101,11 @@
   "Lang": {
    "t": "",
    "p": 1
+  },
+  "Akanji": {
+   "t": "S.S. Longobarda",
+   "p": 20,
+   "s": 1
   }
  },
  "riv": {
@@ -110,8 +115,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 451,
-   "g": 2,
+   "c": 431,
+   "g": 3,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -346,6 +351,13 @@
    "n": "Lang",
    "t": "",
    "p": 1
+  },
+  {
+   "ts": 1789151023698,
+   "a": "altri",
+   "n": "Akanji",
+   "t": "S.S. Longobarda",
+   "p": 20
   }
  ],
  "passed": [
