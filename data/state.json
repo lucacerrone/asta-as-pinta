@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153739921,
+ "updatedAt": 1789153792901,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -304,6 +304,11 @@
    "t": "chill curre",
    "p": 25,
    "s": 1
+  },
+  "Dodò": {
+   "t": "Fight Club",
+   "p": 19,
+   "s": 1
   }
  },
  "riv": {
@@ -358,8 +363,8 @@
    "p": 0
   },
   "Fight Club": {
-   "c": 499,
-   "g": 1,
+   "c": 480,
+   "g": 2,
    "p": 0
   },
   "Big Tasty FC": {
@@ -871,6 +876,13 @@
    "n": "Kessiè",
    "t": "chill curre",
    "p": 25
+  },
+  {
+   "ts": 1789153792901,
+   "a": "altri",
+   "n": "Dodò",
+   "t": "Fight Club",
+   "p": 19
   }
  ],
  "passed": [
