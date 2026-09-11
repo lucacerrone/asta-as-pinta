@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152370241,
+ "updatedAt": 1789152414001,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -191,6 +191,11 @@
    "t": "S.S. Longobarda",
    "p": 5,
    "s": 1
+  },
+  "Konè M.": {
+   "t": "Fun Cool FC",
+   "p": 25,
+   "s": 1
   }
  },
  "riv": {
@@ -255,8 +260,8 @@
    "p": 0
   },
   "Fun Cool FC": {
-   "c": 494,
-   "g": 1,
+   "c": 469,
+   "g": 2,
    "p": 0
   }
  },
@@ -590,6 +595,13 @@
    "n": "Luis Henrique",
    "t": "S.S. Longobarda",
    "p": 5
+  },
+  {
+   "ts": 1789152414001,
+   "a": "altri",
+   "n": "Konè M.",
+   "t": "Fun Cool FC",
+   "p": 25
   }
  ],
  "passed": [
