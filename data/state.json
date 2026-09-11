@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154828203,
+ "updatedAt": 1789154896072,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -403,6 +403,11 @@
    "t": "Fight Club",
    "p": 42,
    "s": 1
+  },
+  "Meret": {
+   "t": "AC OMMODITY",
+   "p": 45,
+   "s": 1
   }
  },
  "riv": {
@@ -422,9 +427,9 @@
    "p": 1
   },
   "AC OMMODITY": {
-   "c": 394,
-   "g": 6,
-   "p": 0
+   "c": 349,
+   "g": 7,
+   "p": 1
   },
   "Pro Stata": {
    "c": 444,
@@ -1138,6 +1143,13 @@
    "n": "Beto",
    "t": "Fight Club",
    "p": 42
+  },
+  {
+   "ts": 1789154896072,
+   "a": "altri",
+   "n": "Meret",
+   "t": "AC OMMODITY",
+   "p": 45
   }
  ],
  "passed": [
