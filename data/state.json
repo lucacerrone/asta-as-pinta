@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150109436,
+ "updatedAt": 1789150146742,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -44,6 +44,11 @@
   "Cataldi": {
    "t": "NewRock",
    "p": 2,
+   "s": 1
+  },
+  "Buongiorno": {
+   "t": "NewRock",
+   "p": 9,
    "s": 1
   }
  },
@@ -89,8 +94,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 498,
-   "g": 1,
+   "c": 489,
+   "g": 2,
    "p": 0
   },
   "Fc Afragolese": {
@@ -199,6 +204,13 @@
    "n": "Cataldi",
    "t": "NewRock",
    "p": 2
+  },
+  {
+   "ts": 1789150146742,
+   "a": "altri",
+   "n": "Buongiorno",
+   "t": "NewRock",
+   "p": 9
   }
  ],
  "passed": [
