@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166952828,
+ "updatedAt": 1789167190759,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -77,6 +77,10 @@
   {
    "n": "Gaetano",
    "p": 9
+  },
+  {
+   "n": "N'Dicka",
+   "p": 22
   }
  ],
  "asg": {
@@ -3619,6 +3623,13 @@
    "n": "Balerdi",
    "t": "Fun Cool FC",
    "p": 16
+  },
+  {
+   "ts": 1789167190759,
+   "a": "noi",
+   "n": "N'Dicka",
+   "t": "AS Pinta",
+   "p": 22
   }
  ],
  "passed": [
