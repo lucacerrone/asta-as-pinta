@@ -227,6 +227,78 @@ nav.tabs button[aria-current="page"]{background:#FFF0C9;color:#862633}
 .preflight-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}.checkai-btn{background:linear-gradient(135deg,#54202A,#8B2A36);color:#fff;border-color:#54202A}.checkai-btn svg{width:16px;height:16px;vertical-align:-3px;margin-right:5px}.must-top{border:1px solid #E0C36E;background:linear-gradient(140deg,#FFF8DD,#fff);border-radius:15px;padding:11px;margin:8px 0}.must-top h3{margin:0 0 7px}.must-pills{display:flex;flex-wrap:wrap;gap:6px}.must-pill{border:1px solid #DDB84F;background:#fff;border-radius:999px;padding:6px 9px;font-size:12px;font-weight:850}.must-pill.avoid{border-color:#D7A49A;background:#FFF4F1;color:#8E302B}
 @media(max-width:560px){.identity-summary{grid-template-columns:1fr}.rival-card.open{grid-column:auto}.quick-flags{display:grid;grid-template-columns:1fr 1fr}.quick-flag{width:100%}}
 
+
+/* ---------- v2.7.1 P1 UI/UX: pressione d'asta, densità, leggibilità ---------- */
+/* verdetto: etichetta "fino a" non più sovrapposta al numero */
+.verdict .price{display:flex;flex-direction:column;align-items:flex-end;line-height:1}
+.verdict .price small{letter-spacing:.02em;line-height:1.1;margin:0 0 2px;font-size:12px;text-transform:uppercase}
+.verdict .expert-call strong{font-weight:650;font-size:14.5px;line-height:1.4}
+.verdict .tip{font-size:13px}
+/* tre numeri sotto il verdetto, sempre sopra la piega */
+.price-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:8px 0}
+.pt-cell{background:#fff;border:1px solid #E5DDD3;border-radius:12px;padding:8px 10px;min-width:0}
+.pt-cell .pt-label{display:block;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#6E6B68;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pt-cell strong{display:block;font-size:24px;line-height:1.1;letter-spacing:-.03em;color:var(--ink)}
+.pt-cell .pt-sub{display:block;font-size:11px;color:#8A847E}
+.pt-cell.pt-live{border-color:#862633;background:#FFF7F5}
+.pt-cell.pt-live strong{color:#862633}
+.inj-strip{margin:6px 0;padding:8px 10px;border-radius:12px;border:1px solid #E7C07A;background:#FFF8EA;font-size:13.5px;color:#4E3A10}
+.inj-strip b{color:#7A5200;margin-right:4px}
+/* registrazione esito: griglia più densa, selezione inequivocabile, OK sempre raggiungibile */
+.outcome-card{padding:10px 12px}
+.outcome-head{margin-bottom:8px}
+.outcome-head h3{font-size:15px}
+.outcome-grid{grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:6px}
+.outcome-choice span{min-height:44px;padding:5px 6px;font-size:13.5px;line-height:1.15;text-align:center}
+.outcome-choice input:checked+span{background:#862633;border-color:#862633;color:#fff;box-shadow:0 0 0 3px rgba(242,169,0,.45);transform:none}
+.outcome-choice input:checked+span small{color:#FFE7A8}
+.outcome-choice input:focus-visible+span{outline:3px solid #F2B84B;outline-offset:2px}
+.outcome-ok{position:sticky;bottom:calc(78px + env(safe-area-inset-bottom));z-index:5;width:100%;min-height:52px;font-size:17px;margin-top:10px}
+body.auction .outcome-ok{bottom:calc(10px + env(safe-area-inset-bottom))}
+.outcome-foot{margin:6px 0 0;font-size:12px}
+/* spiegazioni richiudibili: stesso contenuto, zero altezza sprecata */
+details.section-help{display:block;padding:0 10px;margin:6px 0 9px}
+details.section-help>summary{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:13px;list-style:none;cursor:pointer}
+details.section-help>summary::-webkit-details-marker{display:none}
+details.section-help>summary::after{content:"mostra";margin-left:auto;font-size:11px;font-weight:700;color:#8A847E}
+details.section-help[open]>summary::after{content:"chiudi"}
+details.section-help .help-icon{width:22px;height:22px;border-radius:7px}
+details.section-help .help-body{padding:0 0 9px 30px}
+/* toast in alto: non copre più OK e barra di navigazione */
+.toast{top:calc(62px + env(safe-area-inset-top));bottom:auto}
+/* Rivali: più squadre per schermata, il numero che conta in evidenza */
+.rival-grid{grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:7px}
+.rival-card{padding:9px 10px;min-height:0}
+.rival-card .big{font-size:18px}
+.rival-statgrid{margin-top:6px;gap:4px}
+.rival-statgrid div{padding:4px 2px}
+.rival-max{font-size:12px;line-height:1.3;margin-top:6px}
+.rival-max b{font-size:20px;letter-spacing:-.03em;display:inline-block}
+.rival-card.clickable::after{bottom:6px;font-size:9px}
+.rival-card.open{grid-column:1/-1}
+/* barra superiore: una riga, priorità ai numeri d'asta */
+header.top .p-cred{order:1}header.top .p-mov{order:2}header.top .p-alert{order:3}header.top .p-undo{order:4}header.top .p-por{order:5}header.top .p-rosa{order:6}header.top #syncpill{order:7}
+header.top .in>b{order:0}
+@media (max-width:900px){
+  header.top{padding-bottom:7px}
+  header.top .in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;min-height:40px}
+  header.top .in::-webkit-scrollbar{display:none}
+  header.top .in>b{flex:none;margin-right:6px}
+  header.top .pill{flex:none;padding:4px 9px}
+}
+@media (max-width:560px){
+  header.top .in>b>span:last-child{display:none}
+  header.top #syncpill{font-size:0;padding:6px 8px;gap:0}
+  header.top #syncpill::before{width:10px;height:10px}
+  .price-trio{gap:5px}.pt-cell{padding:7px 8px}.pt-cell strong{font-size:20px}.pt-cell .pt-label{font-size:9.5px}.pt-cell .pt-sub{display:none}
+  .outcome-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .outcome-choice span{font-size:12.5px}
+  .rival-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:760px) and (orientation:landscape){
+  .search-stage.has-detail .verdict{padding:13px 16px}
+  .search-stage.has-detail .verdict .price{font-size:58px}
+}
 </style>
 </head>
 <body>
@@ -238,7 +310,7 @@ nav.tabs button[aria-current="page"]{background:#FFF0C9;color:#862633}
 <script>
 
 "use strict";
-const APP_VERSION = "2.7-beta";
+const APP_VERSION = "2.7.1-beta";
 const ROLES = ["Por","Dc","B","Dd","Ds","E","M","C","W","T","A","Pc"];
 // 11 schemi ufficiali Mantra. Ogni slot contiene i ruoli alternativi ammessi senza malus.
 const MANTRA_FORMATIONS = [
@@ -556,7 +628,7 @@ function alternatives(p,n=3){
     .sort((a,b)=>b.sc-a.sc || market(a)-market(b)).slice(0,n);
 }
 function helpBox(text,title="Come leggerla"){
-  return `<div class="section-help"><div class="help-icon">${mi("info")}</div><div><b>${esc(title)}</b><br>${text}</div></div>`;
+  return `<details class="section-help help-fold"><summary><span class="help-icon">${mi("info")}</span><b>${esc(title)}</b></summary><div class="help-body">${text}</div></details>`;
 }
 function recentAuctionEvents(n=3){
   return (S.log||[]).filter(e=>e&&e.n&&(/^(noi|altri|rimasto libero)/.test(e.a||""))).slice(-n).reverse();
@@ -810,9 +882,9 @@ function render(){
   const m = me(), u=undoInfo();
   document.body.classList.toggle("auction", auctionMode);
   $("#topbar").innerHTML = `<b><span class="brandmark">AP</span><span>${esc(NOI)}${IS_BETA ? " · BETA" : ""}</span></b><button class="pill sync" id="syncpill" data-tab="impostazioni"></button>
-    <span class="pill">Crediti <strong>${m.rem}</strong></span><span class="pill">Rosa <strong>${m.tot}</strong>/${RULES.porMin + RULES.movMin}+</span>
-    <span class="pill">Mov fino a <strong>${m.consMov}</strong></span><span class="pill">Por fino a <strong>${m.consPor}</strong></span>${missingPriceAssignments().length?`<button class="pill" data-tab="obiettivi" title="Assegnazioni senza prezzo: controlla i dati">⚠ prezzi ${missingPriceAssignments().length}</button>`:""}${DATA_WARNINGS.length?`<span class="pill" title="Controlla Impostazioni">⚠ ${DATA_WARNINGS.length}</span>`:""}
-    <button class="pill" data-undolast ${u ? "" : "disabled"} title="${u ? esc(u.label) : "Niente da annullare"}">↶ Annulla</button>`;
+    <span class="pill p-cred">Crediti <strong>${m.rem}</strong></span><span class="pill p-rosa">Rosa <strong>${m.tot}</strong>/${RULES.porMin + RULES.movMin}+</span>
+    <span class="pill p-mov">Mov fino a <strong>${m.consMov}</strong></span><span class="pill p-por">Por fino a <strong>${m.consPor}</strong></span>${missingPriceAssignments().length?`<button class="pill p-alert" data-tab="obiettivi" title="Assegnazioni senza prezzo: controlla i dati">⚠ prezzi ${missingPriceAssignments().length}</button>`:""}${DATA_WARNINGS.length?`<span class="pill" title="Controlla Impostazioni">⚠ ${DATA_WARNINGS.length}</span>`:""}
+    <button class="pill p-undo" data-undolast ${u ? "" : "disabled"} title="${u ? esc(u.label) : "Niente da annullare"}">↶ Annulla</button>`;
   $("#tabs").innerHTML = Object.keys(TABNAMES).map(k => `<button data-tab="${k}" ${k===tab?'aria-current="page"':''}>${ICONS[k]}${TABNAMES[k]}</button>`).join("");
   const app = $("#app");
   if (tab === "cerca") app.innerHTML = viewCerca();
@@ -851,6 +923,12 @@ function card(p){
   let h = `<div class="verdict ${v.cls}"><div class="who"><b>${esc(p.n)}</b> · ${clubBadge(p.t)}</div><div class="what">${esc(v.what)}</div>
     <div class="price">${v.price !== "" ? `<small>${esc(v.lab)}</small>${esc(v.price)}` : ""}</div>
     <div class="expert-call"><div class="eyebrow">Consiglio d'asta</div><strong>${esc(advice)}</strong></div>${v.tip ? `<div class="tip">${esc(v.tip)}</div>` : ""}</div>`;
+  h += `<div class="price-trio" role="group" aria-label="Tre numeri del giocatore">
+      <div class="pt-cell" title="Quanto ci aspettiamo che possa costare in una lega come la vostra, sulla base del FVM e della taratura del mercato."><span class="pt-label">Stima mercato</span><strong>${market(p)} cr</strong><span class="pt-sub">cosa costerà</span></div>
+      <div class="pt-cell" title="Quanto vale per noi in assoluto: qualità, ruolo, strategia e scarsità. Non considera ancora quanto puoi spendere oggi."><span class="pt-label">Tetto strategico AS Pinta</span><strong>${maxFor(p)} cr</strong><span class="pt-sub">quanto vale per noi</span></div>
+      <div class="pt-cell pt-live" title="Il vero “fino a”: tiene conto dei crediti rimasti, degli slot obbligatori, della riserva e dei MUST ancora da prendere."><span class="pt-label">Limite operativo oggi</span><strong>${liveLimit}</strong><span class="pt-sub">quanto puoi offrire ora</span></div>
+    </div>`;
+  if (p.i) h += `<div class="inj-strip"><b>Infortunio</b> ${esc(p.i)}</div>`;
   h += `<div class="quick-flags"><button class="quick-flag ${must?'must-on':''}" data-must="${esc(p.n)}">★ ${must?'MUST attivo':'Segna MUST'}</button><button class="quick-flag ${black?'avoid-on':''}" data-black="${esc(p.n)}">⊘ ${black?'Da evitare':'Segna da evitare'}</button></div>`;
   if(passed && !own && !gone) h+=`<div class="card pass-note"><b>↺ Già passato e ancora libero.</b> <span class="small">Ultimo passaggio alle ${new Date(passed.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}. Può essere ripescato normalmente.</span></div>`;
   if (own || gone){
@@ -864,15 +942,9 @@ function card(p){
         ${RIVALS.map(t=>`<label class="outcome-choice rival"><input type="radio" name="outcomeChoice" value="${esc(t)}"><span>${esc(t)}</span></label>`).join("")}
       </div>
       <button class="btn primary outcome-ok" data-outcome="${esc(p.n)}">OK · registra e passa al prossimo</button>
-      <p class="small">“? da verificare” conserva l'estrazione senza inventare dati: una foto successiva potrà completare squadra o prezzo.</p></div>`;
+      <p class="small outcome-foot">“? da verificare” conserva l'estrazione senza inventare dati: una foto successiva potrà completare squadra o prezzo.</p></div>`;
   }
-  if (p.i) h += `<div class="card" style="border-color:#E7C07A;background:#FFF8EA"><b>Infortunio:</b> ${esc(p.i)}</div>`;
-  if (sca && sca.level!=="ok") h += `<div class="card"><span class="badge ${sca.level}">Scarsità ${esc(sca.r)}</span> <span class="small">${sca.free} titolari buoni ancora liberi per circa ${sca.need} slot di lega da coprire. Il tetto del giocatore tiene già conto di questa pressione.</span></div>`;
-  h += `<div class="fanta-metrics">
-      <div class="fanta-metric"><div class="label">Stima mercato</div><strong>${market(p)} cr</strong><div class="explain">Quanto ci aspettiamo che possa costare in una lega come la vostra, sulla base del FVM e della taratura del mercato.</div></div>
-      <div class="fanta-metric"><div class="label">Tetto strategico AS Pinta</div><strong>${maxFor(p)} cr</strong><div class="explain">Quanto vale per noi in assoluto: qualità, ruolo, strategia e scarsità. Non considera ancora quanto puoi spendere oggi.</div></div>
-      <div class="fanta-metric"><div class="label">Limite operativo oggi</div><strong>${liveLimit}</strong><div class="explain">Il vero “fino a”: tiene conto dei crediti rimasti, degli slot obbligatori, della riserva e dei MUST ancora da prendere.</div></div>
-    </div>`;
+  if (sca && sca.level!=="ok" && !String(v.tip||"").includes("Scarsità")) h += `<div class="card"><span class="badge ${sca.level}">Scarsità ${esc(sca.r)}</span> <span class="small">${sca.free} titolari buoni ancora liberi per circa ${sca.need} slot di lega da coprire. Il tetto del giocatore tiene già conto di questa pressione.</span></div>`;
   h += `<div class="card"><h3 style="margin-top:0">Identikit fantacalcistico</h3>
     <div class="identity-summary"><div class="identity-primary"><div class="label">Profilo rapido</div><div class="bigline">${esc(p.r)} · ${esc(p.ft)}</div><div class="subline">${esc(p.s)}${p.rg?` · ${esc(p.rg)} rigorista`:''}${p.pz?` · piazzati`:''}</div></div><div class="identity-primary"><div class="label">Valutazione AS Pinta</div><div class="bigline">${p.sc}/100 · ${esc(consOf(p))}</div><div class="subline">ruolo guida ${esc(p.tr)} · FVM ${esc(p.fv)}${p.fe?' stimato':''}</div></div></div>
     ${geNoteHTML(p)}
