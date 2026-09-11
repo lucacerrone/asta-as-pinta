@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154442465,
+ "updatedAt": 1789154488101,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -368,6 +368,11 @@
    "t": "chill curre",
    "p": 13,
    "s": 1
+  },
+  "Birindelli": {
+   "t": "AC OMMODITY",
+   "p": 13,
+   "s": 1
   }
  },
  "riv": {
@@ -387,8 +392,8 @@
    "p": 1
   },
   "AC OMMODITY": {
-   "c": 407,
-   "g": 5,
+   "c": 394,
+   "g": 6,
    "p": 0
   },
   "Pro Stata": {
@@ -1053,6 +1058,13 @@
    "a": "altri",
    "n": "Britschgi",
    "t": "chill curre",
+   "p": 13
+  },
+  {
+   "ts": 1789154488101,
+   "a": "altri",
+   "n": "Birindelli",
+   "t": "AC OMMODITY",
    "p": 13
   }
  ],
