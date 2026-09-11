@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161054618,
+ "updatedAt": 1789161107635,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -45,10 +45,6 @@
   {
    "n": "Samardzic",
    "p": 40
-  },
-  {
-   "n": "Sarr P.",
-   "p": 19
   },
   {
    "n": "Frendrup",
