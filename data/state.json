@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154254162,
+ "updatedAt": 1789154277773,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -20,6 +20,14 @@
   },
   {
    "n": "Valdepenas",
+   "p": 10
+  },
+  {
+   "n": "Ghilardi",
+   "p": 4
+  },
+  {
+   "n": "Monteiro J.",
    "p": 10
   }
  ],
@@ -197,18 +205,10 @@
    "p": 25,
    "s": 1
   },
-  "Pedraza": {
-   "t": "",
-   "p": 4
-  },
   "Stones": {
    "t": "Al-Chaos-Ahli",
    "p": 25,
    "s": 1
-  },
-  "Correia T.": {
-   "t": "Real Skënderbeu",
-   "p": ""
   },
   "McTominay": {
    "t": "Space Invaders",
@@ -338,6 +338,22 @@
   "Rabiot": {
    "t": "",
    "p": ""
+  },
+  "Correia T.": {
+   "t": "Real Skënderbeu",
+   "p": 8
+  },
+  "Baturina": {
+   "t": "NewRock",
+   "p": 90
+  },
+  "Corvi": {
+   "t": "S.S. Longobarda",
+   "p": 13
+  },
+  "Pedraza": {
+   "t": "S.S. Longobarda",
+   "p": 4
   }
  },
  "riv": {
@@ -347,12 +363,12 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 229,
+   "c": 5,
    "g": 11,
    "p": 1
   },
   "Al-Chaos-Ahli": {
-   "c": 428,
+   "c": 22,
    "g": 5,
    "p": 1
   },
@@ -372,7 +388,7 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 343,
+   "c": 71,
    "g": 4,
    "p": 1
   },
@@ -382,7 +398,7 @@
    "p": 0
   },
   "NewRock": {
-   "c": 426,
+   "c": 17,
    "g": 6,
    "p": 0
   },
@@ -414,7 +430,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "",
+ "upd": "21:17",
  "log": [
   {
    "ts": 1789149704009,
@@ -954,6 +970,55 @@
    "n": "Rabiot",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789154277772,
+   "a": "altri (foto/integrazione)",
+   "n": "Correia T.",
+   "t": "Real Skënderbeu",
+   "p": 8
+  },
+  {
+   "ts": 1789154277772,
+   "a": "noi (foto/integrazione)",
+   "n": "Ghilardi",
+   "t": "AS Pinta",
+   "p": 4
+  },
+  {
+   "ts": 1789154277772,
+   "a": "noi (foto/integrazione)",
+   "n": "Monteiro J.",
+   "t": "AS Pinta",
+   "p": 10
+  },
+  {
+   "ts": 1789154277772,
+   "a": "altri (foto/integrazione)",
+   "n": "Baturina",
+   "t": "NewRock",
+   "p": 90
+  },
+  {
+   "ts": 1789154277772,
+   "a": "altri (foto/integrazione)",
+   "n": "Corvi",
+   "t": "S.S. Longobarda",
+   "p": 13
+  },
+  {
+   "ts": 1789154277773,
+   "a": "altri (foto/integrazione)",
+   "n": "Pedraza",
+   "t": "S.S. Longobarda",
+   "p": 4
+  },
+  {
+   "ts": 1789154277773,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "8 squadre"
   }
  ],
  "passed": [
@@ -990,5 +1055,11 @@
    "ts": 1789152461384
   }
  ],
- "updates": []
+ "updates": [
+  {
+   "ts": 1789154277773,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 6 squadre (Space Invaders: 343→71 cr; Al-Chaos-Ahli: 428→22 cr; Al-Chaos-Ahli: 428→22 cr; +3 altre). sono state integrate 6 assegnazioni, 2 completate con informazioni mancanti."
+  }
+ ]
 }
