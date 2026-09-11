@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165251491,
+ "updatedAt": 1789165324463,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1136,6 +1136,10 @@
   "Ciurria": {
    "t": "",
    "p": ""
+  },
+  "De Ketelaere": {
+   "t": "Real Skënderbeu",
+   "p": 40
   }
  },
  "riv": {
@@ -3271,6 +3275,13 @@
    "n": "Ciurria",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789165324463,
+   "a": "altri",
+   "n": "De Ketelaere",
+   "t": "Real Skënderbeu",
+   "p": 40
   }
  ],
  "passed": [
