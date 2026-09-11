@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155139285,
+ "updatedAt": 1789155182389,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -437,6 +437,11 @@
    "t": "Al-Chaos-Ahli",
    "p": 10,
    "s": 1
+  },
+  "Kaiki": {
+   "t": "AS Emazz",
+   "p": 10,
+   "s": 1
   }
  },
  "riv": {
@@ -476,8 +481,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 431,
-   "g": 4,
+   "c": 421,
+   "g": 5,
    "p": 0
   },
   "NewRock": {
@@ -1220,6 +1225,13 @@
    "a": "altri",
    "n": "Troilo",
    "t": "Al-Chaos-Ahli",
+   "p": 10
+  },
+  {
+   "ts": 1789155182389,
+   "a": "altri",
+   "n": "Kaiki",
+   "t": "AS Emazz",
    "p": 10
   }
  ],
