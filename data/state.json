@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164751998,
+ "updatedAt": 1789164813881,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1092,6 +1092,10 @@
   "Solet": {
    "t": "Fun Cool FC",
    "p": 17
+  },
+  "Davis K.": {
+   "t": "Pro Stata",
+   "p": 60
   }
  },
  "riv": {
@@ -3150,6 +3154,13 @@
    "n": "Solet",
    "t": "Fun Cool FC",
    "p": 17
+  },
+  {
+   "ts": 1789164813881,
+   "a": "altri",
+   "n": "Davis K.",
+   "t": "Pro Stata",
+   "p": 60
   }
  ],
  "passed": [
