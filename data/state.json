@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154722363,
+ "updatedAt": 1789154746658,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -393,6 +393,11 @@
    "t": "NewRock",
    "p": 67,
    "s": 1
+  },
+  "Zè Pedro": {
+   "t": "Real Skënderbeu",
+   "p": 8,
+   "s": 1
   }
  },
  "riv": {
@@ -422,8 +427,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 234,
-   "g": 12,
+   "c": 226,
+   "g": 13,
    "p": 0
   },
   "Space Invaders": {
@@ -1114,6 +1119,13 @@
    "n": "Mastantuono",
    "t": "NewRock",
    "p": 67
+  },
+  {
+   "ts": 1789154746658,
+   "a": "altri",
+   "n": "Zè Pedro",
+   "t": "Real Skënderbeu",
+   "p": 8
   }
  ],
  "passed": [
