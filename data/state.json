@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156232042,
+ "updatedAt": 1789156710911,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -540,6 +540,11 @@
    "t": "AS Emazz",
    "p": 20,
    "s": 1
+  },
+  "Krstovic": {
+   "t": "Fun Cool FC",
+   "p": 52,
+   "s": 1
   }
  },
  "riv": {
@@ -604,8 +609,8 @@
    "p": 0
   },
   "Fun Cool FC": {
-   "c": 404,
-   "g": 4,
+   "c": 352,
+   "g": 5,
    "p": 0
   }
  },
@@ -1534,6 +1539,13 @@
    "n": "Calò",
    "t": "AS Emazz",
    "p": 20
+  },
+  {
+   "ts": 1789156710911,
+   "a": "altri",
+   "n": "Krstovic",
+   "t": "Fun Cool FC",
+   "p": 52
   }
  ],
  "passed": [
