@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154622950,
+ "updatedAt": 1789154722363,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -388,6 +388,11 @@
    "t": "Fight Club",
    "p": 7,
    "s": 1
+  },
+  "Mastantuono": {
+   "t": "NewRock",
+   "p": 67,
+   "s": 1
   }
  },
  "riv": {
@@ -432,8 +437,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 17,
-   "g": 6,
+   "c": -50,
+   "g": 7,
    "p": 0
   },
   "Fc Afragolese": {
@@ -1102,6 +1107,13 @@
    "n": "Basic",
    "t": "Fight Club",
    "p": 7
+  },
+  {
+   "ts": 1789154722363,
+   "a": "altri",
+   "n": "Mastantuono",
+   "t": "NewRock",
+   "p": 67
   }
  ],
  "passed": [
