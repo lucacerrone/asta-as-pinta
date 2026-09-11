@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151099280,
+ "updatedAt": 1789151135878,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -112,6 +112,11 @@
    "t": "Space Invaders",
    "p": 9,
    "s": 1
+  },
+  "Stankovic F.": {
+   "t": "Al-Chaos-Ahli",
+   "p": 8,
+   "s": 1
   }
  },
  "riv": {
@@ -126,9 +131,9 @@
    "p": 0
   },
   "Al-Chaos-Ahli": {
-   "c": 478,
-   "g": 1,
-   "p": 0
+   "c": 470,
+   "g": 2,
+   "p": 1
   },
   "AC OMMODITY": {
    "c": 496,
@@ -385,6 +390,13 @@
    "n": "Provedel",
    "t": "Space Invaders",
    "p": 9
+  },
+  {
+   "ts": 1789151135878,
+   "a": "altri",
+   "n": "Stankovic F.",
+   "t": "Al-Chaos-Ahli",
+   "p": 8
   }
  ],
  "passed": [
