@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152414001,
+ "updatedAt": 1789152461384,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -602,6 +602,13 @@
    "n": "Konè M.",
    "t": "Fun Cool FC",
    "p": 25
+  },
+  {
+   "ts": 1789152461384,
+   "a": "rimasto libero",
+   "n": "Fadera",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
@@ -632,6 +639,10 @@
   {
    "n": "Marianucci",
    "ts": 1789152066767
+  },
+  {
+   "n": "Fadera",
+   "ts": 1789152461384
   }
  ],
  "updates": []
