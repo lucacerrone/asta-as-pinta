@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166713300,
+ "updatedAt": 1789166802445,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -73,6 +73,10 @@
   {
    "n": "Malen",
    "p": 202
+  },
+  {
+   "n": "Gaetano",
+   "p": 9
   }
  ],
  "asg": {
@@ -3586,6 +3590,13 @@
    "n": "Ferguson",
    "t": "Fc Afragolese",
    "p": 2
+  },
+  {
+   "ts": 1789166802445,
+   "a": "noi",
+   "n": "Gaetano",
+   "t": "AS Pinta",
+   "p": 9
   }
  ],
  "passed": [
