@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150218392,
+ "updatedAt": 1789150272037,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -17,6 +17,10 @@
   {
    "n": "De Roon",
    "p": 3
+  },
+  {
+   "n": "Valdepenas",
+   "p": 10
   }
  ],
  "asg": {
@@ -234,6 +238,13 @@
    "n": "De Roon",
    "t": "AS Pinta",
    "p": 3
+  },
+  {
+   "ts": 1789150272037,
+   "a": "noi",
+   "n": "Valdepenas",
+   "t": "AS Pinta",
+   "p": 10
   }
  ],
  "passed": [
