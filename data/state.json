@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155441725,
+ "updatedAt": 1789155471436,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -467,6 +467,11 @@
    "t": "Fc Afragolese",
    "p": 7,
    "s": 1
+  },
+  "Gandelman": {
+   "t": "NewRock",
+   "p": 6,
+   "s": 1
   }
  },
  "riv": {
@@ -511,8 +516,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": -51,
-   "g": 8,
+   "c": -57,
+   "g": 9,
    "p": 0
   },
   "Fc Afragolese": {
@@ -1293,6 +1298,13 @@
    "n": "Estupinan",
    "t": "Fc Afragolese",
    "p": 7
+  },
+  {
+   "ts": 1789155471436,
+   "a": "altri",
+   "n": "Gandelman",
+   "t": "NewRock",
+   "p": 6
   }
  ],
  "passed": [
