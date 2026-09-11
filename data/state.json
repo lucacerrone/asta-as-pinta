@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160073912,
+ "updatedAt": 1789160184914,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -106,18 +106,9 @@
    "p": 6,
    "s": 1
   },
-  "Lang": {
-   "t": "",
-   "p": 1
-  },
   "Akanji": {
    "t": "S.S. Longobarda",
    "p": 20,
-   "s": 1
-  },
-  "Raimondo": {
-   "t": "S.S. Longobarda",
-   "p": 83,
    "s": 1
   },
   "Provedel": {
@@ -777,6 +768,18 @@
   "Kelly L.": {
    "t": "Big Tasty FC",
    "p": 8
+  },
+  "Lang": {
+   "t": "Real Skënderbeu",
+   "p": 5
+  },
+  "Zappacosta": {
+   "t": "NewRock",
+   "p": 17
+  },
+  "Raimondo": {
+   "t": "S.S. Longobarda",
+   "p": 82
   }
  },
  "riv": {
@@ -786,14 +789,14 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": -48,
-   "g": 14,
-   "p": 1
+   "c": 79,
+   "g": 22,
+   "p": 2
   },
   "Al-Chaos-Ahli": {
-   "c": -18,
-   "g": 8,
-   "p": 2
+   "c": 332,
+   "g": 11,
+   "p": 3
   },
   "AC OMMODITY": {
    "c": 113,
@@ -807,8 +810,8 @@
   },
   "Real Skënderbeu": {
    "c": 1,
-   "g": 15,
-   "p": 1
+   "g": 22,
+   "p": 2
   },
   "Space Invaders": {
    "c": 224,
@@ -821,8 +824,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": -105,
-   "g": 11,
+   "c": 184,
+   "g": 16,
    "p": 0
   },
   "Fc Afragolese": {
@@ -831,8 +834,8 @@
    "p": 1
   },
   "Fight Club": {
-   "c": -29,
-   "g": 9,
+   "c": 329,
+   "g": 12,
    "p": 2
   },
   "Big Tasty FC": {
@@ -853,7 +856,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "22:54",
+ "upd": "22:56",
  "log": [
   {
    "ts": 1789149704009,
@@ -2198,6 +2201,34 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789160184914,
+   "a": "altri (foto/integrazione)",
+   "n": "Lang",
+   "t": "Real Skënderbeu",
+   "p": 5
+  },
+  {
+   "ts": 1789160184914,
+   "a": "altri (foto/integrazione)",
+   "n": "Zappacosta",
+   "t": "NewRock",
+   "p": 17
+  },
+  {
+   "ts": 1789160184914,
+   "a": "altri (foto/integrazione)",
+   "n": "Raimondo",
+   "t": "S.S. Longobarda",
+   "p": 82
+  },
+  {
+   "ts": 1789160184914,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "6 squadre"
   }
  ],
  "passed": [
@@ -2274,6 +2305,11 @@
    "ts": 1789160073912,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 6 assegnazioni, 1 corrette."
+  },
+  {
+   "ts": 1789160184914,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 6 squadre (Real Skënderbeu: 15→22 gioc., 1→2 por; Real Skënderbeu: 15→22 gioc., 1→2 por; Fight Club: -29→329 cr, 9→12 gioc.; +3 altre). sono state integrate 3 assegnazioni, 1 completate con informazioni mancanti, 1 corrette: Lang, Zappacosta, Raimondo."
   }
  ]
 }
