@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150450648,
+ "updatedAt": 1789150541910,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -78,6 +78,11 @@
    "t": "Pro Stata",
    "p": 15,
    "s": 1
+  },
+  "Lontani": {
+   "t": "S.S. Longobarda",
+   "p": 13,
+   "s": 1
   }
  },
  "riv": {
@@ -87,8 +92,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 464,
-   "g": 1,
+   "c": 451,
+   "g": 2,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -281,6 +286,13 @@
    "n": "Comuzzo",
    "t": "Pro Stata",
    "p": 15
+  },
+  {
+   "ts": 1789150541910,
+   "a": "altri",
+   "n": "Lontani",
+   "t": "S.S. Longobarda",
+   "p": 13
   }
  ],
  "passed": [
