@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154277773,
+ "updatedAt": 1789154296638,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -354,6 +354,10 @@
   "Pedraza": {
    "t": "S.S. Longobarda",
    "p": 4
+  },
+  "Musah": {
+   "t": "",
+   "p": ""
   }
  },
  "riv": {
@@ -1019,6 +1023,13 @@
    "n": "",
    "t": "",
    "p": "8 squadre"
+  },
+  {
+   "ts": 1789154296638,
+   "a": "altri",
+   "n": "Musah",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
