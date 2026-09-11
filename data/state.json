@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155017476,
+ "updatedAt": 1789155061379,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -423,6 +423,11 @@
    "t": "NewRock",
    "p": 1,
    "s": 1
+  },
+  "Chalobah T.": {
+   "t": "Big Tasty FC",
+   "p": 27,
+   "s": 1
   }
  },
  "riv": {
@@ -482,8 +487,8 @@
    "p": 0
   },
   "Big Tasty FC": {
-   "c": 410,
-   "g": 1,
+   "c": 383,
+   "g": 2,
    "p": 0
   },
   "Fun Cool FC": {
@@ -1186,6 +1191,13 @@
    "n": "Amorim",
    "t": "NewRock",
    "p": 1
+  },
+  {
+   "ts": 1789155061379,
+   "a": "altri",
+   "n": "Chalobah T.",
+   "t": "Big Tasty FC",
+   "p": 27
   }
  ],
  "passed": [
