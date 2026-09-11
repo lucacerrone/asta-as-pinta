@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153655587,
+ "updatedAt": 1789153739921,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -299,12 +299,17 @@
    "t": "AC OMMODITY",
    "p": 38,
    "s": 1
+  },
+  "Kessiè": {
+   "t": "chill curre",
+   "p": 25,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 468,
-   "g": 3,
+   "c": 443,
+   "g": 4,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -859,6 +864,13 @@
    "n": "Zielinski",
    "t": "AC OMMODITY",
    "p": 38
+  },
+  {
+   "ts": 1789153739921,
+   "a": "altri",
+   "n": "Kessiè",
+   "t": "chill curre",
+   "p": 25
   }
  ],
  "passed": [
