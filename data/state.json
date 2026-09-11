@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154031193,
+ "updatedAt": 1789154070818,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -324,6 +324,11 @@
    "t": "S.S. Longobarda",
    "p": 21,
    "s": 1
+  },
+  "Maldini": {
+   "t": "S.S. Longobarda",
+   "p": 17,
+   "s": 1
   }
  },
  "riv": {
@@ -333,8 +338,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 264,
-   "g": 9,
+   "c": 247,
+   "g": 10,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -919,6 +924,13 @@
    "n": "Osmajic",
    "t": "S.S. Longobarda",
    "p": 21
+  },
+  {
+   "ts": 1789154070818,
+   "a": "altri",
+   "n": "Maldini",
+   "t": "S.S. Longobarda",
+   "p": 17
   }
  ],
  "passed": [
