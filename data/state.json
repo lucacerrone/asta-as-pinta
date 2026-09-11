@@ -1,0 +1,84 @@
+{
+ "version": 2,
+ "updatedAt": 0,
+ "set": {
+  "budget": 500,
+  "tetto": 25,
+  "stile": "Normale",
+  "riserva": 30,
+  "target": 27
+ },
+ "mine": [],
+ "asg": {},
+ "riv": {
+  "chill curre": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "S.S. Longobarda": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Al-Chaos-Ahli": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "AC OMMODITY": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Pro Stata": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Real Skënderbeu": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Space Invaders": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "AS Emazz": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "NewRock": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Fc Afragolese": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Fight Club": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Big Tasty FC": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  },
+  "Fun Cool FC": {
+   "c": 500,
+   "g": 0,
+   "p": 0
+  }
+ },
+ "must": [],
+ "black": [],
+ "upd": "",
+ "log": []
+}
