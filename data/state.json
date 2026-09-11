@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789159721440,
+ "updatedAt": 1789159913980,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -752,6 +752,11 @@
    "t": "S.S. Longobarda",
    "p": 43,
    "s": 1
+  },
+  "Hermoso": {
+   "t": "AC OMMODITY",
+   "p": 46,
+   "s": 1
   }
  },
  "riv": {
@@ -771,8 +776,8 @@
    "p": 2
   },
   "AC OMMODITY": {
-   "c": 159,
-   "g": 11,
+   "c": 113,
+   "g": 12,
    "p": 1
   },
   "Pro Stata": {
@@ -2110,6 +2115,13 @@
    "n": "Varela G.",
    "t": "S.S. Longobarda",
    "p": 43
+  },
+  {
+   "ts": 1789159913980,
+   "a": "altri",
+   "n": "Hermoso",
+   "t": "AC OMMODITY",
+   "p": 46
   }
  ],
  "passed": [
