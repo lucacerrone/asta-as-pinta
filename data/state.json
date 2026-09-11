@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155699002,
+ "updatedAt": 1789155754602,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -494,6 +494,10 @@
   "Rabiot": {
    "t": "Real Skënderbeu",
    "p": 45
+  },
+  "Zalewski": {
+   "t": "",
+   "p": 4
   }
  },
  "riv": {
@@ -1390,6 +1394,13 @@
    "n": "Rabiot",
    "t": "Real Skënderbeu",
    "p": 45
+  },
+  {
+   "ts": 1789155754602,
+   "a": "altri",
+   "n": "Zalewski",
+   "t": "",
+   "p": 4
   }
  ],
  "passed": [
