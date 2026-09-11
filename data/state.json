@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156806820,
+ "updatedAt": 1789156843307,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -555,6 +555,11 @@
    "t": "Pro Stata",
    "p": 70,
    "s": 1
+  },
+  "Ilic": {
+   "t": "AC OMMODITY",
+   "p": 6,
+   "s": 1
   }
  },
  "riv": {
@@ -574,8 +579,8 @@
    "p": 2
   },
   "AC OMMODITY": {
-   "c": 165,
-   "g": 10,
+   "c": 159,
+   "g": 11,
    "p": 1
   },
   "Pro Stata": {
@@ -1570,6 +1575,13 @@
    "n": "Esposito F.P.",
    "t": "Pro Stata",
    "p": 70
+  },
+  {
+   "ts": 1789156843307,
+   "a": "altri",
+   "n": "Ilic",
+   "t": "AC OMMODITY",
+   "p": 6
   }
  ],
  "passed": [
