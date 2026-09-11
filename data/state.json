@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156118249,
+ "updatedAt": 1789156123418,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -521,6 +521,10 @@
   "Moro N.": {
    "t": "chill curre",
    "p": 3
+  },
+  "Varela G.": {
+   "t": "S.S. Longobarda",
+   "p": ""
   }
  },
  "riv": {
@@ -1486,6 +1490,13 @@
    "a": "annulla",
    "n": "Varela G.",
    "t": "",
+   "p": ""
+  },
+  {
+   "ts": 1789156123418,
+   "a": "altri",
+   "n": "Varela G.",
+   "t": "S.S. Longobarda",
    "p": ""
   }
  ],
