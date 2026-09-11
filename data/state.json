@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155356579,
+ "updatedAt": 1789155382117,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -457,6 +457,11 @@
    "t": "Big Tasty FC",
    "p": 34,
    "s": 1
+  },
+  "Spence": {
+   "t": "Al-Chaos-Ahli",
+   "p": 17,
+   "s": 1
   }
  },
  "riv": {
@@ -471,8 +476,8 @@
    "p": 1
   },
   "Al-Chaos-Ahli": {
-   "c": -1,
-   "g": 7,
+   "c": -18,
+   "g": 8,
    "p": 2
   },
   "AC OMMODITY": {
@@ -1269,6 +1274,13 @@
    "n": "Ederson D.S.",
    "t": "Big Tasty FC",
    "p": 34
+  },
+  {
+   "ts": 1789155382117,
+   "a": "altri",
+   "n": "Spence",
+   "t": "Al-Chaos-Ahli",
+   "p": 17
   }
  ],
  "passed": [
