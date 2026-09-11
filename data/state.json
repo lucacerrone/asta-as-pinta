@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154574561,
+ "updatedAt": 1789154622950,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -383,6 +383,11 @@
    "t": "Big Tasty FC",
    "p": 90,
    "s": 1
+  },
+  "Basic": {
+   "t": "Fight Club",
+   "p": 7,
+   "s": 1
   }
  },
  "riv": {
@@ -437,8 +442,8 @@
    "p": 0
   },
   "Fight Club": {
-   "c": 480,
-   "g": 2,
+   "c": 473,
+   "g": 3,
    "p": 0
   },
   "Big Tasty FC": {
@@ -1090,6 +1095,13 @@
    "n": "Dybala",
    "t": "Big Tasty FC",
    "p": 90
+  },
+  {
+   "ts": 1789154622950,
+   "a": "altri",
+   "n": "Basic",
+   "t": "Fight Club",
+   "p": 7
   }
  ],
  "passed": [
