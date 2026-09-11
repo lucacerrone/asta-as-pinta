@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158518369,
+ "updatedAt": 1789158580919,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -670,12 +670,17 @@
    "t": "Fight Club",
    "p": 20,
    "s": 1
+  },
+  "Bowie": {
+   "t": "chill curre",
+   "p": 25,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 428,
-   "g": 6,
+   "c": 403,
+   "g": 7,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -1867,6 +1872,13 @@
    "n": "Vasquez",
    "t": "Fight Club",
    "p": 20
+  },
+  {
+   "ts": 1789158580919,
+   "a": "altri",
+   "n": "Bowie",
+   "t": "chill curre",
+   "p": 25
   }
  ],
  "passed": [
