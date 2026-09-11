@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153907210,
+ "updatedAt": 1789153966827,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -314,6 +314,11 @@
    "t": "Space Invaders",
    "p": 71,
    "s": 1
+  },
+  "Fitz-Jim": {
+   "t": "NewRock",
+   "p": 18,
+   "s": 1
   }
  },
  "riv": {
@@ -358,8 +363,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 444,
-   "g": 5,
+   "c": 426,
+   "g": 6,
    "p": 0
   },
   "Fc Afragolese": {
@@ -895,6 +900,13 @@
    "n": "Berardi",
    "t": "Space Invaders",
    "p": 71
+  },
+  {
+   "ts": 1789153966827,
+   "a": "altri",
+   "n": "Fitz-Jim",
+   "t": "NewRock",
+   "p": 18
   }
  ],
  "passed": [
