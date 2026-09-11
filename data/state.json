@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153087303,
+ "updatedAt": 1789153159955,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -239,6 +239,11 @@
    "t": "Real Skënderbeu",
    "p": 1,
    "s": 1
+  },
+  "Isaksen": {
+   "t": "NewRock",
+   "p": 22,
+   "s": 1
   }
  },
  "riv": {
@@ -283,8 +288,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 466,
-   "g": 4,
+   "c": 444,
+   "g": 5,
    "p": 0
   },
   "Fc Afragolese": {
@@ -715,6 +720,13 @@
    "n": "Mout",
    "t": "Real Skënderbeu",
    "p": 1
+  },
+  {
+   "ts": 1789153159955,
+   "a": "altri",
+   "n": "Isaksen",
+   "t": "NewRock",
+   "p": 22
   }
  ],
  "passed": [
