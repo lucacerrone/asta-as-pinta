@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789162801032,
+ "updatedAt": 1789162934870,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -53,6 +53,10 @@
   {
    "n": "Yeboah J.",
    "p": 10
+  },
+  {
+   "n": "El Shaarawy",
+   "p": 3
   }
  ],
  "asg": {
@@ -2832,6 +2836,13 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789162934870,
+   "a": "noi",
+   "n": "El Shaarawy",
+   "t": "AS Pinta",
+   "p": 3
   }
  ],
  "passed": [
