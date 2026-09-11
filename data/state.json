@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151039760,
+ "updatedAt": 1789151091145,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -102,6 +102,11 @@
    "t": "S.S. Longobarda",
    "p": 20,
    "s": 1
+  },
+  "Raimondo": {
+   "t": "S.S. Longobarda",
+   "p": 83,
+   "s": 1
   }
  },
  "riv": {
@@ -111,8 +116,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 431,
-   "g": 3,
+   "c": 348,
+   "g": 4,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -361,6 +366,13 @@
    "n": "Raimondo",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789151091145,
+   "a": "altri",
+   "n": "Raimondo",
+   "t": "S.S. Longobarda",
+   "p": 83
   }
  ],
  "passed": [
