@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151922481,
+ "updatedAt": 1789151987866,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -141,6 +141,11 @@
    "t": "Pro Stata",
    "p": 30,
    "s": 1
+  },
+  "Pellegrino M.": {
+   "t": "Real Skënderbeu",
+   "p": 46,
+   "s": 1
   }
  },
  "riv": {
@@ -170,8 +175,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 457,
-   "g": 2,
+   "c": 411,
+   "g": 3,
    "p": 0
   },
   "Space Invaders": {
@@ -463,6 +468,13 @@
    "n": "Santos A.",
    "t": "Pro Stata",
    "p": 30
+  },
+  {
+   "ts": 1789151987866,
+   "a": "altri",
+   "n": "Pellegrino M.",
+   "t": "Real Skënderbeu",
+   "p": 46
   }
  ],
  "passed": [
