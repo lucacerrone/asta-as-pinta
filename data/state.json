@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150399929,
+ "updatedAt": 1789150450648,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -73,6 +73,11 @@
    "t": "AC OMMODITY",
    "p": 3,
    "s": 1
+  },
+  "Comuzzo": {
+   "t": "Pro Stata",
+   "p": 15,
+   "s": 1
   }
  },
  "riv": {
@@ -97,8 +102,8 @@
    "p": 0
   },
   "Pro Stata": {
-   "c": 500,
-   "g": 0,
+   "c": 485,
+   "g": 1,
    "p": 0
   },
   "Real Skënderbeu": {
@@ -269,6 +274,13 @@
    "n": "Sagrado",
    "t": "AC OMMODITY",
    "p": 3
+  },
+  {
+   "ts": 1789150450648,
+   "a": "altri",
+   "n": "Comuzzo",
+   "t": "Pro Stata",
+   "p": 15
   }
  ],
  "passed": [
