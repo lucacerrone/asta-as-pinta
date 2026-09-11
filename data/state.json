@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156734188,
+ "updatedAt": 1789156806820,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -550,6 +550,11 @@
    "t": "AC OMMODITY",
    "p": 30,
    "s": 1
+  },
+  "Esposito F.P.": {
+   "t": "Pro Stata",
+   "p": 70,
+   "s": 1
   }
  },
  "riv": {
@@ -574,8 +579,8 @@
    "p": 1
   },
   "Pro Stata": {
-   "c": 444,
-   "g": 4,
+   "c": 374,
+   "g": 5,
    "p": 0
   },
   "Real Skënderbeu": {
@@ -1558,6 +1563,13 @@
    "n": "Colombo",
    "t": "AC OMMODITY",
    "p": 30
+  },
+  {
+   "ts": 1789156806820,
+   "a": "altri",
+   "n": "Esposito F.P.",
+   "t": "Pro Stata",
+   "p": 70
   }
  ],
  "passed": [
