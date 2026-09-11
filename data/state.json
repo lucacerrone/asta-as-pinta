@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156895171,
+ "updatedAt": 1789157014824,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -570,6 +570,11 @@
    "t": "chill curre",
    "p": 2,
    "s": 1
+  },
+  "Calhanoglu": {
+   "t": "Fc Afragolese",
+   "p": 86,
+   "s": 1
   }
  },
  "riv": {
@@ -619,8 +624,8 @@
    "p": 0
   },
   "Fc Afragolese": {
-   "c": 462,
-   "g": 4,
+   "c": 376,
+   "g": 5,
    "p": 1
   },
   "Fight Club": {
@@ -1606,6 +1611,13 @@
    "n": "Pierotti",
    "t": "chill curre",
    "p": 2
+  },
+  {
+   "ts": 1789157014824,
+   "a": "altri",
+   "n": "Calhanoglu",
+   "t": "Fc Afragolese",
+   "p": 86
   }
  ],
  "passed": [
