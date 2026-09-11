@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158323311,
+ "updatedAt": 1789158427149,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -655,6 +655,11 @@
    "t": "NewRock",
    "p": 36,
    "s": 1
+  },
+  "Scamacca": {
+   "t": "Space Invaders",
+   "p": 96,
+   "s": 1
   }
  },
  "riv": {
@@ -689,8 +694,8 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 55,
-   "g": 5,
+   "c": -41,
+   "g": 6,
    "p": 1
   },
   "AS Emazz": {
@@ -1831,6 +1836,13 @@
    "n": "Adzic",
    "t": "NewRock",
    "p": 36
+  },
+  {
+   "ts": 1789158427149,
+   "a": "altri",
+   "n": "Scamacca",
+   "t": "Space Invaders",
+   "p": 96
   }
  ],
  "passed": [
