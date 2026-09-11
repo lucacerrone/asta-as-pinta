@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166098814,
+ "updatedAt": 1789166487886,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1188,6 +1188,58 @@
   "Douglas Luiz": {
    "t": "Fight Club",
    "p": 9
+  },
+  "Lobotka": {
+   "t": "Fc Afragolese",
+   "p": 4
+  },
+  "Kempf": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Busio": {
+   "t": "Pro Stata",
+   "p": 3
+  },
+  "Elmas": {
+   "t": "chill curre",
+   "p": 6
+  },
+  "Piccoli": {
+   "t": "AC OMMODITY",
+   "p": 23
+  },
+  "Romero D.": {
+   "t": "Al-Chaos-Ahli",
+   "p": 2
+  },
+  "Coulibaly L.": {
+   "t": "Fight Club",
+   "p": 1
+  },
+  "Tavares N.": {
+   "t": "Fight Club",
+   "p": 12
+  },
+  "Gatti": {
+   "t": "Big Tasty FC",
+   "p": 3
+  },
+  "Marin R.": {
+   "t": "Fight Club",
+   "p": 7
+  },
+  "Berisha M.": {
+   "t": "NewRock",
+   "p": 1
+  },
+  "Sohm": {
+   "t": "Fc Afragolese",
+   "p": 2
+  },
+  "Hainaut": {
+   "t": "Fc Afragolese",
+   "p": 1
   }
  },
  "riv": {
@@ -3421,6 +3473,97 @@
    "n": "Malen",
    "t": "AS Pinta",
    "p": 202
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Lobotka",
+   "t": "Fc Afragolese",
+   "p": 4
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Kempf",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Busio",
+   "t": "Pro Stata",
+   "p": 3
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Elmas",
+   "t": "chill curre",
+   "p": 6
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Piccoli",
+   "t": "AC OMMODITY",
+   "p": 23
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Romero D.",
+   "t": "Al-Chaos-Ahli",
+   "p": 2
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Coulibaly L.",
+   "t": "Fight Club",
+   "p": 1
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Tavares N.",
+   "t": "Fight Club",
+   "p": 12
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Gatti",
+   "t": "Big Tasty FC",
+   "p": 3
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Marin R.",
+   "t": "Fight Club",
+   "p": 7
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Berisha M.",
+   "t": "NewRock",
+   "p": 1
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Sohm",
+   "t": "Fc Afragolese",
+   "p": 2
+  },
+  {
+   "ts": 1789166487885,
+   "a": "altri (foto/integrazione)",
+   "n": "Hainaut",
+   "t": "Fc Afragolese",
+   "p": 1
   }
  ],
  "passed": [
@@ -3547,6 +3690,11 @@
    "ts": 1789165904854,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 8 assegnazioni, 1 completate con informazioni mancanti."
+  },
+  {
+   "ts": 1789166487886,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 13 assegnazioni."
   }
  ]
 }
