@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789162934870,
+ "updatedAt": 1789163402339,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -988,6 +988,54 @@
   "Milinkovic-Savic V.": {
    "t": "Fun Cool FC",
    "p": 22
+  },
+  "Fagioli": {
+   "t": "Pro Stata",
+   "p": 14
+  },
+  "Bisseck": {
+   "t": "Big Tasty FC",
+   "p": 35
+  },
+  "Diouf": {
+   "t": "S.S. Longobarda",
+   "p": 37
+  },
+  "Grabara": {
+   "t": "chill curre",
+   "p": 1
+  },
+  "Lulli": {
+   "t": "S.S. Longobarda",
+   "p": 6
+  },
+  "Cutrone": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Provstgaard": {
+   "t": "Fc Afragolese",
+   "p": 11
+  },
+  "Ellertsson": {
+   "t": "chill curre",
+   "p": 8
+  },
+  "Veiga D.": {
+   "t": "Fc Afragolese",
+   "p": 6
+  },
+  "Hutchinson": {
+   "t": "Real Skënderbeu",
+   "p": 2
+  },
+  "Kamara H.": {
+   "t": "NewRock",
+   "p": 14
+  },
+  "Bernabè": {
+   "t": "Space Invaders",
+   "p": 4
   }
  },
  "riv": {
@@ -2843,6 +2891,90 @@
    "n": "El Shaarawy",
    "t": "AS Pinta",
    "p": 3
+  },
+  {
+   "ts": 1789163402337,
+   "a": "altri (foto/integrazione)",
+   "n": "Fagioli",
+   "t": "Pro Stata",
+   "p": 14
+  },
+  {
+   "ts": 1789163402338,
+   "a": "altri (foto/integrazione)",
+   "n": "Bisseck",
+   "t": "Big Tasty FC",
+   "p": 35
+  },
+  {
+   "ts": 1789163402338,
+   "a": "altri (foto/integrazione)",
+   "n": "Diouf",
+   "t": "S.S. Longobarda",
+   "p": 37
+  },
+  {
+   "ts": 1789163402338,
+   "a": "altri (foto/integrazione)",
+   "n": "Grabara",
+   "t": "chill curre",
+   "p": 1
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Lulli",
+   "t": "S.S. Longobarda",
+   "p": 6
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Cutrone",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Provstgaard",
+   "t": "Fc Afragolese",
+   "p": 11
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Ellertsson",
+   "t": "chill curre",
+   "p": 8
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Veiga D.",
+   "t": "Fc Afragolese",
+   "p": 6
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Hutchinson",
+   "t": "Real Skënderbeu",
+   "p": 2
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Kamara H.",
+   "t": "NewRock",
+   "p": 14
+  },
+  {
+   "ts": 1789163402339,
+   "a": "altri (foto/integrazione)",
+   "n": "Bernabè",
+   "t": "Space Invaders",
+   "p": 4
   }
  ],
  "passed": [
@@ -2949,6 +3081,11 @@
    "ts": 1789162801032,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 1 squadre (Fc Afragolese: 376→1 cr). sono state integrate 14 assegnazioni."
+  },
+  {
+   "ts": 1789163402339,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 12 assegnazioni."
   }
  ]
 }
