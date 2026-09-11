@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164236899,
+ "updatedAt": 1789164375635,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1068,6 +1068,10 @@
   "Cinquegrano": {
    "t": "NewRock",
    "p": 6
+  },
+  "Cissè A.": {
+   "t": "Fun Cool FC",
+   "p": 50
   }
  },
  "riv": {
@@ -3084,6 +3088,13 @@
    "n": "Cinquegrano",
    "t": "NewRock",
    "p": 6
+  },
+  {
+   "ts": 1789164375635,
+   "a": "altri",
+   "n": "Cissè A.",
+   "t": "Fun Cool FC",
+   "p": 50
   }
  ],
  "passed": [
