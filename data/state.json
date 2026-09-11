@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154488101,
+ "updatedAt": 1789154517941,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -373,6 +373,11 @@
    "t": "AC OMMODITY",
    "p": 13,
    "s": 1
+  },
+  "Cichella": {
+   "t": "Fun Cool FC",
+   "p": 2,
+   "s": 1
   }
  },
  "riv": {
@@ -437,8 +442,8 @@
    "p": 0
   },
   "Fun Cool FC": {
-   "c": 469,
-   "g": 2,
+   "c": 467,
+   "g": 3,
    "p": 0
   }
  },
@@ -1066,6 +1071,13 @@
    "n": "Birindelli",
    "t": "AC OMMODITY",
    "p": 13
+  },
+  {
+   "ts": 1789154517941,
+   "a": "altri",
+   "n": "Cichella",
+   "t": "Fun Cool FC",
+   "p": 2
   }
  ],
  "passed": [
