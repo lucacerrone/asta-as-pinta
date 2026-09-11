@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152492257,
+ "updatedAt": 1789152600519,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -200,6 +200,11 @@
   "Pedraza": {
    "t": "",
    "p": 4
+  },
+  "Stones": {
+   "t": "Al-Chaos-Ahli",
+   "p": 25,
+   "s": 1
   }
  },
  "riv": {
@@ -214,8 +219,8 @@
    "p": 0
   },
   "Al-Chaos-Ahli": {
-   "c": 453,
-   "g": 4,
+   "c": 428,
+   "g": 5,
    "p": 1
   },
   "AC OMMODITY": {
@@ -620,6 +625,13 @@
    "n": "Pedraza",
    "t": "",
    "p": 4
+  },
+  {
+   "ts": 1789152600519,
+   "a": "altri",
+   "n": "Stones",
+   "t": "Al-Chaos-Ahli",
+   "p": 25
   }
  ],
  "passed": [
