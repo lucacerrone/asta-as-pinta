@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165820317,
+ "updatedAt": 1789165904854,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1141,10 +1141,6 @@
    "t": "Fun Cool FC",
    "p": 6
   },
-  "Ciurria": {
-   "t": "",
-   "p": ""
-  },
   "De Ketelaere": {
    "t": "Real Skënderbeu",
    "p": 40
@@ -1152,6 +1148,38 @@
   "Politano": {
    "t": "Fc Afragolese",
    "p": 16
+  },
+  "Thuram K.": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Holm": {
+   "t": "AC OMMODITY",
+   "p": 3
+  },
+  "Cacciamani": {
+   "t": "AS Emazz",
+   "p": 9
+  },
+  "Lucca": {
+   "t": "Fun Cool FC",
+   "p": 3
+  },
+  "Spinazzola": {
+   "t": "Fight Club",
+   "p": 8
+  },
+  "Pongracic": {
+   "t": "AC OMMODITY",
+   "p": 2
+  },
+  "Ciurria": {
+   "t": "S.S. Longobarda",
+   "p": 1
+  },
+  "Zapata D.": {
+   "t": "S.S. Longobarda",
+   "p": 2
   }
  },
  "riv": {
@@ -3315,6 +3343,62 @@
    "n": "Rensch",
    "t": "AS Pinta",
    "p": 2
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Thuram K.",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Holm",
+   "t": "AC OMMODITY",
+   "p": 3
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Cacciamani",
+   "t": "AS Emazz",
+   "p": 9
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Lucca",
+   "t": "Fun Cool FC",
+   "p": 3
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Spinazzola",
+   "t": "Fight Club",
+   "p": 8
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Pongracic",
+   "t": "AC OMMODITY",
+   "p": 2
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Ciurria",
+   "t": "S.S. Longobarda",
+   "p": 1
+  },
+  {
+   "ts": 1789165904854,
+   "a": "altri (foto/integrazione)",
+   "n": "Zapata D.",
+   "t": "S.S. Longobarda",
+   "p": 2
   }
  ],
  "passed": [
@@ -3436,6 +3520,11 @@
    "ts": 1789165230176,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 5 assegnazioni."
+  },
+  {
+   "ts": 1789165904854,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 8 assegnazioni, 1 completate con informazioni mancanti."
   }
  ]
 }
