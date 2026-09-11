@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153620520,
+ "updatedAt": 1789153655587,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -294,6 +294,11 @@
    "t": "Real Skënderbeu",
    "p": 1,
    "s": 1
+  },
+  "Zielinski": {
+   "t": "AC OMMODITY",
+   "p": 38,
+   "s": 1
   }
  },
  "riv": {
@@ -313,8 +318,8 @@
    "p": 1
   },
   "AC OMMODITY": {
-   "c": 445,
-   "g": 4,
+   "c": 407,
+   "g": 5,
    "p": 0
   },
   "Pro Stata": {
@@ -847,6 +852,13 @@
    "n": "Almqvist",
    "t": "Real Skënderbeu",
    "p": 1
+  },
+  {
+   "ts": 1789153655587,
+   "a": "altri",
+   "n": "Zielinski",
+   "t": "AC OMMODITY",
+   "p": 38
   }
  ],
  "passed": [
