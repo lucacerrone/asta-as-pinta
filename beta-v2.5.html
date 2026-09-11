@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="it" data-channel="beta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#862633">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Asta Pinta">
+<meta name="robots" content="noindex">
+<title>Asta AS Pinta BETA</title>
+<style>
+:root{
+  --bg:#F2F0EC; --card:#FFFFFF; --ink:#191B20; --muted:#6E6B68; --line:#DEDAD3;
+  --pinta:#862633; --pinta-2:#A72E3D; --giallo:#F2A900; --roma-dark:#581820; --roma-soft:#F7E9E5; --go:#15784A; --warn:#A66A00; --stop:#A8261D; --own:#2458B8; --gone:#7A8190;
+  --r-lg:18px; --r-sm:10px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;font-variant-numeric:tabular-nums}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:820px;margin:0 auto;padding:0 14px calc(92px + env(safe-area-inset-bottom))}
+header.top{position:sticky;top:0;z-index:20;background:var(--pinta);color:#fff;padding:calc(8px + env(safe-area-inset-top)) 14px 10px}
+header.top .in{max-width:820px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+header.top b{font-size:17px;margin-right:auto;letter-spacing:.2px}
+.pill{background:rgba(255,255,255,.14);border-radius:999px;padding:4px 10px;font-size:13px;white-space:nowrap}
+.pill strong{font-size:15px}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs button{flex:1;max-width:140px;border:0;background:none;padding:10px 2px 9px;font-size:12px;color:var(--muted)}
+nav.tabs button svg{display:block;margin:0 auto 3px;width:22px;height:22px}
+nav.tabs button[aria-current="page"]{color:var(--pinta-2);font-weight:600}
+h2{font-size:21px;margin:18px 0 10px}
+h3{font-size:16px;margin:18px 0 8px}
+.card{background:var(--card);border-radius:var(--r-lg);padding:14px;margin:10px 0;border:1px solid var(--line)}
+.search{padding:12px 0 6px}
+.search input{width:100%;font-size:20px;padding:14px 16px;border-radius:14px;border:2px solid var(--pinta-2);background:#fff;outline:none}
+.results{margin:4px 0 0;padding:0;list-style:none}
+.results li button{width:100%;text-align:left;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 12px;margin:6px 0}
+.results .nm{font-weight:600}
+.results .meta{color:var(--muted);font-size:13px}
+.results .tag{margin-left:auto;font-size:13px;font-weight:600;white-space:nowrap}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.go{--c:var(--go)} .warn{--c:var(--warn)} .stop{--c:var(--stop)} .must{--c:var(--pinta-2)} .own{--c:var(--own)} .gone{--c:var(--gone)}
+.dot{background:var(--c)} .tag{color:var(--c)}
+.verdict{background:var(--c);color:#fff;border-radius:var(--r-lg);padding:16px 18px;margin:12px 0 8px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 14px}
+.verdict .who{font-size:15px;opacity:.9;grid-column:1/-1}
+.verdict .what{font-size:26px;font-weight:700;line-height:1.1}
+.verdict .price{font-size:64px;font-weight:800;line-height:.9;text-align:right}
+.verdict .price small{display:block;font-size:13px;font-weight:600;opacity:.85;text-align:right}
+.verdict .tip{grid-column:1/-1;font-size:14px;background:rgba(255,255,255,.16);border-radius:10px;padding:7px 10px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 14px;margin:6px 0}@media (min-width:700px){.facts{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.facts div{border-bottom:1px solid var(--line);padding:5px 0}
+.facts dt{font-size:12px;color:var(--muted)} .facts dd{margin:0;font-weight:600}
+.note{color:#333;font-size:15px;margin:10px 0 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:0;border-radius:12px;padding:12px 14px;font-weight:600;background:#fff;border:1px solid var(--line)}
+.btn.primary{background:var(--pinta-2);color:#fff;border-color:var(--pinta-2)}
+.btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.danger{color:var(--stop)}
+.btn.small{padding:7px 10px;font-size:14px;border-radius:9px}
+.btn:disabled{opacity:.45}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.field input,.field select{font-size:17px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);min-width:90px}
+textarea{width:100%;min-height:150px;padding:10px;border:1px solid var(--line);border-radius:12px;font-size:15px}
+.empty{color:var(--muted);padding:18px 4px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{font-size:12px;color:var(--muted);text-align:left;font-weight:600;padding:6px 4px;border-bottom:1px solid var(--line)}
+td{padding:7px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
+td input{width:54px;font-size:16px;padding:6px 4px;border:1px solid var(--line);border-radius:8px;text-align:right}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:480px){table{font-size:13px}td,th{padding:6px 2px}td input{width:48px;font-size:15px}}
+td.num{text-align:right;font-weight:700}
+.hl{background:#FBEFD9}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.kpi span{display:block;font-size:12px;color:var(--muted)} .kpi strong{font-size:26px}
+.kpi.main{background:var(--pinta);color:#fff;border-color:var(--pinta)} .kpi.main span{color:#D9C8EA}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 11px;font-size:14px}
+.chip.ok{border-color:#9FD3B5;background:#E6F4EC} .chip.no{border-color:#EDB1AC;background:#FBEAE8}
+.chip[aria-pressed="true"]{background:var(--pinta-2);color:#fff;border-color:var(--pinta-2)}
+.list-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.list-item .grow{flex:1;min-width:0}
+.strike{text-decoration:line-through;color:var(--gone)}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:8px 0;padding:4px 12px}
+summary{padding:8px 0;font-weight:600;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+.ok-txt{color:var(--go)} .bad-txt{color:var(--stop)}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-size:15px;z-index:50;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90vw}
+.toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+:focus-visible{outline:3px solid #F2B84B;outline-offset:2px}
+
+.pill.sync{border:0;color:#fff;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.pill.sync::before{content:"";width:8px;height:8px;border-radius:50%;background:#B9B2C4}
+.pill.st-ok::before{background:#5FD38D} .pill.st-busy::before{background:#F2B84B} .pill.st-err{background:#B3261E} .pill.st-err::before{background:#fff} .pill.st-local::before{background:#9DB8F2}
+.st-ok-txt{color:var(--go)} .st-busy-txt{color:var(--warn)} .st-err-txt{color:var(--stop)} .st-local-txt{color:var(--own)}
+label.btn{cursor:pointer}
+
+/* ---------- v2.1: layout denso, iPad affiancato, modalità asta ---------- */
+.wrap{max-width:1180px;padding-left:12px;padding-right:12px}
+header.top .in{max-width:1180px}
+.card{padding:12px;margin:8px 0}
+.search{display:flex;gap:8px;align-items:center;padding-top:10px}
+.search input{flex:1;min-width:0;padding:12px 14px}
+.search-tools{display:flex;gap:6px;flex:none}
+.search-tools .btn{padding:10px 11px}
+.search-stage.has-detail .listpane{display:none}
+.detailpane{min-width:0}
+.alt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:7px}
+.alt-card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px;text-align:left}
+.alt-card b{display:block}.alt-card .small{display:block;margin-top:2px}
+.badge{display:inline-flex;align-items:center;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:700;border:1px solid var(--line);background:#fff}
+.badge.warn{border-color:#E7C07A;background:#FFF8EA;color:#7A5200}.badge.stop{border-color:#EDB1AC;background:#FBEAE8;color:var(--stop)}
+.auction-note{font-size:12px;color:var(--muted)}
+.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:7px}
+.risk-card{border-left:5px solid var(--stop)}
+.close-now .list-item{padding:7px 0}
+.budget-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:7px}
+.budget-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px}.budget-item strong{font-size:20px}
+body.auction nav.tabs{display:none}
+body.auction .wrap{padding-bottom:18px}
+body.auction header.top{position:static;padding-top:8px}
+body.auction header.top .pill:not(.sync){display:none}
+body.auction .search{position:sticky;top:0;z-index:25;background:var(--bg);padding:8px 0}
+body.auction .verdict{padding:20px;margin-top:6px}
+body.auction .verdict .what{font-size:34px}
+body.auction .verdict .price{font-size:88px}
+body.auction .auction-actions .btn{font-size:19px;padding:16px 18px;min-height:58px;flex:1}
+body.auction .auction-actions .field{flex:0 0 95px}
+body.auction .auction-actions input,body.auction .auction-actions select{font-size:20px}
+@media (min-width:760px) and (orientation:landscape){
+  .search-stage.has-detail{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(450px,1.28fr);gap:12px;align-items:start}
+  .search-stage.has-detail .listpane{display:block;position:sticky;top:74px;max-height:calc(100vh - 110px);overflow:auto;padding-right:2px}
+  .search-stage.has-detail .detailpane{display:block}
+  .search-stage.has-detail .results li button{padding:8px 10px;margin:4px 0}
+  .search-stage.has-detail .verdict{margin-top:4px}
+}
+@media (max-width:560px){
+  .wrap{padding-left:9px;padding-right:9px}.card{padding:10px}.verdict{padding:13px 14px}.verdict .what{font-size:23px}.verdict .price{font-size:54px}
+  .search-tools .mode-label{display:none}.facts{gap:4px 10px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.kpi strong{font-size:22px}
+  nav.tabs button{font-size:11px;padding-left:0;padding-right:0}
+}
+
+/* ---------- v2.3 beta: Roma-inspired infographic UI ---------- */
+:root{
+  --surface:#FBFAF8; --surface-2:#F2EEE8; --elev:0 12px 32px rgba(70,28,31,.08);
+  --elev-soft:0 5px 16px rgba(70,28,31,.06); --glass:rgba(255,255,255,.82);
+}
+html,body{background:radial-gradient(circle at 18% -10%,#FFF6DC 0,transparent 32%),linear-gradient(180deg,#FAF7F2 0,#F1EFEC 38%,#EFEEEC 100%)}
+body{letter-spacing:-.006em}
+header.top{background:radial-gradient(circle at 82% -40%,rgba(242,169,0,.34),transparent 38%),linear-gradient(120deg,#581820 0%,#862633 55%,#A72E3D 100%);box-shadow:0 9px 30px rgba(82,24,31,.22);border-bottom:1px solid rgba(255,255,255,.13)}
+header.top .in{min-height:48px}
+header.top b{display:flex;align-items:center;gap:9px;font-size:18px;letter-spacing:-.015em}
+.brandmark{width:31px;height:31px;border-radius:10px;display:inline-grid;place-items:center;background:linear-gradient(145deg,#FFD46C,#F2A900);color:#641D27;font-weight:950;font-size:12px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.48),0 4px 14px rgba(0,0,0,.18)}
+.pill{border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.card,details,.kpi,.budget-item,.alt-card,.info-card{box-shadow:var(--elev-soft)}
+.card{border-color:rgba(89,59,53,.12);background:rgba(255,255,255,.95)}
+h2{font-size:24px;letter-spacing:-.03em;margin-top:16px} h3{letter-spacing:-.015em}
+.search input{box-shadow:0 8px 26px rgba(134,38,51,.10);border-color:#A72E3D;background:rgba(255,255,255,.98)}
+.search input:focus{border-color:#862633;box-shadow:0 0 0 4px rgba(242,169,0,.20),0 10px 28px rgba(134,38,51,.12)}
+.results li button{border-color:rgba(89,59,53,.12);box-shadow:0 3px 11px rgba(70,28,31,.045);transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.results li button:active,.alt-card:active,.btn:active{transform:scale(.985)}
+.results .nm{font-size:16px;letter-spacing:-.01em}
+.verdict{box-shadow:0 12px 30px color-mix(in srgb,var(--c) 22%,transparent);border:1px solid rgba(255,255,255,.18);position:relative;overflow:hidden}
+.verdict:after{content:"";position:absolute;right:-48px;top:-66px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.09);pointer-events:none}
+.verdict .price{letter-spacing:-.06em}
+.btn{box-shadow:0 3px 10px rgba(70,28,31,.045);transition:transform .12s ease,box-shadow .12s ease}
+.btn.primary{background:linear-gradient(135deg,#862633,#B43A49);box-shadow:0 7px 18px rgba(134,38,51,.23)}
+.btn.accent{background:linear-gradient(135deg,#F2A900,#FFC83D);border-color:#E0A000;color:#4C3210;box-shadow:0 7px 18px rgba(242,169,0,.20)}
+.btn.dark{background:linear-gradient(135deg,#202226,#34363C)}
+.kpi{background:linear-gradient(180deg,#fff,#FCFBF8);border-color:rgba(89,59,53,.12);position:relative;overflow:hidden}
+.kpi.main{background:radial-gradient(circle at 90% 0,rgba(242,169,0,.32),transparent 38%),linear-gradient(145deg,#581820,#862633 70%,#A72E3D);box-shadow:0 10px 25px rgba(134,38,51,.20)}
+.kpi.main span{color:#F7E3DC}.kpi strong{letter-spacing:-.04em}
+nav.tabs{background:rgba(255,255,255,.90);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-color:rgba(89,59,53,.11);box-shadow:0 -8px 30px rgba(70,28,31,.07)}
+nav.tabs button{transition:color .15s ease,background .15s ease;border-radius:14px;margin:5px 2px;padding-top:7px;padding-bottom:7px}
+nav.tabs button[aria-current="page"]{background:#FFF0C9;color:#862633}
+.team-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:750;line-height:1.1;border:1px solid var(--tb-border);background:linear-gradient(100deg,var(--tb-bg1),var(--tb-bg2));color:var(--tb-fg);white-space:nowrap;box-shadow:inset 0 0 0 .5px rgba(255,255,255,.4)}
+.team-badge .club-dot{width:7px;height:7px;border-radius:50%;background:var(--tb-accent);box-shadow:0 0 0 2px rgba(255,255,255,.6)}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}.section-head h2,.section-head h3{margin:0}
+.hero-tools{display:flex;gap:7px;flex-wrap:wrap}.share-btn{display:inline-flex;align-items:center;gap:7px}
+.import-rule{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:9px 0}.import-rule div{padding:9px;border-radius:12px;background:#FBF7F1;border:1px solid #E8DED1}
+.preview-change{font-size:12px;border-radius:999px;padding:3px 7px;background:#FFF0C9;color:#7A4D00;font-weight:750}.data-warn{border-left:5px solid #A66A00;background:#FFF9EE}
+.metric-card{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}.metric-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:#FFF1C9;color:#862633;border:1px solid #F0D58C}.metric-icon svg{width:20px;height:20px}
+.progress-ring{--p:0;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--giallo) calc(var(--p)*1%),rgba(255,255,255,.18) 0);position:relative;flex:none}.progress-ring:before{content:"";position:absolute;inset:8px;border-radius:50%;background:#6C1C27}.progress-ring span{position:relative;color:#fff;font-size:17px;font-weight:850}
+.hero-progress{display:flex;align-items:center;gap:13px}.hero-progress strong{font-size:25px;display:block;letter-spacing:-.04em}.hero-progress .small{color:#F7E3DC}
+.role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:7px}.role-meter{padding:9px 10px;border:1px solid #E7E0D7;background:#fff;border-radius:12px}.role-meter .topline{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:700}.mini-bar,.power-bar,.budget-bar{height:7px;border-radius:999px;background:#EEE8E0;overflow:hidden;margin-top:7px}.mini-bar>i,.power-bar>i,.budget-bar>i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#862633,#F2A900)}.role-meter.ok .mini-bar>i{background:linear-gradient(90deg,#147447,#55B77E)}.role-meter.warn .mini-bar>i{background:linear-gradient(90deg,#B14A35,#F2A900)}
+.budget-item{position:relative}.budget-item .budget-bar>i.over{background:linear-gradient(90deg,#A8261D,#E35A45)}
+.rival-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px}.rival-card{background:#fff;border:1px solid #E7E0D7;border-radius:14px;padding:10px}.rival-card .rline{display:flex;justify-content:space-between;gap:8px;align-items:center}.rival-card .big{font-weight:850;font-size:20px}.rival-card.you{border-color:#E4B83F;background:linear-gradient(180deg,#FFF8E4,#fff)}
+.info-card{border:1px solid #E7E0D7;background:linear-gradient(180deg,#fff,#FBF8F3);border-radius:16px;padding:12px;margin:9px 0}.info-card strong{color:#862633}
+.team-radio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:100%}.team-radio{cursor:pointer}.team-radio input{position:absolute;opacity:0;pointer-events:none}.team-radio span{display:flex;align-items:center;justify-content:center;min-height:36px;padding:6px 7px;border:1px solid #DDD6CE;background:#fff;border-radius:10px;font-size:12px;font-weight:700;text-align:center;line-height:1.1}.team-radio input:checked+span{border-color:#862633;background:#FFF0C9;color:#862633;box-shadow:0 0 0 2px rgba(242,169,0,.18)}
+.pass-note{border-left:5px solid var(--giallo);background:#FFF8E5}.pass-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:999px;background:#FFF0C9;color:#7A4D00;font-size:11px;font-weight:800;margin-left:5px}
+.outcome-card{border:1px solid rgba(134,38,51,.18);background:linear-gradient(180deg,#fff,#FFFDFC)}
+.outcome-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:11px}.price-fast{display:flex;flex-direction:column;gap:3px;font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em}.price-fast input{width:84px;font-size:22px;font-weight:850;text-align:center;padding:8px;border:2px solid #D8CFC6;border-radius:12px;background:#fff}.price-fast input:focus{border-color:#862633;outline:0;box-shadow:0 0 0 3px rgba(242,169,0,.16)}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.outcome-choice{cursor:pointer;position:relative}.outcome-choice input{position:absolute;opacity:0;pointer-events:none}.outcome-choice span{display:flex;min-height:44px;align-items:center;justify-content:center;flex-direction:column;gap:1px;padding:7px 5px;border:1px solid #DDD6CE;border-radius:11px;background:#fff;font-size:12px;font-weight:760;text-align:center;line-height:1.05;transition:.12s ease}.outcome-choice span small{font-size:9px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.025em}.outcome-choice input:checked+span{border-color:#862633;box-shadow:0 0 0 3px rgba(134,38,51,.11);transform:translateY(-1px)}.outcome-choice.pinta span{background:#FFF2CF;border-color:#E4B83F;color:#6C1C27}.outcome-choice.pinta input:checked+span{background:linear-gradient(145deg,#FFF2CF,#FFE3A0);border-color:#862633}.outcome-choice.passed span{background:#FFF7E6;border-color:#E3BF78;color:#7A4D00}.outcome-choice.passed input:checked+span{background:#FFE8A9;border-color:#B47A00}.outcome-choice.doubt span{background:#F3F4F6;color:#5E6470}.outcome-choice.doubt input:checked+span{background:#E7E9ED;border-color:#6D7480}.outcome-ok{width:100%;margin-top:10px;font-size:16px;min-height:46px}.price-legend{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0 4px}.price-legend>div{padding:9px 10px;border:1px solid #E7E0D7;border-radius:12px;background:#FCFAF7}.price-legend b{display:block;color:#862633;font-size:12px;margin-bottom:2px}.price-legend span{display:block;color:var(--muted);font-size:11px;line-height:1.35}
+.narrative{font-size:15px;line-height:1.55;color:#33312E}.narrative b{color:#862633}
+.update-card{border-left:4px solid #D6A41A}.update-card .time{font-size:12px;color:#7B736C;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:760px){.team-radio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.rival-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.import-rule{grid-template-columns:1fr}.brandmark{width:27px;height:27px;border-radius:9px}.team-badge{font-size:11px;padding:3px 7px}.team-radio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.outcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.price-legend{grid-template-columns:1fr}.rival-grid{grid-template-columns:1fr}.progress-ring{width:66px;height:66px}}
+
+/* ---------- v2.5: linguaggio fantacalcistico, moduli e explainers ---------- */
+.section-help{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;margin:7px 0 11px;border:1px solid #E5DDD3;border-radius:14px;background:linear-gradient(180deg,#FFFEFC,#F8F4EE);color:#4E4A46;font-size:13px;line-height:1.45}
+.section-help .help-icon{width:25px;height:25px;flex:none;border-radius:9px;display:grid;place-items:center;background:#FFF0C9;color:#862633;font-weight:900;border:1px solid #ECD28C}.section-help b{color:#352F2D}
+.fanta-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:8px;margin:9px 0}.fanta-metric{padding:11px 12px;border:1px solid #E5DDD3;border-radius:14px;background:#fff}.fanta-metric .label{font-size:12px;font-weight:800;color:#862633;text-transform:uppercase;letter-spacing:.025em}.fanta-metric strong{display:block;font-size:27px;letter-spacing:-.04em;margin:1px 0}.fanta-metric .explain{font-size:11px;color:var(--muted);line-height:1.35}
+.expert-call{grid-column:1/-1;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:9px 11px}.expert-call .eyebrow{font-size:10px;opacity:.8;font-weight:900;text-transform:uppercase;letter-spacing:.07em}.expert-call strong{display:block;font-size:15px;line-height:1.35;margin-top:2px}
+.recent-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:9px 0}.recent-card{border:1px solid #E5DDD3;background:#fff;border-radius:12px;padding:9px 10px;min-width:0}.recent-card b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}.recent-card .small{font-size:11px}
+.formation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}.formation-card{border:1px solid #E3DAD0;border-radius:15px;background:#fff;padding:11px;position:relative}.formation-card.best{border-color:#D9A51D;background:linear-gradient(180deg,#FFF9E9,#fff)}.formation-card .fname{display:flex;justify-content:space-between;align-items:center;gap:8px}.formation-card .fname strong{font-size:19px;letter-spacing:-.03em}.formation-card .rank{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:#7A4D00;background:#FFF0C9;border-radius:999px;padding:3px 7px}.formation-bar{height:8px;background:#EEE8E0;border-radius:999px;overflow:hidden;margin:8px 0}.formation-bar i{display:block;height:100%;background:linear-gradient(90deg,#862633,#F2A900);border-radius:inherit}.slot-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}.slot-tag{font-size:10px;font-weight:800;border-radius:999px;padding:3px 6px;background:#F2EEE8;color:#554D48;border:1px solid #E2DAD0}.target-line{font-size:11px;color:#5F5954;margin-top:6px;line-height:1.35}.formation-summary{display:flex;justify-content:space-between;gap:8px;align-items:end}.formation-summary .score{font-size:12px;color:var(--muted);text-align:right}.formation-summary .score b{display:block;color:#2F2B29;font-size:15px}
+.rival-card{padding:12px;min-height:132px}.rival-card .rname{font-size:13px;font-weight:800;line-height:1.15}.rival-statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}.rival-statgrid div{background:#F8F5F1;border-radius:9px;padding:6px;text-align:center}.rival-statgrid b{display:block;font-size:15px}.rival-statgrid span{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.025em}.rival-max{margin-top:8px;padding-top:7px;border-top:1px solid #ECE5DC;font-size:11px}.rival-max b{font-size:16px;color:#862633}
+.settings-group{margin:14px 0 6px}.settings-group .group-title{display:flex;align-items:center;gap:8px;font-size:22px;font-weight:850;letter-spacing:-.03em}.settings-group .group-kicker{font-size:12px;color:var(--muted);margin-top:2px}.setting-card .field{flex:1 1 160px}.setting-note{font-size:11px;color:var(--muted);line-height:1.35;margin-top:5px}.service-status{display:flex;justify-content:space-between;gap:10px;align-items:center}.service-dot{width:10px;height:10px;border-radius:50%;background:#5FD38D;display:inline-block;margin-right:5px}
+.identity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.identity-item{padding:9px 10px;border:1px solid #E5DDD3;border-radius:12px;background:#FCFAF7}.identity-item .label{font-size:10px;text-transform:uppercase;font-weight:800;color:var(--muted);letter-spacing:.04em}.identity-item b{display:block;margin-top:2px;font-size:14px}
+@media(max-width:560px){.recent-strip{grid-template-columns:1fr}.fanta-metrics{grid-template-columns:1fr 1fr}.formation-grid{grid-template-columns:1fr}.identity-grid{grid-template-columns:1fr}.rival-card{min-height:0}}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="in" id="topbar"><b>AS Pinta</b><span class="pill">Carico i dati…</span></div></header>
+<main class="wrap" id="app"><p class="empty">Carico listone e impostazioni…</p></main>
+<nav class="tabs" id="tabs"></nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px">Serve JavaScript attivo.</p></noscript>
+<script>
+
+"use strict";
+const APP_VERSION = "2.5-beta";
+const ROLES = ["Por","Dc","B","Dd","Ds","E","M","C","W","T","A","Pc"];
+// 11 schemi ufficiali Mantra. Ogni slot contiene i ruoli alternativi ammessi senza malus.
+const MANTRA_FORMATIONS = [
+  {n:"3-4-3",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M","C"],["C"],["E"],["W","A"],["A","Pc"],["W","A"]]},
+  {n:"3-4-1-2",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M","C"],["C"],["E"],["T"],["A","Pc"],["A","Pc"]]},
+  {n:"3-4-2-1",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M"],["M","C"],["E","W"],["T"],["T","A"],["A","Pc"]]},
+  {n:"3-5-2",slots:[["Dc"],["Dc"],["Dc","B"],["E"],["M"],["M","C"],["C"],["E","W"],["A","Pc"],["A","Pc"]]},
+  {n:"3-5-1-1",slots:[["Dc"],["Dc"],["Dc","B"],["E","W"],["M"],["M"],["C"],["E","W"],["T","A"],["A","Pc"]]},
+  {n:"4-3-3",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["M","C"],["C"],["W","A"],["A","Pc"],["W","A"]]},
+  {n:"4-3-1-2",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["M","C"],["C"],["T"],["T","A","Pc"],["A","Pc"]]},
+  {n:"4-4-2",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["E"],["M","C"],["C"],["E","W"],["A","Pc"],["A","Pc"]]},
+  {n:"4-1-4-1",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["C","T"],["T"],["E","W"],["W"],["A","Pc"]]},
+  {n:"4-4-1-1",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["E","W"],["M"],["C"],["E","W"],["T","A"],["A","Pc"]]},
+  {n:"4-2-3-1",slots:[["Ds"],["Dc"],["Dc"],["Dd"],["M"],["M","C"],["W","T"],["T"],["W","A"],["A","Pc"]]}
+];
+let P = [], SHORT = [], CFG = null, TEAMS = [], NOI = "", RIVALS = [], RULES = null, PRICE = null, MINS = null, byName = new Map(), dataFromCache = false;
+let DATA_WARNINGS = [];
+
+/* ---------- testo e ricerca ---------- */
+const norm = s => (s||"").toString().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/['’`]/g,"").replace(/[^a-z0-9. ]+/g," ").replace(/\s+/g," ").trim();
+function init(players, cfg, shortlist){
+  P = players; SHORT = shortlist; CFG = cfg;
+  TEAMS = cfg.squadre; NOI = cfg.noi; RIVALS = TEAMS.filter(t => t !== NOI);
+  RULES = cfg.regole; PRICE = cfg.prezzi; MINS = cfg.minimiRuolo;
+  byName = new Map(P.map(p => [p.n, p]));
+  P.forEach(p => {
+    const toks = p.n.split(/\s+/);
+    p._n = norm(p.n).replace(/\./g,"");
+    p._main = toks.filter(t => !t.endsWith(".")).map(t => norm(t)).filter(Boolean);
+    p._init = toks.filter(t => t.endsWith(".")).flatMap(t => norm(t).split(".").filter(Boolean));
+    p._t = norm(p.t);
+  });
+}
+const esc = s => (s??"").toString().replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CLUB_COLORS = {
+  "Atalanta":["#E8F2FF","#EDEEF2","#164B91","#0B2F5C"], "Bologna":["#FCEBED","#EAF0FA","#A51D31","#233C77"],
+  "Cagliari":["#FCEBED","#EAF0FA","#A72236","#263B76"], "Como":["#E7F1FF","#F3F8FF","#1565B5","#144A7A"],
+  "Fiorentina":["#F2EAFB","#FAF7FD","#6B2C91","#4A1D69"], "Frosinone":["#FFF7D8","#EBF2FF","#D5A800","#244A88"],
+  "Genoa":["#FCEBED","#E9EEF7","#A32236","#213B70"], "Inter":["#E8F1FF","#EEF0F4","#1769C2","#101926"],
+  "Juventus":["#F6F6F7","#E9EAED","#15171B","#15171B"], "Lazio":["#E8F6FF","#F7FCFF","#6CBCEB","#245D7A"],
+  "Lecce":["#FFF5D8","#FDE9E8","#C69B00","#A62B2A"], "Milan":["#FCE9EA","#ECEDEF","#C82432","#171A1F"],
+  "Monza":["#FDEBED","#FFF8F8","#D32236","#9C1B29"], "Napoli":["#E7F6FF","#F8FCFF","#2A9ED5","#186D97"],
+  "Parma":["#FFF4C7","#E9F0FF","#D8B100","#244F91"], "Roma":["#F8E7E3","#FFF2D6","#8B2231","#D2A51A"],
+  "Sassuolo":["#E7F6EC","#ECEFF0","#19884B","#17201B"], "Torino":["#F6E8E8","#FBF6F6","#7A2635","#5A1D28"],
+  "Udinese":["#F5F5F6","#EDEEEF","#22252B","#111318"], "Venezia":["#FFF0E7","#E8F3EA","#E96D1F","#1B6B42"]
+};
+function clubBadge(t){
+  const c=CLUB_COLORS[t]||["#F1EEF5","#FAF9FC","#6A5C77","#51465D"];
+  return `<span class="team-badge" style="--tb-bg1:${c[0]};--tb-bg2:${c[1]};--tb-accent:${c[2]};--tb-fg:${c[3]};--tb-border:${c[2]}33">${esc(t||"n.d.")}</span>`;
+}
+
+function searchPlayers(q){
+  q = norm(q).replace(/\./g,""); if (q.length < 2) return [];
+  const out = [];
+  for (const p of P){
+    let s = 0;
+    if (p._n.startsWith(q)) s = 100;
+    else if (p._main.some(t => t.startsWith(q))) s = 90;
+    else if (p._n.includes(q)) s = 70;
+    else if (p._t.startsWith(q)) s = 40;
+    if (s) out.push([s, p]);
+  }
+  return out.sort((a,b) => b[0]-a[0] || b[1].sc-a[1].sc).slice(0, 25).map(x => x[1]);
+}
+function matchPlayer(text){
+  const q = norm(text).replace(/\./g," ").replace(/\s+/g," ").trim(); if (!q) return {p:null};
+  const qt = q.split(" ");
+  const cands = [];
+  for (const p of P){
+    let s = 0;
+    if (p._n === q.replace(/ /g," ")) s = 100;
+    else if (p._main.length && p._main.every(t => qt.includes(t))) {
+      s = 80;
+      if (p._init.length && qt.some(t => !p._main.includes(t) && p._init.some(g => t.startsWith(g)))) s += 10;
+      if (qt.length === p._main.length) s += 5;
+    }
+    if (s) cands.push([s, p]);
+  }
+  cands.sort((a,b) => b[0]-a[0]);
+  if (!cands.length) return {p:null};
+  if (cands.length > 1 && cands[0][0] - cands[1][0] < 5) return {p:null, amb: cands.slice(0,3).map(c => c[1].n)};
+  return {p: cands[0][1]};
+}
+function matchTeam(text){
+  const q = norm(text); if (q.length < 3) return null;
+  for (const t of TEAMS) if (norm(t) === q) return t;
+  for (const t of TEAMS){ const nt = norm(t); if (nt.includes(q) || q.includes(nt)) return t; }
+  const words = q.split(" ").filter(w => w.length > 3);
+  for (const t of TEAMS){ const nt = norm(t); if (words.some(w => nt.includes(w))) return t; }
+  return null;
+}
+
+/* ---------- stato: dispositivo (localStorage) + GitHub (branch dedicato) ---------- */
+const IS_BETA = document.documentElement.dataset.channel === "beta";
+const LS_STATE = IS_BETA ? "astaPinta.beta.state.v2" : "astaPinta.state.v2";
+const LS_GH = IS_BETA ? "astaPinta.beta.github.v1" : "astaPinta.github.v1";
+const LS_CACHE = IS_BETA ? "astaPinta.beta.data.v1" : "astaPinta.data.v1";
+const LS_UNDO = IS_BETA ? "astaPinta.beta.undo.v1" : "astaPinta.undo.v1";
+const stateBranch = () => IS_BETA ? "stato-beta" : CFG.github.branch;
+const ls = {
+  get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+  set(k, v){ try { localStorage.setItem(k, v); return true; } catch(e){ return false; } },
+  del(k){ try { localStorage.removeItem(k); } catch(e){} }
+};
+let localOk = true;
+function defaults(){
+  const s = CFG.impostazioni;
+  return {version:2, updatedAt:0, set:{...s}, mine:[], asg:{},
+    riv:Object.fromEntries(RIVALS.map(t => [t, {c:s.budget, g:0, p:0}])),
+    must:(CFG.must || []).filter(m => m && m.n).map(m => ({n:m.n, max:+m.max || 0, why:m.why || ""})),
+    black:(CFG.evita || []).filter(Boolean), upd:"", log:[], passed:[], updates:[]};
+}
+let S = null;
+const utf8b64 = str => { const bytes = new TextEncoder().encode(str); let bin = ""; for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000)); return btoa(bin); };
+const b64utf8 = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, "")), c => c.charCodeAt(0)));
+const enc = o => utf8b64(JSON.stringify(o));
+const dec = c => JSON.parse(b64utf8(c.trim()));
+function merge(o){
+  const d = defaults(); const s = Object.assign(d, o || {});
+  s.set = Object.assign(defaults().set, (o && o.set) || {});
+  s.riv = Object.assign(defaults().riv, (o && o.riv) || {});
+  ["mine","must","black","log","passed","updates"].forEach(k => { if (!Array.isArray(s[k])) s[k] = []; });
+  if (!s.asg || typeof s.asg !== "object") s.asg = {};
+  return s;
+}
+function loadLocal(){
+  const raw = ls.get(LS_STATE);
+  if (raw){ try { S = merge(JSON.parse(raw)); return; } catch(e){} }
+  S = defaults();
+}
+function persist(){
+  S.updatedAt = Date.now();
+  localOk = ls.set(LS_STATE, JSON.stringify(S));
+  if (gh.ok()) sync.schedule();
+  updateStatus();
+}
+function logEvent(a, n, t, p){ S.log.push({ts: Date.now(), a, n: n || "", t: t || "", p: p ?? ""}); if (S.log.length > 1000) S.log.splice(0, S.log.length - 1000); }
+function passInfo(n){ const a=(S.passed||[]).filter(x=>x&&x.n===n).sort((a,b)=>(b.ts||0)-(a.ts||0)); return a[0]||null; }
+function clearPassed(n){ if(!Array.isArray(S.passed)) S.passed=[]; S.passed=S.passed.filter(x=>x.n!==n); }
+function recordUpdate(text, label="Aggiornamento da screenshot"){
+  if(!text) return; if(!Array.isArray(S.updates)) S.updates=[];
+  S.updates.push({ts:Date.now(),label,text}); if(S.updates.length>20) S.updates.splice(0,S.updates.length-20);
+}
+function fmtUpdate(u){ if(!u) return "Nessun aggiornamento registrato."; return `${u.text}`; }
+
+function saveUndo(label){ try { ls.set(LS_UNDO, JSON.stringify({label: label || "ultima azione", at: Date.now(), state: S})); } catch(e){} }
+function undoInfo(){ try { const u = JSON.parse(ls.get(LS_UNDO) || "null"); return u && u.state ? u : null; } catch(e){ return null; } }
+function undoLast(){ const u = undoInfo(); if (!u) return false; S = merge(u.state); ls.del(LS_UNDO); persist(); render(); toast(`Annullato: ${u.label}`); return true; }
+
+
+const gh = {
+  sha: null,
+  cfg(){ try { const c = JSON.parse(ls.get(LS_GH) || "null"); return c ? Object.assign({branch: stateBranch(), file: CFG.github.file, repo: CFG.github.repo}, c) : null; } catch(e){ return null; } },
+  ok(){ const c = this.cfg(); return !!(c && c.owner && c.repo && c.token); },
+  base(){ const c = this.cfg(); return `https://api.github.com/repos/${encodeURIComponent(c.owner.trim())}/${encodeURIComponent(c.repo.trim())}`; },
+  async req(method, path, body){
+    const c = this.cfg();
+    const headers = {"Authorization": "Bearer " + c.token.trim(), "Accept": "application/vnd.github+json"};
+    if (body) headers["Content-Type"] = "application/json";
+    const r = await fetch(this.base() + path, {method, headers, body: body ? JSON.stringify(body) : undefined, cache: "no-store"});
+    let j = null; try { j = await r.json(); } catch(e){}
+    return {status: r.status, ok: r.ok, j};
+  },
+  explain(r){
+    const m = r.j && r.j.message ? ` (${r.j.message})` : "";
+    if (r.status === 401) return "Token non valido o scaduto" + m;
+    if (r.status === 403) return "Il token non ha il permesso di scrittura: serve Contents 'Read and write'" + m;
+    if (r.status === 404) return "Repository non trovato: controlla utente, nome del repo e che il token abbia accesso a quel repo" + m;
+    return "Errore GitHub " + r.status + m;
+  },
+  async ensureBranch(){
+    const c = this.cfg();
+    const r = await this.req("GET", `/git/ref/heads/${encodeURIComponent(c.branch)}`);
+    if (r.status === 200) return;
+    const repo = await this.req("GET", "");
+    if (!repo.ok) throw new Error(this.explain(repo));
+    if (r.status !== 404) throw new Error(this.explain(r));
+    const main = await this.req("GET", `/git/ref/heads/${encodeURIComponent(repo.j.default_branch)}`);
+    if (!main.ok) throw new Error(this.explain(main));
+    const cr = await this.req("POST", "/git/refs", {ref: `refs/heads/${c.branch}`, sha: main.j.object.sha});
+    if (!cr.ok && cr.status !== 422) throw new Error(this.explain(cr));
+  },
+  async getState(){
+    const c = this.cfg();
+    const r = await this.req("GET", `/contents/${c.file}?ref=${encodeURIComponent(c.branch)}`);
+    if (r.status === 404) { this.sha = null; return {missing: true}; }
+    if (!r.ok) throw new Error(this.explain(r));
+    this.sha = r.j.sha;
+    return {state: JSON.parse(b64utf8(r.j.content))};
+  },
+  async putState(){
+    const c = this.cfg();
+    const body = {message: `Asta ${new Date().toLocaleString("it-IT")}: ${S.mine.length} nostri, ${Object.keys(S.asg).length} altri`, content: utf8b64(JSON.stringify(S, null, 1)), branch: c.branch};
+    if (this.sha) body.sha = this.sha;
+    let r = await this.req("PUT", `/contents/${c.file}`, body);
+    if (r.status === 409 || r.status === 422 || (r.status === 404 && this.sha)){
+      const g = await this.req("GET", `/contents/${c.file}?ref=${encodeURIComponent(c.branch)}`);
+      if (g.ok) body.sha = g.j.sha; else delete body.sha;
+      r = await this.req("PUT", `/contents/${c.file}`, body);
+    }
+    if (!r.ok) throw new Error(this.explain(r));
+    this.sha = r.j.content.sha;
+  }
+};
+
+const sync = {
+  timer: null, busy: false, dirty: false, again: false, last: null, err: null,
+  schedule(delay = 2500){ this.dirty = true; clearTimeout(this.timer); this.timer = setTimeout(() => this.run(), delay); },
+  async run(){
+    if (!gh.ok() || !this.dirty) return;
+    if (this.busy){ this.again = true; return; }
+    this.busy = true; this.dirty = false; updateStatus();
+    try { await gh.putState(); this.last = new Date(); this.err = null; }
+    catch(e){ this.err = e.message || String(e); this.dirty = true; clearTimeout(this.timer); this.timer = setTimeout(() => this.run(), 15000); }
+    this.busy = false;
+    if (this.again){ this.again = false; this.dirty = true; this.busy = false; return this.run(); }
+    updateStatus();
+  }
+};
+
+async function connectAndPull(opts = {}){
+  if (!gh.ok()) return;
+  sync.busy = true; sync.err = null; updateStatus();
+  try {
+    await gh.ensureBranch();
+    const r = await gh.getState();
+    sync.busy = false;
+    if (r.missing){ sync.dirty = true; await sync.run(); if (opts.verbose) toast("Collegato: stato creato su GitHub"); }
+    else {
+      const rem = merge(r.state);
+      if (opts.force || (rem.updatedAt || 0) > (S.updatedAt || 0)){ S = rem; localOk = ls.set(LS_STATE, JSON.stringify(S)); sync.last = new Date(); render(); toast("Caricato lo stato da GitHub"); }
+      else if ((rem.updatedAt || 0) < (S.updatedAt || 0)){ sync.dirty = true; await sync.run(); if (opts.verbose) toast("Collegato: GitHub aggiornato con i dati di questo dispositivo"); }
+      else { sync.last = new Date(); if (opts.verbose) toast("Collegato: già tutto allineato"); }
+    }
+  } catch(e){ sync.busy = false; sync.err = e.message || String(e); if (opts.verbose) toast(sync.err); }
+  updateStatus();
+}
+
+function statusInfo(){
+  if (!gh.ok()) return localOk ? {cls:"st-local", txt:"Salvato sul dispositivo"} : {cls:"st-err", txt:"Non salvato!"};
+  if (sync.err) return {cls:"st-err", txt:"GitHub: errore"};
+  if (sync.busy || sync.dirty) return {cls:"st-busy", txt:"Salvo su GitHub"};
+  if (sync.last) return {cls:"st-ok", txt:"GitHub " + sync.last.toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"})};
+  return {cls:"st-busy", txt:"GitHub"};
+}
+function updateStatus(){ const el = document.getElementById("syncpill"); if (!el) return; const s = statusInfo(); el.className = "pill sync " + s.cls; el.textContent = s.txt; }
+
+/* ---------- calcoli ---------- */
+const mult = fv => fv >= PRICE.sogliaBig ? PRICE.moltBig : (fv >= PRICE.sogliaMedi ? PRICE.moltMedi : PRICE.moltBassi);
+const aggr = () => S.set.stile === "Prudente" ? 0.9 : (S.set.stile === "Aggressivo" ? 1.1 : 1);
+const market = p => Math.max(1, Math.round(p.fv/1000 * S.set.budget * mult(p.fv)));
+const mustOf = n => S.must.find(m => m.n === n);
+const mineOf = n => S.mine.find(x => x.n === n);
+const assigned = n => !!mineOf(n) || !!S.asg[n];
+const isPor = n => { const p = byName.get(n); if (p) return p.tr === "Por"; const m = mineOf(n); return !!(m && m.por); };
+const resOf = m => m.max > 0 ? m.max : (byName.get(m.n) ? Math.round(market(byName.get(m.n))*PRICE.extraMust) : 0);
+const rolesOf = p => (p && p.r ? p.r.split(";").filter(Boolean) : []);
+const teamAvoid = p => !!(p && !mustOf(p.n) && (CFG.evitaSquadre || []).includes(p.t));
+const lastResortPrice = () => Math.max(1, +(CFG.ultimaSpiaggia && CFG.ultimaSpiaggia.prezzo) || 1);
+function roleCountMine(r){ return S.mine.filter(x => { const p=byName.get(x.n); return p ? rolesOf(p).includes(r) : (r === "Por" && x.por); }).length; }
+function freeGoodForRole(r){ return P.filter(p => !assigned(p.n) && rolesOf(p).includes(r) && p.sc >= 60 && /^Titolare/.test(p.s || "")).length; }
+function assignedRoleCount(r){ let n=0; S.mine.forEach(x=>{ const p=byName.get(x.n); if (p && rolesOf(p).includes(r)) n++; }); Object.keys(S.asg).forEach(k=>{ const p=byName.get(k); if (p && rolesOf(p).includes(r)) n++; }); return n; }
+function scarcityFor(r){
+  const min=+MINS[r]||0; if (!min) return {r,free:freeGoodForRole(r),need:0,ratio:99,level:"ok"};
+  const need=Math.max(0, TEAMS.length*min-assignedRoleCount(r)), free=freeGoodForRole(r), ratio=need ? free/need : 99;
+  return {r,free,need,ratio,level: need && free < need ? "stop" : (need && free <= need*1.20 ? "warn" : "ok")};
+}
+function scarcityForPlayer(p){ const xs=rolesOf(p).filter(r => (+MINS[r]||0)>0).map(scarcityFor); if (!xs.length) return null; return xs.sort((a,b)=>a.ratio-b.ratio)[0]; }
+function scarcityFactor(p){ const x=scarcityForPlayer(p); return !x ? 1 : (x.level === "stop" ? 1.08 : (x.level === "warn" ? 1.04 : 1)); }
+const baseMax = p => Math.min(Math.round(S.set.tetto/100 * S.set.budget), Math.max(1, Math.round(market(p) * p.f * aggr() * scarcityFactor(p))));
+const maxFor = p => { const m = mustOf(p.n); return m ? (m.max > 0 ? m.max : Math.max(Math.round(market(p)*PRICE.extraMust), baseMax(p))) : (teamAvoid(p) ? lastResortPrice() : baseMax(p)); };
+const consOf = p => mustOf(p.n) ? "MUST" : (S.black.includes(p.n) ? "EVITA (scelta nostra)" : (teamAvoid(p) ? "EVITA (Juve/Lazio) — ultima spiaggia" : p.c));
+
+function me(){
+  const spent = S.mine.reduce((a,x) => a + (+x.p||0), 0);
+  const por = S.mine.filter(x => isPor(x.n)).length, tot = S.mine.length, mov = tot - por;
+  const rem = S.set.budget - spent, porMiss = Math.max(0, RULES.porMin-por), movMiss = Math.max(0, RULES.movMin-mov);
+  const tecPor = (por >= RULES.porMax || tot >= RULES.rosaMax) ? 0 : Math.max(0, rem - (Math.max(0, porMiss-1) + movMiss));
+  const tecMov = (mov >= RULES.movMax || tot >= RULES.rosaMax) ? 0 : Math.max(0, rem - (porMiss + Math.max(0, movMiss-1)));
+  const mustRes = S.must.filter(m => !mineOf(m.n) && !S.asg[m.n]).reduce((a,m) => a + resOf(m), 0);
+  const finRes = movMiss <= 3 ? 0 : Math.min(+S.set.riserva||0, Math.max(0, rem - (porMiss + movMiss)));
+  return {spent, por, mov, tot, rem, porMiss, movMiss, tecPor, tecMov, mustRes, finRes,
+    consPor: Math.max(0, tecPor - mustRes - finRes), consMov: Math.max(0, tecMov - mustRes - finRes)};
+}
+function rivSlots(r){ const mov=Math.max(0,r.g-r.p); return Math.max(0,RULES.porMin-r.p)+Math.max(0,RULES.movMin-mov); }
+function rivalPower(r){ return r.c / Math.max(1, rivSlots(r)); }
+function rivMax(r, portiere){
+  const mov = Math.max(0, r.g - r.p), porMiss = Math.max(0, RULES.porMin - r.p), movMiss = Math.max(0, RULES.movMin - mov);
+  if (portiere) return (r.p >= RULES.porMax || r.g >= RULES.rosaMax) ? 0 : Math.max(0, r.c - (Math.max(0, porMiss-1) + movMiss));
+  return (mov >= RULES.movMax || r.g >= RULES.rosaMax) ? 0 : Math.max(0, r.c - (porMiss + Math.max(0, movMiss-1)));
+}
+function topRival(portiere){ let best = {t:"-", v:0}; for (const t of RIVALS){ const v = rivMax(S.riv[t] || {c:S.set.budget,g:0,p:0}, portiere); if (v > best.v) best = {t, v}; } return best; }
+function auctionStats(){
+  const m=me(), tracked=S.mine.length+Object.keys(S.asg).length, target=TEAMS.length*(+S.set.target||27), totalBudget=TEAMS.length*S.set.budget;
+  const residual=m.rem+RIVALS.reduce((a,t)=>a+(+S.riv[t].c||0),0), spentPct=Math.max(0,Math.min(100,Math.round((1-residual/totalBudget)*100)));
+  const comp=Math.min(100,Math.round(tracked/Math.max(1,target)*100));
+  const paid=[]; S.mine.forEach(x=>{ const p=byName.get(x.n); if(p && +x.p>0) paid.push([+x.p,market(p)]); }); Object.entries(S.asg).forEach(([n,a])=>{ const p=byName.get(n); if(p && +a.p>0) paid.push([+a.p,market(p)]); });
+  const inflN=paid.length, infl=inflN ? paid.reduce((a,x)=>a+x[0],0)/Math.max(1,paid.reduce((a,x)=>a+x[1],0)) : 1;
+  const ourSlots=Math.max(1,m.porMiss+m.movMiss), ourPower=m.rem/ourSlots;
+  const rp=RIVALS.map(t=>rivalPower(S.riv[t])); const avgPower=rp.reduce((a,x)=>a+x,0)/Math.max(1,rp.length);
+  return {tracked,target,comp,spentPct,infl,inflN,ourPower,avgPower};
+}
+function budgetArea(p){ if(!p) return "Altro"; if(p.tr==="Por") return "Por"; if(["Dc","B","Dd","Ds","E"].includes(p.tr)) return "Difesa"; if(["M","C"].includes(p.tr)) return "Centrocampo"; if(["W","T"].includes(p.tr)) return "Trequarti"; if(["A","Pc"].includes(p.tr)) return "Attacco"; return "Altro"; }
+function budgetStatus(){ const profile=(CFG.budgetReparti||{})[S.set.profiloBudget] || (CFG.budgetReparti||{}).Equilibrato || {}; const spent={Por:0,Difesa:0,Centrocampo:0,Trequarti:0,Attacco:0}; S.mine.forEach(x=>{ const a=budgetArea(byName.get(x.n)); if(a in spent) spent[a]+=+x.p||0; }); return Object.keys(spent).map(a=>({a,spent:spent[a],pct:+profile[a]||0,target:Math.round(S.set.budget*(+profile[a]||0)/100)})); }
+function holeRisks(){ return ROLES.filter(r=>(+MINS[r]||0)>0).map(r=>({r,miss:Math.max(0,MINS[r]-roleCountMine(r)),free:freeGoodForRole(r)})).filter(x=>x.miss>0 && x.free<=Math.max(3,x.miss*2)).sort((a,b)=>(a.free/a.miss)-(b.free/b.miss)); }
+function closingCandidates(){
+  const m=me();
+  if (m.movMiss > 3) return []; // I4 ha senso solo davvero nel finale
+  const missRoles=new Set(ROLES.filter(r=>(+MINS[r]||0)>roleCountMine(r)));
+  return P.filter(p=>!assigned(p.n) && !teamAvoid(p) && !S.black.includes(p.n) && market(p)<=3 && rolesOf(p).some(r=>missRoles.has(r)))
+    .map(p=>({p,cover:rolesOf(p).filter(r=>missRoles.has(r)).length})).sort((a,b)=>b.cover-a.cover || b.p.sc-a.p.sc).slice(0,8);
+}
+function alternatives(p,n=3){
+  const rr=new Set(rolesOf(p)); return P.filter(x=>x.n!==p.n && !assigned(x.n) && !teamAvoid(x) && !S.black.includes(x.n) && x.tr===p.tr)
+    .sort((a,b)=>b.sc-a.sc || market(a)-market(b)).slice(0,n);
+}
+function helpBox(text,title="Come leggerla"){
+  return `<div class="section-help"><div class="help-icon">i</div><div><b>${esc(title)}</b><br>${text}</div></div>`;
+}
+function recentAuctionEvents(n=3){
+  return (S.log||[]).filter(e=>e&&e.n&&(/^(noi|altri|rimasto libero)/.test(e.a||""))).slice(-n).reverse();
+}
+function recentAuctionHTML(){
+  const xs=recentAuctionEvents(3); if(!xs.length) return "";
+  return `<div class="section-head"><h3>Ultimi 3 passaggi registrati</h3></div><div class="recent-strip">${xs.map(e=>{
+    const when=new Date(e.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});
+    const outcome=(e.a||"").startsWith("noi")?`AS Pinta · ${e.p||"?"} cr`:(e.a||"").startsWith("rimasto libero")?"Scartato · ancora libero":`${e.t||"?"}${e.p!==""?` · ${e.p} cr`:""}`;
+    return `<button class="recent-card" data-open="${esc(e.n)}" style="text-align:left"><b>${esc(e.n)}</b><span class="small">${esc(outcome)} · ${when}</span></button>`;
+  }).join("")}</div>`;
+}
+function bitCount(x){ let c=0; while(x){x&=x-1;c++;} return c; }
+function fitsSlot(p,slot){ const rr=rolesOf(p); return slot.some(r=>rr.includes(r)); }
+function bestFreeForSlot(slot){
+  return P.filter(p=>!assigned(p.n)&&!teamAvoid(p)&&!S.black.includes(p.n)&&fitsSlot(p,slot))
+    .sort((a,b)=>b.sc-a.sc || market(a)-market(b))[0] || null;
+}
+function formationFit(f){
+  const owned=S.mine.map(x=>byName.get(x.n)).filter(p=>p&&p.tr!=="Por"), N=f.slots.length, LIM=1<<N;
+  let dp=new Array(LIM).fill(-1e15); dp[0]=0;
+  for(const p of owned){
+    const ndp=dp.slice();
+    for(let mask=0;mask<LIM;mask++) if(dp[mask]>-1e14){
+      for(let i=0;i<N;i++) if(!(mask&(1<<i)) && fitsSlot(p,f.slots[i])){
+        const nm=mask|(1<<i), val=dp[mask]+10000+(+p.sc||0);
+        if(val>ndp[nm]) ndp[nm]=val;
+      }
+    }
+    dp=ndp;
+  }
+  let bestMask=0,bestVal=dp[0];
+  for(let mask=1;mask<LIM;mask++) if(dp[mask]>bestVal){bestVal=dp[mask];bestMask=mask;}
+  const moveFilled=bitCount(bestMask), hasPor=me().por>0, total=moveFilled+(hasPor?1:0), missing=[];
+  for(let i=0;i<N;i++) if(!(bestMask&(1<<i))) missing.push(f.slots[i]);
+  if(!hasPor) missing.unshift(["Por"]);
+  const sumSc=Math.max(0,bestVal-moveFilled*10000), avgSc=moveFilled?sumSc/moveFilled:0;
+  const depths=missing.map(slot=>P.filter(p=>!assigned(p.n)&&!teamAvoid(p)&&!S.black.includes(p.n)&&(+p.sc||0)>=48&&fitsSlot(p,slot)).length);
+  const ease=missing.length ? depths.reduce((a,x)=>a+Math.min(20,x),0)/(missing.length*20) : 1;
+  return {f,total,moveFilled,missing,avgSc,ease,depths};
+}
+function formationAnalysis(){
+  return MANTRA_FORMATIONS.map(formationFit).sort((a,b)=>b.total-a.total || b.avgSc-a.avgSc || b.ease-a.ease);
+}
+function formationCard(x,idx=0){
+  const pct=Math.round(x.total/11*100), missing=x.missing.slice(0,4), complete=x.total===11;
+  const targets=missing.slice(0,3).map(slot=>{const p=bestFreeForSlot(slot);return `${slot.join("/")}${p?` → ${p.n}`:""}`;});
+  return `<div class="formation-card ${idx===0?"best":""}"><div class="fname"><strong>${x.f.n}</strong>${idx===0?`<span class="rank">migliore oggi</span>`:""}</div>
+    <div class="formation-summary"><div><b>${complete?"Schierabile senza malus":`${x.total}/11 coperti`}</b><div class="small">con la rosa attuale</div></div><div class="score"><span>qualità coperti</span><b>${x.avgSc?x.avgSc.toFixed(0):"—"}/100</b></div></div>
+    <div class="formation-bar"><i style="width:${pct}%"></i></div>
+    ${missing.length?`<div class="small">Buchi ottimali</div><div class="slot-tags">${missing.map(s=>`<span class="slot-tag">${esc(s.join("/"))}</span>`).join("")}${x.missing.length>4?`<span class="slot-tag">+${x.missing.length-4}</span>`:""}</div>`:`<div class="target-line"><b>Copertura completa:</b> puoi già costruire questo XI senza fuori ruolo.</div>`}
+    ${targets.length?`<div class="target-line"><b>Mercato utile:</b> ${esc(targets.join(" · "))}</div>`:""}
+  </div>`;
+}
+function expertAdvice(p,v){
+  const own=mineOf(p.n), gone=S.asg[p.n];
+  if(own) return `È già nostro a ${own.p} crediti: il punto ora è capire come si incastra nei moduli, non rilanciare.`;
+  if(gone) return `È già stato assegnato${gone.t?` a ${gone.t}`:""}${gone.p?` a ${gone.p}`:""}: passa oltre.`;
+  const needs=rolesOf(p).filter(r=>(+MINS[r]||0)>roleCountMine(r)), sca=scarcityForPlayer(p), m=me(), mk=market(p), lim=+v.price||0;
+  if(v.cls==="stop") return teamAvoid(p)?`Passa. Per scelta strategica AS Pinta evita ${p.t}; entra solo nell'ipotesi estrema indicata dal tetto.`:`Passa: oggi il rapporto valore/rischio non giustifica crediti su questo profilo.`;
+  if(v.cls==="must") return `Rilancia con decisione fino a ${lim}. È un MUST: il budget è già impostato per proteggerne l'acquisto; oltre ${lim} fermati.`;
+  if(v.cls==="go"){
+    const roleTxt=needs.length?` In più copre ${needs.join("/")}, ruol${needs.length>1?"i":"o"} ancora da costruire.`:"";
+    const scarce=sca&&sca.level!=="ok"?` La disponibilità sul ruolo ${sca.r} si sta stringendo: qui aspettare troppo costa alternative.`:"";
+    const priceTxt=lim>=mk?`Se resta intorno alla stima di mercato (${mk}), è un acquisto coerente.`:`La cassa attuale ti impone disciplina: non superare ${lim}, anche se il mercato lo valuta ${mk}.`;
+    return `Rilancia controllato fino a ${lim}. ${priceTxt}${roleTxt}${scarce}`;
+  }
+  if(v.cls==="warn") return `Aspetta il prezzo. Entra solo se resta davvero a sconto e non oltre ${lim}; se l'asta accelera, meglio conservare crediti per profili più centrali nella strategia.`;
+  return `Valuta il prezzo, ma senza inseguire: la priorità resta mantenere flessibilità per i ruoli ancora scoperti e i MUST.`;
+}
+function verdict(p){
+  const own = mineOf(p.n), gone = S.asg[p.n];
+  if (own) return {cls:"own", what:"Già nostro", price: own.p, lab:"pagato"};
+  if (gone) return {cls:"gone", what:"Andato a " + (gone.t || "un'altra squadra"), price: gone.p || "", lab: gone.p ? "crediti" : ""};
+  const m = me(), por = p.tr === "Por", mx = maxFor(p), cons = consOf(p), must = mustOf(p.n), sca=scarcityForPlayer(p);
+  let off = por ? m.consPor : m.consMov;
+  if (must) off = Math.max(0, (por ? m.tecPor : m.tecMov) - m.finRes - (m.mustRes - resOf(must)));
+  const lim = Math.min(mx, off), tr = topRival(por);
+  let tip = tr.v === 0 ? "" : (tr.v < lim ? `Nessun rivale può superare ${tr.v}: basta offrire ${tr.v + 1}.` : `Il rivale più ricco (${tr.t}) può arrivare a ${tr.v}.`);
+  if (sca && sca.level !== "ok") tip += ` Scarsità ${sca.r}: ${sca.free} titolari buoni liberi per ~${sca.need} slot ancora da coprire in lega.`;
+  if (mx > off && off > 0) tip += " Il limite è dato dai tuoi crediti, non dal valore.";
+  if (!must && !teamAvoid(p) && market(p) > mx * 1.3) tip += ` Mercato stimato ${market(p)}: probabilmente andrà oltre il tuo tetto.`;
+  if (S.black.includes(p.n)) return {cls:"stop", what:"Lascia", price:"", lab:"", tip:"È nella vostra lista manuale da evitare."};
+  if (off <= 0) return {cls:"stop", what:"Non puoi", price:"", lab:"", tip:"Crediti finiti o ruolo già pieno."};
+  if (teamAvoid(p)) return {cls:"stop", what:"Evita — ultima spiaggia", price:Math.min(lastResortPrice(),off), lab:"max", tip:(CFG.ultimaSpiaggia && CFG.ultimaSpiaggia.testo) || "Solo se sei costretto a chiudere la rosa."};
+  if (cons.startsWith("EVITA")) return {cls:"stop", what:"Lascia", price:"", lab:"", tip:"Sconsigliato (infortunio lungo o giocatore a rischio)."};
+  if (must) return {cls:"must", what:"MUST: prendilo", price: lim, lab:"fino a", tip};
+  if (/^(TOP|OBIETTIVO|BUONO)/.test(cons)) return {cls:"go", what:"Prendi", price: lim, lab:"fino a", tip};
+  if (cons.startsWith("OCCASIONE")) return {cls:"warn", what:"Occasione, solo a sconto", price: lim, lab:"fino a", tip};
+  return {cls:"warn", what:"Solo se costa poco", price: lim, lab:"fino a", tip};
+}
+
+/* ---------- interfaccia ---------- */
+let tab = "cerca", selected = null, query = "", roleSel = "Pc", importPreview = null, resetArm = false, auctionMode = false;
+const $ = s => document.querySelector(s);
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2200); }
+function commit(msg){ persist(); render(); if (msg) toast(msg); }
+
+const ICONS = {
+  cerca:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>',
+  rosa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>',
+  rivali:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 2-5 5-5s5 2 5 5"/></svg>',
+  importa:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>',
+  obiettivi:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>',
+  impostazioni:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>'
+};
+const TABNAMES = {cerca:"Cerca", rosa:"Rosa", rivali:"Rivali", importa:"Da foto", obiettivi:"Obiettivi", impostazioni:"Impostazioni"};
+const METRIC_ICONS={
+  wallet:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h14a2 2 0 0 1 2 2v9H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12"/><path d="M15 12h5"/></svg>',
+  users:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><path d="M16 6c2 0 3 1 3 3s-1 3-3 3M17 14c3 0 5 2 5 5"/></svg>',
+  target:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M22 12h-3"/></svg>',
+  shield:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6l-8-3Z"/></svg>',
+  chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>',
+  spark:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 17 5-5 4 3 7-8"/><path d="M15 7h4v4"/></svg>'
+};
+const mi=n=>METRIC_ICONS[n]||METRIC_ICONS.chart;
+
+function render(){
+  const m = me(), u=undoInfo();
+  document.body.classList.toggle("auction", auctionMode);
+  $("#topbar").innerHTML = `<b><span class="brandmark">AP</span><span>${esc(NOI)}${IS_BETA ? " · BETA" : ""}</span></b><button class="pill sync" id="syncpill" data-tab="impostazioni"></button>
+    <span class="pill">Crediti <strong>${m.rem}</strong></span><span class="pill">Rosa <strong>${m.tot}</strong>/${RULES.porMin + RULES.movMin}+</span>
+    <span class="pill">Mov fino a <strong>${m.consMov}</strong></span><span class="pill">Por fino a <strong>${m.consPor}</strong></span>${DATA_WARNINGS.length?`<span class="pill" title="Controlla Impostazioni">⚠ ${DATA_WARNINGS.length}</span>`:""}
+    <button class="pill" data-undolast ${u ? "" : "disabled"} title="${u ? esc(u.label) : "Niente da annullare"}">↶ Annulla</button>`;
+  $("#tabs").innerHTML = Object.keys(TABNAMES).map(k => `<button data-tab="${k}" ${k===tab?'aria-current="page"':''}>${ICONS[k]}${TABNAMES[k]}</button>`).join("");
+  const app = $("#app");
+  if (tab === "cerca") app.innerHTML = viewCerca();
+  if (tab === "rosa") app.innerHTML = viewRosa(m);
+  if (tab === "rivali") app.innerHTML = viewRivali();
+  if (tab === "importa") app.innerHTML = viewImporta();
+  if (tab === "obiettivi") app.innerHTML = viewObiettivi();
+  if (tab === "impostazioni") app.innerHTML = viewImpostazioni();
+  updateStatus();
+}
+
+function miniTag(p){
+  const v = verdict(p);
+  const txt = {own:"nostro", gone:"andato", stop:(teamAvoid(p)?"ultima spiaggia":"lascia"), must:"MUST " + v.price, go:"fino a " + v.price, warn:"poco, max " + v.price}[v.cls];
+  return `<span class="dot ${v.cls}"></span><span class="tag ${v.cls}">${esc(txt)}</span>`;
+}
+function viewCerca(){
+  const tools=`<div class="search-tools"><button class="btn small" data-auctionmode><span class="mode-label">${auctionMode?"Esci da ":""}modalità asta</span>${auctionMode?" ×":" ⛶"}</button></div>`;
+  const html = `<div class="search"><input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Cognome del giocatore uscito" value="${esc(query)}" aria-label="Cerca giocatore">${tools}</div>`;
+  const list=resultsHTML();
+  const recent=!selected?recentAuctionHTML():"";
+  return html + recent + `<div id="res" class="search-stage ${selected?'has-detail':''}">${selected ? `<div class="listpane">${list}</div><div class="detailpane">${card(byName.get(selected))}</div>` : list}</div>`;
+}
+function resultsHTML(){
+  const res = searchPlayers(query);
+  if (!query) return `<p class="empty">Esce un nome all'asta: scrivi 2-4 lettere del cognome. Juve e Lazio ci sono, ma per AS Pinta sono "ultima spiaggia".</p>`;
+  if (norm(query).length >= 2 && !res.length) return `<div class="card"><b>Non trovato.</b><p class="small">Prova solo il cognome o una grafia più corta.</p></div>`;
+  return `<ul class="results">` + res.map(p => { const pi=passInfo(p.n); return `<li><button data-open="${esc(p.n)}"><span class="grow"><span class="nm">${esc(p.n)}${pi?`<span class="pass-tag">↺ già passato</span>`:""}</span><br><span class="meta">${clubBadge(p.t)} <span style="margin-left:5px">${esc(p.r)}</span></span></span>${miniTag(p)}</button></li>`; }).join("") + `</ul>`;
+}
+function card(p){
+  if(!p) return `<div class="card"><b>Giocatore non trovato.</b></div>`;
+  const v = verdict(p), must = mustOf(p.n), black = S.black.includes(p.n), own = mineOf(p.n), gone = S.asg[p.n], sca=scarcityForPlayer(p), alts=alternatives(p), passed=passInfo(p.n), advice=expertAdvice(p,v);
+  const liveLimit=(v.price!==""&&v.price!==undefined)?`${v.price} cr`:"—";
+  let h = `<div class="verdict ${v.cls}"><div class="who"><b>${esc(p.n)}</b> · ${clubBadge(p.t)}</div><div class="what">${esc(v.what)}</div>
+    <div class="price">${v.price !== "" ? `<small>${esc(v.lab)}</small>${esc(v.price)}` : ""}</div>
+    <div class="expert-call"><div class="eyebrow">Consiglio d'asta</div><strong>${esc(advice)}</strong></div>${v.tip ? `<div class="tip">${esc(v.tip)}</div>` : ""}</div>`;
+  if(passed && !own && !gone) h+=`<div class="card pass-note"><b>↺ Già passato e ancora libero.</b> <span class="small">Ultimo passaggio alle ${new Date(passed.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}. Può essere ripescato normalmente.</span></div>`;
+  if (own || gone){
+    h += `<div class="row auction-actions"><button class="btn danger" data-undo="${esc(p.n)}">Annulla assegnazione</button><button class="btn dark" data-back>Nuova ricerca</button></div>`;
+  } else {
+    h += `<div class="card outcome-card"><div class="outcome-head"><div><h3 style="margin:0">Registra l'esito dell'estrazione</h3><div class="small">Inserisci il prezzo, scegli chi lo ha preso (o Scartato) e conferma.</div></div><label class="price-fast">Prezzo<input id="price" type="number" inputmode="numeric" min="1" placeholder="cr"></label></div>
+      <div class="outcome-grid">
+        <label class="outcome-choice doubt"><input type="radio" name="outcomeChoice" value=""><span>?<small>da verificare</small></span></label>
+        <label class="outcome-choice pinta"><input type="radio" name="outcomeChoice" value="__PINTA__"><span>AS Pinta<small>nostro</small></span></label>
+        <label class="outcome-choice passed"><input type="radio" name="outcomeChoice" value="__SCARTATO__"><span>Scartato<small>resta libero</small></span></label>
+        ${RIVALS.map(t=>`<label class="outcome-choice rival"><input type="radio" name="outcomeChoice" value="${esc(t)}"><span>${esc(t)}</span></label>`).join("")}
+      </div>
+      <button class="btn primary outcome-ok" data-outcome="${esc(p.n)}">OK · registra e passa al prossimo</button>
+      <p class="small">“? da verificare” conserva l'estrazione senza inventare dati: una foto successiva potrà completare squadra o prezzo.</p></div>`;
+  }
+  if (p.i) h += `<div class="card" style="border-color:#E7C07A;background:#FFF8EA"><b>Infortunio:</b> ${esc(p.i)}</div>`;
+  if (sca && sca.level!=="ok") h += `<div class="card"><span class="badge ${sca.level}">Scarsità ${esc(sca.r)}</span> <span class="small">${sca.free} titolari buoni ancora liberi per circa ${sca.need} slot di lega da coprire. Il tetto del giocatore tiene già conto di questa pressione.</span></div>`;
+  h += `<div class="fanta-metrics">
+      <div class="fanta-metric"><div class="label">Stima mercato</div><strong>${market(p)} cr</strong><div class="explain">Quanto ci aspettiamo che possa costare in una lega come la vostra, sulla base del FVM e della taratura del mercato.</div></div>
+      <div class="fanta-metric"><div class="label">Tetto strategico AS Pinta</div><strong>${maxFor(p)} cr</strong><div class="explain">Quanto vale per noi in assoluto: qualità, ruolo, strategia e scarsità. Non considera ancora quanto puoi spendere oggi.</div></div>
+      <div class="fanta-metric"><div class="label">Limite operativo oggi</div><strong>${liveLimit}</strong><div class="explain">Il vero “fino a”: tiene conto dei crediti rimasti, degli slot obbligatori, della riserva e dei MUST ancora da prendere.</div></div>
+    </div>`;
+  h += `<div class="card"><h3 style="margin-top:0">Identikit fantacalcistico</h3><div class="identity-grid">
+      <div class="identity-item"><div class="label">Ruoli Mantra</div><b>${esc(p.r)}</b></div>
+      <div class="identity-item"><div class="label">Fascia</div><b>${esc(p.ft)} · ruolo guida ${esc(p.tr)}</b></div>
+      <div class="identity-item"><div class="label">Titolarità</div><b>${esc(p.s)}</b></div>
+      <div class="identity-item"><div class="label">Rigori / piazzati</div><b>${esc((p.rg||"no")+" / "+(p.pz||"no"))}</b></div>
+      <div class="identity-item"><div class="label">Punteggio scheda</div><b>${p.sc}/100</b></div>
+      <div class="identity-item"><div class="label">Profilo base</div><b>${esc(consOf(p))}</b></div>
+    </div>
+    ${p.no ? `<p class="note"><b>Perché:</b> ${esc(p.no)}</p><p class="small">Valutazione costruita sui dati già presenti nel dataset SOS Fanta + Fantacalcio.it.</p>` : ""}<p class="small">Fasce per ruolo: ${esc(p.fr)}${p.fe ? ". Valore FVM stimato dalla fascia." : ""}</p></div>`;
+  if(!own && !gone && alts.length) h += `<div class="card"><h3 style="margin-top:0">Alternative ancora libere</h3>${helpBox("Tre profili liberi dello stesso ruolo guida: servono per capire subito cosa perdi se lasci questo giocatore e quanto margine resta sul mercato.","Confronto rapido")}<div class="alt-grid">${alts.map(a=>`<button class="alt-card" data-open="${esc(a.n)}"><b>${esc(a.n)}</b><span class="small">${clubBadge(a.t)} <span style="margin-left:4px">${esc(a.r)} · ${esc(a.ft)}</span></span><span class="small">mercato ${market(a)} · tetto ${maxFor(a)}</span></button>`).join("")}</div></div>`;
+  h += `<div class="row" style="margin-top:8px"><button class="btn small" data-must="${esc(p.n)}">${must ? "Togli dai MUST" : "Aggiungi ai MUST"}</button>
+    <button class="btn small" data-black="${esc(p.n)}">${black ? "Togli da evitare" : "Metti tra da evitare"}</button></div>`;
+  return h;
+}
+function viewRosa(m){
+  const cov = ROLES.filter(r => (+MINS[r]||0)>0).map(r => [r, roleCountMine(r)]), st=auctionStats(), risks=holeRisks(), close=closingCandidates(), budgets=budgetStatus(), forms=formationAnalysis();
+  const inflPct=Math.round((st.infl-1)*100), inflLabel=st.inflN>=8?(inflPct===0?"in linea":`${inflPct>0?"+":""}${inflPct}%`):"—", inflExplain=st.inflN>=8?(inflPct>0?`I prezzi registrati sono circa ${inflPct}% sopra le stime dell'app.`:inflPct<0?`I prezzi registrati sono circa ${Math.abs(inflPct)}% sotto le stime dell'app.`:"I prezzi registrati sono sostanzialmente in linea con le stime."):`Servono almeno 8 prezzi noti prima di leggerlo seriamente.`;
+  let h = `<div class="section-head"><h2>La nostra rosa</h2><div class="hero-tools"><button class="btn small share-btn" data-sharestate>↗ Condividi stato</button></div></div>
+    ${helpBox("Questa schermata non serve solo a contare i giocatori: ti dice quanta libertà di spesa hai, dove rischi un buco e quali moduli Mantra stai costruendo davvero.","Lettura da fantallenatore")}
+    <div class="card kpi main"><div class="hero-progress"><div class="progress-ring" style="--p:${st.comp}"><span>${st.comp}%</span></div><div><span>Dati d'asta registrati</span><strong>${st.tracked}/${st.target}</strong><div class="small">confronto col target teorico di rose complete: è una fotografia del tool, non l'avanzamento ufficiale dell'asta</div></div></div></div>
+    <div class="fanta-metrics">
+      <div class="fanta-metric"><div class="label">Crediti disponibili</div><strong>${m.rem}</strong><div class="explain">La cassa reale di AS Pinta dopo gli acquisti già registrati.</div></div>
+      <div class="fanta-metric"><div class="label">Movimento · puoi arrivare a</div><strong>${m.consMov} cr</strong><div class="explain">Massimo consigliato su un singolo giocatore di movimento oggi, lasciando coperti posti obbligatori, MUST e riserva finale.</div></div>
+      <div class="fanta-metric"><div class="label">Portiere · puoi arrivare a</div><strong>${m.consPor} cr</strong><div class="explain">Stessa logica, ma applicata a un portiere.</div></div>
+      <div class="fanta-metric"><div class="label">Mercato della stanza</div><strong>${inflLabel}</strong><div class="explain">${esc(inflExplain)} È un termometro: non alza automaticamente i tuoi tetti.</div></div>
+      <div class="fanta-metric"><div class="label">Potere d'acquisto</div><strong>${st.ourPower.toFixed(1)} cr/posto</strong><div class="explain">Crediti rimasti divisi per i posti minimi ancora da riempire. Media rivali: ${st.avgPower.toFixed(1)}. Più sei sopra, più puoi permetterti di vincere rilanci.</div></div>
+      <div class="fanta-metric"><div class="label">Rosa attuale</div><strong>${m.tot}</strong><div class="explain">${m.por} portieri · ${m.mov} giocatori di movimento. Minimo lega: ${RULES.porMin} + ${RULES.movMin}.</div></div>
+    </div>
+    <h3>Copertura minima dei ruoli</h3>${helpBox("È il controllo di sicurezza: confronta quanti giocatori possiedi per ogni ruolo Mantra con i minimi prudenziali impostati. Non dice ancora quale modulo puoi schierare: quello è il blocco tattico subito sotto.","Prima evita i buchi")}
+    <div class="role-grid">${cov.map(([r,n])=>{const min=+MINS[r]||0,pct=min?Math.min(100,Math.round(n/min*100)):100,cl=n>=min?'ok':'warn';return `<div class="role-meter ${cl}"><div class="topline"><span>${r}</span><span>${n}/${min}</span></div><div class="mini-bar"><i style="width:${pct}%"></i></div></div>`}).join("")}</div>`;
+  if(risks.length) h += `<div class="card risk-card"><b>Rischio buco</b><p class="small">Qui non guardo solo quanti te ne mancano: considero anche quanti titolari utili sono ancora liberi. Se un ruolo si restringe, diventa più urgente.</p>${risks.map(x=>`<div class="list-item"><b>${x.r}</b><span class="grow small">te ne mancano ${x.miss}; titolari buoni ancora liberi ${x.free}</span></div>`).join("")}</div>`;
+  h += `<h3>Moduli Mantra: cosa puoi costruire</h3>${helpBox("Analizzo gli 11 moduli ufficiali Mantra senza fuori ruolo e assegno ogni tuo giocatore una sola volta nel ruolo migliore possibile. “Coperti” significa quanti degli 11 posti puoi riempire oggi; sui buchi ti indico anche un profilo ancora libero che potrebbe aiutare. In BASIC il sistema può cambiare modulo durante le sostituzioni, quindi avere 2-3 schemi ben coperti è un vantaggio.","La lettura tattica")}
+    <div class="formation-grid">${forms.slice(0,4).map((x,i)=>formationCard(x,i)).join("")}</div>
+    <details><summary>Vedi tutti gli 11 moduli</summary><div class="formation-grid">${forms.map((x,i)=>formationCard(x,i)).join("")}</div></details>`;
+  if(close.length) h += `<div class="card close-now"><b>Finale asta: profili da 1–3 crediti</b><p class="small">Compare solo quando mancano al massimo tre giocatori di movimento. Sono liberi economici che coprono almeno un ruolo ancora sotto il minimo.</p>${close.map(x=>`<div class="list-item"><span class="grow"><button data-open="${esc(x.p.n)}" style="border:0;background:none;padding:0;font-weight:700">${esc(x.p.n)}</button><br><span class="small">${esc(x.p.t)} · ${esc(x.p.r)} · copre ${x.cover} bisogno/i</span></span><span>${market(x.p)} cr</span></div>`).join("")}</div>`;
+  h += `<h3>Budget per reparto · ${esc(S.set.profiloBudget || 'Equilibrato')}</h3>${helpBox("È una bussola, non un vincolo: confronta quanto hai già speso in ogni zona del campo con il profilo scelto. Se sfori un reparto devi sapere consapevolmente dove recuperare crediti negli altri.","Distribuzione dei crediti")}<div class="budget-grid">${budgets.map(x=>{const pc=x.target?Math.round(x.spent/x.target*100):0;return `<div class="budget-item"><span class="small">${x.a} · obiettivo ${x.pct}%</span><br><strong>${x.spent}</strong> / ${x.target}<div class="budget-bar"><i class="${pc>100?'over':''}" style="width:${Math.min(100,pc)}%"></i></div><span class="small">${x.spent<=x.target?'margine '+(x.target-x.spent):'oltre target '+(x.spent-x.target)}</span></div>`}).join("")}</div>
+    <h3>Acquisti (${S.mine.length})</h3>${helpBox("Qui correggi soltanto eventuali errori di prezzo o rimuovi un acquisto registrato male. La gestione ordinaria passa dalla scheda del giocatore.","Rosa registrata")}`;
+  h += S.mine.length ? `<div class="card">` + S.mine.map((x,i) => { const p = byName.get(x.n); return `<div class="list-item"><span class="grow"><b>${esc(x.n)}</b><br><span class="small">${p ? clubBadge(p.t)+` <span style="margin-left:4px">${esc(p.r)} · tetto strategico ${maxFor(p)}</span>` : "dato non presente nel listone"}</span></span>
+      <input type="number" inputmode="numeric" value="${esc(x.p)}" data-editprice="${i}" style="width:70px;font-size:17px;padding:6px;border:1px solid var(--line);border-radius:8px;text-align:right"><button class="btn small danger" data-del="${i}">Togli</button></div>`; }).join("") + `</div>` : `<p class="empty">Ancora nessun acquisto.</p>`;
+  const last = S.log.slice(-40).reverse();
+  h += `<details><summary>Storico azioni (${S.log.length})</summary>${last.length ? last.map(e => `<div class="list-item small"><span style="width:52px">${new Date(e.ts).toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})}</span><span class="grow">${esc(e.a)}: <b>${esc(e.n)}</b> ${esc(e.t)} ${e.p !== "" ? esc(e.p) : ""}</span></div>`).join("") : `<p class="small">Nessuna azione.</p>`}</details>`;
+  return h;
+}
+function viewRivali(){
+  const rows=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t]),slots:rivSlots(S.riv[t])})).sort((a,b)=>b.power-a.power), m=me(), ourSlots=Math.max(0,m.porMiss+m.movMiss), ourPower=m.rem/Math.max(1,ourSlots), maxPower=Math.max(1,ourPower,...rows.map(x=>x.power));
+  let h = `<div class="section-head"><h2>Rivali</h2><span class="small">${S.upd ? "foto aggiornata "+esc(S.upd) : "nessuna foto ancora"}</span></div>
+    ${helpBox("Non devi mantenere questi numeri a mano. Arrivano dalle foto e servono a capire chi ha ancora più capacità di spesa di te. Il dato chiave è il potere d'acquisto: crediti rimasti per ogni posto minimo ancora da riempire.","Chi può ancora farti alzare il prezzo?")}
+    <div class="rival-grid"><div class="rival-card you"><div class="rline"><span class="rname">${esc(NOI)}<br><span class="small">noi</span></span><span class="big">${ourPower.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,ourPower/maxPower*100)}%"></i></div><div class="rival-statgrid"><div><b>${m.rem}</b><span>crediti</span></div><div><b>${ourSlots}</b><span>posti min.</span></div><div><b>${m.tot}</b><span>rosa</span></div></div><div class="rival-max">Su un movimento oggi AS Pinta può arrivare a <b>${m.consMov}</b> senza rompere la strategia.</div></div>
+      ${rows.map((x,idx)=>`<div class="rival-card"><div class="rline"><span class="rname">${esc(x.t)}</span><span class="big">${x.power.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,x.power/maxPower*100)}%"></i></div><div class="rival-statgrid"><div><b>${x.r.c}</b><span>crediti</span></div><div><b>${x.slots}</b><span>posti min.</span></div><div><b>${x.r.g}</b><span>rosa</span></div></div><div class="rival-max">Rilancio massimo teorico su movimento: <b>${rivMax(x.r,false)}</b></div></div>`).join("")}</div>
+    ${helpBox("Il “rilancio massimo teorico” è il massimo matematico che una squadra potrebbe spendere lasciando 1 credito per ciascun posto minimo ancora da coprire. Non significa che lo farà: serve per capire se può batterti in cassa.","Non è una previsione psicologica")}
+    <details><summary>Correzione manuale · solo emergenza</summary><div class="tscroll"><table><thead><tr><th>Squadra</th><th>Crediti</th><th>Gioc.</th><th>Por</th></tr></thead><tbody>`;
+  for (const x of rows){ const t=x.t,r=x.r; h += `<tr><td>${esc(t)}</td><td><input type="number" inputmode="numeric" value="${r.c}" data-riv="${esc(t)}" data-k="c"></td><td><input type="number" inputmode="numeric" value="${r.g}" data-riv="${esc(t)}" data-k="g"></td><td><input type="number" inputmode="numeric" value="${r.p}" data-riv="${esc(t)}" data-k="p"></td></tr>`; }
+  h += `</tbody></table></div><p class="small">Usalo solo se un dato della foto è sicuramente sbagliato o non puoi fare un nuovo screenshot.</p></details>`;
+  return h;
+}
+const PROMPT_SQUADRE = () => `Questa è una fotografia dell'asta in questo momento. Leggi, per ogni squadra visibile, crediti residui, numero giocatori e numero portieri (se un dato non si vede lascia vuoto). Se differisce da un dato precedente, vale questo screenshot. Rispondi SOLO nel formato Squadra;crediti;giocatori;portieri, una riga per squadra, senza intestazioni. Squadre possibili: ${TEAMS.join(", ")}.`;
+const PROMPT_GIOCATORI = () => `Questa è una fotografia dell'asta in questo momento. Elenca i giocatori assegnati visibili con squadra e prezzo se leggibile. Se un giocatore risultava già assegnato ma qui compare diversamente, vale questo screenshot. Rispondi SOLO nel formato Giocatore;Squadra;Prezzo, una riga per giocatore, senza intestazioni. Usa il nome come appare nell'app. Squadre possibili: ${TEAMS.join(", ")}.`;
+function viewImporta(){
+  let h = `<h2>Aggiorna da screenshot</h2>${helpBox("Questa è una sincronizzazione a fotografie, non una cronologia perfetta: incolli quello che riesci a leggere e l'app fa merge. Un dato nuovo integra, un dato esplicitamente diverso corregge, un campo vuoto o una riga assente non cancella ciò che sapevamo già.","Import sicuro a salti")}
+    <div class="import-rule"><div><b>✓ Integra</b><br><span class=small>aggiunge ciò che prima mancava</span></div><div><b>↻ Corregge</b><br><span class=small>solo valori esplicitamente diversi</span></div><div><b>∅ Non cancella</b><br><span class=small>vuoti e assenze non azzerano nulla</span></div></div>
+    <div class="card"><b>Prompt · crediti e rose delle squadre</b><p class="small">Usalo quando nello screenshot vedi la situazione delle squadre. Queste righe sono l'unica fonte che modifica crediti e numero giocatori dei rivali.</p><p class="small">${esc(PROMPT_SQUADRE())}</p><button class="btn small" data-copy="squadre">Copia prompt</button></div>
+    <div class="card"><b>Prompt · giocatori assegnati</b><p class="small">Usalo quando la foto mostra nomi estratti/assegnati. Registrare un giocatore qui <b>non scala automaticamente</b> i crediti del rivale: così non rischiamo di sottrarli due volte quando arriva anche la fotografia della rosa.</p><p class="small">${esc(PROMPT_GIOCATORI())}</p><button class="btn small" data-copy="giocatori">Copia prompt</button></div>
+    <textarea id="paste" placeholder="Incolla qui, es.:&#10;chill curre;412;5;2&#10;Calhanoglu;Fight Club;131"></textarea>
+    <div class="row" style="margin-top:8px"><button class="btn dark" data-parse>Leggi e mostrami cosa hai capito</button></div>`;
+  if (importPreview){ const ip=importPreview; h += `<div class="card"><b>Anteprima: cosa verrà integrato</b>
+    ${ip.riv.length ? `<h3>Squadre (${ip.riv.length})</h3>`+ip.riv.map(x=>`<div class="list-item"><span class="grow">${esc(x.t)}</span><span>${x.c} cr · ${x.g??"?"} gioc. · ${x.p??"?"} por</span></div>`).join(""):""}
+    ${ip.asg.length ? `<h3>Assegnazioni (${ip.asg.length})</h3>`+ip.asg.map(x=>`<div class="list-item"><span class="grow"><b>${esc(x.n)}</b> <span class="small">da "${esc(x.raw)}"</span></span><span>${esc(x.t||"squadra non letta")} ${x.pr!==null&&x.pr!==undefined?x.pr+" cr":""} <span class="preview-change">merge</span></span></div>`).join(""):""}
+    ${ip.bad.length ? `<h3 class="bad-txt">Non riconosciute (${ip.bad.length})</h3>`+ip.bad.map(x=>`<div class="small">${esc(x)}</div>`).join("")+`<p class="small">Correggi il testo o registra il giocatore direttamente da Cerca.</p>`:""}
+    <div class="row" style="margin-top:10px"><button class="btn primary" data-apply ${ip.riv.length||ip.asg.length?"":"disabled"}>Applica questa fotografia</button><button class="btn" data-cancelimport>Annulla</button></div></div>`; }
+  return h;
+}
+function lineTeamMatch(line){
+  const nl=" "+norm(line)+" "; let best=null;
+  for(const t of TEAMS){ const nt=" "+norm(t)+" "; if(nl.includes(nt) && (!best || t.length>best.length)) best=t; }
+  return best;
+}
+function playerFromLooseLine(line, team){
+  let cleaned=line;
+  if(team){ const re=new RegExp(team.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"ig"); cleaned=cleaned.replace(re," "); }
+  cleaned=cleaned.replace(/\b(?:crediti?|cr|giocatori?|gioc\.?|rosa|portieri?|por|prezzo|pagato|squadra|team)\b\s*[:=-]?\s*\d*/gi," ").replace(/\b\d+\b/g," ").replace(/[;|,·:\-]+/g," ").replace(/\s+/g," ").trim();
+  if(!cleaned) return {p:null};
+  let mp=matchPlayer(cleaned); if(mp.p) return mp;
+  const words=cleaned.split(" ");
+  for(let len=Math.min(4,words.length);len>=1;len--){ for(let i=0;i+len<=words.length;i++){ mp=matchPlayer(words.slice(i,i+len).join(" ")); if(mp.p) return mp; } }
+  return {p:null};
+}
+function parseImport(text){
+  const out={riv:[],asg:[],bad:[]};
+  for(let line of text.split(/\r?\n/)){
+    line=line.replace(/^\s*(?:[-*•]|\d+[.)])\s+/,"").replace(/\*\*/g,"").trim().replace(/^\|/,"").replace(/\|$/,"").trim();
+    if(!line||/^\|?\s*:?-{2,}/.test(line)) continue;
+    let parts=/[;|\t]/.test(line)?line.split(/[;|\t]/):line.split(","); parts=parts.map(s=>s.trim()); const nonEmpty=parts.filter(Boolean);
+    if(!nonEmpty.length||/^(squadra|giocatore|team|nome)$/i.test(norm(nonEmpty[0]))) continue;
+    const nums=nonEmpty.map(s=>/^\d+$/.test(s.replace(/\s/g,""))?+s.replace(/\s/g,""):null), team0=matchTeam(nonEmpty[0]);
+    if(team0 && nums[1]!==null && nums[1]!==undefined){ const na=parts.slice(1).map(s=>/^\d+$/.test(s.replace(/\s/g,""))?+s.replace(/\s/g,""):null); out.riv.push({t:team0,c:na[0],g:na[1]??null,p:na[2]??null,raw:line}); continue; }
+    let team=null,name=null,price=null;
+    nonEmpty.forEach((x,i)=>{ if(nums[i]!==null) price=nums[i]; else if(!team && matchTeam(x) && !matchPlayer(x).p) team=matchTeam(x); else if(!name) name=x; });
+    if(name){ const mp=matchPlayer(name); if(mp.p){ out.asg.push({n:mp.p.n,t:team,pr:price,raw:name}); continue; } }
+    // S1: fallback tollerante per Live Text / testo grezzo senza separatori puliti.
+    const looseTeam=lineTeamMatch(line); const looseNums=(line.match(/\b\d+\b/g)||[]).map(Number); const mp=playerFromLooseLine(line,looseTeam);
+    if(mp.p){ out.asg.push({n:mp.p.n,t:looseTeam,pr:looseNums.length?looseNums[looseNums.length-1]:null,raw:line}); continue; }
+    if(looseTeam && looseNums.length){ out.riv.push({t:looseTeam,c:looseNums[0],g:looseNums.length>1?looseNums[1]:null,p:looseNums.length>2?looseNums[2]:null,raw:line}); continue; }
+    out.bad.push(line+(mp.amb?"  (ambiguo: "+mp.amb.join(", ")+")":""));
+  }
+  // ultima riga vince solo per i campi presenti; applyImport fa il merge conservativo
+  return out;
+}
+function removeKnownAssignment(n, touchRival=true){
+  const i=S.mine.findIndex(x=>x.n===n); if(i>=0) S.mine.splice(i,1);
+  const a=S.asg[n]; if(a){ if(touchRival && a.s && a.t && +a.p>0 && S.riv[a.t]){ const r=S.riv[a.t]; r.c+=+a.p; r.g=Math.max(0,r.g-1); if(isPor(n)) r.p=Math.max(0,r.p-1); } delete S.asg[n]; }
+}
+function applyImport(ip){
+  saveUndo("import da screenshot");
+  const scala=false, snapTeams=new Set(ip.riv.map(x=>x.t)), now=new Date().toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});
+  const beforeRiv=JSON.parse(JSON.stringify(S.riv||{}));
+  let changed=0, completed=0, corrected=0; const changedNames=[];
+  ip.asg.forEach(x=>{
+    const oldMine=mineOf(x.n), old=S.asg[x.n];
+    const oldTeam=oldMine?NOI:(old?old.t||"":""), oldPrice=oldMine?(+oldMine.p||null):(old&&+old.p>0?+old.p:null);
+    const newTeam=x.t||oldTeam||"", newPrice=(x.pr!==null&&x.pr!==undefined&&x.pr!=="")?+x.pr:(oldPrice||null);
+    const sameTeam=(oldTeam||"")===(newTeam||""), samePrice=(oldPrice||null)===(newPrice||null);
+    if((oldMine||old) && sameTeam && samePrice) return;
+    const hadKnown=!!(oldMine||old), addsInfo=hadKnown && ((!oldTeam&&newTeam)||(!oldPrice&&newPrice));
+    removeKnownAssignment(x.n,!snapTeams.has(oldTeam)); clearPassed(x.n);
+    if(newTeam===NOI){ S.mine.push({n:x.n,p:newPrice||0}); logEvent("noi (foto/integrazione)",x.n,NOI,newPrice||""); }
+    else{
+      const a={t:newTeam||"",p:newPrice||""};
+      if(scala && newTeam && newPrice && !snapTeams.has(newTeam) && S.riv[newTeam]){ const r=S.riv[newTeam]; r.c-=newPrice; r.g+=1; if(isPor(x.n)) r.p+=1; a.s=1; }
+      S.asg[x.n]=a; logEvent("altri (foto/integrazione)",x.n,newTeam,newPrice||"");
+    }
+    changedNames.push(x.n); changed++; if(addsInfo) completed++; else if(hadKnown) corrected++;
+  });
+  ip.riv.forEach(x=>{
+    if(x.t===NOI||!S.riv[x.t]) return; const r=S.riv[x.t];
+    if(x.c!==null&&x.c!==undefined) r.c=x.c;
+    if(x.g!==null&&x.g!==undefined) r.g=x.g;
+    if(x.p!==null&&x.p!==undefined) r.p=x.p;
+  });
+  const teamChanges=ip.riv.filter(x=>x.t!==NOI&&beforeRiv[x.t]&&S.riv[x.t]).map(x=>{
+    const a=beforeRiv[x.t],b=S.riv[x.t], bits=[];
+    if(a.c!==b.c) bits.push(`${a.c}→${b.c} cr`); if(a.g!==b.g) bits.push(`${a.g}→${b.g} gioc.`); if(a.p!==b.p) bits.push(`${a.p}→${b.p} por`);
+    return bits.length?`${x.t}: ${bits.join(", ")}`:null;
+  }).filter(Boolean);
+  if(ip.riv.length){ S.upd=now; logEvent("snapshot rivali","","",ip.riv.length+" squadre"); }
+  let narrative=[];
+  if(teamChanges.length){ const head=teamChanges.slice(0,3).join("; "); narrative.push(`la fotografia ha aggiornato ${teamChanges.length} squadre${head?` (${head}${teamChanges.length>3?`; +${teamChanges.length-3} altre`:""})`:""}`); }
+  if(changed){ narrative.push(`sono state integrate ${changed} assegnazioni${completed?`, ${completed} completate con informazioni mancanti`:""}${corrected?`, ${corrected} corrette`:""}${changedNames.length&&changedNames.length<=4?`: ${changedNames.join(", ")}`:""}`); }
+  if(!narrative.length && (ip.riv.length||ip.asg.length)) narrative.push("il controllo non ha prodotto variazioni rispetto ai dati già registrati");
+  if(narrative.length) recordUpdate(narrative.join(". ")+".");
+  importPreview=null;
+  commit(`Foto integrata: ${ip.riv.length} squadre, ${changed} assegnazioni (${completed} completate, ${corrected} corrette)`);
+}
+
+function viewObiettivi(){
+  const free = P.filter(p => (";"+p.r+";").includes(";"+roleSel+";") && !mineOf(p.n) && !S.asg[p.n] && !consOf(p).startsWith("EVITA") && !teamAvoid(p)).slice(0, 10);
+  let h = `<h2>Obiettivi</h2>${helpBox("Qui prepari le priorità prima e durante l’asta: MUST da proteggere, giocatori/squadre da evitare e migliori profili ancora liberi per ruolo. È una bussola, non una formazione obbligata.","Piano d’asta")}<h3>I nostri MUST</h3>`;
+  h += S.must.length ? `<div class="card">` + S.must.map((m,i) => { const p = byName.get(m.n); const st = mineOf(m.n) ? "preso" : (S.asg[m.n] ? "andato" : "da prendere");
+      return `<div class="list-item"><span class="grow"><button class="btn small" data-open="${esc(m.n)}" style="border:0;padding:0;background:none;font-weight:700">${esc(m.n)}</button><br><span class="small">${p ? esc(p.t) + ", mercato " + market(p) : "fuori lista"}, ${st}</span></span>
+      <label class="field">Max<input type="number" inputmode="numeric" value="${m.max || ""}" placeholder="auto" data-mustmax="${i}" style="width:74px"></label>
+      <button class="btn small danger" data-mustdel="${i}">Togli</button></div>`; }).join("") + `<p class="small">Max vuoto = mercato +30%. Crediti tenuti da parte per i MUST ancora da prendere: ${me().mustRes}.</p></div>`
+    : `<p class="empty">Nessun MUST. Aprili da Cerca e tocca "Aggiungi ai MUST".</p>`;
+  h += `<div class="row"><button class="btn small" data-seedcfg>Importa MUST e da evitare da config.json</button></div>`;
+  if (S.black.length) h += `<h3>Da evitare</h3><div class="chips">${S.black.map((n,i) => `<button class="chip" data-blackdel="${i}">${esc(n)} ✕</button>`).join("")}</div>`;
+  h += `<h3>Da evitare per squadra</h3><p class="small">${esc((CFG.evitaSquadre||[]).join(", "))}: restano nel listone e nell'asta, ma AS Pinta li considera solo ultima spiaggia a ${lastResortPrice()} credito.</p>`;
+  h += `<h3>Migliori ancora liberi per ruolo</h3><div class="chips">${ROLES.map(r => `<button class="chip" data-role="${r}" aria-pressed="${r === roleSel}">${r}</button>`).join("")}</div>
+    <ul class="results">${free.map(p => `<li><button data-open="${esc(p.n)}"><span class="grow"><span class="nm">${esc(p.n)}</span><br><span class="meta">${esc(p.t)}, ${esc(p.r)}, ${esc(p.s)}</span></span>${miniTag(p)}</button></li>`).join("")}</ul>`;
+  const passedFree=(S.passed||[]).filter(x=>!assigned(x.n)).sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,10);
+  if(passedFree.length) h += `<h3>Già passati e ancora liberi</h3><div class="chips">${passedFree.map(x=>`<button class="chip" data-open="${esc(x.n)}">↺ ${esc(x.n)}</button>`).join("")}</div><p class="small">Sono rimasti invenduti in un passaggio precedente: restano perfettamente ripescabili.</p>`;
+  h += `<h3>Shortlist Piano A / B / C</h3>`;
+  const groups = {}; SHORT.forEach(([rep, piano, n]) => (groups[rep] = groups[rep] || []).push([piano, n]));
+  for (const [rep, items] of Object.entries(groups)){
+    h += `<details><summary>${esc(rep)}</summary>` + items.map(([piano, n]) => { const p = byName.get(n); const done = mineOf(n) || S.asg[n];
+      return `<div class="list-item"><span class="small" style="width:118px">${esc(piano)}</span><span class="grow"><button data-open="${esc(n)}" style="border:0;background:none;padding:0;font-weight:600" class="${done ? "strike" : ""}">${esc(n)}</button><br><span class="small">${p ? esc(p.t) : ""}</span></span>${p ? miniTag(p) : ""}</div>`; }).join("") + `</details>`;
+  }
+  return h;
+}
+
+function viewImpostazioni(){
+  const s = S.set, c = gh.cfg() || {repo: CFG.github.repo, branch: stateBranch(), owner: "", token: ""}, st = statusInfo();
+  return `<h2>Impostazioni</h2>
+    <div class="settings-group"><div class="group-title">Strategia d'asta</div><div class="group-kicker">Queste scelte cambiano i consigli, i tetti e la gestione dei crediti durante l'asta.</div></div>
+    ${helpBox("Qui imposti il carattere di AS Pinta. Sono parametri fantacalcistici: puoi cambiarli anche durante l'asta se la strategia evolve; non toccano salvataggi o dati tecnici.","Configurazione sportiva")}
+    <div class="card setting-card"><div class="row">
+      <label class="field">Budget iniziale<input type="number" inputmode="numeric" value="${s.budget}" data-set="budget"><span class="setting-note">Crediti totali con cui parte ogni squadra.</span></label>
+      <label class="field">Tetto massimo per una stella (%)<input type="number" inputmode="numeric" value="${s.tetto}" data-set="tetto"><span class="setting-note">Limite assoluto sul budget per un singolo giocatore, prima delle eccezioni MUST. 25% di 500 = 125.</span></label>
+      <label class="field">Cuscinetto per il finale<input type="number" inputmode="numeric" value="${s.riserva}" data-set="riserva"><span class="setting-note">Crediti che l'app prova a non bruciare finché la rosa non è quasi completa.</span></label>
+      <label class="field">Aggressività ai rilanci<select data-set="stile">${["Prudente","Normale","Aggressivo"].map(x => `<option ${x === s.stile ? "selected" : ""}>${x}</option>`).join("")}</select><span class="setting-note">Prudente riduce i tetti del 10%; Aggressivo li alza del 10%. Non modifica i MUST.</span></label>
+      <label class="field">Distribuzione budget<select data-set="profiloBudget">${Object.keys(CFG.budgetReparti||{}).filter(x=>!x.startsWith("_")).map(x=>`<option ${x===s.profiloBudget?"selected":""}>${esc(x)}</option>`).join("")}</select><span class="setting-note">È la bussola con cui la schermata Rosa confronta la spesa tra reparti.</span></label>
+    </div></div>
+
+    <div class="settings-group"><div class="group-title">Servizio, salvataggio e sicurezza</div><div class="group-kicker">Questa parte non cambia la strategia: serve solo a non perdere lo stato dell'asta e a recuperarlo.</div></div>
+    ${IS_BETA ? `<div class="card" style="border-color:#E7C07A;background:#FFF8EA"><b>Canale BETA isolato</b><p class="small">Usa memoria separata e branch <b>stato-beta</b>. I test qui non toccano lo stato dell'app vera.</p></div>` : ""}
+    <div class="card"><div class="service-status"><div><b>Salvataggio</b><p class="small" style="margin:3px 0 0">Ogni modifica viene salvata subito sul dispositivo${gh.ok()?" e sincronizzata anche su GitHub":""}.</p></div><div><b class="${st.cls}-txt">${esc(st.txt)}</b></div></div>${sync.err ? `<p class="small bad-txt">${esc(sync.err)}</p>` : ""}</div>
+    <details><summary>Connessione GitHub · dettagli di servizio</summary><div class="card" style="box-shadow:none;border:0;padding:6px 0">
+      <p class="small">Serve solo per avere una copia online dello stato e passare da un dispositivo all'altro. Se è già collegato e il pallino è verde, durante l'asta non devi entrare qui.</p>
+      <div class="row"><label class="field">Utente GitHub<input id="gh_owner" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.owner || "")}" placeholder="il tuo username"></label>
+        <label class="field">Repository<input id="gh_repo" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.repo || "")}"></label>
+        <label class="field">Branch stato<input id="gh_branch" autocapitalize="off" autocorrect="off" spellcheck="false" value="${esc(c.branch || stateBranch())}" ${IS_BETA?"readonly":""}></label></div>
+      <label class="field" style="margin-top:8px">Token GitHub<input id="gh_token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" value="${esc(c.token || "")}" placeholder="github_pat_..."><span class="setting-note">Fine-grained, solo questo repository, permesso Contents: Read and write.</span></label>
+      <div class="row" style="margin-top:10px"><button class="btn primary" data-ghconnect>Collega e sincronizza</button><button class="btn" data-ghpush ${gh.ok() ? "" : "disabled"}>Salva ora</button><button class="btn" data-ghpull ${gh.ok() ? "" : "disabled"}>Ricarica da GitHub</button><button class="btn danger" data-ghoff ${gh.ok() ? "" : "disabled"}>Scollega</button></div>
+      <p class="small">“Ricarica da GitHub” sostituisce lo stato di questo dispositivo con quello salvato online: usalo quando passi volontariamente a un altro dispositivo.</p>
+    </div></details>
+    ${DATA_WARNINGS.length ? `<div class="card data-warn"><b>Controllo dati: ${DATA_WARNINGS.length} avviso/i</b>${DATA_WARNINGS.map(x=>`<div class="small" style="margin-top:5px">• ${esc(x)}</div>`).join("")}</div>` : `<div class="card"><b>Controllo dati ✓</b><p class="small">Config, listone e shortlist hanno superato i controlli essenziali all'avvio.</p></div>`}
+    <details><summary>Backup manuale e ripristino</summary><div class="card" style="box-shadow:none;border:0;padding:6px 0"><p class="small">Paracadute manuale: utile prima dell'asta o se vuoi conservare una copia indipendente da GitHub.</p><div class="row"><button class="btn dark" data-download>Scarica file di backup</button><button class="btn" data-backup>Copia codice di backup</button></div>
+      <textarea id="restore" placeholder="Incolla qui un codice di backup" style="min-height:80px;margin-top:10px"></textarea><div class="row" style="margin-top:8px"><button class="btn" data-restore>Ripristina dal codice</button><label class="btn">Ripristina da file<input type="file" id="restorefile" accept="application/json,.json" style="display:none"></label><button class="btn danger" data-reset>${resetArm ? "Tocca ancora per azzerare tutto" : "Azzera tutto"}</button></div></div></details>
+    <p class="small">Versione ${APP_VERSION}. Dati ${dataFromCache ? "caricati dalla copia salvata (offline)" : "caricati dal repo"}: base SOS Fanta/Fantacalcio.it 10/09 + integrazione Juve/Lazio 11/09/2026; Juve e Lazio inclusi ma ultima spiaggia per AS Pinta.</p>`;
+}
+function currentSituationText(){
+  const m=me(), risks=holeRisks(), st=auctionStats(), openMust=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]).length, bestForm=formationAnalysis()[0];
+  const parts=[];
+  parts.push(`AS Pinta ha ${m.tot} giocatori (${m.por} portieri e ${m.mov} di movimento), ha speso ${m.spent} crediti e ne conserva ${m.rem}`);
+  const need=m.porMiss+m.movMiss; parts.push(need?`restano almeno ${need} posti minimi da riempire`:`i minimi di rosa risultano coperti`);
+  if(bestForm) parts.push(`il modulo Mantra oggi meglio coperto è il ${bestForm.f.n} con ${bestForm.total}/11 posti già utilizzabili senza fuori ruolo`);
+  if(openMust) parts.push(`${openMust} MUST sono ancora liberi`);
+  if(risks.length) parts.push(`la criticità principale è ${risks.slice(0,3).map(x=>`${x.r} (${x.miss} mancanti, ${x.free} titolari buoni liberi)`).join(", ")}`); else parts.push(`non emergono al momento allarmi forti di scarsità`);
+  parts.push(`il potere d'acquisto è ${st.ourPower.toFixed(1)} crediti per posto ancora da coprire contro ${st.avgPower.toFixed(1)} di media dei rivali nell'ultimo snapshot`);
+  return parts.join("; ")+".";
+}
+function stateSnapshotHTML(){
+  const m=me(), st=auctionStats(), risks=holeRisks(), close=closingCandidates(), cov=ROLES.filter(r=>(+MINS[r]||0)>0).map(r=>[r,roleCountMine(r)]), budgets=budgetStatus(), forms=formationAnalysis(), now=new Date();
+  const riv=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t])})).sort((a,b)=>b.power-a.power), maxPower=Math.max(1,st.ourPower,...riv.map(x=>x.power));
+  const mustOpen=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]);
+  const rows=S.mine.map(x=>{const p=byName.get(x.n);return `<tr><td><b>${esc(x.n)}</b></td><td>${p?esc(p.t):"—"}</td><td>${p?esc(p.r):(x.por?"Por":"—")}</td><td>${esc(x.p)}</td></tr>`}).join("");
+  const updates=(S.updates||[]).slice(-2).reverse();
+  const passed=(S.passed||[]).filter(x=>!assigned(x.n)).sort((a,b)=>(b.ts||0)-(a.ts||0)).slice(0,8);
+  const riskHTML=risks.length?risks.map(x=>`<span class="chip bad">${esc(x.r)}: mancano ${x.miss}, liberi ${x.free}</span>`).join(""):"<span class=chip>nessun allarme forte</span>";
+  const closeHTML=close.length?close.slice(0,6).map(x=>`<li><b>${esc(x.p.n)}</b> · ${esc(x.p.t)} · ${esc(x.p.r)} · mercato ${market(x.p)}</li>`).join(""):"<li>nessun candidato urgente</li>";
+  const mustHTML=mustOpen.length?mustOpen.map(x=>`<li><b>${esc(x.n)}</b>${+x.max>0?` · max ${x.max}`:" · max auto"}</li>`).join(""):"<li>nessun MUST ancora libero</li>";
+  const passedHTML=passed.length?passed.map(x=>`<span class="chip">↺ ${esc(x.n)}</span>`).join(""):"<span class=chip>nessuno</span>";
+  const rivalCards=[`<div class="rc you"><b>${esc(NOI)}</b><strong>${st.ourPower.toFixed(1)}</strong><div class="bar"><i style="width:${Math.min(100,st.ourPower/maxPower*100)}%"></i></div><small>${m.rem} cr · ${m.tot} gioc.</small></div>`,...riv.map(x=>`<div class="rc"><b>${esc(x.t)}</b><strong>${x.power.toFixed(1)}</strong><div class="bar"><i style="width:${Math.min(100,x.power/maxPower*100)}%"></i></div><small>${x.r.c} cr · ${x.r.g} gioc. · ${x.r.p} por</small></div>`)].join("");
+  return `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AS Pinta · stato asta</title><style>
+  :root{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Arial,sans-serif;color:#191B20;background:#F2F0EC;--r:#862633;--y:#F2A900}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% -5%,#FFF2C7,transparent 32%),#F2F0EC}.top{background:radial-gradient(circle at 85% -30%,#F2A90066,transparent 36%),linear-gradient(125deg,#581820,#862633 62%,#A72E3D);color:#fff;padding:24px}.wrap{max-width:960px;margin:auto;padding:14px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#FFE3A0}.top h1{margin:2px 0 4px;font-size:27px}.muted{font-size:12px;color:#716A63}.top .muted{color:#F4DCD8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}.k,.card,.rc{background:#fff;border:1px solid #E4DED5;border-radius:16px;padding:12px;margin:8px 0;box-shadow:0 5px 18px #5b1e2810}.k b{font-size:26px;display:block}.lead{font-size:16px;line-height:1.55}.lead b{color:var(--r)}.chip{display:inline-block;border:1px solid #DAD4CC;border-radius:999px;padding:5px 9px;margin:3px;font-size:12px}.chip.ok{background:#E9F6EF;border-color:#B7DEC9}.chip.bad{background:#FCEDEA;border-color:#E7B7AE}table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:7px 5px;border-bottom:1px solid #EEE9E2;text-align:left}h2{margin:18px 0 8px;font-size:18px;color:#541921}ul{padding-left:20px}.updates{display:grid;gap:8px}.upd{border-left:4px solid var(--y);background:#FFFBF0;border-radius:12px;padding:10px}.upd small{display:block;color:#7A6F64;margin-bottom:3px}.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:7px}.role{background:#fff;border:1px solid #E4DED5;border-radius:12px;padding:8px}.role .line{display:flex;justify-content:space-between;font-size:12px;font-weight:700}.bar{height:7px;border-radius:999px;background:#EEE8E0;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--r),var(--y));border-radius:inherit}.budget{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:7px}.budget .b{background:#fff;border:1px solid #E4DED5;border-radius:12px;padding:9px}.rivals{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:7px}.rc{margin:0}.rc.you{border-color:#E0B540;background:#FFF8E4}.rc strong{float:right;font-size:20px}.rc small{display:block;margin-top:6px;color:#716A63}.progress{height:9px;border-radius:999px;background:#ffffff30;overflow:hidden;margin:10px 0 3px}.progress i{display:block;height:100%;width:${st.comp}%;background:linear-gradient(90deg,#F2A900,#FFD86A)}.mods{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:7px}.mod{background:#fff;border:1px solid #E4DED5;border-radius:12px;padding:9px}.mod.best{border-color:#D7AA2A;background:#FFF9E9}.mod strong{font-size:18px}.mod small{display:block;color:#716A63;margin-top:3px}
+  </style></head><body><div class="top"><div class="eyebrow">FantaEnel 1X2 · Mantra</div><h1>AS Pinta · stato asta</h1><div class="muted">Fotografia ${now.toLocaleString("it-IT")} · aggiornamenti a salti, non cronologia completa</div><div class="progress"><i></i></div><div class="muted">Asta tracciata ${st.comp}% · ${st.tracked}/${st.target} slot target</div></div><div class="wrap">
+  <div class="card"><h2 style="margin-top:0">Situazione in due righe</h2><div class="lead">${esc(currentSituationText())}</div></div>
+  <div class="card"><h2 style="margin-top:0">Ultimi due aggiornamenti</h2><div class="updates">${updates.length?updates.map((u,i)=>`<div class="upd"><small>${i===0?'Ultimo':'Precedente'} · ${new Date(u.ts).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}</small>${esc(fmtUpdate(u))}</div>`).join(""):`<div class="muted">Non ci sono ancora due import registrati.</div>`}</div></div>
+  <div class="grid"><div class=k><span class=muted>Crediti disponibili</span><b>${m.rem}</b></div><div class=k><span class=muted>Rosa</span><b>${m.tot}</b></div><div class=k><span class=muted>Movimento · fino a</span><b>${m.consMov}</b></div><div class=k><span class=muted>Portiere · fino a</span><b>${m.consPor}</b></div><div class=k><span class=muted>Crediti protetti</span><b>${m.mustRes+m.finRes}</b></div><div class=k><span class=muted>Potere d'acquisto</span><b>${st.ourPower.toFixed(1)}</b><span class=muted>cr/posto</span></div></div>
+  <div class=card><h2 style="margin-top:0">Copertura ruoli</h2><div class=roles>${cov.map(([r,n])=>{const min=+MINS[r]||0,pct=min?Math.min(100,n/min*100):100;return `<div class=role><div class=line><span>${r}</span><span>${n}/${min}</span></div><div class=bar><i style="width:${pct}%"></i></div></div>`}).join("")}</div><h2>Rischio buco</h2>${riskHTML}</div>
+  <div class=card><h2 style="margin-top:0">Moduli Mantra meglio coperti</h2><div class=mods>${forms.slice(0,3).map((x,i)=>`<div class="mod ${i===0?'best':''}"><strong>${x.f.n}</strong><small>${x.total}/11 posti coperti senza fuori ruolo${x.missing.length?` · mancano ${x.missing.slice(0,3).map(z=>z.join('/')).join(', ')}`:' · già schierabile'}</small></div>`).join("")}</div></div>
+  <div class=card><h2 style="margin-top:0">Budget per reparto</h2><div class=budget>${budgets.map(x=>{const pc=x.target?Math.min(100,x.spent/x.target*100):0;return `<div class=b><b>${x.a}</b><div>${x.spent} / ${x.target}</div><div class=bar><i style="width:${pc}%"></i></div></div>`}).join("")}</div></div>
+  <div class=card><h2 style="margin-top:0">Rosa</h2><table><thead><tr><th>Giocatore</th><th>Club</th><th>Ruoli</th><th>Pagato</th></tr></thead><tbody>${rows||'<tr><td colspan=4>Ancora nessun acquisto</td></tr>'}</tbody></table></div>
+  <div class=card><h2 style="margin-top:0">MUST ancora liberi</h2><ul>${mustHTML}</ul><h2>Chiudi ora / low cost utili</h2><ul>${closeHTML}</ul><h2>Già passati e ancora liberi</h2>${passedHTML}</div>
+  <div class=card><h2 style="margin-top:0">Potere d'acquisto rivali</h2><div class=rivals>${rivalCards}</div><div class=muted style="margin-top:8px">Ultimo snapshot rivali: ${esc(S.upd||"non indicato")}</div></div>
+  </div></body></html>`;
+}
+
+async function shareState(){
+  const html=stateSnapshotHTML(), stamp=new Date().toISOString().slice(0,16).replace(/[:T]/g,"-"), name=`AS-Pinta-stato-${stamp}.html`;
+  const file=new File([html],name,{type:"text/html"});
+  try{
+    if(navigator.share && navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({title:"AS Pinta · stato asta",text:"AS Pinta · situazione asta e ultimi aggiornamenti",files:[file]}); toast("Stato condiviso"); return; }
+  }catch(e){ if(e && e.name==="AbortError") return; }
+  const a=document.createElement("a"); a.href=URL.createObjectURL(file); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},700); toast("HTML dello stato scaricato");
+}
+
+async function copyText(txt){
+  try { await navigator.clipboard.writeText(txt); toast("Copiato"); }
+  catch(e){ const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch(_) {} ta.remove(); toast(ok ? "Copiato" : "Copia non riuscita: seleziona il testo a mano"); }
+}
+
+/* ---------- eventi ---------- */
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const d = b.dataset;
+  if ("undolast" in d){ undoLast(); return; }
+  if ("sharestate" in d){ shareState(); return; }
+  if ("auctionmode" in d){ auctionMode=!auctionMode; render(); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
+  if (d.tab){ tab = d.tab; if (tab !== "cerca") selected = null; resetArm = false; render(); window.scrollTo(0,0); if (tab === "cerca") setTimeout(() => $("#q") && $("#q").focus(), 30); return; }
+  if (d.open){ selected = d.open; tab = "cerca"; render(); window.scrollTo(0,0); return; }
+  if ("back" in d){ selected = null; query = ""; render(); setTimeout(() => $("#q").focus(), 30); return; }
+  if (d.outcome){
+    const ch=document.querySelector('input[name="outcomeChoice"]:checked');
+    if(!ch){ toast("Scegli chi l'ha preso oppure Scartato"); return; }
+    const choice=ch.value, pr=parseInt($("#price").value,10), n=d.outcome;
+    if(choice==="__PINTA__" && !(pr>0)){ toast("Scrivi il prezzo pagato"); $("#price").focus(); return; }
+    saveUndo(`esito ${n}`); removeKnownAssignment(n); clearPassed(n);
+    if(choice==="__SCARTATO__"){
+      S.passed.push({n,ts:Date.now()}); logEvent("rimasto libero",n,"","");
+      selected=null; query=""; commit(`${n} segnato come ancora libero`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
+    }
+    if(choice==="__PINTA__"){
+      S.mine.push({n,p:pr}); logEvent("noi",n,NOI,pr);
+      selected=null; query=""; commit(`${n} preso a ${pr}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
+    }
+    const t=choice||"", a={t,p:pr>0?pr:""};
+    if(t && pr>0 && S.riv[t]){ const r=S.riv[t]; r.c-=pr; r.g+=1; if(isPor(n)) r.p+=1; a.s=1; }
+    S.asg[n]=a; logEvent("altri",n,t,pr>0?pr:"");
+    selected=null; query=""; commit(`${n} segnato come preso${t?" da "+t:" · da verificare"}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
+  }
+  if (d.buy){ const pr = parseInt($("#price").value, 10); if (!(pr > 0)){ toast("Scrivi il prezzo pagato"); $("#price").focus(); return; } saveUndo(`acquisto ${d.buy}`); removeKnownAssignment(d.buy); clearPassed(d.buy); S.mine.push({n: d.buy, p: pr}); logEvent("noi", d.buy, NOI, pr); selected = null; query = ""; commit(`${d.buy} preso a ${pr}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
+  if (d.pass){ saveUndo(`rimasto libero ${d.pass}`); clearPassed(d.pass); S.passed.push({n:d.pass,ts:Date.now()}); logEvent("rimasto libero",d.pass,"",""); selected=null; query=""; commit(`${d.pass} segnato come ancora libero`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
+  if (d.other){ const tr=document.querySelector('input[name="teamChoice"]:checked'), t=tr?tr.value:"", pr = parseInt($("#price").value, 10); saveUndo(`assegnazione ${d.other}`); removeKnownAssignment(d.other); clearPassed(d.other); const a = {t, p: pr > 0 ? pr : ""};
+    if (t && pr > 0){ const r = S.riv[t]; r.c -= pr; r.g += 1; if (isPor(d.other)) r.p += 1; a.s = 1; }
+    S.asg[d.other] = a; logEvent("altri", d.other, t, pr > 0 ? pr : ""); selected = null; query = ""; commit(`${d.other} segnato come preso${t ? " da " + t : ""}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
+  if (d.undo){ const n = d.undo; saveUndo(`annulla assegnazione ${n}`); const i = S.mine.findIndex(x => x.n === n); if (i >= 0) S.mine.splice(i, 1);
+    const a = S.asg[n]; if (a){ if (a.s && a.t && a.p){ const r = S.riv[a.t]; r.c += +a.p; r.g -= 1; if (isPor(n)) r.p -= 1; } delete S.asg[n]; }
+    logEvent("annulla", n); commit("Assegnazione annullata"); return; }
+  if (d.must){ const i = S.must.findIndex(m => m.n === d.must); if (i >= 0) S.must.splice(i, 1); else { S.must.push({n: d.must, max: 0}); S.black = S.black.filter(x => x !== d.must); } commit(i >= 0 ? "Tolto dai MUST" : "Aggiunto ai MUST: imposta il prezzo in Obiettivi"); return; }
+  if (d.black){ const i = S.black.indexOf(d.black); if (i >= 0) S.black.splice(i, 1); else { S.black.push(d.black); S.must = S.must.filter(m => m.n !== d.black); } commit(i >= 0 ? "Tolto da evitare" : "Messo tra da evitare"); return; }
+  if (d.del){ saveUndo("rimozione dalla rosa"); S.mine.splice(+d.del, 1); commit("Tolto dalla rosa"); return; }
+  if ("addx" in d){ const n = $("#xname").value.trim(), pr = parseInt($("#xprice").value, 10); if (!n || !(pr >= 0)){ toast("Scrivi nome e prezzo"); return; } saveUndo(`aggiunta ${n}`); S.mine.push({n, p: pr, por: $("#xpor").value === "1"}); commit(`${n} aggiunto`); return; }
+  if (d.mustdel){ S.must.splice(+d.mustdel, 1); commit("Tolto dai MUST"); return; }
+  if (d.blackdel){ S.black.splice(+d.blackdel, 1); commit("Tolto da evitare"); return; }
+  if (d.role){ roleSel = d.role; render(); return; }
+  if (d.copy){ copyText(d.copy === "squadre" ? PROMPT_SQUADRE() : PROMPT_GIOCATORI()); return; }
+  if ("parse" in d){ const t = $("#paste").value; importPreview = parseImport(t); render(); const ta = $("#paste"); if (ta) ta.value = t; return; }
+  if ("apply" in d){ if (importPreview) applyImport(importPreview); return; }
+  if ("cancelimport" in d){ importPreview = null; render(); return; }
+  if ("backup" in d){ copyText(enc(S)); return; }
+  if ("restore" in d){ try { S = merge(dec($("#restore").value)); commit("Ripristinato dal backup"); } catch(err){ toast("Codice non valido: copialo di nuovo per intero"); } return; }
+  if ("ghconnect" in d){
+    const owner = $("#gh_owner").value.trim(), repo = $("#gh_repo").value.trim(), branch = IS_BETA ? "stato-beta" : ($("#gh_branch").value.trim() || CFG.github.branch), token = $("#gh_token").value.trim();
+    if (!owner || !repo || !token){ toast("Servono utente, repository e token"); return; }
+    ls.set(LS_GH, JSON.stringify({owner, repo, branch, token, file: CFG.github.file}));
+    toast("Collegamento in corso"); connectAndPull({verbose: true}).then(render); return; }
+  if ("ghpush" in d){ sync.dirty = true; sync.run().then(() => { render(); toast(sync.err ? sync.err : "Salvato su GitHub"); }); return; }
+  if ("ghpull" in d){ connectAndPull({verbose: true, force: true}).then(render); return; }
+  if ("ghoff" in d){ ls.del(LS_GH); sync.err = null; sync.last = null; render(); toast("GitHub scollegato da questo dispositivo"); return; }
+  if ("download" in d){
+    const blob = new Blob([JSON.stringify(S, null, 1)], {type: "application/json"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `asta-as-pinta-${new Date().toISOString().slice(0,16).replace(/[:T]/g,"-")}.json`;
+    document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); return; }
+  if ("seedcfg" in d){
+    let n = 0;
+    (CFG.must || []).filter(m => m && m.n).forEach(m => { const cur = mustOf(m.n); if (cur){ if (+m.max > 0) cur.max = +m.max; } else { S.must.push({n: m.n, max: +m.max || 0, why: m.why || ""}); n++; } S.black = S.black.filter(x => x !== m.n); });
+    (CFG.evita || []).filter(Boolean).forEach(x => { if (!S.black.includes(x)){ S.black.push(x); S.must = S.must.filter(m => m.n !== x); n++; } });
+    const unknown = [...(CFG.must || []).filter(m => m && m.n).map(m => m.n), ...(CFG.evita || [])].filter(x => !byName.has(x));
+    commit(`Importati ${n} nomi da config.json` + (unknown.length ? `. Non nel listone: ${unknown.join(", ")}` : "")); return; }
+  if ("reset" in d){ if (!resetArm){ resetArm = true; render(); return; } S = defaults(); ls.del(LS_UNDO); resetArm = false; selected = null; query = ""; commit("Tutto azzerato"); return; }
+});
+document.addEventListener("input", e => {
+  const el = e.target;
+  if (el.id === "q"){ query = el.value; selected = null; $("#res").innerHTML = resultsHTML(); }
+});
+document.addEventListener("change", e => {
+  const el = e.target, d = el.dataset;
+  if (d.riv){ saveUndo(`aggiornamento rivale ${d.riv}`); const v = parseInt(el.value, 10); S.riv[d.riv] = S.riv[d.riv] || {c:S.set.budget,g:0,p:0}; const oldv=S.riv[d.riv][d.k]; S.riv[d.riv][d.k] = isNaN(v) ? 0 : v; S.upd = new Date().toLocaleTimeString("it-IT", {hour:"2-digit", minute:"2-digit"}); recordUpdate(`correzione manuale su ${d.riv}: ${d.k} ${oldv}→${S.riv[d.riv][d.k]}.`,`Correzione manuale`); commit(); }
+  if (d.editprice !== undefined){ saveUndo("correzione prezzo acquisto"); const v = parseInt(el.value, 10); S.mine[+d.editprice].p = isNaN(v) ? 0 : v; commit("Prezzo aggiornato"); }
+  if (d.mustmax !== undefined){ const v = parseInt(el.value, 10); S.must[+d.mustmax].max = isNaN(v) ? 0 : v; commit("Prezzo MUST aggiornato"); }
+  if (d.set){ S.set[d.set] = ["stile","profiloBudget"].includes(d.set) ? el.value : (parseFloat(el.value) || 0); commit("Impostazione salvata"); }
+  if (el.id === "restorefile" && el.files && el.files[0]){
+    el.files[0].text().then(t => { try { S = merge(JSON.parse(t)); commit("Ripristinato dal file"); } catch(err){ toast("File non valido"); } }); }
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "F1"){ e.preventDefault(); undoLast(); return; }
+  if (e.key === "F4"){ e.preventDefault(); auctionMode=!auctionMode; render(); return; }
+  if (e.key === "Enter" && e.target.id === "q"){ const r = searchPlayers(query); if (r.length){ selected = r[0].n; render(); } }
+});
+
+function validateData(players,cfg,shortlist){
+  const errors=[], warnings=[];
+  if(!Array.isArray(players)||!players.length) errors.push("players.json è vuoto o non è un array");
+  if(!cfg||!Array.isArray(cfg.squadre)||!cfg.squadre.length) errors.push("config.json: elenco squadre mancante");
+  if(cfg && (!cfg.noi || !(cfg.squadre||[]).includes(cfg.noi))) errors.push("config.json: 'noi' non compare nell'elenco squadre");
+  if(cfg && new Set(cfg.squadre||[]).size!==(cfg.squadre||[]).length) errors.push("config.json: ci sono squadre duplicate");
+  const names=(players||[]).map(x=>x&&x.n).filter(Boolean), set=new Set(names);
+  if(set.size!==names.length) errors.push("players.json: ci sono nomi giocatore duplicati");
+  (players||[]).forEach((x,i)=>{ if(!x||!x.n||!x.r||x.fv===undefined) warnings.push(`players.json riga ${i+1}: campi essenziali incompleti`); });
+  const cfgNames=[...(cfg&&cfg.must||[]).map(x=>x&&x.n).filter(Boolean),...(cfg&&cfg.evita||[]).filter(Boolean)];
+  cfgNames.filter(n=>!set.has(n)).forEach(n=>warnings.push(`config.json: '${n}' non esiste nel listone`));
+  (shortlist||[]).forEach(x=>{ if(Array.isArray(x)&&x[2]&&!set.has(x[2])) warnings.push(`shortlist: '${x[2]}' non esiste nel listone`); });
+  if(cfg&&(+cfg.impostazioni?.budget||0)<=0) errors.push("config.json: budget non valido");
+  if(cfg&&cfg.budgetReparti){ Object.entries(cfg.budgetReparti).filter(([k])=>!k.startsWith("_")).forEach(([k,v])=>{ const sum=Object.values(v||{}).reduce((a,n)=>a+(+n||0),0); if(Math.abs(sum-100)>1) warnings.push(`Profilo budget '${k}' somma ${sum}% invece di 100%`); }); }
+  return {errors,warnings:[...new Set(warnings)].slice(0,20)};
+}
+
+function fatal(msg){
+  document.getElementById("app").innerHTML = `<div class="card" style="margin-top:20px"><h2 style="margin-top:0">L'app non riesce a partire</h2><p>${esc(msg)}</p><p class="small">Aprila dal link di GitHub Pages (non come file sul dispositivo) e controlla che nel repo ci sia la cartella <b>data</b> con players.json, config.json e shortlist.json.</p></div>`;
+}
+async function fetchJSON(path){ const r = await fetch(`${path}?v=${Date.now()}`, {cache: "no-store"}); if (!r.ok) throw new Error(`${path}: ${r.status}`); return r.json(); }
+async function boot(){
+  try {
+    const [players, cfg, shortlist] = await Promise.all([fetchJSON("data/players.json"), fetchJSON("data/config.json"), fetchJSON("data/shortlist.json")]);
+    const check=validateData(players,cfg,shortlist); if(check.errors.length){ fatal("Controllo dati fallito: "+check.errors.join(" · ")); return; } DATA_WARNINGS=check.warnings;
+    init(players, cfg, shortlist);
+    ls.set(LS_CACHE, JSON.stringify({players, cfg, shortlist, at: Date.now()}));
+  } catch(e){
+    const cached = ls.get(LS_CACHE);
+    if (!cached){ fatal("Non riesco a leggere i file dati (" + (e.message || e) + ")."); return; }
+    try { const o = JSON.parse(cached); const check=validateData(o.players,o.cfg,o.shortlist); if(check.errors.length){ fatal("Copia dati non valida: "+check.errors.join(" · ")); return; } DATA_WARNINGS=check.warnings; init(o.players, o.cfg, o.shortlist); dataFromCache = true; } catch(err){ fatal("Copia dei dati danneggiata."); return; }
+  }
+  loadLocal();
+  if (!ls.set(IS_BETA ? "astaPinta.beta.test" : "astaPinta.test", "1")) localOk = false;
+  render();
+  if (dataFromCache) toast("Offline: uso la copia dei dati salvata");
+  if (gh.ok()) connectAndPull();
+}
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && sync.dirty && gh.ok()){ clearTimeout(sync.timer); sync.run(); } });
+window.addEventListener("online", () => { if (sync.dirty && gh.ok()) sync.run(); });
+boot();
+
+</script>
+</body>
+</html>
