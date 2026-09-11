@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158030651,
+ "updatedAt": 1789158056141,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -626,6 +626,11 @@
    "t": "Fun Cool FC",
    "p": 30,
    "s": 1
+  },
+  "Bijlow": {
+   "t": "Fight Club",
+   "p": 10,
+   "s": 1
   }
  },
  "riv": {
@@ -680,9 +685,9 @@
    "p": 1
   },
   "Fight Club": {
-   "c": 12,
-   "g": 6,
-   "p": 0
+   "c": 2,
+   "g": 7,
+   "p": 1
   },
   "Big Tasty FC": {
    "c": 349,
@@ -1760,6 +1765,13 @@
    "n": "Adams A.",
    "t": "Fun Cool FC",
    "p": 30
+  },
+  {
+   "ts": 1789158056141,
+   "a": "altri",
+   "n": "Bijlow",
+   "t": "Fight Club",
+   "p": 10
   }
  ],
  "passed": [
