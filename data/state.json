@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154896072,
+ "updatedAt": 1789154952673,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -408,6 +408,11 @@
    "t": "AC OMMODITY",
    "p": 45,
    "s": 1
+  },
+  "Floriani Mussolini": {
+   "t": "AC OMMODITY",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -427,8 +432,8 @@
    "p": 1
   },
   "AC OMMODITY": {
-   "c": 349,
-   "g": 7,
+   "c": 348,
+   "g": 8,
    "p": 1
   },
   "Pro Stata": {
@@ -1150,6 +1155,13 @@
    "n": "Meret",
    "t": "AC OMMODITY",
    "p": 45
+  },
+  {
+   "ts": 1789154952673,
+   "a": "altri",
+   "n": "Floriani Mussolini",
+   "t": "AC OMMODITY",
+   "p": 1
   }
  ],
  "passed": [
