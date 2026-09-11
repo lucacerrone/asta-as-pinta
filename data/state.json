@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160005483,
+ "updatedAt": 1789160073912,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -716,10 +716,6 @@
    "t": "NewRock",
    "p": 1
   },
-  "Kelly L.": {
-   "t": "AC OMMODITY",
-   "p": 8
-  },
   "Schmid": {
    "t": "Fun Cool FC",
    "p": 13
@@ -757,6 +753,30 @@
    "t": "AC OMMODITY",
    "p": 46,
    "s": 1
+  },
+  "Chukwueze": {
+   "t": "AS Emazz",
+   "p": 25
+  },
+  "Ziolkowski": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Samardzic": {
+   "t": "S.S. Longobarda",
+   "p": 40
+  },
+  "Pasalic": {
+   "t": "Al-Chaos-Ahli",
+   "p": 7
+  },
+  "Sarr P.": {
+   "t": "S.S. Longobarda",
+   "p": 19
+  },
+  "Kelly L.": {
+   "t": "Big Tasty FC",
+   "p": 8
   }
  },
  "riv": {
@@ -833,7 +853,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "22:53",
+ "upd": "22:54",
  "log": [
   {
    "ts": 1789149704009,
@@ -2129,6 +2149,55 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789160073911,
+   "a": "altri (foto/integrazione)",
+   "n": "Chukwueze",
+   "t": "AS Emazz",
+   "p": 25
+  },
+  {
+   "ts": 1789160073911,
+   "a": "altri (foto/integrazione)",
+   "n": "Ziolkowski",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789160073911,
+   "a": "altri (foto/integrazione)",
+   "n": "Samardzic",
+   "t": "S.S. Longobarda",
+   "p": 40
+  },
+  {
+   "ts": 1789160073911,
+   "a": "altri (foto/integrazione)",
+   "n": "Pasalic",
+   "t": "Al-Chaos-Ahli",
+   "p": 7
+  },
+  {
+   "ts": 1789160073911,
+   "a": "altri (foto/integrazione)",
+   "n": "Sarr P.",
+   "t": "S.S. Longobarda",
+   "p": 19
+  },
+  {
+   "ts": 1789160073911,
+   "a": "altri (foto/integrazione)",
+   "n": "Kelly L.",
+   "t": "Big Tasty FC",
+   "p": 8
+  },
+  {
+   "ts": 1789160073911,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -2200,6 +2269,11 @@
    "ts": 1789160005483,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 1 squadre (Space Invaders: -41→224 cr, 6→9 gioc.)."
+  },
+  {
+   "ts": 1789160073912,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 6 assegnazioni, 1 corrette."
   }
  ]
 }
