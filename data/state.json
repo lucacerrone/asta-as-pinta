@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168851882,
+ "updatedAt": 1789168873269,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1412,6 +1412,10 @@
   "Skorupski": {
    "t": "S.S. Longobarda",
    "p": 21
+  },
+  "Bellanova": {
+   "t": "chill curre",
+   "p": 4
   }
  },
  "riv": {
@@ -4058,6 +4062,13 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789168873269,
+   "a": "altri",
+   "n": "Bellanova",
+   "t": "chill curre",
+   "p": 4
   }
  ],
  "passed": [
