@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149889473,
+ "updatedAt": 1789149903891,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -25,12 +25,17 @@
    "t": "Real Skënderbeu",
    "p": 23,
    "s": 1
+  },
+  "Ghedjemis": {
+   "t": "chill curre",
+   "p": 9,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 500,
-   "g": 0,
+   "c": 491,
+   "g": 1,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -144,6 +149,13 @@
    "n": "Ekkelenkamp",
    "t": "Real Skënderbeu",
    "p": 23
+  },
+  {
+   "ts": 1789149903891,
+   "a": "altri",
+   "n": "Ghedjemis",
+   "t": "chill curre",
+   "p": 9
   }
  ],
  "passed": [
