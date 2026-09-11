@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155382117,
+ "updatedAt": 1789155441725,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -462,6 +462,11 @@
    "t": "Al-Chaos-Ahli",
    "p": 17,
    "s": 1
+  },
+  "Estupinan": {
+   "t": "Fc Afragolese",
+   "p": 7,
+   "s": 1
   }
  },
  "riv": {
@@ -511,8 +516,8 @@
    "p": 0
   },
   "Fc Afragolese": {
-   "c": 497,
-   "g": 1,
+   "c": 490,
+   "g": 2,
    "p": 0
   },
   "Fight Club": {
@@ -1281,6 +1286,13 @@
    "n": "Spence",
    "t": "Al-Chaos-Ahli",
    "p": 17
+  },
+  {
+   "ts": 1789155441725,
+   "a": "altri",
+   "n": "Estupinan",
+   "t": "Fc Afragolese",
+   "p": 7
   }
  ],
  "passed": [
