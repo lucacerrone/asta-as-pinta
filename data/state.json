@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164503743,
+ "updatedAt": 1789164638276,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1080,6 +1080,10 @@
   "Winks": {
    "t": "AC OMMODITY",
    "p": 6
+  },
+  "Couto": {
+   "t": "Al-Chaos-Ahli",
+   "p": 21
   }
  },
  "riv": {
@@ -3117,6 +3121,13 @@
    "n": "Winks",
    "t": "AC OMMODITY",
    "p": 6
+  },
+  {
+   "ts": 1789164638276,
+   "a": "altri",
+   "n": "Couto",
+   "t": "Al-Chaos-Ahli",
+   "p": 21
   }
  ],
  "passed": [
