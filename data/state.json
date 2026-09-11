@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161769469,
+ "updatedAt": 1789161811906,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -2745,6 +2745,11 @@
    "ts": 1789161769469,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 15 assegnazioni."
+  },
+  {
+   "ts": 1789161811906,
+   "label": "Aggiornamento da screenshot",
+   "text": "il controllo non ha prodotto variazioni rispetto ai dati già registrati."
   }
  ]
 }
