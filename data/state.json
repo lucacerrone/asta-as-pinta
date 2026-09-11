@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155277686,
+ "updatedAt": 1789155356579,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -452,6 +452,11 @@
    "t": "Al-Chaos-Ahli",
    "p": 13,
    "s": 1
+  },
+  "Ederson D.S.": {
+   "t": "Big Tasty FC",
+   "p": 34,
+   "s": 1
   }
  },
  "riv": {
@@ -511,8 +516,8 @@
    "p": 0
   },
   "Big Tasty FC": {
-   "c": 383,
-   "g": 2,
+   "c": 349,
+   "g": 3,
    "p": 0
   },
   "Fun Cool FC": {
@@ -1257,6 +1262,13 @@
    "n": "Perri",
    "t": "Al-Chaos-Ahli",
    "p": 13
+  },
+  {
+   "ts": 1789155356579,
+   "a": "altri",
+   "n": "Ederson D.S.",
+   "t": "Big Tasty FC",
+   "p": 34
   }
  ],
  "passed": [
