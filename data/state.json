@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789159715163,
+ "updatedAt": 1789159721440,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -747,6 +747,11 @@
   "Simeone": {
    "t": "Al-Chaos-Ahli",
    "p": 48
+  },
+  "Varela G.": {
+   "t": "S.S. Longobarda",
+   "p": 43,
+   "s": 1
   }
  },
  "riv": {
@@ -756,8 +761,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": -5,
-   "g": 13,
+   "c": -48,
+   "g": 14,
    "p": 1
   },
   "Al-Chaos-Ahli": {
@@ -2098,6 +2103,13 @@
    "n": "Varela G.",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789159721440,
+   "a": "altri",
+   "n": "Varela G.",
+   "t": "S.S. Longobarda",
+   "p": 43
   }
  ],
  "passed": [
