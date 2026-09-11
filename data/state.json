@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149704009,
+ "updatedAt": 1789149720322,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -10,7 +10,13 @@
   "profiloBudget": "Pinta 4-2-3-1"
  },
  "mine": [],
- "asg": {},
+ "asg": {
+  "Gineitis": {
+   "t": "Fight Club",
+   "p": 1,
+   "s": 1
+  }
+ },
  "riv": {
   "chill curre": {
    "c": 500,
@@ -63,8 +69,8 @@
    "p": 0
   },
   "Fight Club": {
-   "c": 500,
-   "g": 0,
+   "c": 499,
+   "g": 1,
    "p": 0
   },
   "Big Tasty FC": {
@@ -93,6 +99,13 @@
    "n": "Pinsoglio",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789149720322,
+   "a": "altri",
+   "n": "Gineitis",
+   "t": "Fight Club",
+   "p": 1
   }
  ],
  "passed": [
