@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166632607,
+ "updatedAt": 1789166713300,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1244,6 +1244,10 @@
   "Lucumì": {
    "t": "chill curre",
    "p": 6
+  },
+  "Ferguson": {
+   "t": "Fc Afragolese",
+   "p": 2
   }
  },
  "riv": {
@@ -3575,6 +3579,13 @@
    "n": "Lucumì",
    "t": "chill curre",
    "p": 6
+  },
+  {
+   "ts": 1789166713300,
+   "a": "altri",
+   "n": "Ferguson",
+   "t": "Fc Afragolese",
+   "p": 2
   }
  ],
  "passed": [
