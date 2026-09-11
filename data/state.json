@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164442972,
+ "updatedAt": 1789164503743,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1076,6 +1076,10 @@
   "Karlstrom": {
    "t": "Big Tasty FC",
    "p": 15
+  },
+  "Winks": {
+   "t": "AC OMMODITY",
+   "p": 6
   }
  },
  "riv": {
@@ -3106,6 +3110,13 @@
    "n": "Karlstrom",
    "t": "Big Tasty FC",
    "p": 15
+  },
+  {
+   "ts": 1789164503743,
+   "a": "altri",
+   "n": "Winks",
+   "t": "AC OMMODITY",
+   "p": 6
   }
  ],
  "passed": [
