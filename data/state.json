@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160184914,
+ "updatedAt": 1789160239590,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -33,6 +33,10 @@
   {
    "n": "Vlasic",
    "p": 35
+  },
+  {
+   "n": "Baldanzi",
+   "p": 15
   }
  ],
  "asg": {
@@ -2229,6 +2233,13 @@
    "n": "",
    "t": "",
    "p": "6 squadre"
+  },
+  {
+   "ts": 1789160239590,
+   "a": "noi",
+   "n": "Baldanzi",
+   "t": "AS Pinta",
+   "p": 15
   }
  ],
  "passed": [
