@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158988919,
+ "updatedAt": 1789159103847,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -694,6 +694,11 @@
    "t": "chill curre",
    "p": 37,
    "s": 1
+  },
+  "Paz N.": {
+   "t": "AS Emazz",
+   "p": 150,
+   "s": 1
   }
  },
  "riv": {
@@ -733,8 +738,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 359,
-   "g": 9,
+   "c": 209,
+   "g": 10,
    "p": 0
   },
   "NewRock": {
@@ -1926,6 +1931,13 @@
    "n": "Alajbegovic",
    "t": "chill curre",
    "p": 37
+  },
+  {
+   "ts": 1789159103847,
+   "a": "altri",
+   "n": "Paz N.",
+   "t": "AS Emazz",
+   "p": 150
   }
  ],
  "passed": [
