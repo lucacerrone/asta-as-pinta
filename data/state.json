@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155182389,
+ "updatedAt": 1789155228179,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -442,6 +442,11 @@
    "t": "AS Emazz",
    "p": 10,
    "s": 1
+  },
+  "Casadei": {
+   "t": "Space Invaders",
+   "p": 16,
+   "s": 1
   }
  },
  "riv": {
@@ -476,8 +481,8 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 71,
-   "g": 4,
+   "c": 55,
+   "g": 5,
    "p": 1
   },
   "AS Emazz": {
@@ -1233,6 +1238,13 @@
    "n": "Kaiki",
    "t": "AS Emazz",
    "p": 10
+  },
+  {
+   "ts": 1789155228179,
+   "a": "altri",
+   "n": "Casadei",
+   "t": "Space Invaders",
+   "p": 16
   }
  ],
  "passed": [
