@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150597671,
+ "updatedAt": 1789150641183,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -305,6 +305,13 @@
    "n": "Neres",
    "t": "AS Emazz",
    "p": 20
+  },
+  {
+   "ts": 1789150641183,
+   "a": "rimasto libero",
+   "n": "Dembelè A.",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
@@ -323,6 +330,10 @@
   {
    "n": "Kevin Carlos",
    "ts": 1789150067064
+  },
+  {
+   "n": "Dembelè A.",
+   "ts": 1789150641183
   }
  ],
  "updates": []
