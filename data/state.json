@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153192139,
+ "updatedAt": 1789153239100,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -249,6 +249,11 @@
    "t": "Real Skënderbeu",
    "p": 35,
    "s": 1
+  },
+  "Ismajli": {
+   "t": "S.S. Longobarda",
+   "p": 10,
+   "s": 1
   }
  },
  "riv": {
@@ -258,8 +263,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 295,
-   "g": 7,
+   "c": 285,
+   "g": 8,
    "p": 0
   },
   "Al-Chaos-Ahli": {
@@ -739,6 +744,13 @@
    "n": "Mancini",
    "t": "Real Skënderbeu",
    "p": 35
+  },
+  {
+   "ts": 1789153239100,
+   "a": "altri",
+   "n": "Ismajli",
+   "t": "S.S. Longobarda",
+   "p": 10
   }
  ],
  "passed": [
