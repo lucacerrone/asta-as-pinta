@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789163672133,
+ "updatedAt": 1789163789072,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1048,6 +1048,10 @@
   "Zambo Anguissa": {
    "t": "Fun Cool FC",
    "p": 22
+  },
+  "Valeri": {
+   "t": "Fun Cool FC",
+   "p": 13
   }
  },
  "riv": {
@@ -3015,6 +3019,13 @@
    "n": "Zambo Anguissa",
    "t": "Fun Cool FC",
    "p": 22
+  },
+  {
+   "ts": 1789163789072,
+   "a": "altri",
+   "n": "Valeri",
+   "t": "Fun Cool FC",
+   "p": 13
   }
  ],
  "passed": [
