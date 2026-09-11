@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149784257,
+ "updatedAt": 1789149889473,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -19,6 +19,11 @@
   "Mota": {
    "t": "AS Emazz",
    "p": 1,
+   "s": 1
+  },
+  "Ekkelenkamp": {
+   "t": "Real Skënderbeu",
+   "p": 23,
    "s": 1
   }
  },
@@ -49,8 +54,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 500,
-   "g": 0,
+   "c": 477,
+   "g": 1,
    "p": 0
   },
   "Space Invaders": {
@@ -132,6 +137,13 @@
    "n": "Thiam",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789149889473,
+   "a": "altri",
+   "n": "Ekkelenkamp",
+   "t": "Real Skënderbeu",
+   "p": 23
   }
  ],
  "passed": [
