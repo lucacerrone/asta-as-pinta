@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154070818,
+ "updatedAt": 1789154117004,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -329,6 +329,11 @@
    "t": "S.S. Longobarda",
    "p": 17,
    "s": 1
+  },
+  "Caprile": {
+   "t": "S.S. Longobarda",
+   "p": 18,
+   "s": 1
   }
  },
  "riv": {
@@ -338,9 +343,9 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 247,
-   "g": 10,
-   "p": 0
+   "c": 229,
+   "g": 11,
+   "p": 1
   },
   "Al-Chaos-Ahli": {
    "c": 428,
@@ -931,6 +936,13 @@
    "n": "Maldini",
    "t": "S.S. Longobarda",
    "p": 17
+  },
+  {
+   "ts": 1789154117004,
+   "a": "altri",
+   "n": "Caprile",
+   "t": "S.S. Longobarda",
+   "p": 18
   }
  ],
  "passed": [
