@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153442390,
+ "updatedAt": 1789153498172,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -279,12 +279,17 @@
    "t": "chill curre",
    "p": 9,
    "s": 1
+  },
+  "Hien": {
+   "t": "chill curre",
+   "p": 14,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 482,
-   "g": 2,
+   "c": 468,
+   "g": 3,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -811,6 +816,13 @@
    "n": "Viery",
    "t": "chill curre",
    "p": 9
+  },
+  {
+   "ts": 1789153498172,
+   "a": "altri",
+   "n": "Hien",
+   "t": "chill curre",
+   "p": 14
   }
  ],
  "passed": [
