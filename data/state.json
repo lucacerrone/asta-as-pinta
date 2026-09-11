@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154990381,
+ "updatedAt": 1789155017476,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -418,6 +418,11 @@
    "t": "Real Skënderbeu",
    "p": 2,
    "s": 1
+  },
+  "Amorim": {
+   "t": "NewRock",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -462,8 +467,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": -50,
-   "g": 7,
+   "c": -51,
+   "g": 8,
    "p": 0
   },
   "Fc Afragolese": {
@@ -1174,6 +1179,13 @@
    "n": "Gorter",
    "t": "Real Skënderbeu",
    "p": 2
+  },
+  {
+   "ts": 1789155017476,
+   "a": "altri",
+   "n": "Amorim",
+   "t": "NewRock",
+   "p": 1
   }
  ],
  "passed": [
