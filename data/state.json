@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789157014824,
+ "updatedAt": 1789157145862,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -575,6 +575,11 @@
    "t": "Fc Afragolese",
    "p": 86,
    "s": 1
+  },
+  "Miranda J.": {
+   "t": "AS Emazz",
+   "p": 11,
+   "s": 1
   }
  },
  "riv": {
@@ -614,8 +619,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 401,
-   "g": 6,
+   "c": 390,
+   "g": 7,
    "p": 0
   },
   "NewRock": {
@@ -1618,6 +1623,13 @@
    "n": "Calhanoglu",
    "t": "Fc Afragolese",
    "p": 86
+  },
+  {
+   "ts": 1789157145862,
+   "a": "altri",
+   "n": "Miranda J.",
+   "t": "AS Emazz",
+   "p": 11
   }
  ],
  "passed": [
