@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152015132,
+ "updatedAt": 1789152051488,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -151,6 +151,11 @@
    "t": "NewRock",
    "p": 7,
    "s": 1
+  },
+  "Dominguez B.": {
+   "t": "Real Skënderbeu",
+   "p": 4,
+   "s": 1
   }
  },
  "riv": {
@@ -180,8 +185,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 411,
-   "g": 3,
+   "c": 407,
+   "g": 4,
    "p": 0
   },
   "Space Invaders": {
@@ -487,6 +492,13 @@
    "n": "Monterisi",
    "t": "NewRock",
    "p": 7
+  },
+  {
+   "ts": 1789152051488,
+   "a": "altri",
+   "n": "Dominguez B.",
+   "t": "Real Skënderbeu",
+   "p": 4
   }
  ],
  "passed": [
