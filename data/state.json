@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156179693,
+ "updatedAt": 1789156232042,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -535,6 +535,11 @@
    "t": "Fight Club",
    "p": 12,
    "s": 1
+  },
+  "Calò": {
+   "t": "AS Emazz",
+   "p": 20,
+   "s": 1
   }
  },
  "riv": {
@@ -574,8 +579,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 421,
-   "g": 5,
+   "c": 401,
+   "g": 6,
    "p": 0
   },
   "NewRock": {
@@ -1522,6 +1527,13 @@
    "n": "Cambiaghi",
    "t": "Fight Club",
    "p": 12
+  },
+  {
+   "ts": 1789156232042,
+   "a": "altri",
+   "n": "Calò",
+   "t": "AS Emazz",
+   "p": 20
   }
  ],
  "passed": [
