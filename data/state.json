@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158471830,
+ "updatedAt": 1789158518369,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -665,6 +665,11 @@
    "t": "Fun Cool FC",
    "p": 21,
    "s": 1
+  },
+  "Vasquez": {
+   "t": "Fight Club",
+   "p": 20,
+   "s": 1
   }
  },
  "riv": {
@@ -719,8 +724,8 @@
    "p": 1
   },
   "Fight Club": {
-   "c": -9,
-   "g": 8,
+   "c": -29,
+   "g": 9,
    "p": 2
   },
   "Big Tasty FC": {
@@ -1855,6 +1860,13 @@
    "n": "De Winter",
    "t": "Fun Cool FC",
    "p": 21
+  },
+  {
+   "ts": 1789158518369,
+   "a": "altri",
+   "n": "Vasquez",
+   "t": "Fight Club",
+   "p": 20
   }
  ],
  "passed": [
