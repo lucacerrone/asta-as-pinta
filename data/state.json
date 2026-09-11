@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167589733,
+ "updatedAt": 1789167660128,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1336,6 +1336,10 @@
   "Doekhi": {
    "t": "Big Tasty FC",
    "p": 4
+  },
+  "Kolasinac": {
+   "t": "Fun Cool FC",
+   "p": 2
   }
  },
  "riv": {
@@ -3842,6 +3846,13 @@
    "n": "Doekhi",
    "t": "Big Tasty FC",
    "p": 4
+  },
+  {
+   "ts": 1789167660128,
+   "a": "altri",
+   "n": "Kolasinac",
+   "t": "Fun Cool FC",
+   "p": 2
   }
  ],
  "passed": [
