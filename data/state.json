@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167660128,
+ "updatedAt": 1789167937830,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1340,6 +1340,18 @@
   "Kolasinac": {
    "t": "Fun Cool FC",
    "p": 2
+  },
+  "Moreira": {
+   "t": "Al-Chaos-Ahli",
+   "p": 15
+  },
+  "Doig": {
+   "t": "Big Tasty FC",
+   "p": 5
+  },
+  "Sanchez Ro.": {
+   "t": "NewRock",
+   "p": 1
   }
  },
  "riv": {
@@ -3853,6 +3865,27 @@
    "n": "Kolasinac",
    "t": "Fun Cool FC",
    "p": 2
+  },
+  {
+   "ts": 1789167937829,
+   "a": "altri (foto/integrazione)",
+   "n": "Moreira",
+   "t": "Al-Chaos-Ahli",
+   "p": 15
+  },
+  {
+   "ts": 1789167937829,
+   "a": "altri (foto/integrazione)",
+   "n": "Doig",
+   "t": "Big Tasty FC",
+   "p": 5
+  },
+  {
+   "ts": 1789167937829,
+   "a": "altri (foto/integrazione)",
+   "n": "Sanchez Ro.",
+   "t": "NewRock",
+   "p": 1
   }
  ],
  "passed": [
@@ -3890,11 +3923,6 @@
   }
  ],
  "updates": [
-  {
-   "ts": 1789154277773,
-   "label": "Aggiornamento da screenshot",
-   "text": "la fotografia ha aggiornato 6 squadre (Space Invaders: 343→71 cr; Al-Chaos-Ahli: 428→22 cr; Al-Chaos-Ahli: 428→22 cr; +3 altre). sono state integrate 6 assegnazioni, 2 completate con informazioni mancanti."
-  },
   {
    "ts": 1789155699002,
    "label": "Aggiornamento da screenshot",
@@ -3989,6 +4017,11 @@
    "ts": 1789167409298,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 15 assegnazioni."
+  },
+  {
+   "ts": 1789167937830,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 3 assegnazioni: Moreira, Doig, Sanchez Ro.."
   }
  ]
 }
