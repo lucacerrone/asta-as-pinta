@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151704671,
+ "updatedAt": 1789151775787,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -121,6 +121,11 @@
   "Varela G.": {
    "t": "",
    "p": ""
+  },
+  "Gilmour": {
+   "t": "AS Emazz",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -160,8 +165,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 479,
-   "g": 2,
+   "c": 478,
+   "g": 3,
    "p": 0
   },
   "NewRock": {
@@ -408,6 +413,13 @@
    "n": "Varela G.",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789151775787,
+   "a": "altri",
+   "n": "Gilmour",
+   "t": "AS Emazz",
+   "p": 1
   }
  ],
  "passed": [
