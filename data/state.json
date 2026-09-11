@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168873269,
+ "updatedAt": 1789168915457,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1416,6 +1416,10 @@
   "Bellanova": {
    "t": "chill curre",
    "p": 4
+  },
+  "Obert": {
+   "t": "Pro Stata",
+   "p": 6
   }
  },
  "riv": {
@@ -4069,6 +4073,13 @@
    "n": "Bellanova",
    "t": "chill curre",
    "p": 4
+  },
+  {
+   "ts": 1789168915457,
+   "a": "altri",
+   "n": "Obert",
+   "t": "Pro Stata",
+   "p": 6
   }
  ],
  "passed": [
