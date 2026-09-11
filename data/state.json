@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153050671,
+ "updatedAt": 1789153087303,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -234,6 +234,11 @@
    "t": "Real Skënderbeu",
    "p": 10,
    "s": 1
+  },
+  "Mout": {
+   "t": "Real Skënderbeu",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -263,8 +268,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 362,
-   "g": 7,
+   "c": 361,
+   "g": 8,
    "p": 0
   },
   "Space Invaders": {
@@ -703,6 +708,13 @@
    "n": "Gallo",
    "t": "Real Skënderbeu",
    "p": 10
+  },
+  {
+   "ts": 1789153087303,
+   "a": "altri",
+   "n": "Mout",
+   "t": "Real Skënderbeu",
+   "p": 1
   }
  ],
  "passed": [
