@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151091145,
+ "updatedAt": 1789151099280,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -107,6 +107,11 @@
    "t": "S.S. Longobarda",
    "p": 83,
    "s": 1
+  },
+  "Provedel": {
+   "t": "Space Invaders",
+   "p": 9,
+   "s": 1
   }
  },
  "riv": {
@@ -141,9 +146,9 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 500,
-   "g": 0,
-   "p": 0
+   "c": 491,
+   "g": 1,
+   "p": 1
   },
   "AS Emazz": {
    "c": 479,
@@ -373,6 +378,13 @@
    "n": "Raimondo",
    "t": "S.S. Longobarda",
    "p": 83
+  },
+  {
+   "ts": 1789151099280,
+   "a": "altri",
+   "n": "Provedel",
+   "t": "Space Invaders",
+   "p": 9
   }
  ],
  "passed": [
