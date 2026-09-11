@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161196433,
+ "updatedAt": 1789161202337,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -856,6 +856,10 @@
   "Sarr P.": {
    "t": "S.S. Longobarda",
    "p": 19
+  },
+  "Samardzic": {
+   "t": "S.S. Longobarda",
+   "p": 40
   }
  },
  "riv": {
@@ -2473,6 +2477,13 @@
    "n": "Samardzic",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789161202337,
+   "a": "altri",
+   "n": "Samardzic",
+   "t": "S.S. Longobarda",
+   "p": 40
   }
  ],
  "passed": [
