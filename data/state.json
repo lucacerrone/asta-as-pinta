@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153792901,
+ "updatedAt": 1789153907210,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -309,6 +309,11 @@
    "t": "Fight Club",
    "p": 19,
    "s": 1
+  },
+  "Berardi": {
+   "t": "Space Invaders",
+   "p": 71,
+   "s": 1
   }
  },
  "riv": {
@@ -343,8 +348,8 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 414,
-   "g": 3,
+   "c": 343,
+   "g": 4,
    "p": 1
   },
   "AS Emazz": {
@@ -883,6 +888,13 @@
    "n": "Dodò",
    "t": "Fight Club",
    "p": 19
+  },
+  {
+   "ts": 1789153907209,
+   "a": "altri",
+   "n": "Berardi",
+   "t": "Space Invaders",
+   "p": 71
   }
  ],
  "passed": [
