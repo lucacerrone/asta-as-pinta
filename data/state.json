@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166487886,
+ "updatedAt": 1789166632607,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1240,6 +1240,10 @@
   "Hainaut": {
    "t": "Fc Afragolese",
    "p": 1
+  },
+  "Lucumì": {
+   "t": "chill curre",
+   "p": 6
   }
  },
  "riv": {
@@ -3564,6 +3568,13 @@
    "n": "Hainaut",
    "t": "Fc Afragolese",
    "p": 1
+  },
+  {
+   "ts": 1789166632607,
+   "a": "altri",
+   "n": "Lucumì",
+   "t": "chill curre",
+   "p": 6
   }
  ],
  "passed": [
