@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789161940049,
+ "updatedAt": 1789162011586,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -48,6 +48,10 @@
   },
   {
    "n": "Falcone",
+   "p": 10
+  },
+  {
+   "n": "Yeboah J.",
    "p": 10
   }
  ],
@@ -2658,6 +2662,13 @@
    "ts": 1789161940049,
    "a": "noi",
    "n": "Falcone",
+   "t": "AS Pinta",
+   "p": 10
+  },
+  {
+   "ts": 1789162011586,
+   "a": "noi",
+   "n": "Yeboah J.",
    "t": "AS Pinta",
    "p": 10
   }
