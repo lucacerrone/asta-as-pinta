@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150336844,
+ "updatedAt": 1789150399929,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -68,6 +68,11 @@
    "t": "Al-Chaos-Ahli",
    "p": 22,
    "s": 1
+  },
+  "Sagrado": {
+   "t": "AC OMMODITY",
+   "p": 3,
+   "s": 1
   }
  },
  "riv": {
@@ -87,8 +92,8 @@
    "p": 0
   },
   "AC OMMODITY": {
-   "c": 499,
-   "g": 1,
+   "c": 496,
+   "g": 2,
    "p": 0
   },
   "Pro Stata": {
@@ -257,6 +262,13 @@
    "n": "Esposito Se.",
    "t": "Al-Chaos-Ahli",
    "p": 22
+  },
+  {
+   "ts": 1789150399929,
+   "a": "altri",
+   "n": "Sagrado",
+   "t": "AC OMMODITY",
+   "p": 3
   }
  ],
  "passed": [
