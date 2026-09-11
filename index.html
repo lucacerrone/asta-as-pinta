@@ -540,6 +540,8 @@ details.section-help .help-body{color:var(--ios-label2)}
 .sp-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
 .sp-gap{color:var(--ios-orange,#C93400);font-weight:700} .sp-neg{color:var(--ios-indigo,#3634A3);font-weight:700} .sp-ok{color:var(--ios-green,#248A3D);font-weight:700} .sp-miss{color:var(--ios-orange,#C93400)}
 @media (max-width:560px){ .sp-kpis{grid-template-columns:repeat(2,minmax(0,1fr))} .sp-kpis strong{font-size:20px} }
+
+.riv-flag{color:var(--ios-orange,#C93400);font-weight:600;margin-top:4px;line-height:1.3}
 </style>
 </head>
 <body>
@@ -551,7 +553,7 @@ details.section-help .help-body{color:var(--ios-label2)}
 <script>
 
 "use strict";
-const APP_VERSION = "2.8.1";
+const APP_VERSION = "2.8.2";
 const ROLES = ["Por","Dc","B","Dd","Ds","E","M","C","W","T","A","Pc"];
 // 11 schemi ufficiali Mantra. Ogni slot contiene i ruoli alternativi ammessi senza malus.
 const MANTRA_FORMATIONS = [
@@ -682,9 +684,9 @@ function teamSpendHTML(){
   return `<div class="card spend-card">
     <div class="sp-head"><div><b>Spesa registrata per squadra</b><div class="small">Somma dei prezzi dei giocatori registrati. Ogni giocatore conta una sola volta, anche se ha più ruoli Mantra: nel grafico finisce nel reparto del suo ruolo principale.</div></div></div>
     <div class="sp-kpis"><div><span>Totale lega</span><strong>${tot}</strong><em>cr registrati</em></div><div><span>Giocatori</span><strong>${players}</strong><em>con squadra</em></div><div><span>Media squadra</span><strong>${Math.round(tot / Math.max(1, rows.length))}</strong><em>cr</em></div><div class="${miss ? "sp-warn" : ""}"><span>Prezzi mancanti</span><strong>${miss}</strong><em>esclusi dalla somma</em></div></div>
-    <div class="tscroll"><table class="sp-table"><thead><tr><th>Squadra</th><th class="num">Gioc.</th><th class="num">Spesi</th><th class="num">Residuo calcolato</th><th class="num">Crediti da foto</th><th class="num">Scarto</th><th>Per reparto</th></tr></thead><tbody>
-    ${sorted.map(r => `<tr class="${r.t === NOI ? "sp-you" : ""}" data-spendteam="${esc(r.t)}" data-spendsum="${r.sum}" data-spendn="${r.n}"><td><b>${esc(r.t)}</b>${r.missing ? `<br><span class="small sp-miss">${r.missing} senza prezzo</span>` : ""}</td><td class="num">${r.n}</td><td class="num"><b>${r.sum}</b></td><td class="num">${r.rest}</td><td class="num">${r.photoRem === null ? "—" : r.photoRem}</td><td class="num">${r.gap === null ? "—" : (r.gap === 0 ? `<span class="sp-ok">ok</span>` : (r.gap > 0 ? `<span class="sp-gap" title="Crediti spesi secondo la foto ma non coperti da nomi registrati">+${r.gap}</span>` : `<span class="sp-neg" title="Somma registrata superiore alla spesa della foto: foto vecchia o prezzo da correggere">${r.gap}</span>`))}</td><td class="sp-cell">${bar(r)}</td></tr>`).join("")}
-    ${unknown.n ? `<tr data-spendteam="?" data-spendsum="${unknown.sum}"><td><b>Squadra non indicata</b></td><td class="num">${unknown.n}</td><td class="num"><b>${unknown.sum}</b></td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td></td></tr>` : ""}
+    <div class="tscroll"><table class="sp-table"><thead><tr><th>Squadra</th><th class="num">Gioc.</th><th class="num">Spesi</th><th class="num">Residuo calcolato</th><th class="num">Crediti da foto</th><th class="num">Crediti stimati</th><th class="num">Scarto</th><th>Per reparto</th></tr></thead><tbody>
+    ${sorted.map(r => `<tr class="${r.t === NOI ? "sp-you" : ""}" data-spendteam="${esc(r.t)}" data-spendsum="${r.sum}" data-spendn="${r.n}"><td><b>${esc(r.t)}</b>${r.missing ? `<br><span class="small sp-miss">${r.missing} senza prezzo</span>` : ""}</td><td class="num">${r.n}</td><td class="num"><b>${r.sum}</b></td><td class="num">${r.rest}</td><td class="num">${r.photoRem === null ? "—" : r.photoRem}</td><td class="num"><b>${r.t === NOI ? me().rem : rivEff(r.t).c}</b></td><td class="num">${r.gap === null ? "—" : (r.gap === 0 ? `<span class="sp-ok">ok</span>` : (r.gap > 0 ? `<span class="sp-gap" title="Crediti spesi secondo la foto ma non coperti da nomi registrati">+${r.gap}</span>` : `<span class="sp-neg" title="Somma registrata superiore alla spesa della foto: foto vecchia o prezzo da correggere">${r.gap}</span>`))}</td><td class="sp-cell">${bar(r)}</td></tr>`).join("")}
+    ${unknown.n ? `<tr data-spendteam="?" data-spendsum="${unknown.sum}"><td><b>Squadra non indicata</b></td><td class="num">${unknown.n}</td><td class="num"><b>${unknown.sum}</b></td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td></td></tr>` : ""}
     </tbody></table></div>
     <div class="sp-legend">${legend}</div>
     <div class="small">Residuo calcolato = ${budget} meno la somma registrata. Scarto = crediti spesi secondo l'ultima foto meno la somma registrata: <b>+N</b> vuol dire acquisti non ancora registrati per nome o prezzo; un valore negativo indica una foto più vecchia delle registrazioni.</div>
@@ -928,22 +930,42 @@ function me(){
   return {spent, por, mov, tot, rem, porMiss, movMiss, tecPor, tecMov, mustRes, finRes,
     consPor: Math.max(0, tecPor - mustRes - finRes), consMov: Math.max(0, tecMov - mustRes - finRes)};
 }
+/* v2.8.2: stima rivali senza doppi conteggi.
+   Foto e registrazioni sono entrambe stime per eccesso dei crediti reali: si usa la più bassa.
+   Se il dato salvato è negativo o sotto il minimo per completare la rosa, viene ricalcolato dai registrati. */
+function rivEff(t){
+  const raw = S.riv[t] || {c:S.set.budget, g:0, p:0}, budget = +S.set.budget || 0, mine = new Set((S.mine||[]).map(x => x.n));
+  let regSum = 0, regN = 0, regPor = 0;
+  Object.entries(S.asg || {}).forEach(([n, a]) => {
+    if (!a || a.t !== t || mine.has(n)) return;
+    regN++; if (isPor(n)) regPor++;
+    const v = Number(a.p); if (a.p !== "" && a.p !== null && a.p !== undefined && isFinite(v)) regSum += v;
+  });
+  const regRem = budget - regSum, rc = Number(raw.c), rg = +raw.g || 0, rp = +raw.p || 0;
+  const g = Math.min(RULES.rosaMax, Math.max(rg, regN)), p = Math.max(rp, regPor);
+  const minNeeded = Math.max(0, RULES.porMin - p) + Math.max(0, RULES.movMin - Math.max(0, g - p));
+  let c, flag = "";
+  if (!isFinite(rc)) { c = regRem; flag = "crediti mancanti: stimati dai registrati"; }
+  else if (rc < 0 || rc < Math.min(minNeeded, regRem)) { c = regRem; flag = `dato salvato incoerente (${rc} cr): stimato dai registrati, aggiorna con una foto`; }
+  else c = Math.min(rc, regRem);
+  return {c: Math.max(0, c), g, p, raw: {c: rc, g: rg, p: rp}, regSum, regN, flag};
+}
 function rivSlots(r){ const mov=Math.max(0,r.g-r.p); return Math.max(0,RULES.porMin-r.p)+Math.max(0,RULES.movMin-mov); }
-function rivalPower(r){ return r.c / Math.max(1, rivSlots(r)); }
+function rivalPower(r){ return Math.max(0, +r.c || 0) / Math.max(1, rivSlots(r)); }
 function rivMax(r, portiere){
   const mov = Math.max(0, r.g - r.p), porMiss = Math.max(0, RULES.porMin - r.p), movMiss = Math.max(0, RULES.movMin - mov);
   if (portiere) return (r.p >= RULES.porMax || r.g >= RULES.rosaMax) ? 0 : Math.max(0, r.c - (Math.max(0, porMiss-1) + movMiss));
   return (mov >= RULES.movMax || r.g >= RULES.rosaMax) ? 0 : Math.max(0, r.c - (porMiss + Math.max(0, movMiss-1)));
 }
-function topRival(portiere){ let best = {t:"-", v:0}; for (const t of RIVALS){ const v = rivMax(S.riv[t] || {c:S.set.budget,g:0,p:0}, portiere); if (v > best.v) best = {t, v}; } return best; }
+function topRival(portiere){ let best = {t:"-", v:0}; for (const t of RIVALS){ const v = rivMax(rivEff(t), portiere); if (v > best.v) best = {t, v}; } return best; }
 function auctionStats(){
   const m=me(), tracked=S.mine.length+Object.keys(S.asg).length, target=TEAMS.length*(+S.set.target||27), totalBudget=TEAMS.length*S.set.budget;
-  const residual=m.rem+RIVALS.reduce((a,t)=>a+(+S.riv[t].c||0),0), spentPct=Math.max(0,Math.min(100,Math.round((1-residual/totalBudget)*100)));
+  const residual=m.rem+RIVALS.reduce((a,t)=>a+(rivEff(t).c),0), spentPct=Math.max(0,Math.min(100,Math.round((1-residual/totalBudget)*100)));
   const comp=Math.min(100,Math.round(tracked/Math.max(1,target)*100));
   const paid=[]; S.mine.forEach(x=>{ const p=byName.get(x.n); if(p && +x.p>0) paid.push([+x.p,market(p)]); }); Object.entries(S.asg).forEach(([n,a])=>{ const p=byName.get(n); if(p && +a.p>0) paid.push([+a.p,market(p)]); });
   const inflN=paid.length, infl=inflN ? paid.reduce((a,x)=>a+x[0],0)/Math.max(1,paid.reduce((a,x)=>a+x[1],0)) : 1;
   const ourSlots=Math.max(1,m.porMiss+m.movMiss), ourPower=m.rem/ourSlots;
-  const rp=RIVALS.map(t=>rivalPower(S.riv[t])); const avgPower=rp.reduce((a,x)=>a+x,0)/Math.max(1,rp.length);
+  const rp=RIVALS.map(t=>rivalPower(rivEff(t))); const avgPower=rp.reduce((a,x)=>a+x,0)/Math.max(1,rp.length);
   return {tracked,target,comp,spentPct,infl,inflN,ourPower,avgPower};
 }
 function budgetArea(p){ if(!p) return "Altro"; if(p.tr==="Por") return "Por"; if(["Dc","B","Dd","Ds","E"].includes(p.tr)) return "Difesa"; if(["M","C"].includes(p.tr)) return "Centrocampo"; if(["W","T"].includes(p.tr)) return "Trequarti"; if(["A","Pc"].includes(p.tr)) return "Attacco"; return "Altro"; }
@@ -1163,7 +1185,7 @@ function checkAIText(){
   lines.push(`Manuali: ${(S.black||[]).join(', ')||'nessuno'}. Squadre ultima spiaggia: ${(CFG.evitaSquadre||[]).join(', ')||'nessuna'}.`);
   lines.push(``);
   lines.push(`## Rivali`);
-  RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t]),known:rosterForTeam(t)})).sort((a,b)=>b.power-a.power).forEach(x=>{
+  RIVALS.map(t=>({t,r:rivEff(t),power:rivalPower(rivEff(t)),known:rosterForTeam(t)})).sort((a,b)=>b.power-a.power).forEach(x=>{
     lines.push(`### ${x.t}`); lines.push(`Crediti ${x.r.c}; giocatori snapshot ${x.r.g}; portieri ${x.r.p}; potere d'acquisto ${x.power.toFixed(1)} cr/posto; nomi registrati ${x.known.length}.`);
     x.known.forEach(z=>lines.push(`- ${z.n}; ruoli ${z.p?z.p.r:'?'}; prezzo ${z.price||'MANCANTE'}`));
   });
@@ -1325,12 +1347,12 @@ function viewRosa(m){
   return h;
 }
 function viewRivali(){
-  const rows=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t]),slots:rivSlots(S.riv[t]),known:rosterForTeam(t).length})).sort((a,b)=>b.power-a.power), m=me(), ourSlots=Math.max(0,m.porMiss+m.movMiss), ourPower=m.rem/Math.max(1,ourSlots), maxPower=Math.max(1,ourPower,...rows.map(x=>x.power));
+  const rows=RIVALS.map(t=>({t,r:rivEff(t),power:rivalPower(rivEff(t)),slots:rivSlots(rivEff(t)),known:rosterForTeam(t).length})).sort((a,b)=>b.power-a.power), m=me(), ourSlots=Math.max(0,m.porMiss+m.movMiss), ourPower=m.rem/Math.max(1,ourSlots), maxPower=Math.max(1,ourPower,...rows.map(x=>x.power));
   let h = `${sectionTitle("users","Rivali","tocca una squadra per aprire subito la rosa registrata")}<div class="section-head"><span></span><span class="small">${S.upd ? "foto aggiornata "+esc(S.upd) : "nessuna foto ancora"}</span></div>
     ${teamSpendHTML()}
     ${helpBox("Non devi mantenere questi numeri a mano. Arrivano dalle foto. Tocca direttamente il box di una squadra per vedere i giocatori nominali che abbiamo registrato, divisi per ruolo Mantra.","Chi può ancora farti alzare il prezzo?")}
     <div class="rival-grid"><div class="rival-card you"><div class="rline"><span class="rname">${esc(NOI)}<br><span class="small">noi</span></span><span class="big">${ourPower.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,ourPower/maxPower*100)}%"></i></div><div class="rival-statgrid"><div>${mi("wallet")}<b>${m.rem}</b><span>crediti</span></div><div>${mi("layers")}<b>${ourSlots}</b><span>posti min.</span></div><div>${mi("users")}<b>${m.tot}</b><span>rosa</span></div></div><div class="rival-max">Su un movimento oggi AS Pinta può arrivare a <b>${m.consMov}</b> senza rompere la strategia.</div></div>
-      ${rows.map(x=>{const open=rivalOpen===x.t;return `<div class="rival-card clickable ${open?'open':''}" data-rivalopen="${esc(x.t)}"><div class="rline"><span class="rname">${esc(x.t)}</span><span class="big">${x.power.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,x.power/maxPower*100)}%"></i></div><div class="rival-statgrid"><div>${mi("wallet")}<b>${x.r.c}</b><span>crediti</span></div><div>${mi("layers")}<b>${x.slots}</b><span>posti min.</span></div><div>${mi("eye")}<b>${x.known}${x.r.g?`/${x.r.g}`:""}</b><span>nomi noti</span></div></div><div class="rival-max">Rilancio massimo teorico su movimento: <b>${rivMax(x.r,false)}</b></div>${open?rivalRosterBody(x.t):''}</div>`}).join("")}</div>
+      ${rows.map(x=>{const open=rivalOpen===x.t;return `<div class="rival-card clickable ${open?'open':''}" data-rivalopen="${esc(x.t)}"><div class="rline"><span class="rname">${esc(x.t)}</span><span class="big">${x.power.toFixed(1)}</span></div><div class="small">potere d'acquisto · cr/posto</div><div class="power-bar"><i style="width:${Math.min(100,x.power/maxPower*100)}%"></i></div><div class="rival-statgrid"><div>${mi("wallet")}<b>${x.r.c}</b><span>crediti</span></div><div>${mi("layers")}<b>${x.slots}</b><span>posti min.</span></div><div>${mi("eye")}<b>${x.known}${x.r.g?`/${x.r.g}`:""}</b><span>nomi noti</span></div></div><div class="rival-max">Rilancio massimo teorico su movimento: <b>${rivMax(x.r,false)}</b></div>${x.r.flag?`<div class="small riv-flag">⚠ ${esc(x.r.flag)}</div>`:""}${open?rivalRosterBody(x.t):''}</div>`}).join("")}</div>
     ${helpBox("Il rilancio massimo teorico è il massimo matematico che una squadra potrebbe spendere lasciando 1 credito per ciascun posto minimo da coprire. Non è una previsione psicologica.","Come leggere i box")}
     <details><summary>Correzione manuale · solo emergenza</summary><div class="tscroll"><table><thead><tr><th>Squadra</th><th>Crediti</th><th>Gioc.</th><th>Por</th></tr></thead><tbody>`;
   for (const x of rows){ const t=x.t,r=x.r; h += `<tr><td>${esc(t)}</td><td><input type="number" inputmode="numeric" value="${r.c}" data-riv="${esc(t)}" data-k="c"></td><td><input type="number" inputmode="numeric" value="${r.g}" data-riv="${esc(t)}" data-k="g"></td><td><input type="number" inputmode="numeric" value="${r.p}" data-riv="${esc(t)}" data-k="p"></td></tr>`; }
@@ -1522,7 +1544,7 @@ function currentSituationText(){
 }
 function stateSnapshotHTML(){
   const m=me(), st=auctionStats(), risks=holeRisks(), close=closingCandidates(), cov=ROLES.filter(r=>(+MINS[r]||0)>0).map(r=>[r,roleCountMine(r)]), budgets=budgetStatus(), forms=formationAnalysis(), now=new Date();
-  const riv=RIVALS.map(t=>({t,r:S.riv[t],power:rivalPower(S.riv[t])})).sort((a,b)=>b.power-a.power), maxPower=Math.max(1,st.ourPower,...riv.map(x=>x.power));
+  const riv=RIVALS.map(t=>({t,r:rivEff(t),power:rivalPower(rivEff(t))})).sort((a,b)=>b.power-a.power), maxPower=Math.max(1,st.ourPower,...riv.map(x=>x.power));
   const mustOpen=S.must.filter(x=>!mineOf(x.n)&&!S.asg[x.n]);
   const rows=S.mine.map(x=>{const p=byName.get(x.n);return `<tr><td><b>${esc(x.n)}</b></td><td>${p?esc(p.t):"—"}</td><td>${p?esc(p.r):(x.por?"Por":"—")}</td><td>${esc(x.p)}</td></tr>`}).join("");
   const updates=(S.updates||[]).slice(-2).reverse();
@@ -1593,14 +1615,14 @@ document.addEventListener("click", e => {
       selected=null; query=""; commit(pr>0?`${n} preso a ${pr}`:`${n} registrato · ⚠ prezzo da verificare`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
     }
     const t=choice||"", a={t,p:pr>0?pr:""};
-    if(t && pr>0 && S.riv[t]){ const r=S.riv[t]; r.c-=pr; r.g+=1; if(isPor(n)) r.p+=1; a.s=1; }
+    /* v2.8.2: nessuna sottrazione incrementale: crediti rivali = foto + registrati (rivEff) */
     S.asg[n]=a; logEvent("altri",n,t,pr>0?pr:"");
     selected=null; query=""; commit(pr>0?`${n} segnato come preso${t?" da "+t:" · da verificare"}`:`${n} registrato${t?" a "+t:""} · ⚠ prezzo da verificare`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return;
   }
   if (d.buy){ const pr = parseInt($("#price").value, 10); if (!(pr > 0)){ toast("Scrivi il prezzo pagato"); $("#price").focus(); return; } saveUndo(`acquisto ${d.buy}`); removeKnownAssignment(d.buy); clearPassed(d.buy); S.mine.push({n: d.buy, p: pr}); logEvent("noi", d.buy, NOI, pr); selected = null; query = ""; commit(`${d.buy} preso a ${pr}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
   if (d.pass){ saveUndo(`rimasto libero ${d.pass}`); clearPassed(d.pass); S.passed.push({n:d.pass,ts:Date.now()}); logEvent("rimasto libero",d.pass,"",""); selected=null; query=""; commit(`${d.pass} segnato come ancora libero`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
   if (d.other){ const tr=document.querySelector('input[name="teamChoice"]:checked'), t=tr?tr.value:"", pr = parseInt($("#price").value, 10); saveUndo(`assegnazione ${d.other}`); removeKnownAssignment(d.other); clearPassed(d.other); const a = {t, p: pr > 0 ? pr : ""};
-    if (t && pr > 0){ const r = S.riv[t]; r.c -= pr; r.g += 1; if (isPor(d.other)) r.p += 1; a.s = 1; }
+    /* v2.8.2: nessuna sottrazione incrementale (vedi rivEff) */
     S.asg[d.other] = a; logEvent("altri", d.other, t, pr > 0 ? pr : ""); selected = null; query = ""; commit(`${d.other} segnato come preso${t ? " da " + t : ""}`); setTimeout(()=>$("#q")&&$("#q").focus(),30); return; }
   if (d.undo){ const n = d.undo; saveUndo(`annulla assegnazione ${n}`); const i = S.mine.findIndex(x => x.n === n); if (i >= 0) S.mine.splice(i, 1);
     const a = S.asg[n]; if (a){ if (a.s && a.t && a.p){ const r = S.riv[a.t]; r.c += +a.p; r.g -= 1; if (isPor(n)) r.p -= 1; } delete S.asg[n]; }
