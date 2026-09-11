@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168289920,
+ "updatedAt": 1789168558983,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -85,6 +85,10 @@
   {
    "n": "Scalvini",
    "p": 21
+  },
+  {
+   "n": "Vojvoda",
+   "p": 10
   }
  ],
  "asg": {
@@ -3908,6 +3912,13 @@
    "n": "Scalvini",
    "t": "AS Pinta",
    "p": 21
+  },
+  {
+   "ts": 1789168558983,
+   "a": "noi",
+   "n": "Vojvoda",
+   "t": "AS Pinta",
+   "p": 10
   }
  ],
  "passed": [
