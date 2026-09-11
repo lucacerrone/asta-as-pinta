@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789162011586,
+ "updatedAt": 1789162801032,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -928,6 +928,62 @@
   "Ndour": {
    "t": "chill curre",
    "p": 15
+  },
+  "Delprato": {
+   "t": "chill curre",
+   "p": 21
+  },
+  "Fortini": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Martinez Jo.": {
+   "t": "Space Invaders",
+   "p": 49
+  },
+  "Theate": {
+   "t": "Al-Chaos-Ahli",
+   "p": 12
+  },
+  "Pavlovic": {
+   "t": "Fun Cool FC",
+   "p": 30
+  },
+  "Taylor K.": {
+   "t": "Big Tasty FC",
+   "p": 29
+  },
+  "Carboni F.": {
+   "t": "NewRock",
+   "p": 1
+  },
+  "Matic": {
+   "t": "S.S. Longobarda",
+   "p": 9
+  },
+  "Modric": {
+   "t": "Fun Cool FC",
+   "p": 22
+  },
+  "Oulai": {
+   "t": "AS Emazz",
+   "p": 10
+  },
+  "Pulisic": {
+   "t": "Space Invaders",
+   "p": 66
+  },
+  "Moreno M.": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Thorstvedt": {
+   "t": "Fight Club",
+   "p": 9
+  },
+  "Milinkovic-Savic V.": {
+   "t": "Fun Cool FC",
+   "p": 22
   }
  },
  "riv": {
@@ -977,7 +1033,7 @@
    "p": 0
   },
   "Fc Afragolese": {
-   "c": 376,
+   "c": 1,
    "g": 5,
    "p": 1
   },
@@ -1004,7 +1060,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "22:56",
+ "upd": "23:40",
  "log": [
   {
    "ts": 1789149704009,
@@ -2671,6 +2727,111 @@
    "n": "Yeboah J.",
    "t": "AS Pinta",
    "p": 10
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Delprato",
+   "t": "chill curre",
+   "p": 21
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Fortini",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Martinez Jo.",
+   "t": "Space Invaders",
+   "p": 49
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Theate",
+   "t": "Al-Chaos-Ahli",
+   "p": 12
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Pavlovic",
+   "t": "Fun Cool FC",
+   "p": 30
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Taylor K.",
+   "t": "Big Tasty FC",
+   "p": 29
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Carboni F.",
+   "t": "NewRock",
+   "p": 1
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Matic",
+   "t": "S.S. Longobarda",
+   "p": 9
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Modric",
+   "t": "Fun Cool FC",
+   "p": 22
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Oulai",
+   "t": "AS Emazz",
+   "p": 10
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Pulisic",
+   "t": "Space Invaders",
+   "p": 66
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Moreno M.",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Thorstvedt",
+   "t": "Fight Club",
+   "p": 9
+  },
+  {
+   "ts": 1789162801031,
+   "a": "altri (foto/integrazione)",
+   "n": "Milinkovic-Savic V.",
+   "t": "Fun Cool FC",
+   "p": 22
+  },
+  {
+   "ts": 1789162801032,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -2772,6 +2933,11 @@
    "ts": 1789161811906,
    "label": "Aggiornamento da screenshot",
    "text": "il controllo non ha prodotto variazioni rispetto ai dati già registrati."
+  },
+  {
+   "ts": 1789162801032,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 1 squadre (Fc Afragolese: 376→1 cr). sono state integrate 14 assegnazioni."
   }
  ]
 }
