@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150087480,
+ "updatedAt": 1789150109436,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -39,6 +39,11 @@
   "Nzola": {
    "t": "AC OMMODITY",
    "p": 1,
+   "s": 1
+  },
+  "Cataldi": {
+   "t": "NewRock",
+   "p": 2,
    "s": 1
   }
  },
@@ -84,8 +89,8 @@
    "p": 0
   },
   "NewRock": {
-   "c": 500,
-   "g": 0,
+   "c": 498,
+   "g": 1,
    "p": 0
   },
   "Fc Afragolese": {
@@ -187,6 +192,13 @@
    "n": "Nzola",
    "t": "AC OMMODITY",
    "p": 1
+  },
+  {
+   "ts": 1789150109436,
+   "a": "altri",
+   "n": "Cataldi",
+   "t": "NewRock",
+   "p": 2
   }
  ],
  "passed": [
