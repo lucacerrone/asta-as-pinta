@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789157193315,
+ "updatedAt": 1789158009437,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -585,6 +585,42 @@
    "t": "Fight Club",
    "p": 15,
    "s": 1
+  },
+  "Calvani": {
+   "t": "S.S. Longobarda",
+   "p": 7
+  },
+  "Bastoni": {
+   "t": "Fc Afragolese",
+   "p": 32
+  },
+  "Bremer": {
+   "t": "Pro Stata",
+   "p": 45
+  },
+  "Geubbels": {
+   "t": "AS Emazz",
+   "p": 1
+  },
+  "Lipani": {
+   "t": "AC OMMODITY",
+   "p": 2
+  },
+  "Kalulu": {
+   "t": "Real Skënderbeu",
+   "p": 39
+  },
+  "Stulic": {
+   "t": "S.S. Longobarda",
+   "p": 1
+  },
+  "Oristanio": {
+   "t": "AS Emazz",
+   "p": 1
+  },
+  "Rodriguez Ju.": {
+   "t": "NewRock",
+   "p": 11
   }
  },
  "riv": {
@@ -639,7 +675,7 @@
    "p": 1
   },
   "Fight Club": {
-   "c": 404,
+   "c": 12,
    "g": 6,
    "p": 0
   },
@@ -661,7 +697,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "21:17",
+ "upd": "22:20",
  "log": [
   {
    "ts": 1789149704009,
@@ -1642,6 +1678,76 @@
    "n": "Dragusin",
    "t": "Fight Club",
    "p": 15
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Calvani",
+   "t": "S.S. Longobarda",
+   "p": 7
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Bastoni",
+   "t": "Fc Afragolese",
+   "p": 32
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Bremer",
+   "t": "Pro Stata",
+   "p": 45
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Geubbels",
+   "t": "AS Emazz",
+   "p": 1
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Lipani",
+   "t": "AC OMMODITY",
+   "p": 2
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Kalulu",
+   "t": "Real Skënderbeu",
+   "p": 39
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Stulic",
+   "t": "S.S. Longobarda",
+   "p": 1
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Oristanio",
+   "t": "AS Emazz",
+   "p": 1
+  },
+  {
+   "ts": 1789158009437,
+   "a": "altri (foto/integrazione)",
+   "n": "Rodriguez Ju.",
+   "t": "NewRock",
+   "p": 11
+  },
+  {
+   "ts": 1789158009437,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -1693,6 +1799,11 @@
    "ts": 1789156066228,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 4 assegnazioni, 2 completate con informazioni mancanti: Jashari, Zalewski, Belahyane, Moro N.."
+  },
+  {
+   "ts": 1789158009437,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 1 squadre (Fight Club: 404→12 cr). sono state integrate 9 assegnazioni."
   }
  ]
 }
