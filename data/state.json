@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155061379,
+ "updatedAt": 1789155119122,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -428,6 +428,10 @@
    "t": "Big Tasty FC",
    "p": 27,
    "s": 1
+  },
+  "Raspadori": {
+   "t": "",
+   "p": ""
   }
  },
  "riv": {
@@ -1198,6 +1202,13 @@
    "n": "Chalobah T.",
    "t": "Big Tasty FC",
    "p": 27
+  },
+  {
+   "ts": 1789155119122,
+   "a": "altri",
+   "n": "Raspadori",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
