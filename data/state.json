@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167448369,
+ "updatedAt": 1789167473356,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1328,6 +1328,10 @@
   "Thuram": {
    "t": "AS Emazz",
    "p": 111
+  },
+  "Miller L.": {
+   "t": "AC OMMODITY",
+   "p": 1
   }
  },
  "riv": {
@@ -3806,6 +3810,13 @@
    "n": "Thuram",
    "t": "AS Emazz",
    "p": 111
+  },
+  {
+   "ts": 1789167473356,
+   "a": "altri",
+   "n": "Miller L.",
+   "t": "AC OMMODITY",
+   "p": 1
   }
  ],
  "passed": [
