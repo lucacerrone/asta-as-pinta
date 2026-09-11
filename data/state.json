@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789169476899,
+ "updatedAt": 1789170096821,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1448,6 +1448,86 @@
   "Badiashile": {
    "t": "Space Invaders",
    "p": 1
+  },
+  "Milla": {
+   "t": "Fun Cool FC",
+   "p": 5
+  },
+  "Wesley": {
+   "t": "Al-Chaos-Ahli",
+   "p": 23
+  },
+  "Pinamonti": {
+   "t": "chill curre",
+   "p": 46
+  },
+  "Njie": {
+   "t": "Pro Stata",
+   "p": 8
+  },
+  "Unai Gomez": {
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  "Loftus-Cheek": {
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  "Svilar": {
+   "t": "Big Tasty FC",
+   "p": 54
+  },
+  "Idzes": {
+   "t": "Pro Stata",
+   "p": 1
+  },
+  "Heggem": {
+   "t": "Pro Stata",
+   "p": 3
+  },
+  "Mandas": {
+   "t": "Pro Stata",
+   "p": 34
+  },
+  "De Bruyne": {
+   "t": "Al-Chaos-Ahli",
+   "p": 25
+  },
+  "Barella": {
+   "t": "chill curre",
+   "p": 26
+  },
+  "Saelemaekers": {
+   "t": "Fc Afragolese",
+   "p": 11
+  },
+  "Celik": {
+   "t": "chill curre",
+   "p": 14
+  },
+  "Caqueret": {
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  "Jones C.": {
+   "t": "Al-Chaos-Ahli",
+   "p": 36
+  },
+  "Volpato": {
+   "t": "Fight Club",
+   "p": 9
+  },
+  "Coco": {
+   "t": "Space Invaders",
+   "p": 2
+  },
+  "Mbangula": {
+   "t": "Pro Stata",
+   "p": 2
+  },
+  "Camarda": {
+   "t": "Fc Afragolese",
+   "p": 3
   }
  },
  "riv": {
@@ -4157,6 +4237,146 @@
    "n": "Terracciano F.",
    "t": "AS Pinta",
    "p": 1
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Milla",
+   "t": "Fun Cool FC",
+   "p": 5
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Wesley",
+   "t": "Al-Chaos-Ahli",
+   "p": 23
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Pinamonti",
+   "t": "chill curre",
+   "p": 46
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Njie",
+   "t": "Pro Stata",
+   "p": 8
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Unai Gomez",
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Loftus-Cheek",
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Svilar",
+   "t": "Big Tasty FC",
+   "p": 54
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Idzes",
+   "t": "Pro Stata",
+   "p": 1
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Heggem",
+   "t": "Pro Stata",
+   "p": 3
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Mandas",
+   "t": "Pro Stata",
+   "p": 34
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "De Bruyne",
+   "t": "Al-Chaos-Ahli",
+   "p": 25
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Barella",
+   "t": "chill curre",
+   "p": 26
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Saelemaekers",
+   "t": "Fc Afragolese",
+   "p": 11
+  },
+  {
+   "ts": 1789170096820,
+   "a": "altri (foto/integrazione)",
+   "n": "Celik",
+   "t": "chill curre",
+   "p": 14
+  },
+  {
+   "ts": 1789170096821,
+   "a": "altri (foto/integrazione)",
+   "n": "Caqueret",
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  {
+   "ts": 1789170096821,
+   "a": "altri (foto/integrazione)",
+   "n": "Jones C.",
+   "t": "Al-Chaos-Ahli",
+   "p": 36
+  },
+  {
+   "ts": 1789170096821,
+   "a": "altri (foto/integrazione)",
+   "n": "Volpato",
+   "t": "Fight Club",
+   "p": 9
+  },
+  {
+   "ts": 1789170096821,
+   "a": "altri (foto/integrazione)",
+   "n": "Coco",
+   "t": "Space Invaders",
+   "p": 2
+  },
+  {
+   "ts": 1789170096821,
+   "a": "altri (foto/integrazione)",
+   "n": "Mbangula",
+   "t": "Pro Stata",
+   "p": 2
+  },
+  {
+   "ts": 1789170096821,
+   "a": "altri (foto/integrazione)",
+   "n": "Camarda",
+   "t": "Fc Afragolese",
+   "p": 3
   }
  ],
  "passed": [
@@ -4194,11 +4414,6 @@
   }
  ],
  "updates": [
-  {
-   "ts": 1789158009437,
-   "label": "Aggiornamento da screenshot",
-   "text": "la fotografia ha aggiornato 1 squadre (Fight Club: 404→12 cr). sono state integrate 9 assegnazioni."
-  },
   {
    "ts": 1789159171358,
    "label": "Aggiornamento da screenshot",
@@ -4293,6 +4508,11 @@
    "ts": 1789169211995,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 5 assegnazioni."
+  },
+  {
+   "ts": 1789170096821,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 20 assegnazioni."
   }
  ]
 }
