@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158155003,
+ "updatedAt": 1789158196399,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -641,6 +641,11 @@
    "t": "AS Emazz",
    "p": 27,
    "s": 1
+  },
+  "Sulemana I.": {
+   "t": "S.S. Longobarda",
+   "p": 1,
+   "s": 1
   }
  },
  "riv": {
@@ -650,8 +655,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": -4,
-   "g": 12,
+   "c": -5,
+   "g": 13,
    "p": 1
   },
   "Al-Chaos-Ahli": {
@@ -1796,6 +1801,13 @@
    "n": "Gila",
    "t": "AS Emazz",
    "p": 27
+  },
+  {
+   "ts": 1789158196399,
+   "a": "altri",
+   "n": "Sulemana I.",
+   "t": "S.S. Longobarda",
+   "p": 1
   }
  ],
  "passed": [
