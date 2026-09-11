@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153368880,
+ "updatedAt": 1789153404021,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -269,6 +269,11 @@
    "t": "AC OMMODITY",
    "p": 35,
    "s": 1
+  },
+  "Fazzini": {
+   "t": "AC OMMODITY",
+   "p": 16,
+   "s": 1
   }
  },
  "riv": {
@@ -288,8 +293,8 @@
    "p": 1
   },
   "AC OMMODITY": {
-   "c": 461,
-   "g": 3,
+   "c": 445,
+   "g": 4,
    "p": 0
   },
   "Pro Stata": {
@@ -787,6 +792,13 @@
    "n": "Zaniolo",
    "t": "AC OMMODITY",
    "p": 35
+  },
+  {
+   "ts": 1789153404021,
+   "a": "altri",
+   "n": "Fazzini",
+   "t": "AC OMMODITY",
+   "p": 16
   }
  ],
  "passed": [
