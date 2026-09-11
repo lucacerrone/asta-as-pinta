@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152260432,
+ "updatedAt": 1789152313718,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -176,6 +176,11 @@
    "t": "S.S. Longobarda",
    "p": 35,
    "s": 1
+  },
+  "Tiago Gabriel": {
+   "t": "Al-Chaos-Ahli",
+   "p": 16,
+   "s": 1
   }
  },
  "riv": {
@@ -190,8 +195,8 @@
    "p": 0
   },
   "Al-Chaos-Ahli": {
-   "c": 470,
-   "g": 2,
+   "c": 454,
+   "g": 3,
    "p": 1
   },
   "AC OMMODITY": {
@@ -554,6 +559,13 @@
    "n": "McKennie",
    "t": "S.S. Longobarda",
    "p": 35
+  },
+  {
+   "ts": 1789152313718,
+   "a": "altri",
+   "n": "Tiago Gabriel",
+   "t": "Al-Chaos-Ahli",
+   "p": 16
   }
  ],
  "passed": [
