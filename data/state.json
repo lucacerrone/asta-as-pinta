@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165060896,
+ "updatedAt": 1789165171571,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1108,6 +1108,10 @@
   "Douvikas": {
    "t": "NewRock",
    "p": 83
+  },
+  "Martinez L.": {
+   "t": "Fc Afragolese",
+   "p": 177
   }
  },
  "riv": {
@@ -3194,6 +3198,13 @@
    "n": "Douvikas",
    "t": "NewRock",
    "p": 83
+  },
+  {
+   "ts": 1789165171571,
+   "a": "altri",
+   "n": "Martinez L.",
+   "t": "Fc Afragolese",
+   "p": 177
   }
  ],
  "passed": [
