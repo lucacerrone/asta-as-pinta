@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155680575,
+ "updatedAt": 1789155699002,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -335,10 +335,6 @@
    "p": 18,
    "s": 1
   },
-  "Rabiot": {
-   "t": "",
-   "p": ""
-  },
   "Correia T.": {
    "t": "Real Skënderbeu",
    "p": 8
@@ -354,10 +350,6 @@
   "Pedraza": {
    "t": "S.S. Longobarda",
    "p": 4
-  },
-  "Musah": {
-   "t": "",
-   "p": ""
   },
   "Goncalves P.": {
    "t": "AS Emazz",
@@ -429,10 +421,6 @@
    "p": 27,
    "s": 1
   },
-  "Raspadori": {
-   "t": "",
-   "p": ""
-  },
   "Troilo": {
    "t": "Al-Chaos-Ahli",
    "p": 10,
@@ -473,11 +461,6 @@
    "p": 6,
    "s": 1
   },
-  "Pessina": {
-   "t": "Real Skënderbeu",
-   "p": 3,
-   "s": 1
-  },
   "Odgaard": {
    "t": "S.S. Longobarda",
    "p": 9,
@@ -487,6 +470,30 @@
    "t": "NewRock",
    "p": 12,
    "s": 1
+  },
+  "Gnonto": {
+   "t": "Space Invaders",
+   "p": 1
+  },
+  "Bertola": {
+   "t": "Real Skënderbeu",
+   "p": 6
+  },
+  "Pessina": {
+   "t": "Space Invaders",
+   "p": 3
+  },
+  "Raspadori": {
+   "t": "Real Skënderbeu",
+   "p": 23
+  },
+  "Musah": {
+   "t": "AC OMMODITY",
+   "p": 4
+  },
+  "Rabiot": {
+   "t": "Real Skënderbeu",
+   "p": 45
   }
  },
  "riv": {
@@ -516,8 +523,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 221,
-   "g": 15,
+   "c": 224,
+   "g": 14,
    "p": 0
   },
   "Space Invaders": {
@@ -1341,6 +1348,48 @@
    "n": "Bonny",
    "t": "NewRock",
    "p": 12
+  },
+  {
+   "ts": 1789155699002,
+   "a": "altri (foto/integrazione)",
+   "n": "Gnonto",
+   "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789155699002,
+   "a": "altri (foto/integrazione)",
+   "n": "Bertola",
+   "t": "Real Skënderbeu",
+   "p": 6
+  },
+  {
+   "ts": 1789155699002,
+   "a": "altri (foto/integrazione)",
+   "n": "Pessina",
+   "t": "Space Invaders",
+   "p": 3
+  },
+  {
+   "ts": 1789155699002,
+   "a": "altri (foto/integrazione)",
+   "n": "Raspadori",
+   "t": "Real Skënderbeu",
+   "p": 23
+  },
+  {
+   "ts": 1789155699002,
+   "a": "altri (foto/integrazione)",
+   "n": "Musah",
+   "t": "AC OMMODITY",
+   "p": 4
+  },
+  {
+   "ts": 1789155699002,
+   "a": "altri (foto/integrazione)",
+   "n": "Rabiot",
+   "t": "Real Skënderbeu",
+   "p": 45
   }
  ],
  "passed": [
@@ -1382,6 +1431,11 @@
    "ts": 1789154277773,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 6 squadre (Space Invaders: 343→71 cr; Al-Chaos-Ahli: 428→22 cr; Al-Chaos-Ahli: 428→22 cr; +3 altre). sono state integrate 6 assegnazioni, 2 completate con informazioni mancanti."
+  },
+  {
+   "ts": 1789155699002,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 6 assegnazioni, 3 completate con informazioni mancanti, 1 corrette."
   }
  ]
 }
