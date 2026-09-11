@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156152433,
+ "updatedAt": 1789156179693,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -530,6 +530,11 @@
    "t": "AC OMMODITY",
    "p": 153,
    "s": 1
+  },
+  "Cambiaghi": {
+   "t": "Fight Club",
+   "p": 12,
+   "s": 1
   }
  },
  "riv": {
@@ -584,8 +589,8 @@
    "p": 1
   },
   "Fight Club": {
-   "c": 431,
-   "g": 4,
+   "c": 419,
+   "g": 5,
    "p": 0
   },
   "Big Tasty FC": {
@@ -1510,6 +1515,13 @@
    "n": "Ramos G.",
    "t": "AC OMMODITY",
    "p": 153
+  },
+  {
+   "ts": 1789156179693,
+   "a": "altri",
+   "n": "Cambiaghi",
+   "t": "Fight Club",
+   "p": 12
   }
  ],
  "passed": [
