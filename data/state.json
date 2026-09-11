@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154117004,
+ "updatedAt": 1789154254162,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -334,6 +334,10 @@
    "t": "S.S. Longobarda",
    "p": 18,
    "s": 1
+  },
+  "Rabiot": {
+   "t": "",
+   "p": ""
   }
  },
  "riv": {
@@ -943,6 +947,13 @@
    "n": "Caprile",
    "t": "S.S. Longobarda",
    "p": 18
+  },
+  {
+   "ts": 1789154254162,
+   "a": "altri",
+   "n": "Rabiot",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
