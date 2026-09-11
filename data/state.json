@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156123418,
+ "updatedAt": 1789156152433,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -525,6 +525,11 @@
   "Varela G.": {
    "t": "S.S. Longobarda",
    "p": ""
+  },
+  "Ramos G.": {
+   "t": "AC OMMODITY",
+   "p": 153,
+   "s": 1
   }
  },
  "riv": {
@@ -544,8 +549,8 @@
    "p": 2
   },
   "AC OMMODITY": {
-   "c": 348,
-   "g": 8,
+   "c": 195,
+   "g": 9,
    "p": 1
   },
   "Pro Stata": {
@@ -1498,6 +1503,13 @@
    "n": "Varela G.",
    "t": "S.S. Longobarda",
    "p": ""
+  },
+  {
+   "ts": 1789156152433,
+   "a": "altri",
+   "n": "Ramos G.",
+   "t": "AC OMMODITY",
+   "p": 153
   }
  ],
  "passed": [
