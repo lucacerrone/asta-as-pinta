@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164027195,
+ "updatedAt": 1789164153226,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -57,6 +57,10 @@
   {
    "n": "El Shaarawy",
    "p": 3
+  },
+  {
+   "n": "Pisilli",
+   "p": 15
   }
  ],
  "asg": {
@@ -3062,6 +3066,13 @@
    "n": "Dimarco",
    "t": "Space Invaders",
    "p": 73
+  },
+  {
+   "ts": 1789164153226,
+   "a": "noi",
+   "n": "Pisilli",
+   "t": "AS Pinta",
+   "p": 15
   }
  ],
  "passed": [
