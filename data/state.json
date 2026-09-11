@@ -1,12 +1,13 @@
 {
  "version": 2,
- "updatedAt": 0,
+ "updatedAt": 1789149704009,
  "set": {
   "budget": 500,
   "tetto": 25,
   "stile": "Normale",
   "riserva": 30,
-  "target": 27
+  "target": 27,
+  "profiloBudget": "Pinta 4-2-3-1"
  },
  "mine": [],
  "asg": {},
@@ -78,7 +79,27 @@
   }
  },
  "must": [],
- "black": [],
+ "black": [
+  "Douvikas",
+  "Esposito F.P.",
+  "Castro S.",
+  "Varela G."
+ ],
  "upd": "",
- "log": []
+ "log": [
+  {
+   "ts": 1789149704009,
+   "a": "rimasto libero",
+   "n": "Pinsoglio",
+   "t": "",
+   "p": ""
+  }
+ ],
+ "passed": [
+  {
+   "n": "Pinsoglio",
+   "ts": 1789149704009
+  }
+ ],
+ "updates": []
 }
