@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789149720322,
+ "updatedAt": 1789149747132,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -106,12 +106,23 @@
    "n": "Gineitis",
    "t": "Fight Club",
    "p": 1
+  },
+  {
+   "ts": 1789149747132,
+   "a": "rimasto libero",
+   "n": "Chakvetadze",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
   {
    "n": "Pinsoglio",
    "ts": 1789149704009
+  },
+  {
+   "n": "Chakvetadze",
+   "ts": 1789149747132
   }
  ],
  "updates": []
