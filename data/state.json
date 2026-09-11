@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154296638,
+ "updatedAt": 1789154389821,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -358,6 +358,11 @@
   "Musah": {
    "t": "",
    "p": ""
+  },
+  "Goncalves P.": {
+   "t": "AS Emazz",
+   "p": 47,
+   "s": 1
   }
  },
  "riv": {
@@ -397,8 +402,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 478,
-   "g": 3,
+   "c": 431,
+   "g": 4,
    "p": 0
   },
   "NewRock": {
@@ -1030,6 +1035,13 @@
    "n": "Musah",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789154389821,
+   "a": "altri",
+   "n": "Goncalves P.",
+   "t": "AS Emazz",
+   "p": 47
   }
  ],
  "passed": [
