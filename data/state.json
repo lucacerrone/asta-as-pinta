@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168135410,
+ "updatedAt": 1789168289920,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -81,6 +81,10 @@
   {
    "n": "N'Dicka",
    "p": 22
+  },
+  {
+   "n": "Scalvini",
+   "p": 21
   }
  ],
  "asg": {
@@ -3897,6 +3901,13 @@
    "n": "Soulè",
    "t": "Fc Afragolese",
    "p": 27
+  },
+  {
+   "ts": 1789168289920,
+   "a": "noi",
+   "n": "Scalvini",
+   "t": "AS Pinta",
+   "p": 21
   }
  ],
  "passed": [
