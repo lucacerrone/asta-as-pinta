@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153239100,
+ "updatedAt": 1789153266157,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -254,6 +254,11 @@
    "t": "S.S. Longobarda",
    "p": 10,
    "s": 1
+  },
+  "Ranieri L.": {
+   "t": "Space Invaders",
+   "p": 6,
+   "s": 1
   }
  },
  "riv": {
@@ -288,8 +293,8 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 420,
-   "g": 2,
+   "c": 414,
+   "g": 3,
    "p": 1
   },
   "AS Emazz": {
@@ -751,6 +756,13 @@
    "n": "Ismajli",
    "t": "S.S. Longobarda",
    "p": 10
+  },
+  {
+   "ts": 1789153266157,
+   "a": "altri",
+   "n": "Ranieri L.",
+   "t": "Space Invaders",
+   "p": 6
   }
  ],
  "passed": [
