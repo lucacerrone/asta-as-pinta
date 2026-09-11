@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789157145862,
+ "updatedAt": 1789157193315,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -580,6 +580,11 @@
    "t": "AS Emazz",
    "p": 11,
    "s": 1
+  },
+  "Dragusin": {
+   "t": "Fight Club",
+   "p": 15,
+   "s": 1
   }
  },
  "riv": {
@@ -634,8 +639,8 @@
    "p": 1
   },
   "Fight Club": {
-   "c": 419,
-   "g": 5,
+   "c": 404,
+   "g": 6,
    "p": 0
   },
   "Big Tasty FC": {
@@ -1630,6 +1635,13 @@
    "n": "Miranda J.",
    "t": "AS Emazz",
    "p": 11
+  },
+  {
+   "ts": 1789157193315,
+   "a": "altri",
+   "n": "Dragusin",
+   "t": "Fight Club",
+   "p": 15
   }
  ],
  "passed": [
