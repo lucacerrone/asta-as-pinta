@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165904854,
+ "updatedAt": 1789166006943,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1180,6 +1180,10 @@
   "Zapata D.": {
    "t": "S.S. Longobarda",
    "p": 2
+  },
+  "Douglas Luiz": {
+   "t": "Fight Club",
+   "p": 9
   }
  },
  "riv": {
@@ -3399,6 +3403,13 @@
    "n": "Zapata D.",
    "t": "S.S. Longobarda",
    "p": 2
+  },
+  {
+   "ts": 1789166006943,
+   "a": "altri",
+   "n": "Douglas Luiz",
+   "t": "Fight Club",
+   "p": 9
   }
  ],
  "passed": [
