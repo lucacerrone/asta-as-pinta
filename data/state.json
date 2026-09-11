@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160885899,
+ "updatedAt": 1789161054618,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -49,6 +49,10 @@
   {
    "n": "Sarr P.",
    "p": 19
+  },
+  {
+   "n": "Frendrup",
+   "p": 12
   }
  ],
  "asg": {
@@ -844,6 +848,18 @@
   "Zortea": {
    "t": "Fun Cool FC",
    "p": 8
+  },
+  "Robinson J.": {
+   "t": "Fight Club",
+   "p": 1
+  },
+  "Mendy P.": {
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  "Folorunsho": {
+   "t": "Pro Stata",
+   "p": 11
   }
  },
  "riv": {
@@ -2419,6 +2435,34 @@
    "n": "Sarr P.",
    "t": "AS Pinta",
    "p": 19
+  },
+  {
+   "ts": 1789161054617,
+   "a": "noi (foto/integrazione)",
+   "n": "Frendrup",
+   "t": "AS Pinta",
+   "p": 12
+  },
+  {
+   "ts": 1789161054617,
+   "a": "altri (foto/integrazione)",
+   "n": "Robinson J.",
+   "t": "Fight Club",
+   "p": 1
+  },
+  {
+   "ts": 1789161054617,
+   "a": "altri (foto/integrazione)",
+   "n": "Mendy P.",
+   "t": "AC OMMODITY",
+   "p": 1
+  },
+  {
+   "ts": 1789161054617,
+   "a": "altri (foto/integrazione)",
+   "n": "Folorunsho",
+   "t": "Pro Stata",
+   "p": 11
   }
  ],
  "passed": [
@@ -2505,6 +2549,11 @@
    "ts": 1789160885898,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 15 assegnazioni, 2 corrette."
+  },
+  {
+   "ts": 1789161054617,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 4 assegnazioni: Frendrup, Robinson J., Mendy P., Folorunsho."
   }
  ]
 }
