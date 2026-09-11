@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789167409298,
+ "updatedAt": 1789167448369,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1324,6 +1324,10 @@
   "Odenthal": {
    "t": "Space Invaders",
    "p": 1
+  },
+  "Thuram": {
+   "t": "AS Emazz",
+   "p": 111
   }
  },
  "riv": {
@@ -3795,6 +3799,13 @@
    "n": "Odenthal",
    "t": "Space Invaders",
    "p": 1
+  },
+  {
+   "ts": 1789167448369,
+   "a": "altri",
+   "n": "Thuram",
+   "t": "AS Emazz",
+   "p": 111
   }
  ],
  "passed": [
