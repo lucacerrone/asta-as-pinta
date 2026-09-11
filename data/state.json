@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155119122,
+ "updatedAt": 1789155139285,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -432,6 +432,11 @@
   "Raspadori": {
    "t": "",
    "p": ""
+  },
+  "Troilo": {
+   "t": "Al-Chaos-Ahli",
+   "p": 10,
+   "s": 1
   }
  },
  "riv": {
@@ -446,8 +451,8 @@
    "p": 1
   },
   "Al-Chaos-Ahli": {
-   "c": 22,
-   "g": 5,
+   "c": 12,
+   "g": 6,
    "p": 1
   },
   "AC OMMODITY": {
@@ -1209,6 +1214,13 @@
    "n": "Raspadori",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789155139285,
+   "a": "altri",
+   "n": "Troilo",
+   "t": "Al-Chaos-Ahli",
+   "p": 10
   }
  ],
  "passed": [
