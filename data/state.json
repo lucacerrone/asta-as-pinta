@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150055981,
+ "updatedAt": 1789150067064,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -168,6 +168,13 @@
    "n": "Kvernadze",
    "t": "S.S. Longobarda",
    "p": 36
+  },
+  {
+   "ts": 1789150067064,
+   "a": "rimasto libero",
+   "n": "Kevin Carlos",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
@@ -182,6 +189,10 @@
   {
    "n": "Thiam",
    "ts": 1789149784257
+  },
+  {
+   "n": "Kevin Carlos",
+   "ts": 1789150067064
   }
  ],
  "updates": []
