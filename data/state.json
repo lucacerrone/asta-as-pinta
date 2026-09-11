@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789169211995,
+ "updatedAt": 1789169476899,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -93,6 +93,10 @@
   {
    "n": "Maignan",
    "p": 40
+  },
+  {
+   "n": "Terracciano F.",
+   "p": 1
   }
  ],
  "asg": {
@@ -4145,6 +4149,13 @@
    "a": "altri (foto/integrazione)",
    "n": "Badiashile",
    "t": "Space Invaders",
+   "p": 1
+  },
+  {
+   "ts": 1789169476899,
+   "a": "noi",
+   "n": "Terracciano F.",
+   "t": "AS Pinta",
    "p": 1
   }
  ],
