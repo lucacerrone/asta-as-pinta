@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164375635,
+ "updatedAt": 1789164442972,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1072,6 +1072,10 @@
   "Cissè A.": {
    "t": "Fun Cool FC",
    "p": 50
+  },
+  "Karlstrom": {
+   "t": "Big Tasty FC",
+   "p": 15
   }
  },
  "riv": {
@@ -3095,6 +3099,13 @@
    "n": "Cissè A.",
    "t": "Fun Cool FC",
    "p": 50
+  },
+  {
+   "ts": 1789164442972,
+   "a": "altri",
+   "n": "Karlstrom",
+   "t": "Big Tasty FC",
+   "p": 15
   }
  ],
  "passed": [
