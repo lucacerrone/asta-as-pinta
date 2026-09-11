@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155471436,
+ "updatedAt": 1789155494924,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -472,6 +472,11 @@
    "t": "NewRock",
    "p": 6,
    "s": 1
+  },
+  "Pessina": {
+   "t": "Real Skënderbeu",
+   "p": 3,
+   "s": 1
   }
  },
  "riv": {
@@ -501,8 +506,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 224,
-   "g": 14,
+   "c": 221,
+   "g": 15,
    "p": 0
   },
   "Space Invaders": {
@@ -1305,6 +1310,13 @@
    "n": "Gandelman",
    "t": "NewRock",
    "p": 6
+  },
+  {
+   "ts": 1789155494924,
+   "a": "altri",
+   "n": "Pessina",
+   "t": "Real Skënderbeu",
+   "p": 3
   }
  ],
  "passed": [
