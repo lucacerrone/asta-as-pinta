@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165171571,
+ "updatedAt": 1789165230176,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1112,6 +1112,26 @@
   "Martinez L.": {
    "t": "Fc Afragolese",
    "p": 177
+  },
+  "Bella-Kotchap": {
+   "t": "Fight Club",
+   "p": 1
+  },
+  "Kouadio": {
+   "t": "Pro Stata",
+   "p": 5
+  },
+  "Smolcic I.": {
+   "t": "S.S. Longobarda",
+   "p": 1
+  },
+  "Mandragora": {
+   "t": "Pro Stata",
+   "p": 22
+  },
+  "Fabbian": {
+   "t": "Fun Cool FC",
+   "p": 6
   }
  },
  "riv": {
@@ -3205,6 +3225,41 @@
    "n": "Martinez L.",
    "t": "Fc Afragolese",
    "p": 177
+  },
+  {
+   "ts": 1789165230176,
+   "a": "altri (foto/integrazione)",
+   "n": "Bella-Kotchap",
+   "t": "Fight Club",
+   "p": 1
+  },
+  {
+   "ts": 1789165230176,
+   "a": "altri (foto/integrazione)",
+   "n": "Kouadio",
+   "t": "Pro Stata",
+   "p": 5
+  },
+  {
+   "ts": 1789165230176,
+   "a": "altri (foto/integrazione)",
+   "n": "Smolcic I.",
+   "t": "S.S. Longobarda",
+   "p": 1
+  },
+  {
+   "ts": 1789165230176,
+   "a": "altri (foto/integrazione)",
+   "n": "Mandragora",
+   "t": "Pro Stata",
+   "p": 22
+  },
+  {
+   "ts": 1789165230176,
+   "a": "altri (foto/integrazione)",
+   "n": "Fabbian",
+   "t": "Fun Cool FC",
+   "p": 6
   }
  ],
  "passed": [
@@ -3321,6 +3376,11 @@
    "ts": 1789163542068,
    "label": "Aggiornamento da screenshot",
    "text": "il controllo non ha prodotto variazioni rispetto ai dati già registrati."
+  },
+  {
+   "ts": 1789165230176,
+   "label": "Aggiornamento da screenshot",
+   "text": "sono state integrate 5 assegnazioni."
   }
  ]
 }
