@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158009437,
+ "updatedAt": 1789158030651,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -621,6 +621,11 @@
   "Rodriguez Ju.": {
    "t": "NewRock",
    "p": 11
+  },
+  "Adams A.": {
+   "t": "Fun Cool FC",
+   "p": 30,
+   "s": 1
   }
  },
  "riv": {
@@ -685,8 +690,8 @@
    "p": 0
   },
   "Fun Cool FC": {
-   "c": 351,
-   "g": 6,
+   "c": 321,
+   "g": 7,
    "p": 0
   }
  },
@@ -1748,6 +1753,13 @@
    "n": "",
    "t": "",
    "p": "1 squadre"
+  },
+  {
+   "ts": 1789158030651,
+   "a": "altri",
+   "n": "Adams A.",
+   "t": "Fun Cool FC",
+   "p": 30
   }
  ],
  "passed": [
