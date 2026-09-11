@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158101327,
+ "updatedAt": 1789158155003,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -636,6 +636,11 @@
    "t": "Fight Club",
    "p": 11,
    "s": 1
+  },
+  "Gila": {
+   "t": "AS Emazz",
+   "p": 27,
+   "s": 1
   }
  },
  "riv": {
@@ -675,8 +680,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 390,
-   "g": 7,
+   "c": 363,
+   "g": 8,
    "p": 0
   },
   "NewRock": {
@@ -1784,6 +1789,13 @@
    "n": "Muric",
    "t": "Fight Club",
    "p": 11
+  },
+  {
+   "ts": 1789158155003,
+   "a": "altri",
+   "n": "Gila",
+   "t": "AS Emazz",
+   "p": 27
   }
  ],
  "passed": [
