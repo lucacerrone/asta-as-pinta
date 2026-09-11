@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152461384,
+ "updatedAt": 1789152492257,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -196,6 +196,10 @@
    "t": "Fun Cool FC",
    "p": 25,
    "s": 1
+  },
+  "Pedraza": {
+   "t": "",
+   "p": 4
   }
  },
  "riv": {
@@ -609,6 +613,13 @@
    "n": "Fadera",
    "t": "",
    "p": ""
+  },
+  {
+   "ts": 1789152492257,
+   "a": "altri",
+   "n": "Pedraza",
+   "t": "",
+   "p": 4
   }
  ],
  "passed": [
