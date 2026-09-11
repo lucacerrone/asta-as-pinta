@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789156877720,
+ "updatedAt": 1789156895171,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -565,12 +565,17 @@
    "t": "Fun Cool FC",
    "p": 1,
    "s": 1
+  },
+  "Pierotti": {
+   "t": "chill curre",
+   "p": 2,
+   "s": 1
   }
  },
  "riv": {
   "chill curre": {
-   "c": 430,
-   "g": 5,
+   "c": 428,
+   "g": 6,
    "p": 0
   },
   "S.S. Longobarda": {
@@ -1594,6 +1599,13 @@
    "n": "Tourè I.",
    "t": "Fun Cool FC",
    "p": 1
+  },
+  {
+   "ts": 1789156895171,
+   "a": "altri",
+   "n": "Pierotti",
+   "t": "chill curre",
+   "p": 2
   }
  ],
  "passed": [
