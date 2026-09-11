@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166006943,
+ "updatedAt": 1789166098814,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -69,6 +69,10 @@
   {
    "n": "Rensch",
    "p": 2
+  },
+  {
+   "n": "Malen",
+   "p": 202
   }
  ],
  "asg": {
@@ -3410,6 +3414,13 @@
    "n": "Douglas Luiz",
    "t": "Fight Club",
    "p": 9
+  },
+  {
+   "ts": 1789166098814,
+   "a": "noi",
+   "n": "Malen",
+   "t": "AS Pinta",
+   "p": 202
   }
  ],
  "passed": [
