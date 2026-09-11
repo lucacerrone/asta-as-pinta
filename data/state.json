@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164648982,
+ "updatedAt": 1789164751998,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1088,6 +1088,10 @@
   "Molina N.": {
    "t": "Al-Chaos-Ahli",
    "p": 22
+  },
+  "Solet": {
+   "t": "Fun Cool FC",
+   "p": 17
   }
  },
  "riv": {
@@ -3139,6 +3143,13 @@
    "n": "Molina N.",
    "t": "Al-Chaos-Ahli",
    "p": 22
+  },
+  {
+   "ts": 1789164751998,
+   "a": "altri",
+   "n": "Solet",
+   "t": "Fun Cool FC",
+   "p": 17
   }
  ],
  "passed": [
