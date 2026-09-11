@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789160239590,
+ "updatedAt": 1789160312808,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -784,6 +784,10 @@
   "Raimondo": {
    "t": "S.S. Longobarda",
    "p": 82
+  },
+  "Diao": {
+   "t": "Fight Club",
+   "p": 93
   }
  },
  "riv": {
@@ -2240,6 +2244,13 @@
    "n": "Baldanzi",
    "t": "AS Pinta",
    "p": 15
+  },
+  {
+   "ts": 1789160312808,
+   "a": "altri",
+   "n": "Diao",
+   "t": "Fight Club",
+   "p": 93
   }
  ],
  "passed": [
