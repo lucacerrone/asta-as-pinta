@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164153226,
+ "updatedAt": 1789164236899,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1064,6 +1064,10 @@
   "Dimarco": {
    "t": "Space Invaders",
    "p": 73
+  },
+  "Cinquegrano": {
+   "t": "NewRock",
+   "p": 6
   }
  },
  "riv": {
@@ -3073,6 +3077,13 @@
    "n": "Pisilli",
    "t": "AS Pinta",
    "p": 15
+  },
+  {
+   "ts": 1789164236899,
+   "a": "altri",
+   "n": "Cinquegrano",
+   "t": "NewRock",
+   "p": 6
   }
  ],
  "passed": [
