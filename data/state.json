@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158648240,
+ "updatedAt": 1789158772214,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -680,6 +680,11 @@
    "t": "Real Skënderbeu",
    "p": 52,
    "s": 1
+  },
+  "Walukiewicz": {
+   "t": "AS Emazz",
+   "p": 4,
+   "s": 1
   }
  },
  "riv": {
@@ -719,8 +724,8 @@
    "p": 1
   },
   "AS Emazz": {
-   "c": 363,
-   "g": 8,
+   "c": 359,
+   "g": 9,
    "p": 0
   },
   "NewRock": {
@@ -1891,6 +1896,13 @@
    "n": "Carnesecchi",
    "t": "Real Skënderbeu",
    "p": 52
+  },
+  {
+   "ts": 1789158772214,
+   "a": "altri",
+   "n": "Walukiewicz",
+   "t": "AS Emazz",
+   "p": 4
   }
  ],
  "passed": [
