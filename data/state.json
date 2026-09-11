@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789168558983,
+ "updatedAt": 1789168851882,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1364,6 +1364,54 @@
   "Soulè": {
    "t": "Fc Afragolese",
    "p": 27
+  },
+  "Olivera": {
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  "Mora": {
+   "t": "Al-Chaos-Ahli",
+   "p": 17
+  },
+  "Oyono A.": {
+   "t": "Big Tasty FC",
+   "p": 1
+  },
+  "Di Lorenzo": {
+   "t": "Fight Club",
+   "p": 15
+  },
+  "Tomori": {
+   "t": "Real Skënderbeu",
+   "p": 1
+  },
+  "Ostigard": {
+   "t": "Al-Chaos-Ahli",
+   "p": 6
+  },
+  "Kolo Muani": {
+   "t": "chill curre",
+   "p": 31
+  },
+  "Sucic P.": {
+   "t": "Fc Afragolese",
+   "p": 4
+  },
+  "Boga": {
+   "t": "NewRock",
+   "p": 7
+  },
+  "Vergara": {
+   "t": "NewRock",
+   "p": 6
+  },
+  "Rowe": {
+   "t": "Pro Stata",
+   "p": 28
+  },
+  "Skorupski": {
+   "t": "S.S. Longobarda",
+   "p": 21
   }
  },
  "riv": {
@@ -1398,7 +1446,7 @@
    "p": 2
   },
   "Space Invaders": {
-   "c": 224,
+   "c": 1,
    "g": 9,
    "p": 1
   },
@@ -1440,7 +1488,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "23:52",
+ "upd": "01:20",
  "log": [
   {
    "ts": 1789149704009,
@@ -3919,6 +3967,97 @@
    "n": "Vojvoda",
    "t": "AS Pinta",
    "p": 10
+  },
+  {
+   "ts": 1789168851881,
+   "a": "altri (foto/integrazione)",
+   "n": "Olivera",
+   "t": "Fc Afragolese",
+   "p": 1
+  },
+  {
+   "ts": 1789168851881,
+   "a": "altri (foto/integrazione)",
+   "n": "Mora",
+   "t": "Al-Chaos-Ahli",
+   "p": 17
+  },
+  {
+   "ts": 1789168851881,
+   "a": "altri (foto/integrazione)",
+   "n": "Oyono A.",
+   "t": "Big Tasty FC",
+   "p": 1
+  },
+  {
+   "ts": 1789168851881,
+   "a": "altri (foto/integrazione)",
+   "n": "Di Lorenzo",
+   "t": "Fight Club",
+   "p": 15
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Tomori",
+   "t": "Real Skënderbeu",
+   "p": 1
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Ostigard",
+   "t": "Al-Chaos-Ahli",
+   "p": 6
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Kolo Muani",
+   "t": "chill curre",
+   "p": 31
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Sucic P.",
+   "t": "Fc Afragolese",
+   "p": 4
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Boga",
+   "t": "NewRock",
+   "p": 7
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Vergara",
+   "t": "NewRock",
+   "p": 6
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Rowe",
+   "t": "Pro Stata",
+   "p": 28
+  },
+  {
+   "ts": 1789168851882,
+   "a": "altri (foto/integrazione)",
+   "n": "Skorupski",
+   "t": "S.S. Longobarda",
+   "p": 21
+  },
+  {
+   "ts": 1789168851882,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -3956,11 +4095,6 @@
   }
  ],
  "updates": [
-  {
-   "ts": 1789155699002,
-   "label": "Aggiornamento da screenshot",
-   "text": "sono state integrate 6 assegnazioni, 3 completate con informazioni mancanti, 1 corrette."
-  },
   {
    "ts": 1789156066228,
    "label": "Aggiornamento da screenshot",
@@ -4055,6 +4189,11 @@
    "ts": 1789167937830,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 3 assegnazioni: Moreira, Doig, Sanchez Ro.."
+  },
+  {
+   "ts": 1789168851882,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 1 squadre (Space Invaders: 224→1 cr). sono state integrate 12 assegnazioni."
   }
  ]
 }
