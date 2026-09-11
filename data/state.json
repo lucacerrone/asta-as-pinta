@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151023698,
+ "updatedAt": 1789151039760,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -93,10 +93,6 @@
    "t": "Fun Cool FC",
    "p": 6,
    "s": 1
-  },
-  "Raimondo": {
-   "t": "",
-   "p": 83
   },
   "Lang": {
    "t": "",
@@ -358,6 +354,13 @@
    "n": "Akanji",
    "t": "S.S. Longobarda",
    "p": 20
+  },
+  {
+   "ts": 1789151039760,
+   "a": "annulla",
+   "n": "Raimondo",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
