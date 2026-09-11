@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789159913980,
+ "updatedAt": 1789160005483,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -791,8 +791,8 @@
    "p": 1
   },
   "Space Invaders": {
-   "c": -41,
-   "g": 6,
+   "c": 224,
+   "g": 9,
    "p": 1
   },
   "AS Emazz": {
@@ -833,7 +833,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "22:47",
+ "upd": "22:53",
  "log": [
   {
    "ts": 1789149704009,
@@ -2122,6 +2122,13 @@
    "n": "Hermoso",
    "t": "AC OMMODITY",
    "p": 46
+  },
+  {
+   "ts": 1789160005483,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -2188,6 +2195,11 @@
    "ts": 1789159666207,
    "label": "Aggiornamento da screenshot",
    "text": "la fotografia ha aggiornato 1 squadre (Real Skënderbeu: 172→1 cr). sono state integrate 8 assegnazioni."
+  },
+  {
+   "ts": 1789160005483,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 1 squadre (Space Invaders: -41→224 cr, 6→9 gioc.)."
   }
  ]
 }
