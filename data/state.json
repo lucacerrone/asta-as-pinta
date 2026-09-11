@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789165402455,
+ "updatedAt": 1789165513407,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1144,6 +1144,10 @@
   "De Ketelaere": {
    "t": "Real Skënderbeu",
    "p": 40
+  },
+  "Politano": {
+   "t": "Fc Afragolese",
+   "p": 16
   }
  },
  "riv": {
@@ -3293,6 +3297,13 @@
    "n": "Dovbyk",
    "t": "AS Pinta",
    "p": 28
+  },
+  {
+   "ts": 1789165513407,
+   "a": "altri",
+   "n": "Politano",
+   "t": "Fc Afragolese",
+   "p": 16
   }
  ],
  "passed": [
