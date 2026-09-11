@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789166802445,
+ "updatedAt": 1789166877715,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1252,6 +1252,10 @@
   "Ferguson": {
    "t": "Fc Afragolese",
    "p": 2
+  },
+  "Mangas": {
+   "t": "Big Tasty FC",
+   "p": 4
   }
  },
  "riv": {
@@ -3597,6 +3601,13 @@
    "n": "Gaetano",
    "t": "AS Pinta",
    "p": 9
+  },
+  {
+   "ts": 1789166877715,
+   "a": "altri",
+   "n": "Mangas",
+   "t": "Big Tasty FC",
+   "p": 4
   }
  ],
  "passed": [
