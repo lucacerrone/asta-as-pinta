@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789159171358,
+ "updatedAt": 1789159666207,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -719,6 +719,38 @@
   "Dele-Bashiru": {
    "t": "NewRock",
    "p": 1
+  },
+  "Kelly L.": {
+   "t": "AC OMMODITY",
+   "p": 8
+  },
+  "Schmid": {
+   "t": "Fun Cool FC",
+   "p": 13
+  },
+  "Cittadini": {
+   "t": "Fight Club",
+   "p": 6
+  },
+  "Kossounou": {
+   "t": "Fc Afragolese",
+   "p": 18
+  },
+  "Tourè E.": {
+   "t": "Fight Club",
+   "p": 21
+  },
+  "Laurientè": {
+   "t": "AC OMMODITY",
+   "p": 32
+  },
+  "Montipò": {
+   "t": "Al-Chaos-Ahli",
+   "p": 1
+  },
+  "Simeone": {
+   "t": "Al-Chaos-Ahli",
+   "p": 48
   }
  },
  "riv": {
@@ -748,7 +780,7 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 172,
+   "c": 1,
    "g": 15,
    "p": 1
   },
@@ -795,7 +827,7 @@
   "Castro S.",
   "Varela G."
  ],
- "upd": "22:20",
+ "upd": "22:47",
  "log": [
   {
    "ts": 1789149704009,
@@ -2000,6 +2032,69 @@
    "n": "Dele-Bashiru",
    "t": "NewRock",
    "p": 1
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Kelly L.",
+   "t": "AC OMMODITY",
+   "p": 8
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Schmid",
+   "t": "Fun Cool FC",
+   "p": 13
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Cittadini",
+   "t": "Fight Club",
+   "p": 6
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Kossounou",
+   "t": "Fc Afragolese",
+   "p": 18
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Tourè E.",
+   "t": "Fight Club",
+   "p": 21
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Laurientè",
+   "t": "AC OMMODITY",
+   "p": 32
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Montipò",
+   "t": "Al-Chaos-Ahli",
+   "p": 1
+  },
+  {
+   "ts": 1789159666206,
+   "a": "altri (foto/integrazione)",
+   "n": "Simeone",
+   "t": "Al-Chaos-Ahli",
+   "p": 48
+  },
+  {
+   "ts": 1789159666206,
+   "a": "snapshot rivali",
+   "n": "",
+   "t": "",
+   "p": "1 squadre"
   }
  ],
  "passed": [
@@ -2061,6 +2156,11 @@
    "ts": 1789159171358,
    "label": "Aggiornamento da screenshot",
    "text": "sono state integrate 6 assegnazioni, 1 completate con informazioni mancanti."
+  },
+  {
+   "ts": 1789159666207,
+   "label": "Aggiornamento da screenshot",
+   "text": "la fotografia ha aggiornato 1 squadre (Real Skënderbeu: 172→1 cr). sono state integrate 8 assegnazioni."
   }
  ]
 }
