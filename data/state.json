@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164936815,
+ "updatedAt": 1789165060896,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1104,6 +1104,10 @@
   "Rrahmani": {
    "t": "Fc Afragolese",
    "p": 26
+  },
+  "Douvikas": {
+   "t": "NewRock",
+   "p": 83
   }
  },
  "riv": {
@@ -3183,6 +3187,13 @@
    "n": "Rrahmani",
    "t": "Fc Afragolese",
    "p": 26
+  },
+  {
+   "ts": 1789165060896,
+   "a": "altri",
+   "n": "Douvikas",
+   "t": "NewRock",
+   "p": 83
   }
  ],
  "passed": [
