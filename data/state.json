@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158580919,
+ "updatedAt": 1789158648240,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -675,6 +675,11 @@
    "t": "chill curre",
    "p": 25,
    "s": 1
+  },
+  "Carnesecchi": {
+   "t": "Real Skënderbeu",
+   "p": 52,
+   "s": 1
   }
  },
  "riv": {
@@ -704,9 +709,9 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 224,
-   "g": 14,
-   "p": 0
+   "c": 172,
+   "g": 15,
+   "p": 1
   },
   "Space Invaders": {
    "c": -41,
@@ -1879,6 +1884,13 @@
    "n": "Bowie",
    "t": "chill curre",
    "p": 25
+  },
+  {
+   "ts": 1789158648240,
+   "a": "altri",
+   "n": "Carnesecchi",
+   "t": "Real Skënderbeu",
+   "p": 52
   }
  ],
  "passed": [
