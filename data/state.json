@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789152634961,
+ "updatedAt": 1789152884314,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -209,6 +209,11 @@
   "Correia T.": {
    "t": "Real Skënderbeu",
    "p": ""
+  },
+  "McTominay": {
+   "t": "Space Invaders",
+   "p": 71,
+   "s": 1
   }
  },
  "riv": {
@@ -243,8 +248,8 @@
    "p": 0
   },
   "Space Invaders": {
-   "c": 491,
-   "g": 1,
+   "c": 420,
+   "g": 2,
    "p": 1
   },
   "AS Emazz": {
@@ -643,6 +648,13 @@
    "n": "Correia T.",
    "t": "Real Skënderbeu",
    "p": ""
+  },
+  {
+   "ts": 1789152884314,
+   "a": "altri",
+   "n": "McTominay",
+   "t": "Space Invaders",
+   "p": 71
   }
  ],
  "passed": [
