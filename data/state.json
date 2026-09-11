@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789155494924,
+ "updatedAt": 1789155626125,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -477,6 +477,11 @@
    "t": "Real Skënderbeu",
    "p": 3,
    "s": 1
+  },
+  "Odgaard": {
+   "t": "S.S. Longobarda",
+   "p": 9,
+   "s": 1
   }
  },
  "riv": {
@@ -486,8 +491,8 @@
    "p": 0
   },
   "S.S. Longobarda": {
-   "c": 5,
-   "g": 11,
+   "c": -4,
+   "g": 12,
    "p": 1
   },
   "Al-Chaos-Ahli": {
@@ -1317,6 +1322,13 @@
    "n": "Pessina",
    "t": "Real Skënderbeu",
    "p": 3
+  },
+  {
+   "ts": 1789155626125,
+   "a": "altri",
+   "n": "Odgaard",
+   "t": "S.S. Longobarda",
+   "p": 9
   }
  ],
  "passed": [
