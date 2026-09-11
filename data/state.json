@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153266157,
+ "updatedAt": 1789153317191,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -259,6 +259,11 @@
    "t": "Space Invaders",
    "p": 6,
    "s": 1
+  },
+  "Orsolini": {
+   "t": "Real Skënderbeu",
+   "p": 73,
+   "s": 1
   }
  },
  "riv": {
@@ -288,8 +293,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 326,
-   "g": 9,
+   "c": 253,
+   "g": 10,
    "p": 0
   },
   "Space Invaders": {
@@ -763,6 +768,13 @@
    "n": "Ranieri L.",
    "t": "Space Invaders",
    "p": 6
+  },
+  {
+   "ts": 1789153317191,
+   "a": "altri",
+   "n": "Orsolini",
+   "t": "Real Skënderbeu",
+   "p": 73
   }
  ],
  "passed": [
