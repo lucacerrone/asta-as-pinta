@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150272037,
+ "updatedAt": 1789150336844,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -63,6 +63,11 @@
    "t": "NewRock",
    "p": 9,
    "s": 1
+  },
+  "Esposito Se.": {
+   "t": "Al-Chaos-Ahli",
+   "p": 22,
+   "s": 1
   }
  },
  "riv": {
@@ -77,8 +82,8 @@
    "p": 0
   },
   "Al-Chaos-Ahli": {
-   "c": 500,
-   "g": 0,
+   "c": 478,
+   "g": 1,
    "p": 0
   },
   "AC OMMODITY": {
@@ -245,6 +250,13 @@
    "n": "Valdepenas",
    "t": "AS Pinta",
    "p": 10
+  },
+  {
+   "ts": 1789150336844,
+   "a": "altri",
+   "n": "Esposito Se.",
+   "t": "Al-Chaos-Ahli",
+   "p": 22
   }
  ],
  "passed": [
