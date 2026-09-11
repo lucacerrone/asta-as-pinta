@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789153159955,
+ "updatedAt": 1789153192139,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -244,6 +244,11 @@
    "t": "NewRock",
    "p": 22,
    "s": 1
+  },
+  "Mancini": {
+   "t": "Real Skënderbeu",
+   "p": 35,
+   "s": 1
   }
  },
  "riv": {
@@ -273,8 +278,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 361,
-   "g": 8,
+   "c": 326,
+   "g": 9,
    "p": 0
   },
   "Space Invaders": {
@@ -727,6 +732,13 @@
    "n": "Isaksen",
    "t": "NewRock",
    "p": 22
+  },
+  {
+   "ts": 1789153192139,
+   "a": "altri",
+   "n": "Mancini",
+   "t": "Real Skënderbeu",
+   "p": 35
   }
  ],
  "passed": [
