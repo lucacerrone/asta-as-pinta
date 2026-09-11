@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151860371,
+ "updatedAt": 1789151922481,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -136,6 +136,11 @@
    "t": "Pro Stata",
    "p": 2,
    "s": 1
+  },
+  "Santos A.": {
+   "t": "Pro Stata",
+   "p": 30,
+   "s": 1
   }
  },
  "riv": {
@@ -160,8 +165,8 @@
    "p": 0
   },
   "Pro Stata": {
-   "c": 483,
-   "g": 2,
+   "c": 453,
+   "g": 3,
    "p": 0
   },
   "Real Skënderbeu": {
@@ -451,6 +456,13 @@
    "n": "Mazzocchi",
    "t": "Pro Stata",
    "p": 2
+  },
+  {
+   "ts": 1789151922481,
+   "a": "altri",
+   "n": "Santos A.",
+   "t": "Pro Stata",
+   "p": 30
   }
  ],
  "passed": [
