@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789150541910,
+ "updatedAt": 1789150597671,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -83,6 +83,11 @@
    "t": "S.S. Longobarda",
    "p": 13,
    "s": 1
+  },
+  "Neres": {
+   "t": "AS Emazz",
+   "p": 20,
+   "s": 1
   }
  },
  "riv": {
@@ -122,8 +127,8 @@
    "p": 0
   },
   "AS Emazz": {
-   "c": 499,
-   "g": 1,
+   "c": 479,
+   "g": 2,
    "p": 0
   },
   "NewRock": {
@@ -293,6 +298,13 @@
    "n": "Lontani",
    "t": "S.S. Longobarda",
    "p": 13
+  },
+  {
+   "ts": 1789150597671,
+   "a": "altri",
+   "n": "Neres",
+   "t": "AS Emazz",
+   "p": 20
   }
  ],
  "passed": [
