@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789158772214,
+ "updatedAt": 1789158885285,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -29,6 +29,10 @@
   {
    "n": "Monteiro J.",
    "p": 10
+  },
+  {
+   "n": "Vlasic",
+   "p": 35
   }
  ],
  "asg": {
@@ -1903,6 +1907,13 @@
    "n": "Walukiewicz",
    "t": "AS Emazz",
    "p": 4
+  },
+  {
+   "ts": 1789158885285,
+   "a": "noi",
+   "n": "Vlasic",
+   "t": "AS Pinta",
+   "p": 35
   }
  ],
  "passed": [
