@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789154952673,
+ "updatedAt": 1789154990381,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -413,6 +413,11 @@
    "t": "AC OMMODITY",
    "p": 1,
    "s": 1
+  },
+  "Gorter": {
+   "t": "Real Skënderbeu",
+   "p": 2,
+   "s": 1
   }
  },
  "riv": {
@@ -442,8 +447,8 @@
    "p": 0
   },
   "Real Skënderbeu": {
-   "c": 226,
-   "g": 13,
+   "c": 224,
+   "g": 14,
    "p": 0
   },
   "Space Invaders": {
@@ -1162,6 +1167,13 @@
    "n": "Floriani Mussolini",
    "t": "AC OMMODITY",
    "p": 1
+  },
+  {
+   "ts": 1789154990381,
+   "a": "altri",
+   "n": "Gorter",
+   "t": "Real Skënderbeu",
+   "p": 2
   }
  ],
  "passed": [
