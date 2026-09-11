@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789151135878,
+ "updatedAt": 1789151704671,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -117,6 +117,10 @@
    "t": "Al-Chaos-Ahli",
    "p": 8,
    "s": 1
+  },
+  "Varela G.": {
+   "t": "",
+   "p": ""
   }
  },
  "riv": {
@@ -397,6 +401,13 @@
    "n": "Stankovic F.",
    "t": "Al-Chaos-Ahli",
    "p": 8
+  },
+  {
+   "ts": 1789151704671,
+   "a": "altri",
+   "n": "Varela G.",
+   "t": "",
+   "p": ""
   }
  ],
  "passed": [
