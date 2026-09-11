@@ -1,6 +1,6 @@
 {
  "version": 2,
- "updatedAt": 1789164867592,
+ "updatedAt": 1789164936815,
  "set": {
   "budget": 500,
   "tetto": 25,
@@ -1100,6 +1100,10 @@
   "Vitinha O.": {
    "t": "chill curre",
    "p": 3
+  },
+  "Rrahmani": {
+   "t": "Fc Afragolese",
+   "p": 26
   }
  },
  "riv": {
@@ -3172,6 +3176,13 @@
    "n": "Vitinha O.",
    "t": "chill curre",
    "p": 3
+  },
+  {
+   "ts": 1789164936815,
+   "a": "altri",
+   "n": "Rrahmani",
+   "t": "Fc Afragolese",
+   "p": 26
   }
  ],
  "passed": [
